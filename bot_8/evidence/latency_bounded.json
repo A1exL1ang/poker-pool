@@ -1,0 +1,85 @@
+{
+  "timestamp_utc": "2026-11-06T06:15:26Z",
+  "python": "3.11.9",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "configuration": {
+    "tables": 24,
+    "repeat": 3,
+    "scale": 0.5,
+    "output": "evidence/latency_bounded.json"
+  },
+  "unique_observations": 3925,
+  "typed_wall": {
+    "calls": 11775,
+    "mean_us": 254.81767303609342,
+    "p50_us": 97.9,
+    "p95_us": 687.9,
+    "p99_us": 880.9,
+    "p999_us": 2578.3,
+    "max_us": 9206.2,
+    "over_1ms": 85
+  },
+  "typed_process_cpu": {
+    "calls": 11775,
+    "mean_us": 224.2569002123142,
+    "p50_us": 0.0,
+    "p95_us": 0.0,
+    "p99_us": 15625.0,
+    "p999_us": 15625.0,
+    "max_us": 15625.0,
+    "over_1ms": 169
+  },
+  "dict_wall": {
+    "calls": 3925,
+    "mean_us": 275.9908789808917,
+    "p50_us": 141.3,
+    "p95_us": 686.0,
+    "p99_us": 740.4,
+    "p999_us": 1197.1,
+    "max_us": 1578.1,
+    "over_1ms": 7
+  },
+  "by_street_wall": {
+    "preflop": {
+      "calls": 6924,
+      "mean_us": 80.39979780473715,
+      "p50_us": 64.7,
+      "p95_us": 154.9,
+      "p99_us": 366.5,
+      "p999_us": 1915.5,
+      "max_us": 3359.4,
+      "over_1ms": 12
+    },
+    "flop": {
+      "calls": 2091,
+      "mean_us": 525.91649928264,
+      "p50_us": 481.2,
+      "p95_us": 755.2,
+      "p99_us": 1151.9,
+      "p999_us": 3763.9,
+      "max_us": 6743.8,
+      "over_1ms": 34
+    },
+    "turn": {
+      "calls": 1515,
+      "mean_us": 516.7440924092409,
+      "p50_us": 495.3,
+      "p95_us": 747.2,
+      "p99_us": 1140.3,
+      "p999_us": 2052.0,
+      "max_us": 2578.3,
+      "over_1ms": 21
+    },
+    "river": {
+      "calls": 1245,
+      "mean_us": 450.7881124497992,
+      "p50_us": 412.0,
+      "p95_us": 713.2,
+      "p99_us": 1207.8,
+      "p999_us": 3168.0,
+      "max_us": 9206.2,
+      "over_1ms": 18
+    }
+  },
+  "note": "Includes state observation and action safety gate. Excludes import, process startup, and JSON serialization. Wall-clock outliers include OS scheduling; CPU clock resolution may be coarse."
+}

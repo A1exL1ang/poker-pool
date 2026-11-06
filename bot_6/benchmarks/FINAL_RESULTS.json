@@ -1,0 +1,270 @@
+{
+  "generated_utc": "2026-11-06T06:34:50.509367+00:00",
+  "runtime_sha256": {
+    "agent.py": "59ef1344ed85e582a62300e2e739eaaa40fe4d6e179d1501d5e987ecc94c05bb",
+    "assets/preflop.json": "fa1d04b05e08ff6f7cbb0badb4a8e200e0e9e1eda920ae6a8c42d695394e7020",
+    "bot6/__init__.py": "4cf4ef95df3b23c7b3c982e77b3d6dc2354ae269b0c7eb0f31541689407ee69b",
+    "bot6/agent.py": "0ae0c38989606b78dcd87fcd284be876bfe7e85ec6eac89a4efa5f2113d1708b",
+    "bot6/cards.py": "3ed8908ae9108533bde7f6a9a87c0d713c67fb73c0ad98d9337edfd208b499c5",
+    "bot6/equity.py": "ca5e22970726897b761231f6fc5596f97b5f52aa364328d65995eea80340ed40",
+    "bot6/icm.py": "aa347e858872e359c351984db6e610d905af85d9ec3af459bb0a017223ab8e7b",
+    "bot6/interface.py": "755f6c50f86e56b3cc15a4241dd9e11b6969b7e5192b5cf8947613e3a0993276",
+    "bot6/preflop.py": "bfce72713a676aee863faefd3c84bce3fbc5974d1082a8d3ac771eb36f1107f3"
+  },
+  "tests": {
+    "file": "test_results.txt",
+    "count": 39,
+    "seconds": 3.775,
+    "passed": true
+  },
+  "exhaustive_evaluator": {
+    "hands": 2598960,
+    "counts": {
+      "0": 1302540,
+      "1": 1098240,
+      "2": 123552,
+      "3": 54912,
+      "4": 10200,
+      "5": 5108,
+      "6": 3744,
+      "7": 624,
+      "8": 40
+    },
+    "seconds": 7.5287002000259236,
+    "passed": true
+  },
+  "latency": [
+    {
+      "file": "final_latency_windows.json",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "python": "3.11.9 (main, Apr 12 2024, 09:55:27)  [GCC UCRT 13.2.0 64 bit (AMD64)]",
+      "input": "dictionary including card parsing and validation",
+      "iterations": 30000,
+      "wall": {
+        "count": 30000,
+        "mean_us": 321.43148333333335,
+        "p50_us": 306.1,
+        "p95_us": 616.4,
+        "p99_us": 853.6,
+        "p999_us": 2820.3,
+        "max_us": 36224.2,
+        "over_1ms": 210
+      }
+    },
+    {
+      "file": "final_latency_typed_windows.json",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "python": "3.11.9 (main, Apr 12 2024, 09:55:27)  [GCC UCRT 13.2.0 64 bit (AMD64)]",
+      "input": "validated State",
+      "iterations": 15000,
+      "wall": {
+        "count": 15000,
+        "mean_us": 291.51506666666666,
+        "p50_us": 271.2,
+        "p95_us": 604.8,
+        "p99_us": 790.2,
+        "p999_us": 2029.3,
+        "max_us": 11877.5,
+        "over_1ms": 72
+      }
+    },
+    {
+      "file": "linux_latency.json",
+      "platform": "Linux-4.18.0-553.147.1.el8_10.x86_64-x86_64-with-glibc2.28",
+      "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:27:36) [GCC 11.2.0]",
+      "input": "dictionary including card parsing and validation",
+      "iterations": 30000,
+      "wall": {
+        "count": 30000,
+        "mean_us": 229.6117484,
+        "p50_us": 229.772,
+        "p95_us": 483.7,
+        "p99_us": 516.701,
+        "p999_us": 558.22,
+        "max_us": 2306.658,
+        "over_1ms": 3
+      }
+    }
+  ],
+  "fields": [
+    {
+      "file": "final_mixed.json",
+      "field": "mixed",
+      "tables": 1000,
+      "seed": 26006,
+      "mean_final_chip_share": 0.446,
+      "standard_error_chip_share": 0.01572677116675039,
+      "outright_win_rate": 0.446,
+      "agent_decisions": 134308,
+      "latency_us": {
+        "median": 115.0,
+        "p95": 553.5,
+        "p99": 771.9,
+        "max": 32245.3
+      },
+      "enforce_1ms_timeout": true,
+      "timeout_fallbacks": 825
+    },
+    {
+      "file": "final_tight.json",
+      "field": "tight",
+      "tables": 300,
+      "seed": 36006,
+      "mean_final_chip_share": 0.5128,
+      "standard_error_chip_share": 0.028880341301867854,
+      "outright_win_rate": 0.51,
+      "agent_decisions": 41442,
+      "latency_us": {
+        "median": 77.4,
+        "p95": 532.2,
+        "p99": 567.3,
+        "max": 7188.7
+      },
+      "enforce_1ms_timeout": true,
+      "timeout_fallbacks": 36
+    },
+    {
+      "file": "final_calling.json",
+      "field": "calling",
+      "tables": 300,
+      "seed": 46006,
+      "mean_final_chip_share": 0.5166666666666667,
+      "standard_error_chip_share": 0.028899677829858923,
+      "outright_win_rate": 0.5166666666666667,
+      "agent_decisions": 53099,
+      "latency_us": {
+        "median": 380.2,
+        "p95": 548.4,
+        "p99": 615.1,
+        "max": 11714.0
+      },
+      "enforce_1ms_timeout": true,
+      "timeout_fallbacks": 67
+    },
+    {
+      "file": "final_maniac.json",
+      "field": "maniac",
+      "tables": 300,
+      "seed": 56006,
+      "mean_final_chip_share": 0.22666666666666666,
+      "standard_error_chip_share": 0.02421260961795184,
+      "outright_win_rate": 0.22666666666666666,
+      "agent_decisions": 34441,
+      "latency_us": {
+        "median": 120.9,
+        "p95": 554.6,
+        "p99": 676.8,
+        "max": 8942.2
+      },
+      "enforce_1ms_timeout": true,
+      "timeout_fallbacks": 114
+    },
+    {
+      "file": "final_self.json",
+      "field": "self",
+      "tables": 100,
+      "seed": 66006,
+      "mean_final_chip_share": 0.13,
+      "standard_error_chip_share": 0.033799766898963114,
+      "outright_win_rate": 0.13,
+      "agent_decisions": 98139,
+      "latency_us": {
+        "median": 102.6,
+        "p95": 536.2,
+        "p99": 596.2,
+        "max": 15606.5
+      },
+      "enforce_1ms_timeout": true,
+      "timeout_fallbacks": 200
+    },
+    {
+      "file": "linux_tight.json",
+      "field": "tight",
+      "tables": 300,
+      "seed": 36006,
+      "mean_final_chip_share": 0.5994133333333334,
+      "standard_error_chip_share": 0.02830989378930884,
+      "outright_win_rate": 0.5966666666666667,
+      "agent_decisions": 42498,
+      "latency_us": {
+        "median": 46.478,
+        "p95": 452.851,
+        "p99": 502.204,
+        "max": 584.7
+      },
+      "enforce_1ms_timeout": true,
+      "timeout_fallbacks": 0
+    },
+    {
+      "file": "linux_calling.json",
+      "field": "calling",
+      "tables": 300,
+      "seed": 46006,
+      "mean_final_chip_share": 0.45,
+      "standard_error_chip_share": 0.028770804599878932,
+      "outright_win_rate": 0.45,
+      "agent_decisions": 49527,
+      "latency_us": {
+        "median": 293.993,
+        "p95": 461.217,
+        "p99": 490.954,
+        "max": 1353.075
+      },
+      "enforce_1ms_timeout": true,
+      "timeout_fallbacks": 1
+    },
+    {
+      "file": "linux_maniac.json",
+      "field": "maniac",
+      "tables": 300,
+      "seed": 56006,
+      "mean_final_chip_share": 0.24333333333333335,
+      "standard_error_chip_share": 0.024815184572325923,
+      "outright_win_rate": 0.24333333333333335,
+      "agent_decisions": 34700,
+      "latency_us": {
+        "median": 65.403,
+        "p95": 469.353,
+        "p99": 504.399,
+        "max": 651.445
+      },
+      "enforce_1ms_timeout": true,
+      "timeout_fallbacks": 0
+    },
+    {
+      "file": "linux_self.json",
+      "field": "self",
+      "tables": 100,
+      "seed": 66006,
+      "mean_final_chip_share": 0.12,
+      "standard_error_chip_share": 0.032659863237109045,
+      "outright_win_rate": 0.12,
+      "agent_decisions": 98668,
+      "latency_us": {
+        "median": 66.094,
+        "p95": 442.242,
+        "p99": 481.956,
+        "max": 2187.203
+      },
+      "enforce_1ms_timeout": true,
+      "timeout_fallbacks": 2
+    }
+  ],
+  "interpretation": "Original synthetic local fixtures, not official contest results. Blinds double every 25 hands for these tests; later official blind sizes and payouts are unknown. Win/final chip share uses a WTA diagnostic. Timing excludes startup and JSON transport. Internal deadlines cannot guarantee 1 ms under OS scheduling.",
+  "remote_job": {
+    "job_id": 28063496,
+    "job_name": "bot_6_validate",
+    "partition": "mit_preemptable",
+    "cpus": 1,
+    "memory_requested": "2 GB",
+    "limit_minutes": 8,
+    "state": "COMPLETED",
+    "exit_code": "0:0",
+    "elapsed_seconds": 71,
+    "max_rss_kib": 123244,
+    "runtime_hashes_match_local": true,
+    "private_namespace": "~/poker-pool-20261106-054844/bot_6",
+    "existing_allocations_used": false,
+    "active_jobs_remaining": false
+  }
+}

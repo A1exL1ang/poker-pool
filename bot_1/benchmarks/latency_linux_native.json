@@ -1,0 +1,72 @@
+{
+  "measured_utc": "2026-11-06T06:35:48.255491+00:00",
+  "python": "3.12.3 (main, Jun 18 2025, 17:59:45) [GCC 13.3.0]",
+  "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "processor": "x86_64",
+  "native_accelerator": true,
+  "native_load_error": null,
+  "gc_enabled": true,
+  "iterations": 50000,
+  "scope": "warm Agent.act wall latency, including card parsing, legal adapter, model update, equity, optional ICM and periodic table resets; timer overhead included. Excludes process startup, imports and JSON transport. Wall-clock outliers are retained.",
+  "source_sha256": {
+    "agent.py": "20bf84919b463a400c21db3073f30de329659a4273b240bd84bf972341c6f432",
+    "pokerbot/__init__.py": "70874594195a801bf74f63da2454497cbf4e775290ec8932a573a74c6bc8f34c",
+    "pokerbot/agent.py": "763cd4b4eccccdef45862f533716623d31217d3d699e0b4c6a2ae33f111be68b",
+    "pokerbot/equity.py": "dc6e1a6ff4a50ae5c80e2b87179630ee116a4fcce8b64525de0ab16d5a1167cc",
+    "pokerbot/evaluator.py": "5e39e7d2c34de57867de50f348e31d2d414e6314787d4c95d5cc889388e9ad8f",
+    "pokerbot/icm.py": "04d380d8a65edf846017bd81e7a7934aba380f8a12ca46cc240549bbdb5c281a",
+    "pokerbot/native.py": "133ca37a4d229a4f141a0df0381b589af793266daacd987de2e6640b9b3f7f41",
+    "pokerbot/simulator.py": "2f85d6789d7c3bad2590e5084a3d616649d785658491d7564782f76ebfa67aed",
+    "pokerbot/fast_equity.cpp": "ad241e1fe09826998b56355652ff84d3a3e32cdc7e1ede4cd1960e9af8dcb794",
+    "assets/preflop.json": "3b058c51b8e0bcdda885faa135db75dec7e985cb7bac6635bb85cf5231c1609e",
+    "tools/benchmark.py": "64ed317abd9ad44d8d930223081f022c9608d84099ecb46070d60939f73239c8",
+    "assets/fast_equity.so": "5fd155dc57cbcb4e07f0592a5adb164eb0a936c3f76820a1c5f3693eccb1e633"
+  },
+  "all": {
+    "n": 50000,
+    "mean_us": 127.919,
+    "p50_us": 101.795,
+    "p95_us": 239.259,
+    "p99_us": 554.39,
+    "p999_us": 3410.015,
+    "max_us": 10163.462,
+    "over_1ms": 226
+  },
+  "categories": {
+    "preflop": {
+      "n": 9962,
+      "mean_us": 81.996,
+      "p50_us": 58.636,
+      "p95_us": 170.945,
+      "p99_us": 339.482,
+      "p999_us": 2867.311,
+      "max_us": 8244.347,
+      "over_1ms": 32
+    },
+    "postflop": {
+      "n": 35741,
+      "mean_us": 133.997,
+      "p50_us": 106.689,
+      "p95_us": 241.558,
+      "p99_us": 591.425,
+      "p999_us": 3284.045,
+      "max_us": 10163.462,
+      "over_1ms": 167
+    },
+    "icm": {
+      "n": 4297,
+      "mean_us": 183.832,
+      "p50_us": 154.597,
+      "p95_us": 315.398,
+      "p99_us": 651.453,
+      "p999_us": 4149.463,
+      "max_us": 8812.748,
+      "over_1ms": 27
+    }
+  },
+  "thread_cpu_batch": {
+    "total_us": 6938023.519,
+    "mean_us_per_decision_including_harness": 138.76047038000002,
+    "note": "Batch average only. Windows thread CPU clock advances in coarse accounting ticks; per-call CPU percentiles would be misleading."
+  }
+}

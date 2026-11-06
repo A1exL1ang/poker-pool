@@ -1,0 +1,103 @@
+{
+  "settings": {
+    "tables": 64,
+    "repeats": 3,
+    "seed": 181000,
+    "output": "evidence/linux_latency.json",
+    "save_corpus": false
+  },
+  "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:27:36) [GCC 11.2.0]",
+  "platform": "Linux-4.18.0-553.147.1.el8_10.x86_64-x86_64-with-glibc2.28",
+  "description": "Complete Agent.act including validation, history tracking, optional ICM and decision. Init, JSON, I/O excluded from main measurement. Thread CPU timer may be coarse on Windows; wall-clock is authoritative here.",
+  "asset_load_us": 10001.566,
+  "unique_legal_observations": 9269,
+  "wall_us": {
+    "n": 27807,
+    "mean": 97.17414341712518,
+    "p50": 72.436,
+    "p95": 201.259,
+    "p99": 227.077,
+    "max": 575.132,
+    "over_1000_us": 0
+  },
+  "thread_cpu_us": {
+    "n": 27807,
+    "mean": 97.3838327039954,
+    "p50": 72.115,
+    "p95": 200.036,
+    "p99": 225.755,
+    "max": 571.134,
+    "over_1000_us": 0
+  },
+  "by_street_wall_us": {
+    "preflop": {
+      "n": 15951,
+      "mean": 70.72915215347,
+      "p50": 67.396,
+      "p95": 120.757,
+      "p99": 218.982,
+      "max": 575.132,
+      "over_1000_us": 0
+    },
+    "flop": {
+      "n": 4626,
+      "mean": 55.420611543450065,
+      "p50": 54.593,
+      "p95": 63.439,
+      "p99": 68.619,
+      "max": 204.775,
+      "over_1000_us": 0
+    },
+    "turn": {
+      "n": 3960,
+      "mean": 197.85552954545454,
+      "p50": 193.013,
+      "p95": 229.432,
+      "p99": 248.698,
+      "max": 545.376,
+      "over_1000_us": 0
+    },
+    "river": {
+      "n": 3270,
+      "mean": 163.31408379204893,
+      "p50": 162.055,
+      "p95": 183.445,
+      "p99": 195.438,
+      "max": 213.802,
+      "over_1000_us": 0
+    }
+  },
+  "by_hand_position_wall_us": {
+    "first_decision_of_hand": {
+      "n": 14331,
+      "mean": 74.2808543716419,
+      "p50": 69.641,
+      "p95": 140.174,
+      "p99": 219.914,
+      "max": 295.355,
+      "over_1000_us": 0
+    },
+    "later_decision": {
+      "n": 13476,
+      "mean": 121.51992297417631,
+      "p50": 152.507,
+      "p95": 208.131,
+      "p99": 233.73,
+      "max": 575.132,
+      "over_1000_us": 0
+    }
+  },
+  "json_decode_act_encode_wall_us": {
+    "n": 1000,
+    "mean": 126.924999,
+    "p50": 103.495,
+    "p95": 228.63,
+    "p99": 258.406,
+    "max": 362.612,
+    "over_1000_us": 0
+  },
+  "illegal_actions": 0,
+  "fallback_errors": 0,
+  "slow_calls": [],
+  "warning": "Not an official sandbox timing guarantee. Raw wall-clock outliers above 1 ms remain visible and may cause folds under the competition's rule."
+}

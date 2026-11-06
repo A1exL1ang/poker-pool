@@ -1,0 +1,176 @@
+{
+  "settings": {
+    "tables": 48,
+    "repeats": 2,
+    "seed": 81000,
+    "output": "evidence/latency_profile.json",
+    "save_corpus": true
+  },
+  "python": "3.11.9 (main, Apr 12 2024, 09:55:27)  [GCC UCRT 13.2.0 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "description": "Complete Agent.act including validation, history tracking, optional ICM and decision. Init, JSON, I/O excluded from main measurement. Thread CPU timer may be coarse on Windows; wall-clock is authoritative here.",
+  "asset_load_us": 7358.5,
+  "unique_legal_observations": 6773,
+  "wall_us": {
+    "n": 13546,
+    "mean": 150.84737191790936,
+    "p50": 108.8,
+    "p95": 350.3,
+    "p99": 444.0,
+    "max": 2679.7,
+    "over_1000_us": 9
+  },
+  "thread_cpu_us": {
+    "n": 13546,
+    "mean": 152.2589694374723,
+    "p50": 0.0,
+    "p95": 0.0,
+    "p99": 0.0,
+    "max": 15625.0,
+    "over_1000_us": 132
+  },
+  "by_street_wall_us": {
+    "preflop": {
+      "n": 7668,
+      "mean": 104.91237610850287,
+      "p50": 96.2,
+      "p95": 215.7,
+      "p99": 343.3,
+      "max": 1314.5,
+      "over_1000_us": 1
+    },
+    "flop": {
+      "n": 2382,
+      "mean": 90.50369437447523,
+      "p50": 89.1,
+      "p95": 122.1,
+      "p99": 190.5,
+      "max": 484.3,
+      "over_1000_us": 0
+    },
+    "turn": {
+      "n": 1976,
+      "mean": 324.43324898785426,
+      "p50": 320.8,
+      "p95": 446.6,
+      "p99": 662.9,
+      "max": 2679.7,
+      "over_1000_us": 7
+    },
+    "river": {
+      "n": 1520,
+      "mean": 251.48059210526316,
+      "p50": 252.7,
+      "p95": 336.7,
+      "p99": 442.6,
+      "max": 1297.4,
+      "over_1000_us": 1
+    }
+  },
+  "by_hand_position_wall_us": {
+    "first_decision_of_hand": {
+      "n": 6686,
+      "mean": 111.6252019144481,
+      "p50": 103.1,
+      "p95": 226.0,
+      "p99": 347.3,
+      "max": 1314.5,
+      "over_1000_us": 1
+    },
+    "later_decision": {
+      "n": 6860,
+      "mean": 189.07469387755103,
+      "p50": 169.4,
+      "p95": 376.4,
+      "p99": 501.2,
+      "max": 2679.7,
+      "over_1000_us": 8
+    }
+  },
+  "json_decode_act_encode_wall_us": {
+    "n": 1000,
+    "mean": 201.2725,
+    "p50": 155.4,
+    "p95": 421.9,
+    "p99": 556.9,
+    "max": 1363.0,
+    "over_1000_us": 2
+  },
+  "illegal_actions": 0,
+  "fallback_errors": 0,
+  "slow_calls": [
+    {
+      "repeat": 1,
+      "index": 4606,
+      "street": "turn",
+      "new_hand": false,
+      "wall_us": 2679.7,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 0,
+      "index": 5531,
+      "street": "turn",
+      "new_hand": false,
+      "wall_us": 1387.4,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 1,
+      "index": 4605,
+      "street": "turn",
+      "new_hand": false,
+      "wall_us": 1384.4,
+      "thread_cpu_us": 15625.0
+    },
+    {
+      "repeat": 0,
+      "index": 4402,
+      "street": "preflop",
+      "new_hand": true,
+      "wall_us": 1314.5,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 0,
+      "index": 3562,
+      "street": "river",
+      "new_hand": false,
+      "wall_us": 1297.4,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 1,
+      "index": 3639,
+      "street": "turn",
+      "new_hand": false,
+      "wall_us": 1284.1,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 1,
+      "index": 5531,
+      "street": "turn",
+      "new_hand": false,
+      "wall_us": 1221.8,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 0,
+      "index": 3429,
+      "street": "turn",
+      "new_hand": false,
+      "wall_us": 1199.8,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 1,
+      "index": 3429,
+      "street": "turn",
+      "new_hand": false,
+      "wall_us": 1100.3,
+      "thread_cpu_us": 0.0
+    }
+  ],
+  "warning": "Not an official sandbox timing guarantee. Raw wall-clock outliers above 1 ms remain visible and may cause folds under the competition's rule."
+}

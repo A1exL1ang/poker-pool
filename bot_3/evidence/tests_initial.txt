@@ -1,0 +1,100 @@
+test_aa_open_and_junk_fold (test_agent.AgentTests.test_aa_open_and_junk_fold) ... ok
+test_free_check_never_folds (test_agent.AgentTests.test_free_check_never_folds) ... ok
+test_input_immutable (test_agent.AgentTests.test_input_immutable) ... ok
+test_randomized_legal_decisions (test_agent.AgentTests.test_randomized_legal_decisions) ... ok
+test_short_stack_aa_commits (test_agent.AgentTests.test_short_stack_aa_commits) ... ok
+test_state_resets_per_table_and_history_deduplicated (test_agent.AgentTests.test_state_resets_per_table_and_history_deduplicated) ... ok
+test_tournament_conservation_and_legality (test_agent.AgentTests.test_tournament_conservation_and_legality) ... ERROR
+test_all_categories_and_kickers (test_cards.CardTests.test_all_categories_and_kickers) ... ok
+test_encoding_roundtrip (test_cards.CardTests.test_encoding_roundtrip) ... ok
+test_independent_oracle (test_cards.CardTests.test_independent_oracle) ... ok
+test_native_feature_parity (test_cards.CardTests.test_native_feature_parity) ... ok
+test_suit_invariance (test_cards.CardTests.test_suit_invariance) ... FAIL
+test_bubble_risk_premium (test_icm.ICMTests.test_bubble_risk_premium) ... ok
+test_chip_ev_call_threshold (test_icm.ICMTests.test_chip_ev_call_threshold) ... ok
+test_eliminated_player (test_icm.ICMTests.test_eliminated_player) ... ok
+test_symmetry_and_sum (test_icm.ICMTests.test_symmetry_and_sum) ... ok
+test_winner_take_all_equals_chip_share (test_icm.ICMTests.test_winner_take_all_equals_chip_share) ... ok
+test_cumulative_short_raises_reopen (test_simulator.SimulatorTests.test_cumulative_short_raises_reopen) ... ok
+test_folded_chips_and_odd_chip (test_simulator.SimulatorTests.test_folded_chips_and_odd_chip) ... ok
+test_full_raise_reopens (test_simulator.SimulatorTests.test_full_raise_reopens) ... ok
+test_heads_up_button_first_preflop_last_postflop (test_simulator.SimulatorTests.test_heads_up_button_first_preflop_last_postflop) ... ok
+test_short_raise_does_not_reopen (test_simulator.SimulatorTests.test_short_raise_does_not_reopen) ... ok
+test_side_pots_and_uncalled_return (test_simulator.SimulatorTests.test_side_pots_and_uncalled_return) ... ok
+
+======================================================================
+ERROR: test_tournament_conservation_and_legality (test_agent.AgentTests.test_tournament_conservation_and_legality)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\alexl\Code\poker-pool\.workers\bot_3\tests\test_agent.py", line 91, in test_tournament_conservation_and_legality
+    result = table.run()
+             ^^^^^^^^^^^
+  File "C:\Users\alexl\Code\poker-pool\.workers\bot_3\tools\simulator.py", line 201, in run
+    while self.hands_played < self.max_hands and self.hand():
+                                                 ^^^^^^^^^^^
+  File "C:\Users\alexl\Code\poker-pool\.workers\bot_3\tools\simulator.py", line 169, in hand
+    self.betting(first, [], "preflop", bb, bb)
+  File "C:\Users\alexl\Code\poker-pool\.workers\bot_3\tools\simulator.py", line 118, in betting
+    validate_action(o, action)
+  File "C:\Users\alexl\Code\poker-pool\.workers\bot_3\bot3\interface.py", line 54, in validate_action
+    raise ValueError("call amount must be the additional chips paid")
+ValueError: call amount must be the additional chips paid
+
+======================================================================
+FAIL: test_suit_invariance (test_cards.CardTests.test_suit_invariance)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\alexl\Code\poker-pool\.workers\bot_3\tests\test_cards.py", line 46, in test_suit_invariance
+    self.assertEqual(features(cs[:2], cs[2:]), features(ds[:2], ds[2:]))
+AssertionError: Lists differ: [5, 1[62 chars], 3, 3, 4, 2, 2, 1, 2, 3, 1, 11, 0, 3, 3, 0, 0, 0, 0, 1, 1, 14] != [5, 1[62 chars], 3, 3, 4, 2, 2, 2, 1, 3, 1, 11, 0, 3, 3, 0, 0, 0, 0, 1, 1, 14]
+
+First differing element 25:
+1
+2
+
+  [5,
+   11,
+   11,
+   0,
+   1,
+   2,
+   11,
+   3,
+   14,
+   0,
+   0,
+   1,
+   3,
+   14,
+   10,
+   5,
+   0,
+   14,
+   10,
+   5,
+   3,
+   3,
+   4,
+   2,
+   2,
++  2,
+   1,
+-  2,
+   3,
+   1,
+   11,
+   0,
+   3,
+   3,
+   0,
+   0,
+   0,
+   0,
+   1,
+   1,
+   14]
+
+----------------------------------------------------------------------
+Ran 23 tests in 3.013s
+
+FAILED (failures=1, errors=1)

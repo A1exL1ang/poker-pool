@@ -1,0 +1,133 @@
+{
+  "full": true,
+  "python": "3.11.9 (main, Apr 12 2024, 09:55:27)  [GCC UCRT 13.2.0 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "seconds": 280.4350500999717,
+  "commands": [
+    [
+      "C:\\msys64\\ucrt64\\bin\\python.exe",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    [
+      "C:\\msys64\\ucrt64\\bin\\python.exe",
+      "tools/evaluator_census.py"
+    ],
+    [
+      "C:\\msys64\\ucrt64\\bin\\python.exe",
+      "tools/calibrate.py",
+      "--states",
+      "800"
+    ],
+    [
+      "C:\\msys64\\ucrt64\\bin\\python.exe",
+      "tools/simulate.py",
+      "--tables",
+      "500",
+      "--seed",
+      "81000",
+      "--field",
+      "mixed",
+      "--payout",
+      "top3",
+      "--output",
+      "evidence/mixed_final.json",
+      "--capture"
+    ],
+    [
+      "C:\\msys64\\ucrt64\\bin\\python.exe",
+      "tools/simulate.py",
+      "--tables",
+      "300",
+      "--seed",
+      "91000",
+      "--field",
+      "equity",
+      "--payout",
+      "top3",
+      "--output",
+      "evidence/equity_final.json"
+    ],
+    [
+      "C:\\msys64\\ucrt64\\bin\\python.exe",
+      "tools/simulate.py",
+      "--tables",
+      "300",
+      "--seed",
+      "101000",
+      "--field",
+      "tight",
+      "--payout",
+      "top3",
+      "--output",
+      "evidence/tight_final.json"
+    ],
+    [
+      "C:\\msys64\\ucrt64\\bin\\python.exe",
+      "tools/simulate.py",
+      "--tables",
+      "300",
+      "--seed",
+      "111000",
+      "--field",
+      "station",
+      "--payout",
+      "top3",
+      "--output",
+      "evidence/station_final.json"
+    ],
+    [
+      "C:\\msys64\\ucrt64\\bin\\python.exe",
+      "tools/simulate.py",
+      "--tables",
+      "400",
+      "--seed",
+      "131000",
+      "--field",
+      "self",
+      "--payout",
+      "top3",
+      "--output",
+      "evidence/self_final.json"
+    ],
+    [
+      "C:\\msys64\\ucrt64\\bin\\python.exe",
+      "tools/simulate.py",
+      "--tables",
+      "500",
+      "--seed",
+      "121000",
+      "--field",
+      "mixed",
+      "--payout",
+      "wta",
+      "--output",
+      "evidence/wta_final.json"
+    ],
+    [
+      "C:\\msys64\\ucrt64\\bin\\python.exe",
+      "tools/benchmark.py",
+      "--rounds",
+      "10",
+      "--output",
+      "evidence/latency_final.json"
+    ]
+  ],
+  "source_sha256": {
+    "agent.py": "7ad4ae3d17e96103d264289a0861e37eafebdeecf1d13b5d23f95cd4cbb58683",
+    "bot/__init__.py": "87fede808bc2ad2d48de6370a670f4461a791da766656311a0efaa5c7a1efdeb",
+    "bot/cards.py": "6ee5d7911cb1e2171df5350cacdadb573953e39e022e5e297c41ad0b27003cb2",
+    "bot/compiled_model.py": "7749088dbf9e82ae34a8ce774a8fde62e78435cc932aaf9fc736579703dbf80c",
+    "bot/icm.py": "2ed559dff4aa8c3e31ff9278a49903b152570486d8c16ecadda993813d9d7c0c",
+    "bot/interface.py": "a690798eedd38f5bbe53a4dcee7185b425c9b1d5f27272ebb910950b49ef1a62",
+    "bot/model.py": "b2864e805a1df58a668dc2ebf9b7ef647de02342ab96ae9751210c2ea2479e06",
+    "bot/policy.py": "8f46df81e6068e5613f41746fcb1f8ef58effe949357e55e8e3b39e50623d777",
+    "assets/preflop.json": "0b82916be94bf9db55f030e749e6dc375e4e66b565b06b7791ea320fa7a7151c",
+    "assets/equity.json": "ad5ee46f2da870e18c25daeac266219a2e883132e297abfb6d38f454b19426b3"
+  },
+  "passed": true
+}

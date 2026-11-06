@@ -1,0 +1,86 @@
+{
+  "timestamp_utc": "2026-11-06T06:23:57Z",
+  "python": "3.11.9",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "configuration": {
+    "tables": 40,
+    "repeat": 3,
+    "scale": 0.5,
+    "budget_us": 450,
+    "output": "evidence/latency_final.json"
+  },
+  "unique_observations": 6781,
+  "typed_wall": {
+    "calls": 20343,
+    "mean_us": 238.4438971636435,
+    "p50_us": 101.7,
+    "p95_us": 518.5,
+    "p99_us": 767.5,
+    "p999_us": 2665.3,
+    "max_us": 10532.0,
+    "over_1ms": 104
+  },
+  "typed_process_cpu": {
+    "calls": 20343,
+    "mean_us": 215.8297694538662,
+    "p50_us": 0.0,
+    "p95_us": 0.0,
+    "p99_us": 15625.0,
+    "p999_us": 15625.0,
+    "max_us": 15625.0,
+    "over_1ms": 281
+  },
+  "dict_wall": {
+    "calls": 6781,
+    "mean_us": 285.6025807403038,
+    "p50_us": 159.7,
+    "p95_us": 521.6,
+    "p99_us": 996.8,
+    "p999_us": 4159.6,
+    "max_us": 6839.2,
+    "over_1ms": 66
+  },
+  "by_street_wall": {
+    "preflop": {
+      "calls": 12066,
+      "mean_us": 88.0011188463451,
+      "p50_us": 70.8,
+      "p95_us": 159.2,
+      "p99_us": 396.6,
+      "p999_us": 1481.2,
+      "max_us": 4972.2,
+      "over_1ms": 29
+    },
+    "flop": {
+      "calls": 3420,
+      "mean_us": 476.247514619883,
+      "p50_us": 467.5,
+      "p95_us": 577.4,
+      "p99_us": 936.0,
+      "p999_us": 3200.6,
+      "max_us": 10532.0,
+      "over_1ms": 29
+    },
+    "turn": {
+      "calls": 2604,
+      "mean_us": 474.63348694316437,
+      "p50_us": 477.3,
+      "p95_us": 575.8,
+      "p99_us": 985.8,
+      "p999_us": 3286.8,
+      "max_us": 7558.8,
+      "over_1ms": 26
+    },
+    "river": {
+      "calls": 2253,
+      "mean_us": 410.17780736795385,
+      "p50_us": 401.3,
+      "p95_us": 552.5,
+      "p99_us": 921.6,
+      "p999_us": 2850.3,
+      "max_us": 5642.8,
+      "over_1ms": 20
+    }
+  },
+  "note": "Includes state observation and action safety gate. Excludes import, process startup, and JSON serialization. Wall-clock outliers include OS scheduling; CPU clock resolution may be coarse."
+}

@@ -1,0 +1,129 @@
+{
+  "python": "3.11.9 (main, Apr 12 2024, 09:55:27)  [GCC UCRT 13.2.0 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "utc": "2026-11-06T06:31:06Z",
+  "gameplay_sha256": {
+    "assets/equity_model.json": "ef72bd25a96a5fb92dda094da97afd00525ccd01221d2518b8c12d8d4566d07c",
+    "assets/preflop.json": "3b80f297e7eae97479cf79b8e88aab9c89fa7ef74c3a5e7292b528e1f7782f33",
+    "pokerbot/__init__.py": "17831d80d3d76899ad4d79b824ec6ab1d399ddaee9b5cad2b27c3737cdd6e399",
+    "pokerbot/_equity_compiled.py": "eb025b98eeebfb66edc117aec0a3737603a9eabf95f63c974986cb1dcf317c33",
+    "pokerbot/agent.py": "80043db7d991d45917aa3273bacc0ba5779f49da1fa9312997d774d31b6e0059",
+    "pokerbot/cards.py": "8f4f2f5c671da20b0be905a1fa3ba8986f5a61e45a609fd8bc6883e66b384608",
+    "pokerbot/equity.py": "a75f6cda7310f28f40888b6b6f5a7fdcdbaef1bf65dcf2da2d6552062b27ad07",
+    "pokerbot/fast_equity.py": "5daaf24d7807d1b3e2becede05c1997bbb27f938cc4f79a016af916197414ba9",
+    "pokerbot/icm.py": "1d4f7a0cfd75e7535d904cd5b5dcaa55bd034e205c5860b3f77598f07d2c884d",
+    "pokerbot/model.py": "362622f6490ca395afbd76d5b80812149c475a34b4147baa2da8506a51188474",
+    "tools/baselines.py": "5cde3d603612498466a16243635ab281f8979604df75a0aeb3fbb4eac6db9664",
+    "tools/benchmark.py": "ba84a0c8e72e052c9efeba69f1febb3e50362a2be750d2aff5dfc576c402ed4e",
+    "tools/simulator.py": "92dca8059c329df25212fd77ada2356f180724ee89c85725b45a070c2fa0fd37"
+  },
+  "matches": {
+    "payouts": [
+      100,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "example_big_blinds": [
+      20,
+      30,
+      50,
+      80,
+      120,
+      200,
+      320,
+      500
+    ],
+    "starting_stack": 2000,
+    "hand_cap": 200,
+    "seed_start": 200000,
+    "decision_limit_us": 1000.0,
+    "suites": {
+      "tag": {
+        "bot_points": {
+          "mean": 37.466,
+          "standard_error": 3.1823586820548684,
+          "ci95": [
+            31.22857698317246,
+            43.70342301682754
+          ]
+        },
+        "control_tag_points": {
+          "mean": 14.56371875,
+          "standard_error": 1.713232191170682,
+          "ci95": [
+            11.205783655305463,
+            17.921653844694536
+          ]
+        },
+        "paired_difference": {
+          "mean": 22.90228125,
+          "standard_error": 3.2037573607251466,
+          "ci95": [
+            16.622916822978716,
+            29.181645677021287
+          ]
+        },
+        "tables_per_arm": 200,
+        "outright_wins": 49,
+        "action_errors": 0,
+        "total_decisions_both_arms": 384971,
+        "total_hands_both_arms": 78026,
+        "deadline_timeouts_both_arms": 12,
+        "hero_deadline_timeouts": 9,
+        "table_actions_bot_arm": {
+          "raise": 32389,
+          "fold": 145990,
+          "call": 7072,
+          "check": 9785
+        },
+        "wall_seconds": 19.175688500050455
+      },
+      "mixed": {
+        "bot_points": {
+          "mean": 32.9509375,
+          "standard_error": 3.198345265398218,
+          "ci95": [
+            26.682180779819497,
+            39.21969422018051
+          ]
+        },
+        "control_tag_points": {
+          "mean": 15.0483125,
+          "standard_error": 1.838259493603996,
+          "ci95": [
+            11.445323892536168,
+            18.65130110746383
+          ]
+        },
+        "paired_difference": {
+          "mean": 17.902625,
+          "standard_error": 3.175420876256101,
+          "ci95": [
+            11.678800082538043,
+            24.126449917461958
+          ]
+        },
+        "tables_per_arm": 200,
+        "outright_wins": 54,
+        "action_errors": 0,
+        "total_decisions_both_arms": 304982,
+        "total_hands_both_arms": 71868,
+        "deadline_timeouts_both_arms": 38,
+        "hero_deadline_timeouts": 30,
+        "table_actions_bot_arm": {
+          "raise": 28940,
+          "fold": 97991,
+          "call": 11027,
+          "check": 15937
+        },
+        "wall_seconds": 17.492838000063784
+      }
+    },
+    "note": "Locally authored simulator and simple opponents; experimental payouts/blind increments, not official data. CI is normal approximation over independent paired seeds; not contest-strength evidence."
+  }
+}

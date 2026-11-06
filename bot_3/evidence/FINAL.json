@@ -1,0 +1,288 @@
+{
+  "status": "complete",
+  "utc": "2026-11-06T06:43:20Z",
+  "bot": "bot_3",
+  "interface": "local-v1; official adapter not supplied",
+  "windows_tests": {
+    "ran": 36,
+    "skipped": 0,
+    "log": "evidence/tests_final.txt"
+  },
+  "linux_tests": {
+    "ran": 36,
+    "skipped": 1,
+    "log": "evidence/tests_linux_final.txt"
+  },
+  "exhaustive_five_card_audit": {
+    "hands": 2598960,
+    "category_counts": [
+      1302540,
+      1098240,
+      123552,
+      54912,
+      10200,
+      5108,
+      3744,
+      624,
+      40
+    ],
+    "passed": true
+  },
+  "equity_validation": {
+    "training_rows": 90000,
+    "validation_rows": 9000,
+    "trees": 80,
+    "depth": 8,
+    "targets": [
+      {
+        "mae": 0.01774688,
+        "rmse": 0.02630612,
+        "p95_abs_error": 0.04918849
+      },
+      {
+        "mae": 0.01930281,
+        "rmse": 0.02969992,
+        "p95_abs_error": 0.05591917
+      },
+      {
+        "mae": 0.02107817,
+        "rmse": 0.03192063,
+        "p95_abs_error": 0.05969489
+      },
+      {
+        "mae": 0.02464315,
+        "rmse": 0.03607215,
+        "p95_abs_error": 0.07277677
+      },
+      {
+        "mae": 0.01819929,
+        "rmse": 0.02807994,
+        "p95_abs_error": 0.0544679
+      },
+      {
+        "mae": 0.01929539,
+        "rmse": 0.03173423,
+        "p95_abs_error": 0.06095357
+      }
+    ]
+  },
+  "windows_latency": {
+    "all": {
+      "count": 100000,
+      "mean_us": 150.601401,
+      "p50_us": 142.6,
+      "p95_us": 266.6,
+      "p99_us": 517.1,
+      "p999_us": 2300.1,
+      "max_us": 19867.8,
+      "over_1ms": 354
+    },
+    "thread_cpu": {
+      "total_ms": 13781.25,
+      "mean_us": 137.8125,
+      "note": "Windows CPU accounting is quantized; per-decision CPU percentiles are not meaningful on this host."
+    },
+    "streets": {
+      "preflop": {
+        "count": 25060,
+        "mean_us": 61.15266959297686,
+        "p50_us": 51.8,
+        "p95_us": 98.0,
+        "p99_us": 215.0,
+        "p999_us": 1151.3,
+        "max_us": 10670.6,
+        "over_1ms": 29
+      },
+      "flop": {
+        "count": 24750,
+        "mean_us": 175.91087272727273,
+        "p50_us": 155.4,
+        "p95_us": 277.7,
+        "p99_us": 587.9,
+        "p999_us": 2626.2,
+        "max_us": 19867.8,
+        "over_1ms": 103
+      },
+      "turn": {
+        "count": 25210,
+        "mean_us": 179.2595319317731,
+        "p50_us": 160.1,
+        "p95_us": 284.2,
+        "p99_us": 601.7,
+        "p999_us": 2915.8,
+        "max_us": 8836.6,
+        "over_1ms": 115
+      },
+      "river": {
+        "count": 24980,
+        "mean_us": 186.33816253002402,
+        "p50_us": 167.1,
+        "p95_us": 298.5,
+        "p99_us": 587.9,
+        "p999_us": 2312.6,
+        "max_us": 17711.9,
+        "over_1ms": 107
+      }
+    },
+    "timer": "perf_counter_ns wall and aggregate thread_time_ns CPU; act only; constructor, JSON, validation excluded"
+  },
+  "linux_latency": {
+    "all": {
+      "count": 100000,
+      "mean_us": 156.50779944,
+      "p50_us": 144.776,
+      "p95_us": 270.35,
+      "p99_us": 490.302,
+      "p999_us": 2699.65,
+      "max_us": 12045.306,
+      "over_1ms": 324
+    },
+    "thread_cpu": {
+      "total_ms": 15716.185853,
+      "mean_us": 157.16185853,
+      "count": 100000,
+      "p50_us": 144.831,
+      "p95_us": 271.718,
+      "p99_us": 494.054,
+      "p999_us": 2698.177,
+      "max_us": 11927.534,
+      "over_1ms": 325,
+      "note": "Thread CPU includes clock-call overhead; wall latency remains the relevant strict deadline measure."
+    },
+    "streets": {
+      "preflop": {
+        "count": 25060,
+        "mean_us": 60.22633280127693,
+        "p50_us": 50.756,
+        "p95_us": 100.568,
+        "p99_us": 186.553,
+        "p999_us": 860.948,
+        "max_us": 11640.041,
+        "over_1ms": 21
+      },
+      "flop": {
+        "count": 24750,
+        "mean_us": 180.07211373737374,
+        "p50_us": 159.87,
+        "p95_us": 280.335,
+        "p99_us": 530.103,
+        "p999_us": 2993.396,
+        "max_us": 11704.098,
+        "over_1ms": 89
+      },
+      "turn": {
+        "count": 25210,
+        "mean_us": 190.0147681475605,
+        "p50_us": 165.64,
+        "p95_us": 288.926,
+        "p99_us": 553.016,
+        "p999_us": 3599.438,
+        "max_us": 12045.306,
+        "over_1ms": 108
+      },
+      "river": {
+        "count": 24980,
+        "mean_us": 195.93478478783027,
+        "p50_us": 172.697,
+        "p95_us": 298.812,
+        "p99_us": 576.473,
+        "p999_us": 3301.763,
+        "max_us": 11782.424,
+        "over_1ms": 106
+      }
+    },
+    "timer": "perf_counter_ns wall and aggregate thread_time_ns CPU; act only; constructor, JSON, validation excluded"
+  },
+  "deadline_enforced_tournament": {
+    "suite": "mixed",
+    "tables": 800,
+    "seed": 823413,
+    "hero_seat": "cycled 0..7",
+    "first_place_finishes": 254,
+    "mean_terminal_chip_share": 0.3175,
+    "standard_error": 0.01646833917685858,
+    "approx_95pct_ci": [
+      0.2852220552133572,
+      0.3497779447866428
+    ],
+    "equal_share_reference": 0.125,
+    "mean_finish_order_low_to_high": 6.16375,
+    "mean_finish_place": 2.8362499999999997,
+    "mean_hands": 116.72,
+    "hero_actions": {
+      "fold": 44728,
+      "raise": 28593,
+      "check": 23567,
+      "call": 9284
+    },
+    "seconds": 56.211258800001815,
+    "deadline_us": 1000,
+    "hero_timeout_fallbacks": 72,
+    "opponent_timeout_fallbacks": 234,
+    "assumptions": "synthetic scripted opponents; 2000 chips; 10/20 initial blinds doubled every 25 hands; 200-hand cap; no supplied payouts; not a contest score"
+  },
+  "package": {
+    "archive": "dist/bot_3.zip",
+    "bytes": 452309,
+    "sha256": "6d1ec6351e98e1dea388d058e2c98f8c3262e124cf1825683d531ef832f5321d",
+    "files": {
+      "bot3/__init__.py": "bd77131e20a18377689dbf6ebfd264ae7ac6c267620dc3845f8d7476af68f437",
+      "bot3/__main__.py": "6a8be6f2612a95eab3e6e6968a61629cacd9638f8a86694c22a849ed75e146ca",
+      "bot3/_equity_fast.py": "390796d7f8a864cbf37db29534f6ae121918b2958323dab3336f98441ea42fb1",
+      "bot3/agent.py": "f0bd7a42a46991ee7aac27921ba3faf69de36558371363068ac9063a54d966f0",
+      "bot3/cards.py": "44b49b4b90b6aebb5cb25c4dbf544562f81bba0e4dc48b49a66a8ebdad3f3f38",
+      "bot3/equity.py": "338c66c4c9f4c67e31d868473fc477303853b7747167a5d19c350b1cb5469e25",
+      "bot3/icm.py": "170bf094e7069fb97a30bc4f454a128d07a56f0b5422a7a39a0a305665c97e66",
+      "bot3/interface.py": "715504f9830f09fb1a90a29c0c1ebbedd2b103f083ed68e336b9cdc236ed3248",
+      "agent.py": "e66d8417fa1e797356c2a4f0f40d5eae851b0d0034bd551d3fb9977e7f8c149b",
+      "README.md": "6959b311f48a561ae7214d18c5e87f6cbe3eef2e85b97c090a9b8378871ebe5b",
+      "assets/preflop.json": "c3af379536ebf6ae1af362e82ab374a9f98919e9e2fdffd791084cdeca84b76c",
+      "assets/pushfold.json": "c6b96d4db602d753e70630a5da7020c4fe212c411a88b223f2931a5cfd9bcf4e",
+      "examples/observation.json": "74e539f9cace2239cd1593b8b74e71a75ded806481812d838d28e3cc3fc0d12a"
+    },
+    "isolated_extracted_smoke_action": {
+      "action": "raise",
+      "amount": 48
+    },
+    "verification_directory": "C:\\Users\\alexl\\Code\\poker-pool\\.workers\\bot_3\\dist\\verify_bot3_l2kn5r8h"
+  },
+  "gameplay_sha256": {
+    "bot3\\agent.py": "f0bd7a42a46991ee7aac27921ba3faf69de36558371363068ac9063a54d966f0",
+    "bot3\\cards.py": "44b49b4b90b6aebb5cb25c4dbf544562f81bba0e4dc48b49a66a8ebdad3f3f38",
+    "bot3\\equity.py": "338c66c4c9f4c67e31d868473fc477303853b7747167a5d19c350b1cb5469e25",
+    "bot3\\icm.py": "170bf094e7069fb97a30bc4f454a128d07a56f0b5422a7a39a0a305665c97e66",
+    "bot3\\interface.py": "715504f9830f09fb1a90a29c0c1ebbedd2b103f083ed68e336b9cdc236ed3248",
+    "bot3\\_equity_fast.py": "390796d7f8a864cbf37db29534f6ae121918b2958323dab3336f98441ea42fb1",
+    "bot3\\__init__.py": "bd77131e20a18377689dbf6ebfd264ae7ac6c267620dc3845f8d7476af68f437",
+    "bot3\\__main__.py": "6a8be6f2612a95eab3e6e6968a61629cacd9638f8a86694c22a849ed75e146ca",
+    "assets\\preflop.json": "c3af379536ebf6ae1af362e82ab374a9f98919e9e2fdffd791084cdeca84b76c",
+    "assets\\equity_model.json": "89df5c5913d9219256f0290306d990a549dc59d38fe7ce89ce5b2c70673f0a83",
+    "assets\\pushfold.json": "c6b96d4db602d753e70630a5da7020c4fe212c411a88b223f2931a5cfd9bcf4e"
+  },
+  "remote_jobs_launched": [],
+  "validation_sources_sha256": {
+    "tools/baselines.py": "d1ecbd1050dad8a2c4fe352f6bd3341da930ecfcddf7cf1a668e138d4f7cad8c",
+    "tools/benchmark.py": "3e3e846385285bdd3fb88e828d36a53a1b0947e0bf58fc6d3ed6eb76dd3b5d33",
+    "tools/export_model.py": "dafbe65c9fd397d91c298f045248d1a49283e585281277fe2a6bcdcf8836a5b1",
+    "tools/finalize_evidence.py": "04e6b3f213e02af23bbe947a27825928547920bac1184e1dc7f517e79d9338b5",
+    "tools/package_bot.py": "8ebda696e7c5ba9d2fa3d4cc0ff9e6eb2faee6f1413840e1b6af1f0ec1e39982",
+    "tools/simulator.py": "b4464b1e6b5a9c9b012c31b11943b364ca41063de66dfc6b60b5768dffc376a7",
+    "tools/evaluator_audit.cpp": "491e7592d437f1dac6a92f7bbc2c7bf6e7dd0f0ad52490a05df69d423c4ffa86",
+    "tools/offline.cpp": "6ea66e0086d4866dfeed47515e2b221a7ca1d6dfb5a665d5dfa88bc286b5905d",
+    "tools/pushfold.cpp": "4d98c6e1b8a4213d16ad8f03f9771f6dc8180b68445bdec7259b43dcd44d9987",
+    "tests/test_agent.py": "a222b40fddd1be5f6c815cc9dfb0e595108923e2b4a8d89bd736a7589de33fe6",
+    "tests/test_cards.py": "5d4377d75b9acec80e52add17eed9906532b08226db5b8ba259a4b6a1089cb9b",
+    "tests/test_icm.py": "772cee896aed8d84b884f7aa4cd84660d422264e852048e2256c58e580a43f7f",
+    "tests/test_interface.py": "771fd783684012d93a0c14d0f79d65cdd20681a09da2f6e06a8fa7997cdcc4c1",
+    "tests/test_models.py": "202762aa34e9a3367f2ead19e0fc62eab4e6d73b877d14e01d3915fc7ebfd357",
+    "tests/test_simulator.py": "e7c91eaadb23e7e62165a7ddc0bcc7e1646a49a3c66af7776aa6bd2a298b3940",
+    "RULES.txt": "d283e86baacfd6d3e8bfb60e86c433f8afae69972c5fc6553016aa2afb8ad87d",
+    "README.md": "6959b311f48a561ae7214d18c5e87f6cbe3eef2e85b97c090a9b8378871ebe5b"
+  },
+  "limitations": [
+    "Official Agent interface, payouts and later blind levels absent.",
+    "Heuristic full-game policy and modeled opponent ranges; multiway equity approximate.",
+    "Measured wall-clock calls sometimes exceed 1 ms; hard deadline not guaranteed.",
+    "Synthetic opponents and assumed blind doubling; no official-engine or actual-entrant validation."
+  ]
+}

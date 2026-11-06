@@ -1,0 +1,504 @@
+{
+  "settings": {
+    "tables": 64,
+    "repeats": 3,
+    "seed": 191000,
+    "output": "evidence/latency.json",
+    "save_corpus": false
+  },
+  "python": "3.11.9 (main, Apr 12 2024, 09:55:27)  [GCC UCRT 13.2.0 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "description": "Complete Agent.act including validation, history tracking, optional ICM and decision. Init, JSON, I/O excluded from main measurement. Thread CPU timer may be coarse on Windows; wall-clock is authoritative here.",
+  "asset_load_us": 4870.9,
+  "unique_legal_observations": 9504,
+  "wall_us": {
+    "n": 28512,
+    "mean": 167.21829755892256,
+    "p50": 116.1,
+    "p95": 368.3,
+    "p99": 511.5,
+    "max": 18728.5,
+    "over_1000_us": 68
+  },
+  "thread_cpu_us": {
+    "n": 28512,
+    "mean": 160.02034231200898,
+    "p50": 0.0,
+    "p95": 0.0,
+    "p99": 15625.0,
+    "max": 15625.0,
+    "over_1000_us": 292
+  },
+  "by_street_wall_us": {
+    "preflop": {
+      "n": 16698,
+      "mean": 116.74533477063122,
+      "p50": 102.5,
+      "p95": 227.4,
+      "p99": 375.6,
+      "max": 18728.5,
+      "over_1000_us": 13
+    },
+    "flop": {
+      "n": 4641,
+      "mean": 104.7509588450765,
+      "p50": 95.9,
+      "p95": 142.4,
+      "p99": 250.5,
+      "max": 15813.1,
+      "over_1000_us": 5
+    },
+    "turn": {
+      "n": 3912,
+      "mean": 352.3076942740286,
+      "p50": 333.3,
+      "p95": 481.6,
+      "p99": 951.3,
+      "max": 4580.6,
+      "over_1000_us": 37
+    },
+    "river": {
+      "n": 3261,
+      "mean": 292.5291628334867,
+      "p50": 275.9,
+      "p95": 387.2,
+      "p99": 615.7,
+      "max": 16299.6,
+      "over_1000_us": 13
+    }
+  },
+  "by_hand_position_wall_us": {
+    "first_decision_of_hand": {
+      "n": 15159,
+      "mean": 120.97045979286233,
+      "p50": 107.6,
+      "p95": 237.4,
+      "p99": 380.9,
+      "max": 13638.8,
+      "over_1000_us": 12
+    },
+    "later_decision": {
+      "n": 13353,
+      "mean": 219.72117876132705,
+      "p50": 216.3,
+      "p95": 407.2,
+      "p99": 604.2,
+      "max": 18728.5,
+      "over_1000_us": 56
+    }
+  },
+  "json_decode_act_encode_wall_us": {
+    "n": 1000,
+    "mean": 224.9994,
+    "p50": 168.1,
+    "p95": 440.4,
+    "p99": 814.3,
+    "max": 4473.6,
+    "over_1000_us": 6
+  },
+  "illegal_actions": 0,
+  "fallback_errors": 0,
+  "slow_calls": [
+    {
+      "repeat": 0,
+      "index": 6677,
+      "street": "preflop",
+      "new_hand": false,
+      "wall_us": 18728.5,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 0,
+      "index": 6685,
+      "street": "river",
+      "new_hand": false,
+      "wall_us": 16299.6,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 0,
+      "index": 6672,
+      "street": "flop",
+      "new_hand": false,
+      "wall_us": 15813.1,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 0,
+      "index": 6670,
+      "street": "preflop",
+      "new_hand": true,
+      "wall_us": 13638.8,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 0,
+      "index": 4722,
+      "street": "river",
+      "new_hand": false,
+      "wall_us": 5025.6,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 0,
+      "index": 4057,
+      "street": "turn",
+      "new_hand": false,
+      "wall_us": 4580.6,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 0,
+      "index": 6648,
+      "street": "river",
+      "new_hand": false,
+      "wall_us": 4513.9,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 0,
+      "index": 4104,
+      "street": "preflop",
+      "new_hand": true,
+      "wall_us": 4455.8,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 1,
+      "index": 7688,
+      "street": "preflop",
+      "new_hand": true,
+      "wall_us": 4425.8,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 0,
+      "index": 6658,
+      "street": "preflop",
+      "new_hand": true,
+      "wall_us": 4319.3,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 0,
+      "index": 4516,
+      "street": "preflop",
+      "new_hand": true,
+      "wall_us": 4257.3,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 0,
+      "index": 6871,
+      "street": "preflop",
+      "new_hand": true,
+      "wall_us": 3704.3,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 1,
+      "index": 7661,
+      "street": "turn",
+      "new_hand": false,
+      "wall_us": 2998.6,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 0,
+      "index": 6857,
+      "street": "turn",
+      "new_hand": false,
+      "wall_us": 2477.3,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 0,
+      "index": 4048,
+      "street": "turn",
+      "new_hand": false,
+      "wall_us": 2300.3,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 0,
+      "index": 4070,
+      "street": "turn",
+      "new_hand": false,
+      "wall_us": 2259.1,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 0,
+      "index": 1832,
+      "street": "river",
+      "new_hand": false,
+      "wall_us": 2165.3,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 0,
+      "index": 7016,
+      "street": "turn",
+      "new_hand": false,
+      "wall_us": 2106.8,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 1,
+      "index": 7521,
+      "street": "turn",
+      "new_hand": false,
+      "wall_us": 1897.2,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 0,
+      "index": 4384,
+      "street": "river",
+      "new_hand": false,
+      "wall_us": 1811.3,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 1,
+      "index": 7669,
+      "street": "turn",
+      "new_hand": false,
+      "wall_us": 1810.9,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 0,
+      "index": 6894,
+      "street": "turn",
+      "new_hand": false,
+      "wall_us": 1716.9,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 1,
+      "index": 8417,
+      "street": "river",
+      "new_hand": false,
+      "wall_us": 1679.1,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 2,
+      "index": 1029,
+      "street": "flop",
+      "new_hand": false,
+      "wall_us": 1616.9,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 1,
+      "index": 7530,
+      "street": "preflop",
+      "new_hand": true,
+      "wall_us": 1597.4,
+      "thread_cpu_us": 15625.0
+    },
+    {
+      "repeat": 0,
+      "index": 5343,
+      "street": "turn",
+      "new_hand": false,
+      "wall_us": 1592.7,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 1,
+      "index": 1732,
+      "street": "turn",
+      "new_hand": false,
+      "wall_us": 1550.2,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 0,
+      "index": 5305,
+      "street": "turn",
+      "new_hand": false,
+      "wall_us": 1545.3,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 2,
+      "index": 7074,
+      "street": "turn",
+      "new_hand": false,
+      "wall_us": 1518.5,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 0,
+      "index": 1893,
+      "street": "preflop",
+      "new_hand": true,
+      "wall_us": 1498.2,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 2,
+      "index": 870,
+      "street": "river",
+      "new_hand": false,
+      "wall_us": 1490.1,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 1,
+      "index": 4159,
+      "street": "preflop",
+      "new_hand": true,
+      "wall_us": 1488.5,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 0,
+      "index": 1145,
+      "street": "turn",
+      "new_hand": false,
+      "wall_us": 1479.1,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 0,
+      "index": 4520,
+      "street": "flop",
+      "new_hand": false,
+      "wall_us": 1470.3,
+      "thread_cpu_us": 15625.0
+    },
+    {
+      "repeat": 1,
+      "index": 3260,
+      "street": "preflop",
+      "new_hand": true,
+      "wall_us": 1459.3,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 1,
+      "index": 442,
+      "street": "turn",
+      "new_hand": false,
+      "wall_us": 1425.2,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 0,
+      "index": 8008,
+      "street": "turn",
+      "new_hand": false,
+      "wall_us": 1375.1,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 1,
+      "index": 8413,
+      "street": "river",
+      "new_hand": false,
+      "wall_us": 1365.2,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 0,
+      "index": 6082,
+      "street": "turn",
+      "new_hand": false,
+      "wall_us": 1347.0,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 2,
+      "index": 5251,
+      "street": "turn",
+      "new_hand": false,
+      "wall_us": 1346.8,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 0,
+      "index": 2222,
+      "street": "turn",
+      "new_hand": false,
+      "wall_us": 1318.2,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 0,
+      "index": 4006,
+      "street": "river",
+      "new_hand": false,
+      "wall_us": 1301.6,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 2,
+      "index": 3873,
+      "street": "turn",
+      "new_hand": false,
+      "wall_us": 1299.7,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 2,
+      "index": 1176,
+      "street": "turn",
+      "new_hand": false,
+      "wall_us": 1259.5,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 2,
+      "index": 4113,
+      "street": "turn",
+      "new_hand": false,
+      "wall_us": 1258.2,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 1,
+      "index": 4113,
+      "street": "turn",
+      "new_hand": false,
+      "wall_us": 1210.0,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 0,
+      "index": 2216,
+      "street": "turn",
+      "new_hand": false,
+      "wall_us": 1198.4,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 1,
+      "index": 7520,
+      "street": "flop",
+      "new_hand": false,
+      "wall_us": 1182.7,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 0,
+      "index": 3559,
+      "street": "river",
+      "new_hand": false,
+      "wall_us": 1179.8,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "repeat": 0,
+      "index": 4787,
+      "street": "turn",
+      "new_hand": false,
+      "wall_us": 1176.2,
+      "thread_cpu_us": 0.0
+    }
+  ],
+  "warning": "Not an official sandbox timing guarantee. Raw wall-clock outliers above 1 ms remain visible and may cause folds under the competition's rule."
+}

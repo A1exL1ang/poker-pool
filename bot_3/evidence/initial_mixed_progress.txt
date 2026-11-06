@@ -1,0 +1,21 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\alexl\Code\poker-pool\.workers\bot_3\tools\benchmark.py", line 125, in <module>
+    main()
+  File "C:\Users\alexl\Code\poker-pool\.workers\bot_3\tools\benchmark.py", line 119, in main
+    output["tournaments"] = tournaments(model, args.tables, args.seed, args.suite)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alexl\Code\poker-pool\.workers\bot_3\tools\benchmark.py", line 83, in tournaments
+    result = table.run()
+             ^^^^^^^^^^^
+  File "C:\Users\alexl\Code\poker-pool\.workers\bot_3\tools\simulator.py", line 201, in run
+    while self.hands_played < self.max_hands and self.hand():
+                                                 ^^^^^^^^^^^
+  File "C:\Users\alexl\Code\poker-pool\.workers\bot_3\tools\simulator.py", line 169, in hand
+    self.betting(first, [], "preflop", bb, bb)
+  File "C:\Users\alexl\Code\poker-pool\.workers\bot_3\tools\simulator.py", line 118, in betting
+    validate_action(o, action)
+  File "C:\Users\alexl\Code\poker-pool\.workers\bot_3\bot3\interface.py", line 54, in validate_action
+    raise ValueError("call amount must be the additional chips paid")
+ValueError: call amount must be the additional chips paid
