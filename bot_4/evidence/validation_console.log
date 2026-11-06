@@ -1,0 +1,11 @@
+Running: -m unittest discover -s tests -v
+Running: tools/evaluator_census.py
+Running: tools/calibrate.py --states 800
+Running: tools/simulate.py --tables 500 --seed 81000 --field mixed --payout top3 --output evidence/mixed_final.json --capture
+Running: tools/simulate.py --tables 300 --seed 91000 --field equity --payout top3 --output evidence/equity_final.json
+Running: tools/simulate.py --tables 300 --seed 101000 --field tight --payout top3 --output evidence/tight_final.json
+Running: tools/simulate.py --tables 300 --seed 111000 --field station --payout top3 --output evidence/station_final.json
+Running: tools/simulate.py --tables 400 --seed 131000 --field self --payout top3 --output evidence/self_final.json
+Running: tools/simulate.py --tables 500 --seed 121000 --field mixed --payout wta --output evidence/wta_final.json
+Running: tools/benchmark.py --rounds 10 --output evidence/latency_final.json
+Validation completed in 280.4s

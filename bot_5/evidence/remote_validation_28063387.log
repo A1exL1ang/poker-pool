@@ -1,0 +1,174 @@
+Fri Nov  6 06:27:31 UTC 2026
+Python 3.12.7
+{
+  "settings": {
+    "tables": 64,
+    "repeats": 3,
+    "seed": 181000,
+    "output": "evidence/linux_latency.json",
+    "save_corpus": false
+  },
+  "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:27:36) [GCC 11.2.0]",
+  "platform": "Linux-4.18.0-553.147.1.el8_10.x86_64-x86_64-with-glibc2.28",
+  "description": "Complete Agent.act including validation, history tracking, optional ICM and decision. Init, JSON, I/O excluded from main measurement. Thread CPU timer may be coarse on Windows; wall-clock is authoritative here.",
+  "asset_load_us": 10001.566,
+  "unique_legal_observations": 9269,
+  "wall_us": {
+    "n": 27807,
+    "mean": 97.17414341712518,
+    "p50": 72.436,
+    "p95": 201.259,
+    "p99": 227.077,
+    "max": 575.132,
+    "over_1000_us": 0
+  },
+  "thread_cpu_us": {
+    "n": 27807,
+    "mean": 97.3838327039954,
+    "p50": 72.115,
+    "p95": 200.036,
+    "p99": 225.755,
+    "max": 571.134,
+    "over_1000_us": 0
+  },
+  "by_street_wall_us": {
+    "preflop": {
+      "n": 15951,
+      "mean": 70.72915215347,
+      "p50": 67.396,
+      "p95": 120.757,
+      "p99": 218.982,
+      "max": 575.132,
+      "over_1000_us": 0
+    },
+    "flop": {
+      "n": 4626,
+      "mean": 55.420611543450065,
+      "p50": 54.593,
+      "p95": 63.439,
+      "p99": 68.619,
+      "max": 204.775,
+      "over_1000_us": 0
+    },
+    "turn": {
+      "n": 3960,
+      "mean": 197.85552954545454,
+      "p50": 193.013,
+      "p95": 229.432,
+      "p99": 248.698,
+      "max": 545.376,
+      "over_1000_us": 0
+    },
+    "river": {
+      "n": 3270,
+      "mean": 163.31408379204893,
+      "p50": 162.055,
+      "p95": 183.445,
+      "p99": 195.438,
+      "max": 213.802,
+      "over_1000_us": 0
+    }
+  },
+  "by_hand_position_wall_us": {
+    "first_decision_of_hand": {
+      "n": 14331,
+      "mean": 74.2808543716419,
+      "p50": 69.641,
+      "p95": 140.174,
+      "p99": 219.914,
+      "max": 295.355,
+      "over_1000_us": 0
+    },
+    "later_decision": {
+      "n": 13476,
+      "mean": 121.51992297417631,
+      "p50": 152.507,
+      "p95": 208.131,
+      "p99": 233.73,
+      "max": 575.132,
+      "over_1000_us": 0
+    }
+  },
+  "json_decode_act_encode_wall_us": {
+    "n": 1000,
+    "mean": 126.924999,
+    "p50": 103.495,
+    "p95": 228.63,
+    "p99": 258.406,
+    "max": 362.612,
+    "over_1000_us": 0
+  },
+  "illegal_actions": 0,
+  "fallback_errors": 0,
+  "warning": "Not an official sandbox timing guarantee. Raw wall-clock outliers above 1 ms remain visible and may cause folds under the competition's rule."
+}
+8/256: mean points 0.3375; elapsed 0.3s
+16/256: mean points 0.3563; elapsed 0.6s
+24/256: mean points 0.3417; elapsed 0.9s
+32/256: mean points 0.3312; elapsed 1.2s
+40/256: mean points 0.3375; elapsed 1.5s
+48/256: mean points 0.3354; elapsed 1.8s
+56/256: mean points 0.3375; elapsed 2.1s
+64/256: mean points 0.3297; elapsed 2.4s
+72/256: mean points 0.3278; elapsed 2.8s
+80/256: mean points 0.3237; elapsed 3.0s
+88/256: mean points 0.3068; elapsed 3.3s
+96/256: mean points 0.3073; elapsed 3.6s
+104/256: mean points 0.3029; elapsed 3.9s
+112/256: mean points 0.3116; elapsed 4.1s
+120/256: mean points 0.3100; elapsed 4.4s
+128/256: mean points 0.3094; elapsed 4.7s
+136/256: mean points 0.3118; elapsed 5.0s
+144/256: mean points 0.3139; elapsed 5.3s
+152/256: mean points 0.3138; elapsed 5.6s
+160/256: mean points 0.3156; elapsed 5.8s
+168/256: mean points 0.3173; elapsed 6.1s
+176/256: mean points 0.3210; elapsed 6.4s
+184/256: mean points 0.3174; elapsed 6.7s
+192/256: mean points 0.3182; elapsed 7.0s
+200/256: mean points 0.3215; elapsed 7.3s
+208/256: mean points 0.3226; elapsed 7.6s
+216/256: mean points 0.3213; elapsed 7.9s
+224/256: mean points 0.3214; elapsed 8.2s
+232/256: mean points 0.3207; elapsed 8.5s
+240/256: mean points 0.3225; elapsed 8.7s
+248/256: mean points 0.3258; elapsed 9.0s
+256/256: mean points 0.3270; elapsed 9.4s
+{
+  "settings": {
+    "tables": 256,
+    "hands": 200,
+    "seed": 182000,
+    "lineup": "mixed",
+    "payouts": "0.5,0.3,0.2,0,0,0,0,0",
+    "blinds": "20,40,80,160,320,640,1280,2560",
+    "enforce_timeout": true,
+    "output": "evidence/linux_timeout_simulation.json"
+  },
+  "note": "Local synthetic opponents, payout vector and later blind levels. Not official results or an estimate of contest win probability.",
+  "mean_points": 0.326953125,
+  "standard_error_points": 0.011440398243571216,
+  "normal_95pct_interval": [
+    0.30452994444260045,
+    0.34937630555739957
+  ],
+  "equal_share_points": 0.125,
+  "mean_final_chips": 7375,
+  "latency_us": {
+    "n": 37707,
+    "mean": 95.7799871907073,
+    "p50": 71.264,
+    "p95": 200.878,
+    "p99": 223.0,
+    "max": 494.52,
+    "over_1000_us": 0
+  },
+  "actions": {
+    "fold": 10997,
+    "raise": 11809,
+    "check": 11424,
+    "call": 3477
+  },
+  "elapsed_seconds": 9.389071173965931
+}
+Fri Nov  6 06:27:50 UTC 2026
