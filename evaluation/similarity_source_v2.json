@@ -1,0 +1,3730 @@
+{
+  "version": "similarity-source-v2-policy-allowlist",
+  "scope": "Authored betting, range selection and opponent-adaptation policy functions only.",
+  "replaces": "similarity20-v1 source pairs/function matches; do not use the superseded source ranking.",
+  "unaffected": "The shared legal-state behavioral probe results and their statistics are unchanged. Asset hashes/shape metadata remain a separate descriptive inventory, not strategy-code evidence.",
+  "corrections": [
+    "Explicit policy-file allowlist excludes bot18 policy/icm_fast.py, including generated _dp_7_5.",
+    "All simulator files excluded by construction, including bot14 pokerbot/game.py and bot19 sim.py.",
+    "Model/schema modules excluded, including model.py from_dict helpers.",
+    "Inline exact ICM, side-pot accounting, input/output normalization, legal clamps, PRNG and position/reset boilerplate excluded consistently.",
+    "Missing-import fallback equity scaffolding excluded for bots9 and19; packaged duplicate copies and generated asset tables never scanned."
+  ],
+  "method": "Same v1 function-local alpha-normalized AST seven-token shingles, retaining constants/attribute names; excluded nested helper definitions replaced by Pass before normalization; fragments present in at least10 bots removed; identical functions within a bot deduplicated.",
+  "function_counts": {
+    "1": 5,
+    "2": 8,
+    "3": 2,
+    "4": 5,
+    "5": 8,
+    "6": 5,
+    "7": 6,
+    "8": 6,
+    "9": 6,
+    "10": 8,
+    "11": 8,
+    "12": 9,
+    "13": 11,
+    "14": 9,
+    "15": 8,
+    "16": 7,
+    "17": 9,
+    "18": 6,
+    "19": 8,
+    "20": 9
+  },
+  "audit": {
+    "1": {
+      "files": [
+        "pokerbot/agent.py"
+      ],
+      "source_sha256": {
+        "pokerbot/agent.py": "763cd4b4eccccdef45862f533716623d31217d3d699e0b4c6a2ae33f111be68b"
+      },
+      "included_functions": [
+        {
+          "file": "pokerbot/agent.py",
+          "function": "observe",
+          "line": 59,
+          "nodes": 383
+        },
+        {
+          "file": "pokerbot/agent.py",
+          "function": "act",
+          "line": 103,
+          "nodes": 113
+        },
+        {
+          "file": "pokerbot/agent.py",
+          "function": "_act",
+          "line": 118,
+          "nodes": 2243
+        },
+        {
+          "file": "pokerbot/agent.py",
+          "function": "_range",
+          "line": 267,
+          "nodes": 131
+        },
+        {
+          "file": "pokerbot/agent.py",
+          "function": "_preflop",
+          "line": 279,
+          "nodes": 1936
+        }
+      ],
+      "excluded_mechanical_functions": [
+        {
+          "file": "pokerbot/agent.py",
+          "function": "_pot_layers",
+          "line": 399,
+          "nodes": 316
+        },
+        {
+          "file": "pokerbot/agent.py",
+          "function": "_random",
+          "line": 426,
+          "nodes": 35
+        },
+        {
+          "file": "pokerbot/agent.py",
+          "function": "_finish",
+          "line": 431,
+          "nodes": 289
+        }
+      ],
+      "deduplicated_functions": []
+    },
+    "2": {
+      "files": [
+        "pokerbot/agent.py"
+      ],
+      "source_sha256": {
+        "pokerbot/agent.py": "80043db7d991d45917aa3273bacc0ba5779f49da1fa9312997d774d31b6e0059"
+      },
+      "included_functions": [
+        {
+          "file": "pokerbot/agent.py",
+          "function": "_observe",
+          "line": 26,
+          "nodes": 428
+        },
+        {
+          "file": "pokerbot/agent.py",
+          "function": "act",
+          "line": 61,
+          "nodes": 682
+        },
+        {
+          "file": "pokerbot/agent.py",
+          "function": "_range",
+          "line": 106,
+          "nodes": 360
+        },
+        {
+          "file": "pokerbot/agent.py",
+          "function": "_risk",
+          "line": 136,
+          "nodes": 297
+        },
+        {
+          "file": "pokerbot/agent.py",
+          "function": "_preflop",
+          "line": 154,
+          "nodes": 1314
+        },
+        {
+          "file": "pokerbot/agent.py",
+          "function": "_postflop",
+          "line": 253,
+          "nodes": 1213
+        },
+        {
+          "file": "pokerbot/agent.py",
+          "function": "_draws",
+          "line": 345,
+          "nodes": 143
+        },
+        {
+          "file": "pokerbot/agent.py",
+          "function": "_blocker",
+          "line": 358,
+          "nodes": 45
+        }
+      ],
+      "excluded_mechanical_functions": [],
+      "deduplicated_functions": []
+    },
+    "3": {
+      "files": [
+        "bot3/agent.py"
+      ],
+      "source_sha256": {
+        "bot3/agent.py": "f0bd7a42a46991ee7aac27921ba3faf69de36558371363068ac9063a54d966f0"
+      },
+      "included_functions": [
+        {
+          "file": "bot3/agent.py",
+          "function": "_observe",
+          "line": 44,
+          "nodes": 323
+        },
+        {
+          "file": "bot3/agent.py",
+          "function": "act",
+          "line": 77,
+          "nodes": 3792
+        }
+      ],
+      "excluded_mechanical_functions": [
+        {
+          "file": "bot3/agent.py",
+          "function": "_random",
+          "line": 36,
+          "nodes": 61
+        },
+        {
+          "file": "bot3/agent.py",
+          "function": "raising",
+          "line": 147,
+          "nodes": 82
+        }
+      ],
+      "deduplicated_functions": []
+    },
+    "4": {
+      "files": [
+        "bot/policy.py"
+      ],
+      "source_sha256": {
+        "bot/policy.py": "8f46df81e6068e5613f41746fcb1f8ef58effe949357e55e8e3b39e50623d777"
+      },
+      "included_functions": [
+        {
+          "file": "bot/policy.py",
+          "function": "_observe",
+          "line": 69,
+          "nodes": 297
+        },
+        {
+          "file": "bot/policy.py",
+          "function": "_range_equity",
+          "line": 115,
+          "nodes": 129
+        },
+        {
+          "file": "bot/policy.py",
+          "function": "decide",
+          "line": 123,
+          "nodes": 154
+        },
+        {
+          "file": "bot/policy.py",
+          "function": "_preflop",
+          "line": 137,
+          "nodes": 2023
+        },
+        {
+          "file": "bot/policy.py",
+          "function": "_postflop",
+          "line": 266,
+          "nodes": 2131
+        }
+      ],
+      "excluded_mechanical_functions": [
+        {
+          "file": "bot/policy.py",
+          "function": "_random",
+          "line": 61,
+          "nodes": 61
+        },
+        {
+          "file": "bot/policy.py",
+          "function": "_order",
+          "line": 107,
+          "nodes": 101
+        }
+      ],
+      "deduplicated_functions": []
+    },
+    "5": {
+      "files": [
+        "pokerbot/agent.py"
+      ],
+      "source_sha256": {
+        "pokerbot/agent.py": "9f6270cf1a8e7b44743e52efa7b3ba846e73fafea02688b4ef779c60874e9e17"
+      },
+      "included_functions": [
+        {
+          "file": "pokerbot/agent.py",
+          "function": "opening_score",
+          "line": 14,
+          "nodes": 171
+        },
+        {
+          "file": "pokerbot/agent.py",
+          "function": "board_features",
+          "line": 36,
+          "nodes": 472
+        },
+        {
+          "file": "pokerbot/agent.py",
+          "function": "_update",
+          "line": 104,
+          "nodes": 482
+        },
+        {
+          "file": "pokerbot/agent.py",
+          "function": "act",
+          "line": 149,
+          "nodes": 63
+        },
+        {
+          "file": "pokerbot/agent.py",
+          "function": "_act",
+          "line": 157,
+          "nodes": 598
+        },
+        {
+          "file": "pokerbot/agent.py",
+          "function": "_range_width",
+          "line": 192,
+          "nodes": 345
+        },
+        {
+          "file": "pokerbot/agent.py",
+          "function": "_preflop",
+          "line": 222,
+          "nodes": 1312
+        },
+        {
+          "file": "pokerbot/agent.py",
+          "function": "_postflop",
+          "line": 306,
+          "nodes": 1243
+        }
+      ],
+      "excluded_mechanical_functions": [],
+      "deduplicated_functions": []
+    },
+    "6": {
+      "files": [
+        "bot6/agent.py"
+      ],
+      "source_sha256": {
+        "bot6/agent.py": "0ae0c38989606b78dcd87fcd284be876bfe7e85ec6eac89a4efa5f2113d1708b"
+      },
+      "included_functions": [
+        {
+          "file": "bot6/agent.py",
+          "function": "act",
+          "line": 32,
+          "nodes": 104
+        },
+        {
+          "file": "bot6/agent.py",
+          "function": "_observe",
+          "line": 47,
+          "nodes": 277
+        },
+        {
+          "file": "bot6/agent.py",
+          "function": "_ranges",
+          "line": 94,
+          "nodes": 542
+        },
+        {
+          "file": "bot6/agent.py",
+          "function": "_preflop",
+          "line": 137,
+          "nodes": 1164
+        },
+        {
+          "file": "bot6/agent.py",
+          "function": "_postflop",
+          "line": 227,
+          "nodes": 1145
+        }
+      ],
+      "excluded_mechanical_functions": [
+        {
+          "file": "bot6/agent.py",
+          "function": "_position",
+          "line": 71,
+          "nodes": 175
+        },
+        {
+          "file": "bot6/agent.py",
+          "function": "_in_position",
+          "line": 89,
+          "nodes": 87
+        }
+      ],
+      "deduplicated_functions": []
+    },
+    "7": {
+      "files": [
+        "bot7/agent.py"
+      ],
+      "source_sha256": {
+        "bot7/agent.py": "b2ec03de893b1872c3264413babaadaea28bfae49e6edddee00ce4ed8aa6d525"
+      },
+      "included_functions": [
+        {
+          "file": "bot7/agent.py",
+          "function": "_observe",
+          "line": 56,
+          "nodes": 516
+        },
+        {
+          "file": "bot7/agent.py",
+          "function": "_risk",
+          "line": 118,
+          "nodes": 202
+        },
+        {
+          "file": "bot7/agent.py",
+          "function": "_preflop",
+          "line": 158,
+          "nodes": 1390
+        },
+        {
+          "file": "bot7/agent.py",
+          "function": "_postflop",
+          "line": 251,
+          "nodes": 1003
+        },
+        {
+          "file": "bot7/agent.py",
+          "function": "act",
+          "line": 332,
+          "nodes": 209
+        },
+        {
+          "file": "bot7/agent.py",
+          "function": "group_equity",
+          "line": 220,
+          "nodes": 45
+        }
+      ],
+      "excluded_mechanical_functions": [
+        {
+          "file": "bot7/agent.py",
+          "function": "_position",
+          "line": 110,
+          "nodes": 210
+        },
+        {
+          "file": "bot7/agent.py",
+          "function": "_eligible_pot",
+          "line": 133,
+          "nodes": 53
+        },
+        {
+          "file": "bot7/agent.py",
+          "function": "_pot_groups",
+          "line": 140,
+          "nodes": 251
+        }
+      ],
+      "deduplicated_functions": []
+    },
+    "8": {
+      "files": [
+        "kestrel/policy.py"
+      ],
+      "source_sha256": {
+        "kestrel/policy.py": "2e6c1c606249c5c26666eb8606c3edfbedb86dac8f09d045c58ccd4f61895262"
+      },
+      "included_functions": [
+        {
+          "file": "kestrel/policy.py",
+          "function": "_observe",
+          "line": 103,
+          "nodes": 343
+        },
+        {
+          "file": "kestrel/policy.py",
+          "function": "_ranges",
+          "line": 139,
+          "nodes": 553
+        },
+        {
+          "file": "kestrel/policy.py",
+          "function": "_risk",
+          "line": 184,
+          "nodes": 300
+        },
+        {
+          "file": "kestrel/policy.py",
+          "function": "act",
+          "line": 200,
+          "nodes": 205
+        },
+        {
+          "file": "kestrel/policy.py",
+          "function": "_preflop",
+          "line": 216,
+          "nodes": 1399
+        },
+        {
+          "file": "kestrel/policy.py",
+          "function": "_postflop",
+          "line": 307,
+          "nodes": 1296
+        }
+      ],
+      "excluded_mechanical_functions": [
+        {
+          "file": "kestrel/policy.py",
+          "function": "_mix",
+          "line": 45,
+          "nodes": 56
+        },
+        {
+          "file": "kestrel/policy.py",
+          "function": "_seed",
+          "line": 53,
+          "nodes": 74
+        },
+        {
+          "file": "kestrel/policy.py",
+          "function": "_pre_order",
+          "line": 60,
+          "nodes": 91
+        },
+        {
+          "file": "kestrel/policy.py",
+          "function": "_in_position",
+          "line": 69,
+          "nodes": 85
+        }
+      ],
+      "deduplicated_functions": []
+    },
+    "9": {
+      "files": [
+        "bot.py"
+      ],
+      "source_sha256": {
+        "bot.py": "eb401fd4b4708aba2770d0915b22f2e1f8237240949112239956714a98b15132"
+      },
+      "included_functions": [
+        {
+          "file": "bot.py",
+          "function": "act",
+          "line": 97,
+          "nodes": 70
+        },
+        {
+          "file": "bot.py",
+          "function": "_observe",
+          "line": 112,
+          "nodes": 246
+        },
+        {
+          "file": "bot.py",
+          "function": "_rates",
+          "line": 141,
+          "nodes": 84
+        },
+        {
+          "file": "bot.py",
+          "function": "_risk",
+          "line": 148,
+          "nodes": 604
+        },
+        {
+          "file": "bot.py",
+          "function": "_preflop",
+          "line": 200,
+          "nodes": 1859
+        },
+        {
+          "file": "bot.py",
+          "function": "_postflop",
+          "line": 326,
+          "nodes": 1489
+        }
+      ],
+      "excluded_mechanical_functions": [
+        {
+          "file": "bot.py",
+          "function": "_icm_hero",
+          "line": 34,
+          "nodes": 334
+        },
+        {
+          "file": "bot.py",
+          "function": "_random",
+          "line": 76,
+          "nodes": 61
+        },
+        {
+          "file": "bot.py",
+          "function": "_raise",
+          "line": 90,
+          "nodes": 63
+        },
+        {
+          "file": "bot.py",
+          "function": "preflop_equity",
+          "line": 14,
+          "nodes": 112
+        }
+      ],
+      "deduplicated_functions": []
+    },
+    "10": {
+      "files": [
+        "agent.py"
+      ],
+      "source_sha256": {
+        "agent.py": "2000f58dcf218a5f9dc0bc47c4af765b43e4a81a30cf3c1a3298ba74ee81566d"
+      },
+      "included_functions": [
+        {
+          "file": "agent.py",
+          "function": "_observe",
+          "line": 49,
+          "nodes": 314
+        },
+        {
+          "file": "agent.py",
+          "function": "_style",
+          "line": 79,
+          "nodes": 109
+        },
+        {
+          "file": "agent.py",
+          "function": "act",
+          "line": 94,
+          "nodes": 77
+        },
+        {
+          "file": "agent.py",
+          "function": "_act",
+          "line": 105,
+          "nodes": 296
+        },
+        {
+          "file": "agent.py",
+          "function": "_risk_threshold",
+          "line": 122,
+          "nodes": 357
+        },
+        {
+          "file": "agent.py",
+          "function": "_preflop",
+          "line": 152,
+          "nodes": 1717
+        },
+        {
+          "file": "agent.py",
+          "function": "_postflop",
+          "line": 250,
+          "nodes": 1648
+        },
+        {
+          "file": "agent.py",
+          "function": "u",
+          "line": 139,
+          "nodes": 61
+        }
+      ],
+      "excluded_mechanical_functions": [
+        {
+          "file": "agent.py",
+          "function": "_percentiles",
+          "line": 14,
+          "nodes": 88
+        },
+        {
+          "file": "agent.py",
+          "function": "_raise",
+          "line": 88,
+          "nodes": 60
+        },
+        {
+          "file": "agent.py",
+          "function": "_eligible_pot",
+          "line": 147,
+          "nodes": 74
+        }
+      ],
+      "deduplicated_functions": []
+    },
+    "11": {
+      "files": [
+        "pokerbot/agent.py"
+      ],
+      "source_sha256": {
+        "pokerbot/agent.py": "220ed4a6886b99d4c1f8246973e7801dbec36c2e97c6d3303d9b07364ee82aca"
+      },
+      "included_functions": [
+        {
+          "file": "pokerbot/agent.py",
+          "function": "_lerp_range",
+          "line": 25,
+          "nodes": 105
+        },
+        {
+          "file": "pokerbot/agent.py",
+          "function": "act",
+          "line": 70,
+          "nodes": 68
+        },
+        {
+          "file": "pokerbot/agent.py",
+          "function": "_observe",
+          "line": 81,
+          "nodes": 314
+        },
+        {
+          "file": "pokerbot/agent.py",
+          "function": "_act",
+          "line": 110,
+          "nodes": 534
+        },
+        {
+          "file": "pokerbot/agent.py",
+          "function": "_pf_fraction",
+          "line": 171,
+          "nodes": 407
+        },
+        {
+          "file": "pokerbot/agent.py",
+          "function": "_preflop",
+          "line": 199,
+          "nodes": 1646
+        },
+        {
+          "file": "pokerbot/agent.py",
+          "function": "_postflop",
+          "line": 304,
+          "nodes": 2011
+        },
+        {
+          "file": "pokerbot/agent.py",
+          "function": "_multi_equity",
+          "line": 433,
+          "nodes": 161
+        }
+      ],
+      "excluded_mechanical_functions": [
+        {
+          "file": "pokerbot/agent.py",
+          "function": "_random",
+          "line": 51,
+          "nodes": 61
+        },
+        {
+          "file": "pokerbot/agent.py",
+          "function": "_legalize",
+          "line": 154,
+          "nodes": 176
+        }
+      ],
+      "deduplicated_functions": []
+    },
+    "12": {
+      "files": [
+        "agent.py"
+      ],
+      "source_sha256": {
+        "agent.py": "ec197171b4c7654b27333b1fc446be9dd42054d223f71030067de513eef90a35"
+      },
+      "included_functions": [
+        {
+          "file": "agent.py",
+          "function": "_range_equity",
+          "line": 24,
+          "nodes": 214
+        },
+        {
+          "file": "agent.py",
+          "function": "_multiway_equity",
+          "line": 40,
+          "nodes": 137
+        },
+        {
+          "file": "agent.py",
+          "function": "_playability",
+          "line": 58,
+          "nodes": 155
+        },
+        {
+          "file": "agent.py",
+          "function": "_observe",
+          "line": 115,
+          "nodes": 359
+        },
+        {
+          "file": "agent.py",
+          "function": "_profile",
+          "line": 155,
+          "nodes": 94
+        },
+        {
+          "file": "agent.py",
+          "function": "act",
+          "line": 162,
+          "nodes": 98
+        },
+        {
+          "file": "agent.py",
+          "function": "_threshold",
+          "line": 203,
+          "nodes": 135
+        },
+        {
+          "file": "agent.py",
+          "function": "_preflop",
+          "line": 226,
+          "nodes": 1611
+        },
+        {
+          "file": "agent.py",
+          "function": "_postflop",
+          "line": 325,
+          "nodes": 1600
+        }
+      ],
+      "excluded_mechanical_functions": [
+        {
+          "file": "agent.py",
+          "function": "_random",
+          "line": 107,
+          "nodes": 61
+        },
+        {
+          "file": "agent.py",
+          "function": "_legal",
+          "line": 175,
+          "nodes": 123
+        },
+        {
+          "file": "agent.py",
+          "function": "_raise",
+          "line": 190,
+          "nodes": 55
+        },
+        {
+          "file": "agent.py",
+          "function": "_eligible_pot",
+          "line": 199,
+          "nodes": 44
+        },
+        {
+          "file": "agent.py",
+          "function": "_position",
+          "line": 212,
+          "nodes": 298
+        }
+      ],
+      "deduplicated_functions": []
+    },
+    "13": {
+      "files": [
+        "bot13/agent.py"
+      ],
+      "source_sha256": {
+        "bot13/agent.py": "f40ec33eead637ff4c92784a59e075245ce2bead2dd94becfed749fcbecbc9ab"
+      },
+      "included_functions": [
+        {
+          "file": "bot13/agent.py",
+          "function": "_approx_preflop",
+          "line": 37,
+          "nodes": 119
+        },
+        {
+          "file": "bot13/agent.py",
+          "function": "_update",
+          "line": 171,
+          "nodes": 960
+        },
+        {
+          "file": "bot13/agent.py",
+          "function": "act",
+          "line": 255,
+          "nodes": 46
+        },
+        {
+          "file": "bot13/agent.py",
+          "function": "_act",
+          "line": 266,
+          "nodes": 241
+        },
+        {
+          "file": "bot13/agent.py",
+          "function": "_preflop_vs_range",
+          "line": 294,
+          "nodes": 243
+        },
+        {
+          "file": "bot13/agent.py",
+          "function": "_preflop",
+          "line": 311,
+          "nodes": 1797
+        },
+        {
+          "file": "bot13/agent.py",
+          "function": "_short_hu",
+          "line": 416,
+          "nodes": 391
+        },
+        {
+          "file": "bot13/agent.py",
+          "function": "_equity",
+          "line": 447,
+          "nodes": 608
+        },
+        {
+          "file": "bot13/agent.py",
+          "function": "_risk_premium",
+          "line": 496,
+          "nodes": 712
+        },
+        {
+          "file": "bot13/agent.py",
+          "function": "_pot_equity",
+          "line": 542,
+          "nodes": 224
+        },
+        {
+          "file": "bot13/agent.py",
+          "function": "_postflop",
+          "line": 562,
+          "nodes": 919
+        }
+      ],
+      "excluded_mechanical_functions": [
+        {
+          "file": "bot13/agent.py",
+          "function": "_starting_tables",
+          "line": 48,
+          "nodes": 347
+        },
+        {
+          "file": "bot13/agent.py",
+          "function": "reset_hand",
+          "line": 101,
+          "nodes": 49
+        },
+        {
+          "file": "bot13/agent.py",
+          "function": "_random",
+          "line": 163,
+          "nodes": 88
+        },
+        {
+          "file": "bot13/agent.py",
+          "function": "_position",
+          "line": 281,
+          "nodes": 154
+        },
+        {
+          "file": "bot13/agent.py",
+          "function": "_raise",
+          "line": 289,
+          "nodes": 40
+        }
+      ],
+      "deduplicated_functions": []
+    },
+    "14": {
+      "files": [
+        "pokerbot/strategy.py"
+      ],
+      "source_sha256": {
+        "pokerbot/strategy.py": "8a29361b2dcb45e59301ed1a805bfebcf692f7dbb82d488c20432a379413d941"
+      },
+      "included_functions": [
+        {
+          "file": "pokerbot/strategy.py",
+          "function": "_observe",
+          "line": 68,
+          "nodes": 268
+        },
+        {
+          "file": "pokerbot/strategy.py",
+          "function": "_looseness",
+          "line": 91,
+          "nodes": 48
+        },
+        {
+          "file": "pokerbot/strategy.py",
+          "function": "_opening_fraction",
+          "line": 114,
+          "nodes": 194
+        },
+        {
+          "file": "pokerbot/strategy.py",
+          "function": "_ranges",
+          "line": 128,
+          "nodes": 519
+        },
+        {
+          "file": "pokerbot/strategy.py",
+          "function": "_equity",
+          "line": 172,
+          "nodes": 401
+        },
+        {
+          "file": "pokerbot/strategy.py",
+          "function": "decide",
+          "line": 205,
+          "nodes": 167
+        },
+        {
+          "file": "pokerbot/strategy.py",
+          "function": "_preflop",
+          "line": 227,
+          "nodes": 1488
+        },
+        {
+          "file": "pokerbot/strategy.py",
+          "function": "_shove_ev",
+          "line": 312,
+          "nodes": 764
+        },
+        {
+          "file": "pokerbot/strategy.py",
+          "function": "_postflop",
+          "line": 367,
+          "nodes": 1647
+        }
+      ],
+      "excluded_mechanical_functions": [
+        {
+          "file": "pokerbot/strategy.py",
+          "function": "_random",
+          "line": 61,
+          "nodes": 83
+        },
+        {
+          "file": "pokerbot/strategy.py",
+          "function": "_live",
+          "line": 98,
+          "nodes": 48
+        },
+        {
+          "file": "pokerbot/strategy.py",
+          "function": "_in_position",
+          "line": 103,
+          "nodes": 91
+        },
+        {
+          "file": "pokerbot/strategy.py",
+          "function": "_eligible_pot",
+          "line": 109,
+          "nodes": 56
+        }
+      ],
+      "deduplicated_functions": []
+    },
+    "15": {
+      "files": [
+        "bot/agent.py"
+      ],
+      "source_sha256": {
+        "bot/agent.py": "a61653c7c76195b44c839b9004e06cb2bcba3a7c9f8389d879267f32dbd97136"
+      },
+      "included_functions": [
+        {
+          "file": "bot/agent.py",
+          "function": "_observe",
+          "line": 70,
+          "nodes": 265
+        },
+        {
+          "file": "bot/agent.py",
+          "function": "_profile",
+          "line": 100,
+          "nodes": 106
+        },
+        {
+          "file": "bot/agent.py",
+          "function": "_pot_equity",
+          "line": 131,
+          "nodes": 236
+        },
+        {
+          "file": "bot/agent.py",
+          "function": "_texture",
+          "line": 156,
+          "nodes": 292
+        },
+        {
+          "file": "bot/agent.py",
+          "function": "_risk_threshold",
+          "line": 175,
+          "nodes": 405
+        },
+        {
+          "file": "bot/agent.py",
+          "function": "act",
+          "line": 216,
+          "nodes": 61
+        },
+        {
+          "file": "bot/agent.py",
+          "function": "_act",
+          "line": 225,
+          "nodes": 1502
+        },
+        {
+          "file": "bot/agent.py",
+          "function": "_preflop",
+          "line": 331,
+          "nodes": 1549
+        }
+      ],
+      "excluded_mechanical_functions": [
+        {
+          "file": "bot/agent.py",
+          "function": "selected_config",
+          "line": 29,
+          "nodes": 155
+        },
+        {
+          "file": "bot/agent.py",
+          "function": "_position",
+          "line": 112,
+          "nodes": 234
+        }
+      ],
+      "deduplicated_functions": []
+    },
+    "16": {
+      "files": [
+        "bot/policy.py"
+      ],
+      "source_sha256": {
+        "bot/policy.py": "3b40c7afd3e89c86eebcaee0966dff3527090fd965abdfa27fdc9a926d9c386d"
+      },
+      "included_functions": [
+        {
+          "file": "bot/policy.py",
+          "function": "act",
+          "line": 84,
+          "nodes": 79
+        },
+        {
+          "file": "bot/policy.py",
+          "function": "_observe",
+          "line": 95,
+          "nodes": 386
+        },
+        {
+          "file": "bot/policy.py",
+          "function": "_range",
+          "line": 157,
+          "nodes": 334
+        },
+        {
+          "file": "bot/policy.py",
+          "function": "_pressure",
+          "line": 181,
+          "nodes": 171
+        },
+        {
+          "file": "bot/policy.py",
+          "function": "_act",
+          "line": 201,
+          "nodes": 331
+        },
+        {
+          "file": "bot/policy.py",
+          "function": "_preflop",
+          "line": 226,
+          "nodes": 1281
+        },
+        {
+          "file": "bot/policy.py",
+          "function": "_postflop",
+          "line": 310,
+          "nodes": 1209
+        }
+      ],
+      "excluded_mechanical_functions": [
+        {
+          "file": "bot/policy.py",
+          "function": "normalize",
+          "line": 28,
+          "nodes": 244
+        },
+        {
+          "file": "bot/policy.py",
+          "function": "_position",
+          "line": 143,
+          "nodes": 243
+        }
+      ],
+      "deduplicated_functions": []
+    },
+    "17": {
+      "files": [
+        "agent.py"
+      ],
+      "source_sha256": {
+        "agent.py": "0c0dd6af1a3975223c15eb96d315c061a4cd429a016319ff1999f20fc28aab2c"
+      },
+      "included_functions": [
+        {
+          "file": "agent.py",
+          "function": "_pre_score",
+          "line": 16,
+          "nodes": 149
+        },
+        {
+          "file": "agent.py",
+          "function": "percentile",
+          "line": 44,
+          "nodes": 67
+        },
+        {
+          "file": "agent.py",
+          "function": "_texture",
+          "line": 50,
+          "nodes": 395
+        },
+        {
+          "file": "agent.py",
+          "function": "_observe",
+          "line": 95,
+          "nodes": 294
+        },
+        {
+          "file": "agent.py",
+          "function": "_style",
+          "line": 123,
+          "nodes": 97
+        },
+        {
+          "file": "agent.py",
+          "function": "act",
+          "line": 132,
+          "nodes": 395
+        },
+        {
+          "file": "agent.py",
+          "function": "_risk",
+          "line": 214,
+          "nodes": 149
+        },
+        {
+          "file": "agent.py",
+          "function": "_preflop",
+          "line": 223,
+          "nodes": 1505
+        },
+        {
+          "file": "agent.py",
+          "function": "_postflop",
+          "line": 317,
+          "nodes": 1432
+        }
+      ],
+      "excluded_mechanical_functions": [
+        {
+          "file": "agent.py",
+          "function": "_legalize",
+          "line": 167,
+          "nodes": 130
+        },
+        {
+          "file": "agent.py",
+          "function": "_raise",
+          "line": 179,
+          "nodes": 48
+        },
+        {
+          "file": "agent.py",
+          "function": "_eligible",
+          "line": 185,
+          "nodes": 44
+        },
+        {
+          "file": "agent.py",
+          "function": "_pot_layers",
+          "line": 190,
+          "nodes": 257
+        }
+      ],
+      "deduplicated_functions": []
+    },
+    "18": {
+      "files": [
+        "agent.py"
+      ],
+      "source_sha256": {
+        "agent.py": "66a969bb484f4c16adf8f7aeccca224bf516ba9f51ec022ad20a4077a533e224"
+      },
+      "included_functions": [
+        {
+          "file": "agent.py",
+          "function": "_stat",
+          "line": 41,
+          "nodes": 40
+        },
+        {
+          "file": "agent.py",
+          "function": "_learn",
+          "line": 47,
+          "nodes": 299
+        },
+        {
+          "file": "agent.py",
+          "function": "_profile",
+          "line": 79,
+          "nodes": 151
+        },
+        {
+          "file": "agent.py",
+          "function": "act",
+          "line": 104,
+          "nodes": 85
+        },
+        {
+          "file": "agent.py",
+          "function": "_preflop",
+          "line": 116,
+          "nodes": 2247
+        },
+        {
+          "file": "agent.py",
+          "function": "_postflop",
+          "line": 255,
+          "nodes": 1628
+        }
+      ],
+      "excluded_mechanical_functions": [
+        {
+          "file": "agent.py",
+          "function": "_raise",
+          "line": 96,
+          "nodes": 71
+        }
+      ],
+      "deduplicated_functions": []
+    },
+    "19": {
+      "files": [
+        "agent.py"
+      ],
+      "source_sha256": {
+        "agent.py": "4ed889524f4dfaa29b7f1a01501750fe85b482af85141c7c8b10f9e403da0e00"
+      },
+      "included_functions": [
+        {
+          "file": "agent.py",
+          "function": "_learn",
+          "line": 86,
+          "nodes": 426
+        },
+        {
+          "file": "agent.py",
+          "function": "_profile",
+          "line": 133,
+          "nodes": 118
+        },
+        {
+          "file": "agent.py",
+          "function": "_ranges",
+          "line": 143,
+          "nodes": 374
+        },
+        {
+          "file": "agent.py",
+          "function": "act",
+          "line": 176,
+          "nodes": 118
+        },
+        {
+          "file": "agent.py",
+          "function": "_decide",
+          "line": 208,
+          "nodes": 283
+        },
+        {
+          "file": "agent.py",
+          "function": "_preflop",
+          "line": 229,
+          "nodes": 1240
+        },
+        {
+          "file": "agent.py",
+          "function": "_push_ev",
+          "line": 331,
+          "nodes": 721
+        },
+        {
+          "file": "agent.py",
+          "function": "_postflop",
+          "line": 394,
+          "nodes": 1473
+        }
+      ],
+      "excluded_mechanical_functions": [
+        {
+          "file": "agent.py",
+          "function": "_legalize",
+          "line": 191,
+          "nodes": 157
+        },
+        {
+          "file": "agent.py",
+          "function": "preflop_equity",
+          "line": 16,
+          "nodes": 123
+        },
+        {
+          "file": "agent.py",
+          "function": "predict_from_features",
+          "line": 27,
+          "nodes": 121
+        }
+      ],
+      "deduplicated_functions": []
+    },
+    "20": {
+      "files": [
+        "pokerbot/policy.py"
+      ],
+      "source_sha256": {
+        "pokerbot/policy.py": "3388054057dac6692013b9606d3442a0756fe4e24ab705ef9fac648d28768876"
+      },
+      "included_functions": [
+        {
+          "file": "pokerbot/policy.py",
+          "function": "act",
+          "line": 78,
+          "nodes": 81
+        },
+        {
+          "file": "pokerbot/policy.py",
+          "function": "_observe",
+          "line": 92,
+          "nodes": 308
+        },
+        {
+          "file": "pokerbot/policy.py",
+          "function": "_ranges",
+          "line": 149,
+          "nodes": 731
+        },
+        {
+          "file": "pokerbot/policy.py",
+          "function": "_risk_premium",
+          "line": 217,
+          "nodes": 405
+        },
+        {
+          "file": "pokerbot/policy.py",
+          "function": "_call_threshold",
+          "line": 242,
+          "nodes": 415
+        },
+        {
+          "file": "pokerbot/policy.py",
+          "function": "_raise_is_safe",
+          "line": 272,
+          "nodes": 266
+        },
+        {
+          "file": "pokerbot/policy.py",
+          "function": "_preflop",
+          "line": 298,
+          "nodes": 1627
+        },
+        {
+          "file": "pokerbot/policy.py",
+          "function": "_postflop",
+          "line": 407,
+          "nodes": 1203
+        },
+        {
+          "file": "pokerbot/policy.py",
+          "function": "_unbeatable_board",
+          "line": 493,
+          "nodes": 146
+        }
+      ],
+      "excluded_mechanical_functions": [
+        {
+          "file": "pokerbot/policy.py",
+          "function": "_live",
+          "line": 129,
+          "nodes": 39
+        },
+        {
+          "file": "pokerbot/policy.py",
+          "function": "_in_position",
+          "line": 133,
+          "nodes": 88
+        },
+        {
+          "file": "pokerbot/policy.py",
+          "function": "_behind",
+          "line": 140,
+          "nodes": 151
+        },
+        {
+          "file": "pokerbot/policy.py",
+          "function": "_eligible_pot",
+          "line": 213,
+          "nodes": 49
+        }
+      ],
+      "deduplicated_functions": []
+    }
+  },
+  "mechanical_function_exclusions": [
+    "_behind",
+    "_call",
+    "_clamp",
+    "_clip",
+    "_eligible",
+    "_eligible_pot",
+    "_finish",
+    "_icm_hero",
+    "_in_position",
+    "_legal",
+    "_legalize",
+    "_live",
+    "_mix",
+    "_order",
+    "_pass",
+    "_percentiles",
+    "_position",
+    "_pot_groups",
+    "_pot_layers",
+    "_pre_order",
+    "_raise",
+    "_random",
+    "_safe",
+    "_seed",
+    "_starting_tables",
+    "as_dict",
+    "calling",
+    "clamp",
+    "fallback",
+    "from_dict",
+    "legalize",
+    "load_assets",
+    "main",
+    "normalize",
+    "observation",
+    "passive",
+    "raising",
+    "reset",
+    "reset_hand",
+    "safe_action",
+    "selected_config",
+    "to_dict"
+  ],
+  "per_bot_function_exclusions": {
+    "9": [
+      "equity_vs_range",
+      "preflop_equity",
+      "preflop_percentile"
+    ],
+    "19": [
+      "multiway_equity",
+      "predict_from_features",
+      "preflop_equity",
+      "preflop_percentile"
+    ]
+  },
+  "pairs": [
+    {
+      "a": 7,
+      "b": 8,
+      "token_shingle_jaccard": 0.16191607284243864,
+      "shared_shingles": 409,
+      "union_shingles": 2526,
+      "exact_normalized_functions": [],
+      "strongest_function_matches": [
+        {
+          "score": 0.33695652173913043,
+          "shared_shingles": 62,
+          "a": {
+            "file": "bot7/agent.py",
+            "function": "_risk",
+            "line": 118,
+            "nodes": 202
+          },
+          "b": {
+            "file": "kestrel/policy.py",
+            "function": "_risk",
+            "line": 184,
+            "nodes": 300
+          }
+        },
+        {
+          "score": 0.30409356725146197,
+          "shared_shingles": 52,
+          "a": {
+            "file": "bot7/agent.py",
+            "function": "act",
+            "line": 332,
+            "nodes": 209
+          },
+          "b": {
+            "file": "kestrel/policy.py",
+            "function": "act",
+            "line": 200,
+            "nodes": 205
+          }
+        },
+        {
+          "score": 0.19021739130434784,
+          "shared_shingles": 35,
+          "a": {
+            "file": "bot7/agent.py",
+            "function": "_risk",
+            "line": 118,
+            "nodes": 202
+          },
+          "b": {
+            "file": "kestrel/policy.py",
+            "function": "act",
+            "line": 200,
+            "nodes": 205
+          }
+        },
+        {
+          "score": 0.15207373271889402,
+          "shared_shingles": 33,
+          "a": {
+            "file": "bot7/agent.py",
+            "function": "act",
+            "line": 332,
+            "nodes": 209
+          },
+          "b": {
+            "file": "kestrel/policy.py",
+            "function": "_risk",
+            "line": 184,
+            "nodes": 300
+          }
+        }
+      ]
+    },
+    {
+      "a": 4,
+      "b": 8,
+      "token_shingle_jaccard": 0.1614928496686432,
+      "shared_shingles": 463,
+      "union_shingles": 2867,
+      "exact_normalized_functions": [],
+      "strongest_function_matches": [
+        {
+          "score": 0.37142857142857144,
+          "shared_shingles": 52,
+          "a": {
+            "file": "bot/policy.py",
+            "function": "decide",
+            "line": 123,
+            "nodes": 154
+          },
+          "b": {
+            "file": "kestrel/policy.py",
+            "function": "act",
+            "line": 200,
+            "nodes": 205
+          }
+        },
+        {
+          "score": 0.2669172932330827,
+          "shared_shingles": 71,
+          "a": {
+            "file": "bot/policy.py",
+            "function": "_observe",
+            "line": 69,
+            "nodes": 297
+          },
+          "b": {
+            "file": "kestrel/policy.py",
+            "function": "_observe",
+            "line": 103,
+            "nodes": 343
+          }
+        },
+        {
+          "score": 0.17912657290895634,
+          "shared_shingles": 242,
+          "a": {
+            "file": "bot/policy.py",
+            "function": "_preflop",
+            "line": 137,
+            "nodes": 2023
+          },
+          "b": {
+            "file": "kestrel/policy.py",
+            "function": "_preflop",
+            "line": 216,
+            "nodes": 1399
+          }
+        },
+        {
+          "score": 0.1774193548387097,
+          "shared_shingles": 33,
+          "a": {
+            "file": "bot/policy.py",
+            "function": "decide",
+            "line": 123,
+            "nodes": 154
+          },
+          "b": {
+            "file": "kestrel/policy.py",
+            "function": "_risk",
+            "line": 184,
+            "nodes": 300
+          }
+        }
+      ]
+    },
+    {
+      "a": 2,
+      "b": 8,
+      "token_shingle_jaccard": 0.1575780368559609,
+      "shared_shingles": 419,
+      "union_shingles": 2659,
+      "exact_normalized_functions": [],
+      "strongest_function_matches": [
+        {
+          "score": 0.2383177570093458,
+          "shared_shingles": 51,
+          "a": {
+            "file": "pokerbot/agent.py",
+            "function": "_risk",
+            "line": 136,
+            "nodes": 297
+          },
+          "b": {
+            "file": "kestrel/policy.py",
+            "function": "_risk",
+            "line": 184,
+            "nodes": 300
+          }
+        },
+        {
+          "score": 0.21428571428571427,
+          "shared_shingles": 42,
+          "a": {
+            "file": "pokerbot/agent.py",
+            "function": "_risk",
+            "line": 136,
+            "nodes": 297
+          },
+          "b": {
+            "file": "kestrel/policy.py",
+            "function": "act",
+            "line": 200,
+            "nodes": 205
+          }
+        },
+        {
+          "score": 0.18361581920903955,
+          "shared_shingles": 65,
+          "a": {
+            "file": "pokerbot/agent.py",
+            "function": "act",
+            "line": 61,
+            "nodes": 682
+          },
+          "b": {
+            "file": "kestrel/policy.py",
+            "function": "act",
+            "line": 200,
+            "nodes": 205
+          }
+        },
+        {
+          "score": 0.1686746987951807,
+          "shared_shingles": 42,
+          "a": {
+            "file": "pokerbot/agent.py",
+            "function": "_observe",
+            "line": 26,
+            "nodes": 428
+          },
+          "b": {
+            "file": "kestrel/policy.py",
+            "function": "_risk",
+            "line": 184,
+            "nodes": 300
+          }
+        },
+        {
+          "score": 0.16707021791767554,
+          "shared_shingles": 69,
+          "a": {
+            "file": "pokerbot/agent.py",
+            "function": "_range",
+            "line": 106,
+            "nodes": 360
+          },
+          "b": {
+            "file": "kestrel/policy.py",
+            "function": "_ranges",
+            "line": 139,
+            "nodes": 553
+          }
+        }
+      ]
+    },
+    {
+      "a": 4,
+      "b": 7,
+      "token_shingle_jaccard": 0.15300751879699248,
+      "shared_shingles": 407,
+      "union_shingles": 2660,
+      "exact_normalized_functions": [],
+      "strongest_function_matches": [
+        {
+          "score": 0.5042016806722689,
+          "shared_shingles": 60,
+          "a": {
+            "file": "bot/policy.py",
+            "function": "decide",
+            "line": 123,
+            "nodes": 154
+          },
+          "b": {
+            "file": "bot7/agent.py",
+            "function": "act",
+            "line": 332,
+            "nodes": 209
+          }
+        },
+        {
+          "score": 0.2589928057553957,
+          "shared_shingles": 36,
+          "a": {
+            "file": "bot/policy.py",
+            "function": "decide",
+            "line": 123,
+            "nodes": 154
+          },
+          "b": {
+            "file": "bot7/agent.py",
+            "function": "_risk",
+            "line": 118,
+            "nodes": 202
+          }
+        },
+        {
+          "score": 0.1935483870967742,
+          "shared_shingles": 84,
+          "a": {
+            "file": "bot/policy.py",
+            "function": "_observe",
+            "line": 69,
+            "nodes": 297
+          },
+          "b": {
+            "file": "bot7/agent.py",
+            "function": "_observe",
+            "line": 56,
+            "nodes": 516
+          }
+        },
+        {
+          "score": 0.17410714285714285,
+          "shared_shingles": 39,
+          "a": {
+            "file": "bot/policy.py",
+            "function": "_observe",
+            "line": 69,
+            "nodes": 297
+          },
+          "b": {
+            "file": "bot7/agent.py",
+            "function": "_risk",
+            "line": 118,
+            "nodes": 202
+          }
+        }
+      ]
+    },
+    {
+      "a": 1,
+      "b": 3,
+      "token_shingle_jaccard": 0.15029552490852802,
+      "shared_shingles": 534,
+      "union_shingles": 3553,
+      "exact_normalized_functions": [],
+      "strongest_function_matches": []
+    },
+    {
+      "a": 1,
+      "b": 11,
+      "token_shingle_jaccard": 0.1493045699687766,
+      "shared_shingles": 526,
+      "union_shingles": 3523,
+      "exact_normalized_functions": [],
+      "strongest_function_matches": [
+        {
+          "score": 0.2222222222222222,
+          "shared_shingles": 32,
+          "a": {
+            "file": "pokerbot/agent.py",
+            "function": "act",
+            "line": 103,
+            "nodes": 113
+          },
+          "b": {
+            "file": "pokerbot/agent.py",
+            "function": "act",
+            "line": 70,
+            "nodes": 68
+          }
+        }
+      ]
+    },
+    {
+      "a": 6,
+      "b": 8,
+      "token_shingle_jaccard": 0.14113873295910184,
+      "shared_shingles": 352,
+      "union_shingles": 2494,
+      "exact_normalized_functions": [],
+      "strongest_function_matches": [
+        {
+          "score": 0.19298245614035087,
+          "shared_shingles": 33,
+          "a": {
+            "file": "bot6/agent.py",
+            "function": "act",
+            "line": 32,
+            "nodes": 104
+          },
+          "b": {
+            "file": "kestrel/policy.py",
+            "function": "act",
+            "line": 200,
+            "nodes": 205
+          }
+        },
+        {
+          "score": 0.16216216216216217,
+          "shared_shingles": 30,
+          "a": {
+            "file": "bot6/agent.py",
+            "function": "_observe",
+            "line": 47,
+            "nodes": 277
+          },
+          "b": {
+            "file": "kestrel/policy.py",
+            "function": "act",
+            "line": 200,
+            "nodes": 205
+          }
+        }
+      ]
+    },
+    {
+      "a": 15,
+      "b": 19,
+      "token_shingle_jaccard": 0.1400429799426934,
+      "shared_shingles": 391,
+      "union_shingles": 2792,
+      "exact_normalized_functions": [],
+      "strongest_function_matches": []
+    },
+    {
+      "a": 3,
+      "b": 11,
+      "token_shingle_jaccard": 0.1368124118476728,
+      "shared_shingles": 485,
+      "union_shingles": 3545,
+      "exact_normalized_functions": [],
+      "strongest_function_matches": []
+    },
+    {
+      "a": 6,
+      "b": 7,
+      "token_shingle_jaccard": 0.13339183852566916,
+      "shared_shingles": 304,
+      "union_shingles": 2279,
+      "exact_normalized_functions": [],
+      "strongest_function_matches": [
+        {
+          "score": 0.18633540372670807,
+          "shared_shingles": 30,
+          "a": {
+            "file": "bot6/agent.py",
+            "function": "act",
+            "line": 32,
+            "nodes": 104
+          },
+          "b": {
+            "file": "bot7/agent.py",
+            "function": "act",
+            "line": 332,
+            "nodes": 209
+          }
+        },
+        {
+          "score": 0.16091954022988506,
+          "shared_shingles": 28,
+          "a": {
+            "file": "bot6/agent.py",
+            "function": "_observe",
+            "line": 47,
+            "nodes": 277
+          },
+          "b": {
+            "file": "bot7/agent.py",
+            "function": "act",
+            "line": 332,
+            "nodes": 209
+          }
+        }
+      ]
+    },
+    {
+      "a": 2,
+      "b": 4,
+      "token_shingle_jaccard": 0.13147691223123018,
+      "shared_shingles": 373,
+      "union_shingles": 2837,
+      "exact_normalized_functions": [],
+      "strongest_function_matches": [
+        {
+          "score": 0.3472222222222222,
+          "shared_shingles": 50,
+          "a": {
+            "file": "pokerbot/agent.py",
+            "function": "_risk",
+            "line": 136,
+            "nodes": 297
+          },
+          "b": {
+            "file": "bot/policy.py",
+            "function": "decide",
+            "line": 123,
+            "nodes": 154
+          }
+        },
+        {
+          "score": 0.2571428571428571,
+          "shared_shingles": 63,
+          "a": {
+            "file": "pokerbot/agent.py",
+            "function": "_observe",
+            "line": 26,
+            "nodes": 428
+          },
+          "b": {
+            "file": "bot/policy.py",
+            "function": "_observe",
+            "line": 69,
+            "nodes": 297
+          }
+        },
+        {
+          "score": 0.1956521739130435,
+          "shared_shingles": 36,
+          "a": {
+            "file": "pokerbot/agent.py",
+            "function": "_observe",
+            "line": 26,
+            "nodes": 428
+          },
+          "b": {
+            "file": "bot/policy.py",
+            "function": "decide",
+            "line": 123,
+            "nodes": 154
+          }
+        },
+        {
+          "score": 0.19047619047619047,
+          "shared_shingles": 60,
+          "a": {
+            "file": "pokerbot/agent.py",
+            "function": "act",
+            "line": 61,
+            "nodes": 682
+          },
+          "b": {
+            "file": "bot/policy.py",
+            "function": "decide",
+            "line": 123,
+            "nodes": 154
+          }
+        }
+      ]
+    },
+    {
+      "a": 2,
+      "b": 6,
+      "token_shingle_jaccard": 0.12877846790890268,
+      "shared_shingles": 311,
+      "union_shingles": 2415,
+      "exact_normalized_functions": [],
+      "strongest_function_matches": []
+    },
+    {
+      "a": 16,
+      "b": 17,
+      "token_shingle_jaccard": 0.12234848484848485,
+      "shared_shingles": 323,
+      "union_shingles": 2640,
+      "exact_normalized_functions": [],
+      "strongest_function_matches": [
+        {
+          "score": 0.20350877192982456,
+          "shared_shingles": 58,
+          "a": {
+            "file": "bot/policy.py",
+            "function": "_act",
+            "line": 201,
+            "nodes": 331
+          },
+          "b": {
+            "file": "agent.py",
+            "function": "act",
+            "line": 132,
+            "nodes": 395
+          }
+        }
+      ]
+    },
+    {
+      "a": 10,
+      "b": 17,
+      "token_shingle_jaccard": 0.1218026796589525,
+      "shared_shingles": 300,
+      "union_shingles": 2463,
+      "exact_normalized_functions": [],
+      "strongest_function_matches": [
+        {
+          "score": 0.21818181818181817,
+          "shared_shingles": 48,
+          "a": {
+            "file": "agent.py",
+            "function": "_act",
+            "line": 105,
+            "nodes": 296
+          },
+          "b": {
+            "file": "agent.py",
+            "function": "act",
+            "line": 132,
+            "nodes": 395
+          }
+        }
+      ]
+    },
+    {
+      "a": 1,
+      "b": 5,
+      "token_shingle_jaccard": 0.11984799766150249,
+      "shared_shingles": 410,
+      "union_shingles": 3421,
+      "exact_normalized_functions": [],
+      "strongest_function_matches": []
+    },
+    {
+      "a": 4,
+      "b": 6,
+      "token_shingle_jaccard": 0.1182876455125798,
+      "shared_shingles": 315,
+      "union_shingles": 2663,
+      "exact_normalized_functions": [],
+      "strongest_function_matches": [
+        {
+          "score": 0.1958041958041958,
+          "shared_shingles": 28,
+          "a": {
+            "file": "bot/policy.py",
+            "function": "decide",
+            "line": 123,
+            "nodes": 154
+          },
+          "b": {
+            "file": "bot6/agent.py",
+            "function": "_observe",
+            "line": 47,
+            "nodes": 277
+          }
+        },
+        {
+          "score": 0.17647058823529413,
+          "shared_shingles": 24,
+          "a": {
+            "file": "bot/policy.py",
+            "function": "decide",
+            "line": 123,
+            "nodes": 154
+          },
+          "b": {
+            "file": "bot6/agent.py",
+            "function": "act",
+            "line": 32,
+            "nodes": 104
+          }
+        }
+      ]
+    },
+    {
+      "a": 2,
+      "b": 7,
+      "token_shingle_jaccard": 0.11750694720127035,
+      "shared_shingles": 296,
+      "union_shingles": 2519,
+      "exact_normalized_functions": [],
+      "strongest_function_matches": [
+        {
+          "score": 0.2857142857142857,
+          "shared_shingles": 50,
+          "a": {
+            "file": "pokerbot/agent.py",
+            "function": "_risk",
+            "line": 136,
+            "nodes": 297
+          },
+          "b": {
+            "file": "bot7/agent.py",
+            "function": "act",
+            "line": 332,
+            "nodes": 209
+          }
+        },
+        {
+          "score": 0.27011494252873564,
+          "shared_shingles": 47,
+          "a": {
+            "file": "pokerbot/agent.py",
+            "function": "_risk",
+            "line": 136,
+            "nodes": 297
+          },
+          "b": {
+            "file": "bot7/agent.py",
+            "function": "_risk",
+            "line": 118,
+            "nodes": 202
+          }
+        },
+        {
+          "score": 0.18181818181818182,
+          "shared_shingles": 38,
+          "a": {
+            "file": "pokerbot/agent.py",
+            "function": "_observe",
+            "line": 26,
+            "nodes": 428
+          },
+          "b": {
+            "file": "bot7/agent.py",
+            "function": "_risk",
+            "line": 118,
+            "nodes": 202
+          }
+        },
+        {
+          "score": 0.16744186046511628,
+          "shared_shingles": 36,
+          "a": {
+            "file": "pokerbot/agent.py",
+            "function": "_observe",
+            "line": 26,
+            "nodes": 428
+          },
+          "b": {
+            "file": "bot7/agent.py",
+            "function": "act",
+            "line": 332,
+            "nodes": 209
+          }
+        },
+        {
+          "score": 0.16332378223495703,
+          "shared_shingles": 57,
+          "a": {
+            "file": "pokerbot/agent.py",
+            "function": "act",
+            "line": 61,
+            "nodes": 682
+          },
+          "b": {
+            "file": "bot7/agent.py",
+            "function": "act",
+            "line": 332,
+            "nodes": 209
+          }
+        }
+      ]
+    },
+    {
+      "a": 12,
+      "b": 19,
+      "token_shingle_jaccard": 0.11600688468158347,
+      "shared_shingles": 337,
+      "union_shingles": 2905,
+      "exact_normalized_functions": [],
+      "strongest_function_matches": [
+        {
+          "score": 0.26153846153846155,
+          "shared_shingles": 34,
+          "a": {
+            "file": "agent.py",
+            "function": "act",
+            "line": 162,
+            "nodes": 98
+          },
+          "b": {
+            "file": "agent.py",
+            "function": "act",
+            "line": 176,
+            "nodes": 118
+          }
+        }
+      ]
+    },
+    {
+      "a": 11,
+      "b": 13,
+      "token_shingle_jaccard": 0.114990234375,
+      "shared_shingles": 471,
+      "union_shingles": 4096,
+      "exact_normalized_functions": [],
+      "strongest_function_matches": [
+        {
+          "score": 0.20903954802259886,
+          "shared_shingles": 37,
+          "a": {
+            "file": "pokerbot/agent.py",
+            "function": "_act",
+            "line": 110,
+            "nodes": 534
+          },
+          "b": {
+            "file": "bot13/agent.py",
+            "function": "_act",
+            "line": 266,
+            "nodes": 241
+          }
+        },
+        {
+          "score": 0.16494845360824742,
+          "shared_shingles": 16,
+          "a": {
+            "file": "pokerbot/agent.py",
+            "function": "act",
+            "line": 70,
+            "nodes": 68
+          },
+          "b": {
+            "file": "bot13/agent.py",
+            "function": "act",
+            "line": 255,
+            "nodes": 46
+          }
+        }
+      ]
+    },
+    {
+      "a": 11,
+      "b": 14,
+      "token_shingle_jaccard": 0.11467617349970291,
+      "shared_shingles": 386,
+      "union_shingles": 3366,
+      "exact_normalized_functions": [],
+      "strongest_function_matches": [
+        {
+          "score": 0.15853658536585366,
+          "shared_shingles": 26,
+          "a": {
+            "file": "pokerbot/agent.py",
+            "function": "_observe",
+            "line": 81,
+            "nodes": 314
+          },
+          "b": {
+            "file": "pokerbot/strategy.py",
+            "function": "_observe",
+            "line": 68,
+            "nodes": 268
+          }
+        }
+      ]
+    },
+    {
+      "a": 14,
+      "b": 19,
+      "token_shingle_jaccard": 0.11339198435972629,
+      "shared_shingles": 348,
+      "union_shingles": 3069,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 12,
+      "b": 16,
+      "token_shingle_jaccard": 0.10859403092412802,
+      "shared_shingles": 302,
+      "union_shingles": 2781,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 10,
+      "b": 16,
+      "token_shingle_jaccard": 0.108300395256917,
+      "shared_shingles": 274,
+      "union_shingles": 2530,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 11,
+      "b": 18,
+      "token_shingle_jaccard": 0.10749506903353057,
+      "shared_shingles": 327,
+      "union_shingles": 3042,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 12,
+      "b": 17,
+      "token_shingle_jaccard": 0.10738987986894795,
+      "shared_shingles": 295,
+      "union_shingles": 2747,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 11,
+      "b": 19,
+      "token_shingle_jaccard": 0.10717529518619437,
+      "shared_shingles": 354,
+      "union_shingles": 3303,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 11,
+      "b": 12,
+      "token_shingle_jaccard": 0.10640272193009588,
+      "shared_shingles": 344,
+      "union_shingles": 3233,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 11,
+      "b": 17,
+      "token_shingle_jaccard": 0.10447284345047923,
+      "shared_shingles": 327,
+      "union_shingles": 3130,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 15,
+      "b": 16,
+      "token_shingle_jaccard": 0.10405257393209201,
+      "shared_shingles": 285,
+      "union_shingles": 2739,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 2,
+      "b": 15,
+      "token_shingle_jaccard": 0.10290334435869165,
+      "shared_shingles": 280,
+      "union_shingles": 2721,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 13,
+      "b": 17,
+      "token_shingle_jaccard": 0.10254306808859721,
+      "shared_shingles": 375,
+      "union_shingles": 3657,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 15,
+      "b": 18,
+      "token_shingle_jaccard": 0.10243716679360244,
+      "shared_shingles": 269,
+      "union_shingles": 2626,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 10,
+      "b": 12,
+      "token_shingle_jaccard": 0.10164310278945357,
+      "shared_shingles": 266,
+      "union_shingles": 2617,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 12,
+      "b": 18,
+      "token_shingle_jaccard": 0.10100633619083116,
+      "shared_shingles": 271,
+      "union_shingles": 2683,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 11,
+      "b": 15,
+      "token_shingle_jaccard": 0.10040663121676571,
+      "shared_shingles": 321,
+      "union_shingles": 3197,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 5,
+      "b": 15,
+      "token_shingle_jaccard": 0.10036678892964321,
+      "shared_shingles": 301,
+      "union_shingles": 2999,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 13,
+      "b": 15,
+      "token_shingle_jaccard": 0.10026881720430107,
+      "shared_shingles": 373,
+      "union_shingles": 3720,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 19,
+      "b": 20,
+      "token_shingle_jaccard": 0.10023155805491234,
+      "shared_shingles": 303,
+      "union_shingles": 3023,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 1,
+      "b": 13,
+      "token_shingle_jaccard": 0.09964328180737217,
+      "shared_shingles": 419,
+      "union_shingles": 4205,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 12,
+      "b": 20,
+      "token_shingle_jaccard": 0.09922113105316627,
+      "shared_shingles": 293,
+      "union_shingles": 2953,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 12,
+      "b": 15,
+      "token_shingle_jaccard": 0.0991852639036486,
+      "shared_shingles": 280,
+      "union_shingles": 2823,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 5,
+      "b": 17,
+      "token_shingle_jaccard": 0.09871099050203527,
+      "shared_shingles": 291,
+      "union_shingles": 2948,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 3,
+      "b": 18,
+      "token_shingle_jaccard": 0.09867784585617542,
+      "shared_shingles": 306,
+      "union_shingles": 3101,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 17,
+      "b": 19,
+      "token_shingle_jaccard": 0.09697821503865074,
+      "shared_shingles": 276,
+      "union_shingles": 2846,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 13,
+      "b": 19,
+      "token_shingle_jaccard": 0.09694142042509073,
+      "shared_shingles": 374,
+      "union_shingles": 3858,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 13,
+      "b": 14,
+      "token_shingle_jaccard": 0.09627565239422346,
+      "shared_shingles": 380,
+      "union_shingles": 3947,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 16,
+      "b": 19,
+      "token_shingle_jaccard": 0.09598059598059598,
+      "shared_shingles": 277,
+      "union_shingles": 2886,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 1,
+      "b": 15,
+      "token_shingle_jaccard": 0.09595340282035561,
+      "shared_shingles": 313,
+      "union_shingles": 3262,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 1,
+      "b": 17,
+      "token_shingle_jaccard": 0.09402241594022416,
+      "shared_shingles": 302,
+      "union_shingles": 3212,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 11,
+      "b": 16,
+      "token_shingle_jaccard": 0.09380863039399624,
+      "shared_shingles": 300,
+      "union_shingles": 3198,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 2,
+      "b": 17,
+      "token_shingle_jaccard": 0.09375,
+      "shared_shingles": 252,
+      "union_shingles": 2688,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 15,
+      "b": 20,
+      "token_shingle_jaccard": 0.0936856554564173,
+      "shared_shingles": 273,
+      "union_shingles": 2914,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 5,
+      "b": 19,
+      "token_shingle_jaccard": 0.09348171701112877,
+      "shared_shingles": 294,
+      "union_shingles": 3145,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 9,
+      "b": 17,
+      "token_shingle_jaccard": 0.09330143540669857,
+      "shared_shingles": 234,
+      "union_shingles": 2508,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 9,
+      "b": 19,
+      "token_shingle_jaccard": 0.09286775631500743,
+      "shared_shingles": 250,
+      "union_shingles": 2692,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 9,
+      "b": 15,
+      "token_shingle_jaccard": 0.09278752436647174,
+      "shared_shingles": 238,
+      "union_shingles": 2565,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 2,
+      "b": 16,
+      "token_shingle_jaccard": 0.0923415170392085,
+      "shared_shingles": 252,
+      "union_shingles": 2729,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 5,
+      "b": 16,
+      "token_shingle_jaccard": 0.09224109224109224,
+      "shared_shingles": 277,
+      "union_shingles": 3003,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 17,
+      "b": 18,
+      "token_shingle_jaccard": 0.09210019267822736,
+      "shared_shingles": 239,
+      "union_shingles": 2595,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 4,
+      "b": 12,
+      "token_shingle_jaccard": 0.09198813056379822,
+      "shared_shingles": 279,
+      "union_shingles": 3033,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 4,
+      "b": 13,
+      "token_shingle_jaccard": 0.09160111646790155,
+      "shared_shingles": 361,
+      "union_shingles": 3941,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 1,
+      "b": 8,
+      "token_shingle_jaccard": 0.0908004778972521,
+      "shared_shingles": 304,
+      "union_shingles": 3348,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 15,
+      "b": 17,
+      "token_shingle_jaccard": 0.09027777777777778,
+      "shared_shingles": 247,
+      "union_shingles": 2736,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 2,
+      "b": 5,
+      "token_shingle_jaccard": 0.09002677376171352,
+      "shared_shingles": 269,
+      "union_shingles": 2988,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 4,
+      "b": 19,
+      "token_shingle_jaccard": 0.08997429305912596,
+      "shared_shingles": 280,
+      "union_shingles": 3112,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 9,
+      "b": 10,
+      "token_shingle_jaccard": 0.08987341772151898,
+      "shared_shingles": 213,
+      "union_shingles": 2370,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 9,
+      "b": 20,
+      "token_shingle_jaccard": 0.08909426987060998,
+      "shared_shingles": 241,
+      "union_shingles": 2705,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 3,
+      "b": 5,
+      "token_shingle_jaccard": 0.0885208452312964,
+      "shared_shingles": 310,
+      "union_shingles": 3502,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 13,
+      "b": 20,
+      "token_shingle_jaccard": 0.08838643371017471,
+      "shared_shingles": 344,
+      "union_shingles": 3892,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 14,
+      "b": 18,
+      "token_shingle_jaccard": 0.08834782608695652,
+      "shared_shingles": 254,
+      "union_shingles": 2875,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 1,
+      "b": 16,
+      "token_shingle_jaccard": 0.0881542699724518,
+      "shared_shingles": 288,
+      "union_shingles": 3267,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 1,
+      "b": 19,
+      "token_shingle_jaccard": 0.08787346221441125,
+      "shared_shingles": 300,
+      "union_shingles": 3414,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 9,
+      "b": 12,
+      "token_shingle_jaccard": 0.08697303456133688,
+      "shared_shingles": 229,
+      "union_shingles": 2633,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 3,
+      "b": 12,
+      "token_shingle_jaccard": 0.08689116055321708,
+      "shared_shingles": 289,
+      "union_shingles": 3326,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 4,
+      "b": 20,
+      "token_shingle_jaccard": 0.08672,
+      "shared_shingles": 271,
+      "union_shingles": 3125,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 10,
+      "b": 15,
+      "token_shingle_jaccard": 0.08615384615384615,
+      "shared_shingles": 224,
+      "union_shingles": 2600,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 13,
+      "b": 16,
+      "token_shingle_jaccard": 0.08613333333333334,
+      "shared_shingles": 323,
+      "union_shingles": 3750,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 5,
+      "b": 20,
+      "token_shingle_jaccard": 0.0861198738170347,
+      "shared_shingles": 273,
+      "union_shingles": 3170,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 10,
+      "b": 18,
+      "token_shingle_jaccard": 0.08607389362565976,
+      "shared_shingles": 212,
+      "union_shingles": 2463,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 1,
+      "b": 14,
+      "token_shingle_jaccard": 0.08580387685290763,
+      "shared_shingles": 301,
+      "union_shingles": 3508,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 1,
+      "b": 4,
+      "token_shingle_jaccard": 0.08579626972740316,
+      "shared_shingles": 299,
+      "union_shingles": 3485,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 4,
+      "b": 15,
+      "token_shingle_jaccard": 0.08578104138851803,
+      "shared_shingles": 257,
+      "union_shingles": 2996,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 10,
+      "b": 11,
+      "token_shingle_jaccard": 0.08558262014483213,
+      "shared_shingles": 260,
+      "union_shingles": 3038,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 9,
+      "b": 16,
+      "token_shingle_jaccard": 0.08499025341130605,
+      "shared_shingles": 218,
+      "union_shingles": 2565,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 5,
+      "b": 11,
+      "token_shingle_jaccard": 0.08479448117275079,
+      "shared_shingles": 295,
+      "union_shingles": 3479,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 1,
+      "b": 18,
+      "token_shingle_jaccard": 0.08452041785375118,
+      "shared_shingles": 267,
+      "union_shingles": 3159,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 5,
+      "b": 13,
+      "token_shingle_jaccard": 0.08426826227873348,
+      "shared_shingles": 338,
+      "union_shingles": 4011,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 14,
+      "b": 17,
+      "token_shingle_jaccard": 0.08426019548365352,
+      "shared_shingles": 250,
+      "union_shingles": 2967,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 18,
+      "b": 20,
+      "token_shingle_jaccard": 0.08345221112696148,
+      "shared_shingles": 234,
+      "union_shingles": 2804,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 5,
+      "b": 18,
+      "token_shingle_jaccard": 0.08319009969061533,
+      "shared_shingles": 242,
+      "union_shingles": 2909,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 2,
+      "b": 20,
+      "token_shingle_jaccard": 0.08227194492254733,
+      "shared_shingles": 239,
+      "union_shingles": 2905,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 14,
+      "b": 20,
+      "token_shingle_jaccard": 0.08225245175577349,
+      "shared_shingles": 260,
+      "union_shingles": 3161,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 7,
+      "b": 15,
+      "token_shingle_jaccard": 0.08216584627035214,
+      "shared_shingles": 217,
+      "union_shingles": 2641,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 9,
+      "b": 11,
+      "token_shingle_jaccard": 0.08187520633872565,
+      "shared_shingles": 248,
+      "union_shingles": 3029,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 14,
+      "b": 15,
+      "token_shingle_jaccard": 0.08184818481848184,
+      "shared_shingles": 248,
+      "union_shingles": 3030,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 4,
+      "b": 11,
+      "token_shingle_jaccard": 0.08091647331786543,
+      "shared_shingles": 279,
+      "union_shingles": 3448,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 9,
+      "b": 14,
+      "token_shingle_jaccard": 0.0807829181494662,
+      "shared_shingles": 227,
+      "union_shingles": 2810,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 3,
+      "b": 14,
+      "token_shingle_jaccard": 0.08038768529076397,
+      "shared_shingles": 282,
+      "union_shingles": 3508,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 12,
+      "b": 14,
+      "token_shingle_jaccard": 0.07993527508090614,
+      "shared_shingles": 247,
+      "union_shingles": 3090,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 3,
+      "b": 4,
+      "token_shingle_jaccard": 0.0794151376146789,
+      "shared_shingles": 277,
+      "union_shingles": 3488,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 4,
+      "b": 5,
+      "token_shingle_jaccard": 0.07936019686250384,
+      "shared_shingles": 258,
+      "union_shingles": 3251,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 4,
+      "b": 16,
+      "token_shingle_jaccard": 0.07910547396528705,
+      "shared_shingles": 237,
+      "union_shingles": 2996,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 12,
+      "b": 13,
+      "token_shingle_jaccard": 0.079002079002079,
+      "shared_shingles": 304,
+      "union_shingles": 3848,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 9,
+      "b": 13,
+      "token_shingle_jaccard": 0.07899159663865546,
+      "shared_shingles": 282,
+      "union_shingles": 3570,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 18,
+      "b": 19,
+      "token_shingle_jaccard": 0.07894736842105263,
+      "shared_shingles": 222,
+      "union_shingles": 2812,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 10,
+      "b": 13,
+      "token_shingle_jaccard": 0.0785296574770259,
+      "shared_shingles": 282,
+      "union_shingles": 3591,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 5,
+      "b": 12,
+      "token_shingle_jaccard": 0.07660256410256411,
+      "shared_shingles": 239,
+      "union_shingles": 3120,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 6,
+      "b": 20,
+      "token_shingle_jaccard": 0.07612712490761271,
+      "shared_shingles": 206,
+      "union_shingles": 2706,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 16,
+      "b": 18,
+      "token_shingle_jaccard": 0.07597305389221556,
+      "shared_shingles": 203,
+      "union_shingles": 2672,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 13,
+      "b": 18,
+      "token_shingle_jaccard": 0.07583196944899072,
+      "shared_shingles": 278,
+      "union_shingles": 3666,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 3,
+      "b": 10,
+      "token_shingle_jaccard": 0.07543520309477757,
+      "shared_shingles": 234,
+      "union_shingles": 3102,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 17,
+      "b": 20,
+      "token_shingle_jaccard": 0.07533539731682147,
+      "shared_shingles": 219,
+      "union_shingles": 2907,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 7,
+      "b": 13,
+      "token_shingle_jaccard": 0.07512383048981838,
+      "shared_shingles": 273,
+      "union_shingles": 3634,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 8,
+      "b": 13,
+      "token_shingle_jaccard": 0.07501933488012374,
+      "shared_shingles": 291,
+      "union_shingles": 3879,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 8,
+      "b": 15,
+      "token_shingle_jaccard": 0.07435456110154905,
+      "shared_shingles": 216,
+      "union_shingles": 2905,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 3,
+      "b": 17,
+      "token_shingle_jaccard": 0.07406269207129687,
+      "shared_shingles": 241,
+      "union_shingles": 3254,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 1,
+      "b": 2,
+      "token_shingle_jaccard": 0.0738826391000304,
+      "shared_shingles": 243,
+      "union_shingles": 3289,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 1,
+      "b": 10,
+      "token_shingle_jaccard": 0.0736,
+      "shared_shingles": 230,
+      "union_shingles": 3125,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 2,
+      "b": 11,
+      "token_shingle_jaccard": 0.07352486870559159,
+      "shared_shingles": 238,
+      "union_shingles": 3237,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 6,
+      "b": 13,
+      "token_shingle_jaccard": 0.0733764408209165,
+      "shared_shingles": 261,
+      "union_shingles": 3557,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 3,
+      "b": 15,
+      "token_shingle_jaccard": 0.07269984917043741,
+      "shared_shingles": 241,
+      "union_shingles": 3315,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 1,
+      "b": 12,
+      "token_shingle_jaccard": 0.07260920897284534,
+      "shared_shingles": 246,
+      "union_shingles": 3388,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 8,
+      "b": 20,
+      "token_shingle_jaccard": 0.07227332457293036,
+      "shared_shingles": 220,
+      "union_shingles": 3044,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 1,
+      "b": 7,
+      "token_shingle_jaccard": 0.07145115396775213,
+      "shared_shingles": 226,
+      "union_shingles": 3163,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 2,
+      "b": 12,
+      "token_shingle_jaccard": 0.07142857142857142,
+      "shared_shingles": 204,
+      "union_shingles": 2856,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 4,
+      "b": 18,
+      "token_shingle_jaccard": 0.07108350586611456,
+      "shared_shingles": 206,
+      "union_shingles": 2898,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 8,
+      "b": 12,
+      "token_shingle_jaccard": 0.07106769956214214,
+      "shared_shingles": 211,
+      "union_shingles": 2969,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 7,
+      "b": 20,
+      "token_shingle_jaccard": 0.07063860149839457,
+      "shared_shingles": 198,
+      "union_shingles": 2803,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 3,
+      "b": 13,
+      "token_shingle_jaccard": 0.07018359284220312,
+      "shared_shingles": 302,
+      "union_shingles": 4303,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 9,
+      "b": 18,
+      "token_shingle_jaccard": 0.0692989524576954,
+      "shared_shingles": 172,
+      "union_shingles": 2482,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 2,
+      "b": 10,
+      "token_shingle_jaccard": 0.06879323597232898,
+      "shared_shingles": 179,
+      "union_shingles": 2602,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 16,
+      "b": 20,
+      "token_shingle_jaccard": 0.0684885290148448,
+      "shared_shingles": 203,
+      "union_shingles": 2964,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 7,
+      "b": 10,
+      "token_shingle_jaccard": 0.0680161943319838,
+      "shared_shingles": 168,
+      "union_shingles": 2470,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 5,
+      "b": 8,
+      "token_shingle_jaccard": 0.06799493991144845,
+      "shared_shingles": 215,
+      "union_shingles": 3162,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 2,
+      "b": 19,
+      "token_shingle_jaccard": 0.06693849813115868,
+      "shared_shingles": 197,
+      "union_shingles": 2943,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 3,
+      "b": 7,
+      "token_shingle_jaccard": 0.06611831698829485,
+      "shared_shingles": 209,
+      "union_shingles": 3161,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 14,
+      "b": 16,
+      "token_shingle_jaccard": 0.06609947643979057,
+      "shared_shingles": 202,
+      "union_shingles": 3056,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 4,
+      "b": 9,
+      "token_shingle_jaccard": 0.06581740976645435,
+      "shared_shingles": 186,
+      "union_shingles": 2826,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 8,
+      "b": 17,
+      "token_shingle_jaccard": 0.0650887573964497,
+      "shared_shingles": 187,
+      "union_shingles": 2873,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 10,
+      "b": 19,
+      "token_shingle_jaccard": 0.06506110711718188,
+      "shared_shingles": 181,
+      "union_shingles": 2782,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 4,
+      "b": 14,
+      "token_shingle_jaccard": 0.06505803298717165,
+      "shared_shingles": 213,
+      "union_shingles": 3274,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 7,
+      "b": 16,
+      "token_shingle_jaccard": 0.06491557223264541,
+      "shared_shingles": 173,
+      "union_shingles": 2665,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 8,
+      "b": 11,
+      "token_shingle_jaccard": 0.0648696682464455,
+      "shared_shingles": 219,
+      "union_shingles": 3376,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 3,
+      "b": 19,
+      "token_shingle_jaccard": 0.06453471622010948,
+      "shared_shingles": 224,
+      "union_shingles": 3471,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 5,
+      "b": 10,
+      "token_shingle_jaccard": 0.06427090532135453,
+      "shared_shingles": 186,
+      "union_shingles": 2894,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 2,
+      "b": 9,
+      "token_shingle_jaccard": 0.06399383191981496,
+      "shared_shingles": 166,
+      "union_shingles": 2594,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 6,
+      "b": 9,
+      "token_shingle_jaccard": 0.06397306397306397,
+      "shared_shingles": 152,
+      "union_shingles": 2376,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 10,
+      "b": 14,
+      "token_shingle_jaccard": 0.06365217391304348,
+      "shared_shingles": 183,
+      "union_shingles": 2875,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 7,
+      "b": 17,
+      "token_shingle_jaccard": 0.0634980988593156,
+      "shared_shingles": 167,
+      "union_shingles": 2630,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 8,
+      "b": 16,
+      "token_shingle_jaccard": 0.06307850531367844,
+      "shared_shingles": 184,
+      "union_shingles": 2917,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 10,
+      "b": 20,
+      "token_shingle_jaccard": 0.06305983518452167,
+      "shared_shingles": 176,
+      "union_shingles": 2791,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 2,
+      "b": 13,
+      "token_shingle_jaccard": 0.06299212598425197,
+      "shared_shingles": 240,
+      "union_shingles": 3810,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 2,
+      "b": 3,
+      "token_shingle_jaccard": 0.06293494704992436,
+      "shared_shingles": 208,
+      "union_shingles": 3305,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 3,
+      "b": 20,
+      "token_shingle_jaccard": 0.06293103448275862,
+      "shared_shingles": 219,
+      "union_shingles": 3480,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 6,
+      "b": 12,
+      "token_shingle_jaccard": 0.06275836151822622,
+      "shared_shingles": 167,
+      "union_shingles": 2661,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 1,
+      "b": 20,
+      "token_shingle_jaccard": 0.0625893112317805,
+      "shared_shingles": 219,
+      "union_shingles": 3499,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 3,
+      "b": 8,
+      "token_shingle_jaccard": 0.062280701754385964,
+      "shared_shingles": 213,
+      "union_shingles": 3420,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 8,
+      "b": 14,
+      "token_shingle_jaccard": 0.061708860759493674,
+      "shared_shingles": 195,
+      "union_shingles": 3160,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 7,
+      "b": 18,
+      "token_shingle_jaccard": 0.06152037617554859,
+      "shared_shingles": 157,
+      "union_shingles": 2552,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 6,
+      "b": 18,
+      "token_shingle_jaccard": 0.06115836371000405,
+      "shared_shingles": 151,
+      "union_shingles": 2469,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 6,
+      "b": 10,
+      "token_shingle_jaccard": 0.06075738660008323,
+      "shared_shingles": 146,
+      "union_shingles": 2403,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 6,
+      "b": 17,
+      "token_shingle_jaccard": 0.060712886799843324,
+      "shared_shingles": 155,
+      "union_shingles": 2553,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 5,
+      "b": 9,
+      "token_shingle_jaccard": 0.06067961165048544,
+      "shared_shingles": 175,
+      "union_shingles": 2884,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 7,
+      "b": 9,
+      "token_shingle_jaccard": 0.06037277147487844,
+      "shared_shingles": 149,
+      "union_shingles": 2468,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 7,
+      "b": 12,
+      "token_shingle_jaccard": 0.06034169392948019,
+      "shared_shingles": 166,
+      "union_shingles": 2751,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 4,
+      "b": 10,
+      "token_shingle_jaccard": 0.059748427672955975,
+      "shared_shingles": 171,
+      "union_shingles": 2862,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 6,
+      "b": 15,
+      "token_shingle_jaccard": 0.05970149253731343,
+      "shared_shingles": 156,
+      "union_shingles": 2613,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 8,
+      "b": 19,
+      "token_shingle_jaccard": 0.05912930474333983,
+      "shared_shingles": 182,
+      "union_shingles": 3078,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 5,
+      "b": 14,
+      "token_shingle_jaccard": 0.05903506143242433,
+      "shared_shingles": 197,
+      "union_shingles": 3337,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 6,
+      "b": 14,
+      "token_shingle_jaccard": 0.058885754583921014,
+      "shared_shingles": 167,
+      "union_shingles": 2836,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 5,
+      "b": 7,
+      "token_shingle_jaccard": 0.058823529411764705,
+      "shared_shingles": 173,
+      "union_shingles": 2941,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 8,
+      "b": 9,
+      "token_shingle_jaccard": 0.05843439911797133,
+      "shared_shingles": 159,
+      "union_shingles": 2721,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 8,
+      "b": 18,
+      "token_shingle_jaccard": 0.058027767888928446,
+      "shared_shingles": 163,
+      "union_shingles": 2809,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 5,
+      "b": 6,
+      "token_shingle_jaccard": 0.057692307692307696,
+      "shared_shingles": 165,
+      "union_shingles": 2860,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 8,
+      "b": 10,
+      "token_shingle_jaccard": 0.05721574344023324,
+      "shared_shingles": 157,
+      "union_shingles": 2744,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 3,
+      "b": 16,
+      "token_shingle_jaccard": 0.05710014947683109,
+      "shared_shingles": 191,
+      "union_shingles": 3345,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 6,
+      "b": 16,
+      "token_shingle_jaccard": 0.05690119184928873,
+      "shared_shingles": 148,
+      "union_shingles": 2601,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 11,
+      "b": 20,
+      "token_shingle_jaccard": 0.05656565656565657,
+      "shared_shingles": 196,
+      "union_shingles": 3465,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 6,
+      "b": 11,
+      "token_shingle_jaccard": 0.054634146341463415,
+      "shared_shingles": 168,
+      "union_shingles": 3075,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 1,
+      "b": 6,
+      "token_shingle_jaccard": 0.053976365378473334,
+      "shared_shingles": 169,
+      "union_shingles": 3131,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 7,
+      "b": 19,
+      "token_shingle_jaccard": 0.05305692199578355,
+      "shared_shingles": 151,
+      "union_shingles": 2846,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 7,
+      "b": 11,
+      "token_shingle_jaccard": 0.05209977897063467,
+      "shared_shingles": 165,
+      "union_shingles": 3167,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 4,
+      "b": 17,
+      "token_shingle_jaccard": 0.05172981878088962,
+      "shared_shingles": 157,
+      "union_shingles": 3035,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 2,
+      "b": 14,
+      "token_shingle_jaccard": 0.04930262731106066,
+      "shared_shingles": 152,
+      "union_shingles": 3083,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 3,
+      "b": 6,
+      "token_shingle_jaccard": 0.04891304347826087,
+      "shared_shingles": 153,
+      "union_shingles": 3128,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 6,
+      "b": 19,
+      "token_shingle_jaccard": 0.04868373602596466,
+      "shared_shingles": 135,
+      "union_shingles": 2773,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 1,
+      "b": 9,
+      "token_shingle_jaccard": 0.045796737766624844,
+      "shared_shingles": 146,
+      "union_shingles": 3188,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 2,
+      "b": 18,
+      "token_shingle_jaccard": 0.045071454745327956,
+      "shared_shingles": 123,
+      "union_shingles": 2729,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 7,
+      "b": 14,
+      "token_shingle_jaccard": 0.04494761743832376,
+      "shared_shingles": 133,
+      "union_shingles": 2959,
+      "exact_normalized_functions": []
+    },
+    {
+      "a": 3,
+      "b": 9,
+      "token_shingle_jaccard": 0.0444234404536862,
+      "shared_shingles": 141,
+      "union_shingles": 3174,
+      "exact_normalized_functions": []
+    }
+  ],
+  "limitations": [
+    "This deliberately narrower metric measures selected policy structure, not whole-program similarity or all poker logic.",
+    "Calls to separately implemented equity, risk and model modules can hide differences; behavioral comparisons complement this metric.",
+    "Alpha-normalization retains constants and attribute/key names, so renaming or different program decompositions can lower similarity.",
+    "Functions below35 AST nodes and large literal-dominated functions are excluded by the shared extractor.",
+    "Shared standard poker decisions and common coding idioms can arise independently; resemblance does not establish copying.",
+    "Pair scores and strongest function matches are descriptive, with no universal threshold defining equivalent policies."
+  ]
+}

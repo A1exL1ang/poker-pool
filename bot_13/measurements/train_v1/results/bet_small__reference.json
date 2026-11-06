@@ -1,0 +1,7094 @@
+{
+  "metadata": {
+    "created_utc": "2026-11-06T08:18:14.404431+00:00",
+    "independent_local_simulator": true,
+    "official_interface_compatibility_claimed": false,
+    "local_scenario_blinds_and_payouts_not_official": true,
+    "candidate": "bot13.agent:Agent",
+    "config": {
+      "bet_scale": 0.48
+    },
+    "reference": "bot13.agent:Agent",
+    "reference_config": {},
+    "opponents": [
+      "reference",
+      "reference",
+      "reference",
+      "reference",
+      "reference",
+      "reference",
+      "reference"
+    ],
+    "tables": 64,
+    "seed_start": 230000,
+    "candidate_seat_rotation": "table_id modulo 8",
+    "blind_schedule": [
+      [
+        10,
+        20
+      ],
+      [
+        15,
+        30
+      ],
+      [
+        25,
+        50
+      ],
+      [
+        40,
+        80
+      ],
+      [
+        60,
+        120
+      ],
+      [
+        100,
+        200
+      ],
+      [
+        150,
+        300
+      ],
+      [
+        250,
+        500
+      ]
+    ],
+    "payouts": [
+      50,
+      30,
+      20,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "hand_limit": 200,
+    "hands_per_level": 25,
+    "starting_stack": 2000,
+    "enforce_1ms_deadline": true,
+    "observations_path": null,
+    "elapsed_seconds": 16.048574693966657,
+    "source_sha256": {
+      "lab/simulator.py": "ab0182a404f9b9b189d95d2dc0ec6e8c864d39eead1a734921de0122360592fc",
+      "lab/baselines.py": "ac9b4779e1842703eb600e072706b36299ba09673810fc093049d62514799f48",
+      "lab/benchmark.py": "662c1c74281f575a9186371c2cac353bb5ffb9bef12d2082dc48b9c16c14bc51",
+      "bot13/agent.py": "322ca368cd114272b8f1b6d1de954fbe1265c9d6281e1d2714ef9c921bc4d7c8",
+      "bot13/native.py": "0fb0116a920c56036829d130cd37e628ce1a3e959055458de5b6c6b1555c1e40",
+      "bot13/cards.py": "604cab2c1f58c7788c0d429a507654b45191ae00de416889643f07b85f693a44",
+      "bot13/icm.py": "0828c3ece9fec82a808e6131059d161ef681d8f5888ac8ab09d35fb04100e065",
+      "bot13/interface.py": "7be9530a04f1f9e68a2a4ea4a72c95a95653c044b807ee76b17e8f1bb036aff6",
+      "native/bot13.cpp": "3c09e3b203f5da4041a3c90a50076817a5affb4217c5929e1445c120b771e7ea",
+      "assets/preflop.json": "0f64fece92b6f907e21a8a55d672f25f2bbc9ad6b01e39ce0dae460df1f6764d"
+    },
+    "confidence_interval": "unadjusted normal 95% interval of independent seeded tables; small batches are noisy"
+  },
+  "summary": {
+    "candidate_chips": {
+      "count": 64,
+      "mean": 1604.796875,
+      "standard_error": 566.4894996941549,
+      "ci95_normal": [
+        494.47745559945633,
+        2715.1162944005437
+      ]
+    },
+    "candidate_chip_delta": {
+      "count": 64,
+      "mean": -395.203125,
+      "standard_error": 566.4894996941549,
+      "ci95_normal": [
+        -1505.5225444005437,
+        715.1162944005437
+      ]
+    },
+    "candidate_chip_share": {
+      "count": 64,
+      "mean": 0.1002998046875,
+      "standard_error": 0.03540559373088468,
+      "ci95_normal": [
+        0.030904840974966027,
+        0.16969476840003395
+      ]
+    },
+    "candidate_points": {
+      "count": 64,
+      "mean": 8.72474609375,
+      "standard_error": 2.0539922584208803,
+      "ci95_normal": [
+        4.698921267245074,
+        12.750570920254924
+      ]
+    },
+    "tables_won": 5,
+    "tables_unfinished_at_hand_limit": 7,
+    "candidate_latency": {
+      "count": 9558,
+      "mean_us": 134.1703763339611,
+      "median_us": 134.434,
+      "p95_us": 238.2,
+      "p99_us": 309.554,
+      "max_us": 8663.033,
+      "over_1ms": 1,
+      "fallbacks": {
+        "deadline": 1
+      },
+      "errors": {}
+    },
+    "all_policies_latency": {
+      "count": 92464,
+      "mean_us": 135.24057800873854,
+      "median_us": 134.514,
+      "p95_us": 236.296,
+      "p99_us": 304.665,
+      "max_us": 56626.509,
+      "over_1ms": 27,
+      "fallbacks": {
+        "deadline": 27
+      },
+      "errors": {}
+    }
+  },
+  "tables": [
+    {
+      "table_id": 0,
+      "seed": 230000,
+      "candidate_seat": 0,
+      "hands": 161,
+      "stacks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        16000,
+        0
+      ],
+      "points": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        30.0,
+        50.0,
+        20.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 0.0,
+      "winner": 6,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 147,
+        "mean_us": 133.1257210884354,
+        "median_us": 135.706,
+        "p95_us": 234.212,
+        "p99_us": 282.122,
+        "max_us": 296.89,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {},
+      "eliminations": [
+        {
+          "seat": 3,
+          "hand_id": 4,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 1970,
+          "points": 0.0
+        },
+        {
+          "seat": 4,
+          "hand_id": 58,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 1306,
+          "points": 0.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 87,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 252,
+          "points": 0.0
+        },
+        {
+          "seat": 1,
+          "hand_id": 104,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 398,
+          "points": 0.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 135,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 1714,
+          "points": 0.0
+        },
+        {
+          "seat": 7,
+          "hand_id": 136,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 1804,
+          "points": 20.0
+        },
+        {
+          "seat": 5,
+          "hand_id": 160,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 6630,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 1,
+      "seed": 230001,
+      "candidate_seat": 1,
+      "hands": 197,
+      "stacks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        16000
+      ],
+      "points": [
+        20.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        30.0,
+        50.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 0.0,
+      "winner": 7,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 208,
+        "mean_us": 136.56705769230769,
+        "median_us": 132.61,
+        "p95_us": 245.012,
+        "p99_us": 324.082,
+        "max_us": 401.267,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {},
+      "eliminations": [
+        {
+          "seat": 4,
+          "hand_id": 31,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 1111,
+          "points": 0.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 48,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 103,
+          "points": 0.0
+        },
+        {
+          "seat": 5,
+          "hand_id": 66,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 506,
+          "points": 0.0
+        },
+        {
+          "seat": 3,
+          "hand_id": 106,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 1250,
+          "points": 0.0
+        },
+        {
+          "seat": 1,
+          "hand_id": 127,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 2422,
+          "points": 0.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 176,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 3038,
+          "points": 20.0
+        },
+        {
+          "seat": 6,
+          "hand_id": 196,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 7802,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 2,
+      "seed": 230002,
+      "candidate_seat": 2,
+      "hands": 185,
+      "stacks": [
+        0,
+        16000,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "points": [
+        0.0,
+        50.0,
+        0.0,
+        30.0,
+        20.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 0.0,
+      "winner": 1,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 197,
+        "mean_us": 132.86611675126903,
+        "median_us": 135.065,
+        "p95_us": 230.224,
+        "p99_us": 300.206,
+        "max_us": 354.189,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {},
+      "eliminations": [
+        {
+          "seat": 0,
+          "hand_id": 7,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 1902,
+          "points": 0.0
+        },
+        {
+          "seat": 5,
+          "hand_id": 92,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 1655,
+          "points": 0.0
+        },
+        {
+          "seat": 7,
+          "hand_id": 106,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 657,
+          "points": 0.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 117,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 1774,
+          "points": 0.0
+        },
+        {
+          "seat": 6,
+          "hand_id": 128,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 2440,
+          "points": 0.0
+        },
+        {
+          "seat": 4,
+          "hand_id": 131,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 4438,
+          "points": 20.0
+        },
+        {
+          "seat": 3,
+          "hand_id": 184,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 5481,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 3,
+      "seed": 230003,
+      "candidate_seat": 3,
+      "hands": 139,
+      "stacks": [
+        0,
+        16000,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "points": [
+        30.0,
+        50.0,
+        0.0,
+        20.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 20.0,
+      "winner": 1,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 205,
+        "mean_us": 187.48718536585366,
+        "median_us": 155.744,
+        "p95_us": 234.673,
+        "p99_us": 776.326,
+        "max_us": 8663.033,
+        "over_1ms": 1,
+        "fallbacks": {
+          "deadline": 1
+        },
+        "errors": {}
+      },
+      "all_fallbacks": {
+        "deadline": 4
+      },
+      "eliminations": [
+        {
+          "seat": 6,
+          "hand_id": 3,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 1877,
+          "points": 0.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 47,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 1405,
+          "points": 0.0
+        },
+        {
+          "seat": 7,
+          "hand_id": 58,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 1416,
+          "points": 0.0
+        },
+        {
+          "seat": 4,
+          "hand_id": 64,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 2109,
+          "points": 0.0
+        },
+        {
+          "seat": 5,
+          "hand_id": 66,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 549,
+          "points": 0.0
+        },
+        {
+          "seat": 3,
+          "hand_id": 110,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 1025,
+          "points": 20.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 138,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 6109,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 4,
+      "seed": 230004,
+      "candidate_seat": 4,
+      "hands": 154,
+      "stacks": [
+        0,
+        16000,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "points": [
+        0.0,
+        50.0,
+        30.0,
+        0.0,
+        0.0,
+        20.0,
+        0.0,
+        0.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 0.0,
+      "winner": 1,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 205,
+        "mean_us": 128.63140975609755,
+        "median_us": 135.446,
+        "p95_us": 227.399,
+        "p99_us": 261.844,
+        "max_us": 303.743,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {
+        "deadline": 1
+      },
+      "eliminations": [
+        {
+          "seat": 0,
+          "hand_id": 18,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 1794,
+          "points": 0.0
+        },
+        {
+          "seat": 7,
+          "hand_id": 26,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 160,
+          "points": 0.0
+        },
+        {
+          "seat": 3,
+          "hand_id": 28,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 564,
+          "points": 0.0
+        },
+        {
+          "seat": 6,
+          "hand_id": 66,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 2802,
+          "points": 0.0
+        },
+        {
+          "seat": 4,
+          "hand_id": 125,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 270,
+          "points": 0.0
+        },
+        {
+          "seat": 5,
+          "hand_id": 127,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 923,
+          "points": 20.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 153,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 1568,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 5,
+      "seed": 230005,
+      "candidate_seat": 5,
+      "hands": 154,
+      "stacks": [
+        16000,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "points": [
+        50.0,
+        20.0,
+        0.0,
+        0.0,
+        30.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 0.0,
+      "winner": 0,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 25,
+        "mean_us": 137.90552,
+        "median_us": 152.828,
+        "p95_us": 232.369,
+        "p99_us": 266.393,
+        "max_us": 266.393,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {},
+      "eliminations": [
+        {
+          "seat": 6,
+          "hand_id": 3,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 1990,
+          "points": 0.0
+        },
+        {
+          "seat": 5,
+          "hand_id": 13,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 1902,
+          "points": 0.0
+        },
+        {
+          "seat": 7,
+          "hand_id": 106,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 996,
+          "points": 0.0
+        },
+        {
+          "seat": 3,
+          "hand_id": 108,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 114,
+          "points": 0.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 120,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 1585,
+          "points": 0.0
+        },
+        {
+          "seat": 1,
+          "hand_id": 130,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 2955,
+          "points": 20.0
+        },
+        {
+          "seat": 4,
+          "hand_id": 153,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 4505,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 6,
+      "seed": 230006,
+      "candidate_seat": 6,
+      "hands": 178,
+      "stacks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        16000
+      ],
+      "points": [
+        0.0,
+        20.0,
+        30.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        50.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 0.0,
+      "winner": 7,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 43,
+        "mean_us": 139.99583720930232,
+        "median_us": 159.13,
+        "p95_us": 232.248,
+        "p99_us": 332.338,
+        "max_us": 332.338,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {},
+      "eliminations": [
+        {
+          "seat": 4,
+          "hand_id": 20,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 30,
+          "points": 0.0
+        },
+        {
+          "seat": 5,
+          "hand_id": 25,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 2283,
+          "points": 0.0
+        },
+        {
+          "seat": 6,
+          "hand_id": 28,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 15,
+          "points": 0.0
+        },
+        {
+          "seat": 3,
+          "hand_id": 67,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 1605,
+          "points": 0.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 77,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 405,
+          "points": 0.0
+        },
+        {
+          "seat": 1,
+          "hand_id": 131,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 2078,
+          "points": 20.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 177,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 2775,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 7,
+      "seed": 230007,
+      "candidate_seat": 7,
+      "hands": 200,
+      "stacks": [
+        0,
+        0,
+        0,
+        7387,
+        8613,
+        0,
+        0,
+        0
+      ],
+      "points": [
+        0.0,
+        0.0,
+        0.0,
+        39.23375,
+        40.76625,
+        20.0,
+        0.0,
+        0.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 0.0,
+      "winner": null,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 189,
+        "mean_us": 126.99202645502645,
+        "median_us": 131.979,
+        "p95_us": 231.607,
+        "p99_us": 307.781,
+        "max_us": 357.084,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {},
+      "eliminations": [
+        {
+          "seat": 6,
+          "hand_id": 19,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 1960,
+          "points": 0.0
+        },
+        {
+          "seat": 1,
+          "hand_id": 31,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 18,
+          "points": 0.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 73,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 2469,
+          "points": 0.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 100,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 547,
+          "points": 0.0
+        },
+        {
+          "seat": 7,
+          "hand_id": 122,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 2446,
+          "points": 0.0
+        },
+        {
+          "seat": 5,
+          "hand_id": 143,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 2371,
+          "points": 20.0
+        }
+      ]
+    },
+    {
+      "table_id": 8,
+      "seed": 230008,
+      "candidate_seat": 0,
+      "hands": 158,
+      "stacks": [
+        0,
+        16000,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "points": [
+        20.0,
+        50.0,
+        0.0,
+        30.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 20.0,
+      "winner": 1,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 236,
+        "mean_us": 126.44058898305086,
+        "median_us": 122.1,
+        "p95_us": 227.078,
+        "p99_us": 325.204,
+        "max_us": 594.963,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {
+        "deadline": 1
+      },
+      "eliminations": [
+        {
+          "seat": 2,
+          "hand_id": 8,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 1956,
+          "points": 0.0
+        },
+        {
+          "seat": 6,
+          "hand_id": 40,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 54,
+          "points": 0.0
+        },
+        {
+          "seat": 4,
+          "hand_id": 85,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 1162,
+          "points": 0.0
+        },
+        {
+          "seat": 7,
+          "hand_id": 101,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 2072,
+          "points": 0.0
+        },
+        {
+          "seat": 5,
+          "hand_id": 112,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 102,
+          "points": 0.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 148,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 1016,
+          "points": 20.0
+        },
+        {
+          "seat": 3,
+          "hand_id": 157,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 770,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 9,
+      "seed": 230009,
+      "candidate_seat": 1,
+      "hands": 180,
+      "stacks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        16000,
+        0
+      ],
+      "points": [
+        30.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        50.0,
+        20.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 0.0,
+      "winner": 6,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 44,
+        "mean_us": 116.51906818181817,
+        "median_us": 111.029,
+        "p95_us": 228.421,
+        "p99_us": 256.093,
+        "max_us": 256.093,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {},
+      "eliminations": [
+        {
+          "seat": 4,
+          "hand_id": 9,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 1976,
+          "points": 0.0
+        },
+        {
+          "seat": 1,
+          "hand_id": 28,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 1870,
+          "points": 0.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 36,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 418,
+          "points": 0.0
+        },
+        {
+          "seat": 3,
+          "hand_id": 86,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 430,
+          "points": 0.0
+        },
+        {
+          "seat": 5,
+          "hand_id": 130,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 2771,
+          "points": 0.0
+        },
+        {
+          "seat": 7,
+          "hand_id": 154,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 2991,
+          "points": 20.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 179,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 5801,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 10,
+      "seed": 230010,
+      "candidate_seat": 2,
+      "hands": 193,
+      "stacks": [
+        0,
+        0,
+        0,
+        0,
+        16000,
+        0,
+        0,
+        0
+      ],
+      "points": [
+        20.0,
+        0.0,
+        0.0,
+        0.0,
+        50.0,
+        30.0,
+        0.0,
+        0.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 0.0,
+      "winner": 4,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 44,
+        "mean_us": 121.21659090909091,
+        "median_us": 122.151,
+        "p95_us": 215.217,
+        "p99_us": 290.118,
+        "max_us": 290.118,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {},
+      "eliminations": [
+        {
+          "seat": 3,
+          "hand_id": 28,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 390,
+          "points": 0.0
+        },
+        {
+          "seat": 6,
+          "hand_id": 33,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 1099,
+          "points": 0.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 33,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 1854,
+          "points": 0.0
+        },
+        {
+          "seat": 1,
+          "hand_id": 72,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 3748,
+          "points": 0.0
+        },
+        {
+          "seat": 7,
+          "hand_id": 154,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 587,
+          "points": 0.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 173,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 1496,
+          "points": 20.0
+        },
+        {
+          "seat": 5,
+          "hand_id": 192,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 2897,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 11,
+      "seed": 230011,
+      "candidate_seat": 3,
+      "hands": 185,
+      "stacks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        16000,
+        0,
+        0
+      ],
+      "points": [
+        0.0,
+        0.0,
+        20.0,
+        0.0,
+        30.0,
+        50.0,
+        0.0,
+        0.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 0.0,
+      "winner": 5,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 145,
+        "mean_us": 123.60358620689655,
+        "median_us": 129.224,
+        "p95_us": 229.554,
+        "p99_us": 293.534,
+        "max_us": 294.987,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {},
+      "eliminations": [
+        {
+          "seat": 1,
+          "hand_id": 7,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 2000,
+          "points": 0.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 8,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 1478,
+          "points": 0.0
+        },
+        {
+          "seat": 7,
+          "hand_id": 10,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 44,
+          "points": 0.0
+        },
+        {
+          "seat": 3,
+          "hand_id": 87,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 1578,
+          "points": 0.0
+        },
+        {
+          "seat": 6,
+          "hand_id": 148,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 532,
+          "points": 0.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 155,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 472,
+          "points": 20.0
+        },
+        {
+          "seat": 4,
+          "hand_id": 184,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 6430,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 12,
+      "seed": 230012,
+      "candidate_seat": 4,
+      "hands": 200,
+      "stacks": [
+        0,
+        3300,
+        5330,
+        0,
+        0,
+        0,
+        4468,
+        2902
+      ],
+      "points": [
+        0.0,
+        22.4370097598824,
+        29.955900878091747,
+        0.0,
+        0.0,
+        0.0,
+        27.216904064220575,
+        20.39018529780528
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 0.0,
+      "winner": null,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 233,
+        "mean_us": 134.3194592274678,
+        "median_us": 138.973,
+        "p95_us": 246.445,
+        "p99_us": 343.439,
+        "max_us": 358.447,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {
+        "deadline": 1
+      },
+      "eliminations": [
+        {
+          "seat": 5,
+          "hand_id": 79,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 748,
+          "points": 0.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 89,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 523,
+          "points": 0.0
+        },
+        {
+          "seat": 3,
+          "hand_id": 142,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 876,
+          "points": 0.0
+        },
+        {
+          "seat": 4,
+          "hand_id": 147,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 3022,
+          "points": 0.0
+        }
+      ]
+    },
+    {
+      "table_id": 13,
+      "seed": 230013,
+      "candidate_seat": 5,
+      "hands": 156,
+      "stacks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        16000
+      ],
+      "points": [
+        0.0,
+        30.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        20.0,
+        50.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 0.0,
+      "winner": 7,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 44,
+        "mean_us": 130.97495454545455,
+        "median_us": 135.977,
+        "p95_us": 250.452,
+        "p99_us": 252.096,
+        "max_us": 252.096,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {},
+      "eliminations": [
+        {
+          "seat": 5,
+          "hand_id": 23,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 2086,
+          "points": 0.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 38,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 1620,
+          "points": 0.0
+        },
+        {
+          "seat": 3,
+          "hand_id": 56,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 2616,
+          "points": 0.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 58,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 2142,
+          "points": 0.0
+        },
+        {
+          "seat": 4,
+          "hand_id": 102,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 285,
+          "points": 0.0
+        },
+        {
+          "seat": 6,
+          "hand_id": 134,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 5340,
+          "points": 20.0
+        },
+        {
+          "seat": 1,
+          "hand_id": 155,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 3674,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 14,
+      "seed": 230014,
+      "candidate_seat": 6,
+      "hands": 172,
+      "stacks": [
+        0,
+        0,
+        0,
+        16000,
+        0,
+        0,
+        0,
+        0
+      ],
+      "points": [
+        0.0,
+        0.0,
+        0.0,
+        50.0,
+        0.0,
+        30.0,
+        20.0,
+        0.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 20.0,
+      "winner": 3,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 239,
+        "mean_us": 135.99771548117155,
+        "median_us": 141.157,
+        "p95_us": 232.94,
+        "p99_us": 271.131,
+        "max_us": 441.724,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {},
+      "eliminations": [
+        {
+          "seat": 1,
+          "hand_id": 0,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 2000,
+          "points": 0.0
+        },
+        {
+          "seat": 7,
+          "hand_id": 67,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 919,
+          "points": 0.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 80,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 1628,
+          "points": 0.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 91,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 236,
+          "points": 0.0
+        },
+        {
+          "seat": 4,
+          "hand_id": 105,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 668,
+          "points": 0.0
+        },
+        {
+          "seat": 6,
+          "hand_id": 129,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 88,
+          "points": 20.0
+        },
+        {
+          "seat": 5,
+          "hand_id": 171,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 7545,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 15,
+      "seed": 230015,
+      "candidate_seat": 7,
+      "hands": 177,
+      "stacks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        16000,
+        0,
+        0
+      ],
+      "points": [
+        0.0,
+        0.0,
+        30.0,
+        20.0,
+        0.0,
+        50.0,
+        0.0,
+        0.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 0.0,
+      "winner": 5,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 170,
+        "mean_us": 139.05687647058824,
+        "median_us": 141.287,
+        "p95_us": 235.214,
+        "p99_us": 354.849,
+        "max_us": 420.323,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {},
+      "eliminations": [
+        {
+          "seat": 4,
+          "hand_id": 23,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 49,
+          "points": 0.0
+        },
+        {
+          "seat": 6,
+          "hand_id": 67,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 927,
+          "points": 0.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 79,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 1393,
+          "points": 0.0
+        },
+        {
+          "seat": 7,
+          "hand_id": 105,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 328,
+          "points": 0.0
+        },
+        {
+          "seat": 1,
+          "hand_id": 106,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 576,
+          "points": 0.0
+        },
+        {
+          "seat": 3,
+          "hand_id": 158,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 680,
+          "points": 20.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 176,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 5729,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 16,
+      "seed": 230016,
+      "candidate_seat": 0,
+      "hands": 188,
+      "stacks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        16000,
+        0,
+        0
+      ],
+      "points": [
+        0.0,
+        30.0,
+        0.0,
+        0.0,
+        0.0,
+        50.0,
+        20.0,
+        0.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 0.0,
+      "winner": 5,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 175,
+        "mean_us": 122.51530285714286,
+        "median_us": 129.344,
+        "p95_us": 233.862,
+        "p99_us": 252.356,
+        "max_us": 446.152,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {
+        "deadline": 1
+      },
+      "eliminations": [
+        {
+          "seat": 4,
+          "hand_id": 43,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 15,
+          "points": 0.0
+        },
+        {
+          "seat": 3,
+          "hand_id": 67,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 276,
+          "points": 0.0
+        },
+        {
+          "seat": 7,
+          "hand_id": 90,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 418,
+          "points": 0.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 104,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 1268,
+          "points": 0.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 121,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 631,
+          "points": 0.0
+        },
+        {
+          "seat": 6,
+          "hand_id": 131,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 1888,
+          "points": 20.0
+        },
+        {
+          "seat": 1,
+          "hand_id": 187,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 4097,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 17,
+      "seed": 230017,
+      "candidate_seat": 1,
+      "hands": 184,
+      "stacks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        16000,
+        0
+      ],
+      "points": [
+        0.0,
+        0.0,
+        0.0,
+        20.0,
+        0.0,
+        30.0,
+        50.0,
+        0.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 0.0,
+      "winner": 6,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 30,
+        "mean_us": 126.5115,
+        "median_us": 133.952,
+        "p95_us": 226.498,
+        "p99_us": 236.577,
+        "max_us": 236.577,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {},
+      "eliminations": [
+        {
+          "seat": 1,
+          "hand_id": 16,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 320,
+          "points": 0.0
+        },
+        {
+          "seat": 7,
+          "hand_id": 39,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 2164,
+          "points": 0.0
+        },
+        {
+          "seat": 4,
+          "hand_id": 56,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 440,
+          "points": 0.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 93,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 441,
+          "points": 0.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 102,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 1654,
+          "points": 0.0
+        },
+        {
+          "seat": 3,
+          "hand_id": 141,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 1936,
+          "points": 20.0
+        },
+        {
+          "seat": 5,
+          "hand_id": 183,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 204,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 18,
+      "seed": 230018,
+      "candidate_seat": 2,
+      "hands": 184,
+      "stacks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        16000
+      ],
+      "points": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        20.0,
+        30.0,
+        50.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 0.0,
+      "winner": 7,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 86,
+        "mean_us": 136.19791860465116,
+        "median_us": 136.308,
+        "p95_us": 253.298,
+        "p99_us": 356.473,
+        "max_us": 356.473,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {},
+      "eliminations": [
+        {
+          "seat": 2,
+          "hand_id": 52,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 1222,
+          "points": 0.0
+        },
+        {
+          "seat": 3,
+          "hand_id": 54,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 1907,
+          "points": 0.0
+        },
+        {
+          "seat": 4,
+          "hand_id": 115,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 486,
+          "points": 0.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 124,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 1238,
+          "points": 0.0
+        },
+        {
+          "seat": 1,
+          "hand_id": 171,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 6060,
+          "points": 0.0
+        },
+        {
+          "seat": 5,
+          "hand_id": 174,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 112,
+          "points": 20.0
+        },
+        {
+          "seat": 6,
+          "hand_id": 183,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 4556,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 19,
+      "seed": 230019,
+      "candidate_seat": 3,
+      "hands": 197,
+      "stacks": [
+        0,
+        0,
+        0,
+        0,
+        16000,
+        0,
+        0,
+        0
+      ],
+      "points": [
+        0.0,
+        30.0,
+        0.0,
+        0.0,
+        50.0,
+        20.0,
+        0.0,
+        0.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 0.0,
+      "winner": 4,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 54,
+        "mean_us": 138.59251851851852,
+        "median_us": 143.752,
+        "p95_us": 240.574,
+        "p99_us": 276.532,
+        "max_us": 276.532,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {},
+      "eliminations": [
+        {
+          "seat": 2,
+          "hand_id": 10,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 102,
+          "points": 0.0
+        },
+        {
+          "seat": 3,
+          "hand_id": 33,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 1534,
+          "points": 0.0
+        },
+        {
+          "seat": 6,
+          "hand_id": 35,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 1689,
+          "points": 0.0
+        },
+        {
+          "seat": 7,
+          "hand_id": 52,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 1978,
+          "points": 0.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 136,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 3486,
+          "points": 0.0
+        },
+        {
+          "seat": 5,
+          "hand_id": 155,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 622,
+          "points": 20.0
+        },
+        {
+          "seat": 1,
+          "hand_id": 196,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 5348,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 20,
+      "seed": 230020,
+      "candidate_seat": 4,
+      "hands": 156,
+      "stacks": [
+        0,
+        0,
+        0,
+        0,
+        16000,
+        0,
+        0,
+        0
+      ],
+      "points": [
+        0.0,
+        0.0,
+        30.0,
+        0.0,
+        50.0,
+        20.0,
+        0.0,
+        0.0
+      ],
+      "candidate_chips": 16000,
+      "candidate_chip_delta": 14000,
+      "candidate_chip_share": 1.0,
+      "candidate_points": 50.0,
+      "winner": 4,
+      "candidate_won_table": true,
+      "candidate_latency": {
+        "count": 245,
+        "mean_us": 125.0125387755102,
+        "median_us": 116.14,
+        "p95_us": 234.092,
+        "p99_us": 354.118,
+        "max_us": 419.181,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {},
+      "eliminations": [
+        {
+          "seat": 1,
+          "hand_id": 70,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 1935,
+          "points": 0.0
+        },
+        {
+          "seat": 7,
+          "hand_id": 71,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 597,
+          "points": 0.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 79,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 90,
+          "points": 0.0
+        },
+        {
+          "seat": 3,
+          "hand_id": 116,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 3329,
+          "points": 0.0
+        },
+        {
+          "seat": 6,
+          "hand_id": 117,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 1551,
+          "points": 0.0
+        },
+        {
+          "seat": 5,
+          "hand_id": 134,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 1408,
+          "points": 20.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 155,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 1560,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 21,
+      "seed": 230021,
+      "candidate_seat": 5,
+      "hands": 199,
+      "stacks": [
+        0,
+        0,
+        16000,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "points": [
+        0.0,
+        0.0,
+        50.0,
+        30.0,
+        20.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 0.0,
+      "winner": 2,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 138,
+        "mean_us": 122.816384057971,
+        "median_us": 123.213,
+        "p95_us": 233.801,
+        "p99_us": 272.244,
+        "max_us": 294.426,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {
+        "deadline": 2
+      },
+      "eliminations": [
+        {
+          "seat": 1,
+          "hand_id": 45,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 1429,
+          "points": 0.0
+        },
+        {
+          "seat": 5,
+          "hand_id": 102,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 469,
+          "points": 0.0
+        },
+        {
+          "seat": 6,
+          "hand_id": 102,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 871,
+          "points": 0.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 167,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 554,
+          "points": 0.0
+        },
+        {
+          "seat": 7,
+          "hand_id": 176,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 1964,
+          "points": 0.0
+        },
+        {
+          "seat": 4,
+          "hand_id": 181,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 1060,
+          "points": 20.0
+        },
+        {
+          "seat": 3,
+          "hand_id": 198,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 4455,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 22,
+      "seed": 230022,
+      "candidate_seat": 6,
+      "hands": 139,
+      "stacks": [
+        0,
+        0,
+        0,
+        0,
+        16000,
+        0,
+        0,
+        0
+      ],
+      "points": [
+        0.0,
+        30.0,
+        0.0,
+        0.0,
+        50.0,
+        0.0,
+        20.0,
+        0.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 20.0,
+      "winner": 4,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 169,
+        "mean_us": 128.38253846153847,
+        "median_us": 125.717,
+        "p95_us": 244.682,
+        "p99_us": 339.932,
+        "max_us": 487.08,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {
+        "deadline": 1
+      },
+      "eliminations": [
+        {
+          "seat": 0,
+          "hand_id": 40,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 1423,
+          "points": 0.0
+        },
+        {
+          "seat": 7,
+          "hand_id": 62,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 1648,
+          "points": 0.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 70,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 966,
+          "points": 0.0
+        },
+        {
+          "seat": 3,
+          "hand_id": 95,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 597,
+          "points": 0.0
+        },
+        {
+          "seat": 5,
+          "hand_id": 102,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 1534,
+          "points": 0.0
+        },
+        {
+          "seat": 6,
+          "hand_id": 109,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 3825,
+          "points": 20.0
+        },
+        {
+          "seat": 1,
+          "hand_id": 138,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 1584,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 23,
+      "seed": 230023,
+      "candidate_seat": 7,
+      "hands": 139,
+      "stacks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        16000
+      ],
+      "points": [
+        0.0,
+        0.0,
+        0.0,
+        30.0,
+        0.0,
+        0.0,
+        20.0,
+        50.0
+      ],
+      "candidate_chips": 16000,
+      "candidate_chip_delta": 14000,
+      "candidate_chip_share": 1.0,
+      "candidate_points": 50.0,
+      "winner": 7,
+      "candidate_won_table": true,
+      "candidate_latency": {
+        "count": 259,
+        "mean_us": 144.44265637065635,
+        "median_us": 154.912,
+        "p95_us": 258.748,
+        "p99_us": 345.562,
+        "max_us": 365.911,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {},
+      "eliminations": [
+        {
+          "seat": 4,
+          "hand_id": 3,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 1620,
+          "points": 0.0
+        },
+        {
+          "seat": 5,
+          "hand_id": 32,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 2,
+          "points": 0.0
+        },
+        {
+          "seat": 1,
+          "hand_id": 60,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 1956,
+          "points": 0.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 87,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 860,
+          "points": 0.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 95,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 1307,
+          "points": 0.0
+        },
+        {
+          "seat": 6,
+          "hand_id": 132,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 2864,
+          "points": 20.0
+        },
+        {
+          "seat": 3,
+          "hand_id": 138,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 5188,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 24,
+      "seed": 230024,
+      "candidate_seat": 0,
+      "hands": 144,
+      "stacks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        16000,
+        0,
+        0
+      ],
+      "points": [
+        0.0,
+        0.0,
+        0.0,
+        30.0,
+        0.0,
+        50.0,
+        0.0,
+        20.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 0.0,
+      "winner": 5,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 95,
+        "mean_us": 125.95184210526315,
+        "median_us": 115.017,
+        "p95_us": 265.08,
+        "p99_us": 785.253,
+        "max_us": 785.253,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {},
+      "eliminations": [
+        {
+          "seat": 6,
+          "hand_id": 4,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 2000,
+          "points": 0.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 74,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 485,
+          "points": 0.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 96,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 462,
+          "points": 0.0
+        },
+        {
+          "seat": 4,
+          "hand_id": 112,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 1244,
+          "points": 0.0
+        },
+        {
+          "seat": 1,
+          "hand_id": 119,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 3272,
+          "points": 0.0
+        },
+        {
+          "seat": 7,
+          "hand_id": 122,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 4222,
+          "points": 20.0
+        },
+        {
+          "seat": 3,
+          "hand_id": 143,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 5347,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 25,
+      "seed": 230025,
+      "candidate_seat": 1,
+      "hands": 179,
+      "stacks": [
+        0,
+        0,
+        0,
+        0,
+        16000,
+        0,
+        0,
+        0
+      ],
+      "points": [
+        0.0,
+        0.0,
+        30.0,
+        0.0,
+        50.0,
+        20.0,
+        0.0,
+        0.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 0.0,
+      "winner": 4,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 7,
+        "mean_us": 157.31842857142857,
+        "median_us": 198.645,
+        "p95_us": 252.517,
+        "p99_us": 252.517,
+        "max_us": 252.517,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {
+        "deadline": 1
+      },
+      "eliminations": [
+        {
+          "seat": 1,
+          "hand_id": 2,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 2000,
+          "points": 0.0
+        },
+        {
+          "seat": 3,
+          "hand_id": 7,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 1946,
+          "points": 0.0
+        },
+        {
+          "seat": 7,
+          "hand_id": 29,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 203,
+          "points": 0.0
+        },
+        {
+          "seat": 6,
+          "hand_id": 30,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 1427,
+          "points": 0.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 132,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 667,
+          "points": 0.0
+        },
+        {
+          "seat": 5,
+          "hand_id": 167,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 1956,
+          "points": 20.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 178,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 4090,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 26,
+      "seed": 230026,
+      "candidate_seat": 2,
+      "hands": 166,
+      "stacks": [
+        16000,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "points": [
+        50.0,
+        0.0,
+        0.0,
+        20.0,
+        30.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 0.0,
+      "winner": 0,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 47,
+        "mean_us": 144.3096595744681,
+        "median_us": 151.165,
+        "p95_us": 321.257,
+        "p99_us": 406.828,
+        "max_us": 406.828,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {
+        "deadline": 1
+      },
+      "eliminations": [
+        {
+          "seat": 1,
+          "hand_id": 3,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 2000,
+          "points": 0.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 27,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 2021,
+          "points": 0.0
+        },
+        {
+          "seat": 6,
+          "hand_id": 60,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 1718,
+          "points": 0.0
+        },
+        {
+          "seat": 7,
+          "hand_id": 61,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 4104,
+          "points": 0.0
+        },
+        {
+          "seat": 5,
+          "hand_id": 100,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 2039,
+          "points": 0.0
+        },
+        {
+          "seat": 3,
+          "hand_id": 106,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 36,
+          "points": 20.0
+        },
+        {
+          "seat": 4,
+          "hand_id": 165,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 1126,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 27,
+      "seed": 230027,
+      "candidate_seat": 3,
+      "hands": 200,
+      "stacks": [
+        0,
+        0,
+        0,
+        7235,
+        8765,
+        0,
+        0,
+        0
+      ],
+      "points": [
+        0.0,
+        0.0,
+        20.0,
+        39.04375,
+        40.95625,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "candidate_chips": 7235,
+      "candidate_chip_delta": 5235,
+      "candidate_chip_share": 0.4521875,
+      "candidate_points": 39.04375,
+      "winner": null,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 325,
+        "mean_us": 130.56570461538462,
+        "median_us": 131.799,
+        "p95_us": 242.227,
+        "p99_us": 266.433,
+        "max_us": 369.838,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {},
+      "eliminations": [
+        {
+          "seat": 7,
+          "hand_id": 50,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 682,
+          "points": 0.0
+        },
+        {
+          "seat": 6,
+          "hand_id": 74,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 1286,
+          "points": 0.0
+        },
+        {
+          "seat": 1,
+          "hand_id": 98,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 681,
+          "points": 0.0
+        },
+        {
+          "seat": 5,
+          "hand_id": 160,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 1260,
+          "points": 0.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 163,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 872,
+          "points": 0.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 194,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 2164,
+          "points": 20.0
+        }
+      ]
+    },
+    {
+      "table_id": 28,
+      "seed": 230028,
+      "candidate_seat": 4,
+      "hands": 178,
+      "stacks": [
+        0,
+        0,
+        0,
+        0,
+        16000,
+        0,
+        0,
+        0
+      ],
+      "points": [
+        0.0,
+        0.0,
+        20.0,
+        0.0,
+        50.0,
+        0.0,
+        0.0,
+        30.0
+      ],
+      "candidate_chips": 16000,
+      "candidate_chip_delta": 14000,
+      "candidate_chip_share": 1.0,
+      "candidate_points": 50.0,
+      "winner": 4,
+      "candidate_won_table": true,
+      "candidate_latency": {
+        "count": 289,
+        "mean_us": 125.1389446366782,
+        "median_us": 114.686,
+        "p95_us": 236.066,
+        "p99_us": 294.526,
+        "max_us": 365.97,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {
+        "deadline": 3
+      },
+      "eliminations": [
+        {
+          "seat": 6,
+          "hand_id": 0,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 2000,
+          "points": 0.0
+        },
+        {
+          "seat": 3,
+          "hand_id": 9,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 1904,
+          "points": 0.0
+        },
+        {
+          "seat": 1,
+          "hand_id": 65,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 533,
+          "points": 0.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 150,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 472,
+          "points": 0.0
+        },
+        {
+          "seat": 5,
+          "hand_id": 161,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 1019,
+          "points": 0.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 169,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 3841,
+          "points": 20.0
+        },
+        {
+          "seat": 7,
+          "hand_id": 177,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 2340,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 29,
+      "seed": 230029,
+      "candidate_seat": 5,
+      "hands": 199,
+      "stacks": [
+        0,
+        0,
+        0,
+        16000,
+        0,
+        0,
+        0,
+        0
+      ],
+      "points": [
+        30.0,
+        0.0,
+        0.0,
+        50.0,
+        20.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 0.0,
+      "winner": 3,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 285,
+        "mean_us": 130.060950877193,
+        "median_us": 129.745,
+        "p95_us": 243.279,
+        "p99_us": 384.285,
+        "max_us": 466.32,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {
+        "deadline": 1
+      },
+      "eliminations": [
+        {
+          "seat": 6,
+          "hand_id": 19,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 206,
+          "points": 0.0
+        },
+        {
+          "seat": 7,
+          "hand_id": 23,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 1549,
+          "points": 0.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 74,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 1145,
+          "points": 0.0
+        },
+        {
+          "seat": 1,
+          "hand_id": 104,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 617,
+          "points": 0.0
+        },
+        {
+          "seat": 5,
+          "hand_id": 176,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 1701,
+          "points": 0.0
+        },
+        {
+          "seat": 4,
+          "hand_id": 194,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 3450,
+          "points": 20.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 198,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 3572,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 30,
+      "seed": 230030,
+      "candidate_seat": 6,
+      "hands": 132,
+      "stacks": [
+        0,
+        0,
+        0,
+        16000,
+        0,
+        0,
+        0,
+        0
+      ],
+      "points": [
+        0.0,
+        0.0,
+        0.0,
+        50.0,
+        30.0,
+        0.0,
+        0.0,
+        20.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 0.0,
+      "winner": 3,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 130,
+        "mean_us": 134.70303076923076,
+        "median_us": 136.377,
+        "p95_us": 230.796,
+        "p99_us": 315.416,
+        "max_us": 372.443,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {},
+      "eliminations": [
+        {
+          "seat": 1,
+          "hand_id": 24,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 655,
+          "points": 0.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 59,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 356,
+          "points": 0.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 61,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 2349,
+          "points": 0.0
+        },
+        {
+          "seat": 5,
+          "hand_id": 82,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 2063,
+          "points": 0.0
+        },
+        {
+          "seat": 6,
+          "hand_id": 83,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 1313,
+          "points": 0.0
+        },
+        {
+          "seat": 7,
+          "hand_id": 129,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 2204,
+          "points": 20.0
+        },
+        {
+          "seat": 4,
+          "hand_id": 131,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 6736,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 31,
+      "seed": 230031,
+      "candidate_seat": 7,
+      "hands": 190,
+      "stacks": [
+        0,
+        0,
+        0,
+        16000,
+        0,
+        0,
+        0,
+        0
+      ],
+      "points": [
+        0.0,
+        0.0,
+        20.0,
+        50.0,
+        0.0,
+        0.0,
+        30.0,
+        0.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 0.0,
+      "winner": 3,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 187,
+        "mean_us": 139.2949625668449,
+        "median_us": 147.618,
+        "p95_us": 239.963,
+        "p99_us": 273.556,
+        "max_us": 291.109,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {},
+      "eliminations": [
+        {
+          "seat": 5,
+          "hand_id": 52,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 1124,
+          "points": 0.0
+        },
+        {
+          "seat": 4,
+          "hand_id": 87,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 1513,
+          "points": 0.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 89,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 1178,
+          "points": 0.0
+        },
+        {
+          "seat": 1,
+          "hand_id": 95,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 711,
+          "points": 0.0
+        },
+        {
+          "seat": 7,
+          "hand_id": 111,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 4505,
+          "points": 0.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 155,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 1308,
+          "points": 20.0
+        },
+        {
+          "seat": 6,
+          "hand_id": 189,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 5253,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 32,
+      "seed": 230032,
+      "candidate_seat": 0,
+      "hands": 166,
+      "stacks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        16000,
+        0,
+        0
+      ],
+      "points": [
+        0.0,
+        30.0,
+        0.0,
+        20.0,
+        0.0,
+        50.0,
+        0.0,
+        0.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 0.0,
+      "winner": 5,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 109,
+        "mean_us": 130.64307339449542,
+        "median_us": 142.499,
+        "p95_us": 224.504,
+        "p99_us": 241.255,
+        "max_us": 275.63,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {},
+      "eliminations": [
+        {
+          "seat": 4,
+          "hand_id": 58,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 1630,
+          "points": 0.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 75,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 153,
+          "points": 0.0
+        },
+        {
+          "seat": 6,
+          "hand_id": 122,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 1052,
+          "points": 0.0
+        },
+        {
+          "seat": 7,
+          "hand_id": 123,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 1837,
+          "points": 0.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 136,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 2486,
+          "points": 0.0
+        },
+        {
+          "seat": 3,
+          "hand_id": 155,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 3318,
+          "points": 20.0
+        },
+        {
+          "seat": 1,
+          "hand_id": 165,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 7584,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 33,
+      "seed": 230033,
+      "candidate_seat": 1,
+      "hands": 150,
+      "stacks": [
+        16000,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "points": [
+        50.0,
+        0.0,
+        20.0,
+        30.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 0.0,
+      "winner": 0,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 159,
+        "mean_us": 135.98897484276728,
+        "median_us": 145.695,
+        "p95_us": 244.942,
+        "p99_us": 305.407,
+        "max_us": 380.218,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {
+        "deadline": 1
+      },
+      "eliminations": [
+        {
+          "seat": 5,
+          "hand_id": 18,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 34,
+          "points": 0.0
+        },
+        {
+          "seat": 6,
+          "hand_id": 33,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 1534,
+          "points": 0.0
+        },
+        {
+          "seat": 4,
+          "hand_id": 57,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 2800,
+          "points": 0.0
+        },
+        {
+          "seat": 7,
+          "hand_id": 77,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 1509,
+          "points": 0.0
+        },
+        {
+          "seat": 1,
+          "hand_id": 99,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 2960,
+          "points": 0.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 127,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 1120,
+          "points": 20.0
+        },
+        {
+          "seat": 3,
+          "hand_id": 149,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 3728,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 34,
+      "seed": 230034,
+      "candidate_seat": 2,
+      "hands": 145,
+      "stacks": [
+        0,
+        0,
+        0,
+        16000,
+        0,
+        0,
+        0,
+        0
+      ],
+      "points": [
+        20.0,
+        0.0,
+        0.0,
+        50.0,
+        0.0,
+        30.0,
+        0.0,
+        0.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 0.0,
+      "winner": 3,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 50,
+        "mean_us": 141.95154,
+        "median_us": 159.401,
+        "p95_us": 270.28,
+        "p99_us": 305.647,
+        "max_us": 305.647,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {},
+      "eliminations": [
+        {
+          "seat": 4,
+          "hand_id": 2,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 1946,
+          "points": 0.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 29,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 1673,
+          "points": 0.0
+        },
+        {
+          "seat": 1,
+          "hand_id": 45,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 2028,
+          "points": 0.0
+        },
+        {
+          "seat": 7,
+          "hand_id": 59,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 3821,
+          "points": 0.0
+        },
+        {
+          "seat": 6,
+          "hand_id": 65,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 1321,
+          "points": 0.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 95,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 3138,
+          "points": 20.0
+        },
+        {
+          "seat": 5,
+          "hand_id": 144,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 7030,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 35,
+      "seed": 230035,
+      "candidate_seat": 3,
+      "hands": 177,
+      "stacks": [
+        0,
+        0,
+        0,
+        0,
+        16000,
+        0,
+        0,
+        0
+      ],
+      "points": [
+        0.0,
+        20.0,
+        0.0,
+        30.0,
+        50.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 30.0,
+      "winner": 4,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 311,
+        "mean_us": 137.19271382636654,
+        "median_us": 137.109,
+        "p95_us": 239.733,
+        "p99_us": 307.29,
+        "max_us": 652.291,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {
+        "deadline": 1
+      },
+      "eliminations": [
+        {
+          "seat": 5,
+          "hand_id": 39,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 1480,
+          "points": 0.0
+        },
+        {
+          "seat": 7,
+          "hand_id": 77,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 670,
+          "points": 0.0
+        },
+        {
+          "seat": 6,
+          "hand_id": 100,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 663,
+          "points": 0.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 116,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 2852,
+          "points": 0.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 131,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 512,
+          "points": 0.0
+        },
+        {
+          "seat": 1,
+          "hand_id": 133,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 2936,
+          "points": 20.0
+        },
+        {
+          "seat": 3,
+          "hand_id": 176,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 7164,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 36,
+      "seed": 230036,
+      "candidate_seat": 4,
+      "hands": 164,
+      "stacks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        16000
+      ],
+      "points": [
+        0.0,
+        0.0,
+        0.0,
+        30.0,
+        20.0,
+        0.0,
+        0.0,
+        50.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 20.0,
+      "winner": 7,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 242,
+        "mean_us": 137.60114876033057,
+        "median_us": 140.776,
+        "p95_us": 230.165,
+        "p99_us": 344.76,
+        "max_us": 567.591,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {
+        "deadline": 1
+      },
+      "eliminations": [
+        {
+          "seat": 6,
+          "hand_id": 37,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 167,
+          "points": 0.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 43,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 600,
+          "points": 0.0
+        },
+        {
+          "seat": 5,
+          "hand_id": 56,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 3278,
+          "points": 0.0
+        },
+        {
+          "seat": 1,
+          "hand_id": 63,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 2912,
+          "points": 0.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 110,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 374,
+          "points": 0.0
+        },
+        {
+          "seat": 4,
+          "hand_id": 134,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 1554,
+          "points": 20.0
+        },
+        {
+          "seat": 3,
+          "hand_id": 163,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 2026,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 37,
+      "seed": 230037,
+      "candidate_seat": 5,
+      "hands": 165,
+      "stacks": [
+        16000,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "points": [
+        50.0,
+        20.0,
+        30.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 0.0,
+      "winner": 0,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 47,
+        "mean_us": 134.0815744680851,
+        "median_us": 134.443,
+        "p95_us": 231.076,
+        "p99_us": 271.573,
+        "max_us": 271.573,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {},
+      "eliminations": [
+        {
+          "seat": 3,
+          "hand_id": 11,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 1727,
+          "points": 0.0
+        },
+        {
+          "seat": 5,
+          "hand_id": 30,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 1860,
+          "points": 0.0
+        },
+        {
+          "seat": 7,
+          "hand_id": 53,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 2330,
+          "points": 0.0
+        },
+        {
+          "seat": 4,
+          "hand_id": 65,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 1897,
+          "points": 0.0
+        },
+        {
+          "seat": 6,
+          "hand_id": 141,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 1610,
+          "points": 0.0
+        },
+        {
+          "seat": 1,
+          "hand_id": 147,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 5068,
+          "points": 20.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 164,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 2248,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 38,
+      "seed": 230038,
+      "candidate_seat": 6,
+      "hands": 200,
+      "stacks": [
+        0,
+        0,
+        0,
+        5291,
+        0,
+        0,
+        0,
+        10709
+      ],
+      "points": [
+        0.0,
+        0.0,
+        0.0,
+        36.613749999999996,
+        0.0,
+        20.0,
+        0.0,
+        43.38625
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 0.0,
+      "winner": null,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 150,
+        "mean_us": 130.07852666666668,
+        "median_us": 131.408,
+        "p95_us": 235.084,
+        "p99_us": 312.63,
+        "max_us": 348.257,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {},
+      "eliminations": [
+        {
+          "seat": 1,
+          "hand_id": 87,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 975,
+          "points": 0.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 94,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 2319,
+          "points": 0.0
+        },
+        {
+          "seat": 6,
+          "hand_id": 97,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 1163,
+          "points": 0.0
+        },
+        {
+          "seat": 4,
+          "hand_id": 103,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 2029,
+          "points": 0.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 133,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 467,
+          "points": 0.0
+        },
+        {
+          "seat": 5,
+          "hand_id": 184,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 2272,
+          "points": 20.0
+        }
+      ]
+    },
+    {
+      "table_id": 39,
+      "seed": 230039,
+      "candidate_seat": 7,
+      "hands": 200,
+      "stacks": [
+        0,
+        0,
+        0,
+        0,
+        6434,
+        0,
+        0,
+        9566
+      ],
+      "points": [
+        0.0,
+        0.0,
+        0.0,
+        20.0,
+        38.042500000000004,
+        0.0,
+        0.0,
+        41.9575
+      ],
+      "candidate_chips": 9566,
+      "candidate_chip_delta": 7566,
+      "candidate_chip_share": 0.597875,
+      "candidate_points": 41.9575,
+      "winner": null,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 342,
+        "mean_us": 132.40386257309942,
+        "median_us": 136.268,
+        "p95_us": 231.557,
+        "p99_us": 261.033,
+        "max_us": 303.633,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {},
+      "eliminations": [
+        {
+          "seat": 0,
+          "hand_id": 90,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 354,
+          "points": 0.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 101,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 610,
+          "points": 0.0
+        },
+        {
+          "seat": 5,
+          "hand_id": 105,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 729,
+          "points": 0.0
+        },
+        {
+          "seat": 6,
+          "hand_id": 120,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 1434,
+          "points": 0.0
+        },
+        {
+          "seat": 1,
+          "hand_id": 121,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 354,
+          "points": 0.0
+        },
+        {
+          "seat": 3,
+          "hand_id": 131,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 310,
+          "points": 20.0
+        }
+      ]
+    },
+    {
+      "table_id": 40,
+      "seed": 230040,
+      "candidate_seat": 0,
+      "hands": 183,
+      "stacks": [
+        0,
+        0,
+        0,
+        16000,
+        0,
+        0,
+        0,
+        0
+      ],
+      "points": [
+        0.0,
+        30.0,
+        0.0,
+        50.0,
+        0.0,
+        20.0,
+        0.0,
+        0.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 0.0,
+      "winner": 3,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 209,
+        "mean_us": 127.59105263157895,
+        "median_us": 130.296,
+        "p95_us": 234.914,
+        "p99_us": 364.709,
+        "max_us": 397.571,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {},
+      "eliminations": [
+        {
+          "seat": 2,
+          "hand_id": 37,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 1687,
+          "points": 0.0
+        },
+        {
+          "seat": 4,
+          "hand_id": 83,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 108,
+          "points": 0.0
+        },
+        {
+          "seat": 6,
+          "hand_id": 109,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 1834,
+          "points": 0.0
+        },
+        {
+          "seat": 7,
+          "hand_id": 130,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 622,
+          "points": 0.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 136,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 1973,
+          "points": 0.0
+        },
+        {
+          "seat": 5,
+          "hand_id": 146,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 464,
+          "points": 20.0
+        },
+        {
+          "seat": 1,
+          "hand_id": 182,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 6609,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 41,
+      "seed": 230041,
+      "candidate_seat": 1,
+      "hands": 200,
+      "stacks": [
+        10094,
+        5906,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "points": [
+        42.6175,
+        37.3825,
+        0.0,
+        0.0,
+        0.0,
+        20.0,
+        0.0,
+        0.0
+      ],
+      "candidate_chips": 5906,
+      "candidate_chip_delta": 3906,
+      "candidate_chip_share": 0.369125,
+      "candidate_points": 37.3825,
+      "winner": null,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 326,
+        "mean_us": 133.05995398773007,
+        "median_us": 127.831,
+        "p95_us": 239.853,
+        "p99_us": 326.206,
+        "max_us": 587.109,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {},
+      "eliminations": [
+        {
+          "seat": 7,
+          "hand_id": 4,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 44,
+          "points": 0.0
+        },
+        {
+          "seat": 3,
+          "hand_id": 14,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 1912,
+          "points": 0.0
+        },
+        {
+          "seat": 4,
+          "hand_id": 55,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 1888,
+          "points": 0.0
+        },
+        {
+          "seat": 6,
+          "hand_id": 150,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 1517,
+          "points": 0.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 153,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 1339,
+          "points": 0.0
+        },
+        {
+          "seat": 5,
+          "hand_id": 159,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 2205,
+          "points": 20.0
+        }
+      ]
+    },
+    {
+      "table_id": 42,
+      "seed": 230042,
+      "candidate_seat": 2,
+      "hands": 149,
+      "stacks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        16000,
+        0
+      ],
+      "points": [
+        0.0,
+        0.0,
+        0.0,
+        30.0,
+        0.0,
+        0.0,
+        50.0,
+        20.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 0.0,
+      "winner": 6,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 172,
+        "mean_us": 138.78055813953486,
+        "median_us": 137.028,
+        "p95_us": 246.835,
+        "p99_us": 293.284,
+        "max_us": 315.265,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {
+        "deadline": 1
+      },
+      "eliminations": [
+        {
+          "seat": 1,
+          "hand_id": 1,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 2000,
+          "points": 0.0
+        },
+        {
+          "seat": 4,
+          "hand_id": 7,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 1819,
+          "points": 0.0
+        },
+        {
+          "seat": 5,
+          "hand_id": 44,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 2858,
+          "points": 0.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 99,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 828,
+          "points": 0.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 123,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 4746,
+          "points": 0.0
+        },
+        {
+          "seat": 7,
+          "hand_id": 130,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 372,
+          "points": 20.0
+        },
+        {
+          "seat": 3,
+          "hand_id": 148,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 2025,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 43,
+      "seed": 230043,
+      "candidate_seat": 3,
+      "hands": 106,
+      "stacks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        16000
+      ],
+      "points": [
+        30.0,
+        0.0,
+        20.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        50.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 0.0,
+      "winner": 7,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 32,
+        "mean_us": 133.60421875,
+        "median_us": 131.698,
+        "p95_us": 251.515,
+        "p99_us": 275.89,
+        "max_us": 275.89,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {},
+      "eliminations": [
+        {
+          "seat": 3,
+          "hand_id": 17,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 1801,
+          "points": 0.0
+        },
+        {
+          "seat": 4,
+          "hand_id": 29,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 1940,
+          "points": 0.0
+        },
+        {
+          "seat": 5,
+          "hand_id": 48,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 3523,
+          "points": 0.0
+        },
+        {
+          "seat": 1,
+          "hand_id": 61,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 1548,
+          "points": 0.0
+        },
+        {
+          "seat": 6,
+          "hand_id": 67,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 1332,
+          "points": 0.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 82,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 2604,
+          "points": 20.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 105,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 7882,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 44,
+      "seed": 230044,
+      "candidate_seat": 4,
+      "hands": 167,
+      "stacks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        16000,
+        0,
+        0
+      ],
+      "points": [
+        0.0,
+        0.0,
+        30.0,
+        0.0,
+        0.0,
+        50.0,
+        20.0,
+        0.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 0.0,
+      "winner": 5,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 47,
+        "mean_us": 122.02578723404255,
+        "median_us": 126.999,
+        "p95_us": 241.336,
+        "p99_us": 242.658,
+        "max_us": 242.658,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {},
+      "eliminations": [
+        {
+          "seat": 4,
+          "hand_id": 30,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 2061,
+          "points": 0.0
+        },
+        {
+          "seat": 1,
+          "hand_id": 56,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 1670,
+          "points": 0.0
+        },
+        {
+          "seat": 3,
+          "hand_id": 117,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 2639,
+          "points": 0.0
+        },
+        {
+          "seat": 7,
+          "hand_id": 125,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 1407,
+          "points": 0.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 141,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 841,
+          "points": 0.0
+        },
+        {
+          "seat": 6,
+          "hand_id": 146,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 1831,
+          "points": 20.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 166,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 6705,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 45,
+      "seed": 230045,
+      "candidate_seat": 5,
+      "hands": 182,
+      "stacks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        16000,
+        0
+      ],
+      "points": [
+        30.0,
+        0.0,
+        0.0,
+        0.0,
+        20.0,
+        0.0,
+        50.0,
+        0.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 0.0,
+      "winner": 6,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 127,
+        "mean_us": 132.11252755905514,
+        "median_us": 130.516,
+        "p95_us": 234.473,
+        "p99_us": 331.766,
+        "max_us": 338.228,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {
+        "deadline": 1
+      },
+      "eliminations": [
+        {
+          "seat": 2,
+          "hand_id": 24,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 57,
+          "points": 0.0
+        },
+        {
+          "seat": 1,
+          "hand_id": 39,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 495,
+          "points": 0.0
+        },
+        {
+          "seat": 3,
+          "hand_id": 63,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 852,
+          "points": 0.0
+        },
+        {
+          "seat": 5,
+          "hand_id": 80,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 4053,
+          "points": 0.0
+        },
+        {
+          "seat": 7,
+          "hand_id": 123,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 131,
+          "points": 0.0
+        },
+        {
+          "seat": 4,
+          "hand_id": 142,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 3854,
+          "points": 20.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 181,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 3078,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 46,
+      "seed": 230046,
+      "candidate_seat": 6,
+      "hands": 157,
+      "stacks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        16000,
+        0,
+        0
+      ],
+      "points": [
+        0.0,
+        20.0,
+        0.0,
+        0.0,
+        30.0,
+        50.0,
+        0.0,
+        0.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 0.0,
+      "winner": 5,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 53,
+        "mean_us": 137.60588679245282,
+        "median_us": 149.763,
+        "p95_us": 239.572,
+        "p99_us": 246.345,
+        "max_us": 246.345,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {},
+      "eliminations": [
+        {
+          "seat": 2,
+          "hand_id": 2,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 2000,
+          "points": 0.0
+        },
+        {
+          "seat": 6,
+          "hand_id": 27,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 1740,
+          "points": 0.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 53,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 813,
+          "points": 0.0
+        },
+        {
+          "seat": 3,
+          "hand_id": 100,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 1394,
+          "points": 0.0
+        },
+        {
+          "seat": 7,
+          "hand_id": 135,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 2094,
+          "points": 0.0
+        },
+        {
+          "seat": 1,
+          "hand_id": 154,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 4520,
+          "points": 20.0
+        },
+        {
+          "seat": 4,
+          "hand_id": 156,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 3245,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 47,
+      "seed": 230047,
+      "candidate_seat": 7,
+      "hands": 176,
+      "stacks": [
+        0,
+        0,
+        16000,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "points": [
+        20.0,
+        0.0,
+        50.0,
+        0.0,
+        30.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 0.0,
+      "winner": 2,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 67,
+        "mean_us": 150.93249253731344,
+        "median_us": 161.084,
+        "p95_us": 255.463,
+        "p99_us": 390.918,
+        "max_us": 390.918,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {},
+      "eliminations": [
+        {
+          "seat": 7,
+          "hand_id": 43,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 121,
+          "points": 0.0
+        },
+        {
+          "seat": 5,
+          "hand_id": 58,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 1558,
+          "points": 0.0
+        },
+        {
+          "seat": 1,
+          "hand_id": 73,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 850,
+          "points": 0.0
+        },
+        {
+          "seat": 6,
+          "hand_id": 109,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 496,
+          "points": 0.0
+        },
+        {
+          "seat": 3,
+          "hand_id": 126,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 2153,
+          "points": 0.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 172,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 1023,
+          "points": 20.0
+        },
+        {
+          "seat": 4,
+          "hand_id": 175,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 1600,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 48,
+      "seed": 230048,
+      "candidate_seat": 0,
+      "hands": 200,
+      "stacks": [
+        0,
+        0,
+        0,
+        4648,
+        0,
+        11352,
+        0,
+        0
+      ],
+      "points": [
+        0.0,
+        0.0,
+        20.0,
+        35.81,
+        0.0,
+        44.19,
+        0.0,
+        0.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 0.0,
+      "winner": null,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 18,
+        "mean_us": 126.93622222222221,
+        "median_us": 126.87,
+        "p95_us": 242.417,
+        "p99_us": 242.417,
+        "max_us": 242.417,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {},
+      "eliminations": [
+        {
+          "seat": 0,
+          "hand_id": 10,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 2192,
+          "points": 0.0
+        },
+        {
+          "seat": 4,
+          "hand_id": 65,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 1926,
+          "points": 0.0
+        },
+        {
+          "seat": 1,
+          "hand_id": 78,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 1332,
+          "points": 0.0
+        },
+        {
+          "seat": 6,
+          "hand_id": 87,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 2789,
+          "points": 0.0
+        },
+        {
+          "seat": 7,
+          "hand_id": 162,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 1472,
+          "points": 0.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 176,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 4437,
+          "points": 20.0
+        }
+      ]
+    },
+    {
+      "table_id": 49,
+      "seed": 230049,
+      "candidate_seat": 1,
+      "hands": 194,
+      "stacks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        16000,
+        0
+      ],
+      "points": [
+        20.0,
+        0.0,
+        0.0,
+        30.0,
+        0.0,
+        0.0,
+        50.0,
+        0.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 0.0,
+      "winner": 6,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 9,
+        "mean_us": 122.24055555555556,
+        "median_us": 134.895,
+        "p95_us": 244.551,
+        "p99_us": 244.551,
+        "max_us": 244.551,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {
+        "deadline": 1
+      },
+      "eliminations": [
+        {
+          "seat": 1,
+          "hand_id": 5,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 2000,
+          "points": 0.0
+        },
+        {
+          "seat": 5,
+          "hand_id": 45,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 826,
+          "points": 0.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 72,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 1443,
+          "points": 0.0
+        },
+        {
+          "seat": 4,
+          "hand_id": 104,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 596,
+          "points": 0.0
+        },
+        {
+          "seat": 7,
+          "hand_id": 123,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 864,
+          "points": 0.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 167,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 2037,
+          "points": 20.0
+        },
+        {
+          "seat": 3,
+          "hand_id": 193,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 4390,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 50,
+      "seed": 230050,
+      "candidate_seat": 2,
+      "hands": 166,
+      "stacks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        16000,
+        0
+      ],
+      "points": [
+        0.0,
+        0.0,
+        0.0,
+        20.0,
+        0.0,
+        30.0,
+        50.0,
+        0.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 0.0,
+      "winner": 6,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 93,
+        "mean_us": 137.30461290322583,
+        "median_us": 144.854,
+        "p95_us": 243.049,
+        "p99_us": 334.541,
+        "max_us": 334.541,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {},
+      "eliminations": [
+        {
+          "seat": 0,
+          "hand_id": 18,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 2189,
+          "points": 0.0
+        },
+        {
+          "seat": 4,
+          "hand_id": 51,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 1920,
+          "points": 0.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 59,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 239,
+          "points": 0.0
+        },
+        {
+          "seat": 7,
+          "hand_id": 80,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 965,
+          "points": 0.0
+        },
+        {
+          "seat": 1,
+          "hand_id": 143,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 310,
+          "points": 0.0
+        },
+        {
+          "seat": 3,
+          "hand_id": 153,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 1098,
+          "points": 20.0
+        },
+        {
+          "seat": 5,
+          "hand_id": 165,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 3671,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 51,
+      "seed": 230051,
+      "candidate_seat": 3,
+      "hands": 177,
+      "stacks": [
+        0,
+        0,
+        0,
+        16000,
+        0,
+        0,
+        0,
+        0
+      ],
+      "points": [
+        0.0,
+        0.0,
+        30.0,
+        50.0,
+        0.0,
+        0.0,
+        20.0,
+        0.0
+      ],
+      "candidate_chips": 16000,
+      "candidate_chip_delta": 14000,
+      "candidate_chip_share": 1.0,
+      "candidate_points": 50.0,
+      "winner": 3,
+      "candidate_won_table": true,
+      "candidate_latency": {
+        "count": 326,
+        "mean_us": 138.23532515337422,
+        "median_us": 142.96,
+        "p95_us": 234.973,
+        "p99_us": 331.846,
+        "max_us": 387.02,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {},
+      "eliminations": [
+        {
+          "seat": 5,
+          "hand_id": 6,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 1946,
+          "points": 0.0
+        },
+        {
+          "seat": 4,
+          "hand_id": 48,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 652,
+          "points": 0.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 57,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 2078,
+          "points": 0.0
+        },
+        {
+          "seat": 1,
+          "hand_id": 75,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 2130,
+          "points": 0.0
+        },
+        {
+          "seat": 7,
+          "hand_id": 123,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 624,
+          "points": 0.0
+        },
+        {
+          "seat": 6,
+          "hand_id": 166,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 1418,
+          "points": 20.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 176,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 2405,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 52,
+      "seed": 230052,
+      "candidate_seat": 4,
+      "hands": 187,
+      "stacks": [
+        0,
+        0,
+        16000,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "points": [
+        30.0,
+        0.0,
+        50.0,
+        0.0,
+        0.0,
+        20.0,
+        0.0,
+        0.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 0.0,
+      "winner": 2,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 150,
+        "mean_us": 136.86402666666666,
+        "median_us": 141.667,
+        "p95_us": 246.796,
+        "p99_us": 274.468,
+        "max_us": 290.939,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {},
+      "eliminations": [
+        {
+          "seat": 6,
+          "hand_id": 9,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 1747,
+          "points": 0.0
+        },
+        {
+          "seat": 1,
+          "hand_id": 81,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 1707,
+          "points": 0.0
+        },
+        {
+          "seat": 3,
+          "hand_id": 85,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 721,
+          "points": 0.0
+        },
+        {
+          "seat": 4,
+          "hand_id": 89,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 813,
+          "points": 0.0
+        },
+        {
+          "seat": 7,
+          "hand_id": 133,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 393,
+          "points": 0.0
+        },
+        {
+          "seat": 5,
+          "hand_id": 164,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 1581,
+          "points": 20.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 186,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 5078,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 53,
+      "seed": 230053,
+      "candidate_seat": 5,
+      "hands": 198,
+      "stacks": [
+        0,
+        0,
+        16000,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "points": [
+        30.0,
+        0.0,
+        50.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        20.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 0.0,
+      "winner": 2,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 94,
+        "mean_us": 132.6117765957447,
+        "median_us": 133.682,
+        "p95_us": 258.658,
+        "p99_us": 371.441,
+        "max_us": 371.441,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {
+        "deadline": 1
+      },
+      "eliminations": [
+        {
+          "seat": 6,
+          "hand_id": 48,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 33,
+          "points": 0.0
+        },
+        {
+          "seat": 5,
+          "hand_id": 68,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 293,
+          "points": 0.0
+        },
+        {
+          "seat": 1,
+          "hand_id": 77,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 2480,
+          "points": 0.0
+        },
+        {
+          "seat": 3,
+          "hand_id": 89,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 1247,
+          "points": 0.0
+        },
+        {
+          "seat": 4,
+          "hand_id": 132,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 608,
+          "points": 0.0
+        },
+        {
+          "seat": 7,
+          "hand_id": 187,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 3654,
+          "points": 20.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 197,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 4736,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 54,
+      "seed": 230054,
+      "candidate_seat": 6,
+      "hands": 159,
+      "stacks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        16000
+      ],
+      "points": [
+        0.0,
+        0.0,
+        30.0,
+        20.0,
+        0.0,
+        0.0,
+        0.0,
+        50.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 0.0,
+      "winner": 7,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 11,
+        "mean_us": 136.50763636363635,
+        "median_us": 149.001,
+        "p95_us": 278.265,
+        "p99_us": 278.265,
+        "max_us": 278.265,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {},
+      "eliminations": [
+        {
+          "seat": 6,
+          "hand_id": 6,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 2000,
+          "points": 0.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 49,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 1481,
+          "points": 0.0
+        },
+        {
+          "seat": 1,
+          "hand_id": 53,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 53,
+          "points": 0.0
+        },
+        {
+          "seat": 5,
+          "hand_id": 58,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 898,
+          "points": 0.0
+        },
+        {
+          "seat": 4,
+          "hand_id": 112,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 2496,
+          "points": 0.0
+        },
+        {
+          "seat": 3,
+          "hand_id": 131,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 2354,
+          "points": 20.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 158,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 2446,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 55,
+      "seed": 230055,
+      "candidate_seat": 7,
+      "hands": 182,
+      "stacks": [
+        0,
+        0,
+        16000,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "points": [
+        30.0,
+        0.0,
+        50.0,
+        0.0,
+        20.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 0.0,
+      "winner": 2,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 238,
+        "mean_us": 131.9750756302521,
+        "median_us": 133.783,
+        "p95_us": 225.937,
+        "p99_us": 247.498,
+        "max_us": 367.924,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {},
+      "eliminations": [
+        {
+          "seat": 3,
+          "hand_id": 3,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 1956,
+          "points": 0.0
+        },
+        {
+          "seat": 5,
+          "hand_id": 81,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 546,
+          "points": 0.0
+        },
+        {
+          "seat": 7,
+          "hand_id": 137,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 3827,
+          "points": 0.0
+        },
+        {
+          "seat": 1,
+          "hand_id": 145,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 1340,
+          "points": 0.0
+        },
+        {
+          "seat": 6,
+          "hand_id": 153,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 692,
+          "points": 0.0
+        },
+        {
+          "seat": 4,
+          "hand_id": 155,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 1083,
+          "points": 20.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 181,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 5213,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 56,
+      "seed": 230056,
+      "candidate_seat": 0,
+      "hands": 174,
+      "stacks": [
+        0,
+        0,
+        16000,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "points": [
+        0.0,
+        0.0,
+        50.0,
+        30.0,
+        0.0,
+        20.0,
+        0.0,
+        0.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 0.0,
+      "winner": 2,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 129,
+        "mean_us": 128.62501550387597,
+        "median_us": 132.05,
+        "p95_us": 240.354,
+        "p99_us": 261.534,
+        "max_us": 282.994,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {},
+      "eliminations": [
+        {
+          "seat": 1,
+          "hand_id": 79,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 1376,
+          "points": 0.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 86,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 944,
+          "points": 0.0
+        },
+        {
+          "seat": 4,
+          "hand_id": 106,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 2377,
+          "points": 0.0
+        },
+        {
+          "seat": 6,
+          "hand_id": 142,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 294,
+          "points": 0.0
+        },
+        {
+          "seat": 7,
+          "hand_id": 143,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 880,
+          "points": 0.0
+        },
+        {
+          "seat": 5,
+          "hand_id": 147,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 1015,
+          "points": 20.0
+        },
+        {
+          "seat": 3,
+          "hand_id": 173,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 4985,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 57,
+      "seed": 230057,
+      "candidate_seat": 1,
+      "hands": 184,
+      "stacks": [
+        0,
+        0,
+        0,
+        16000,
+        0,
+        0,
+        0,
+        0
+      ],
+      "points": [
+        0.0,
+        30.0,
+        20.0,
+        50.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 30.0,
+      "winner": 3,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 289,
+        "mean_us": 128.67098615916956,
+        "median_us": 126.418,
+        "p95_us": 229.032,
+        "p99_us": 253.398,
+        "max_us": 288.384,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {
+        "deadline": 1
+      },
+      "eliminations": [
+        {
+          "seat": 4,
+          "hand_id": 9,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 1258,
+          "points": 0.0
+        },
+        {
+          "seat": 6,
+          "hand_id": 17,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 1815,
+          "points": 0.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 55,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 2368,
+          "points": 0.0
+        },
+        {
+          "seat": 5,
+          "hand_id": 110,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 1414,
+          "points": 0.0
+        },
+        {
+          "seat": 7,
+          "hand_id": 141,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 336,
+          "points": 0.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 164,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 6045,
+          "points": 20.0
+        },
+        {
+          "seat": 1,
+          "hand_id": 183,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 7334,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 58,
+      "seed": 230058,
+      "candidate_seat": 2,
+      "hands": 177,
+      "stacks": [
+        0,
+        0,
+        0,
+        0,
+        16000,
+        0,
+        0,
+        0
+      ],
+      "points": [
+        20.0,
+        0.0,
+        0.0,
+        0.0,
+        50.0,
+        0.0,
+        0.0,
+        30.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 0.0,
+      "winner": 4,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 79,
+        "mean_us": 131.03706329113925,
+        "median_us": 134.113,
+        "p95_us": 247.487,
+        "p99_us": 355.862,
+        "max_us": 355.862,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {},
+      "eliminations": [
+        {
+          "seat": 6,
+          "hand_id": 2,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 2000,
+          "points": 0.0
+        },
+        {
+          "seat": 5,
+          "hand_id": 43,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 1944,
+          "points": 0.0
+        },
+        {
+          "seat": 3,
+          "hand_id": 48,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 2469,
+          "points": 0.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 49,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 1344,
+          "points": 0.0
+        },
+        {
+          "seat": 1,
+          "hand_id": 130,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 2060,
+          "points": 0.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 145,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 2292,
+          "points": 20.0
+        },
+        {
+          "seat": 7,
+          "hand_id": 176,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 2823,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 59,
+      "seed": 230059,
+      "candidate_seat": 3,
+      "hands": 176,
+      "stacks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        16000
+      ],
+      "points": [
+        0.0,
+        30.0,
+        0.0,
+        0.0,
+        20.0,
+        0.0,
+        0.0,
+        50.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 0.0,
+      "winner": 7,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 101,
+        "mean_us": 147.4890297029703,
+        "median_us": 177.465,
+        "p95_us": 248.329,
+        "p99_us": 273.056,
+        "max_us": 347.536,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {},
+      "eliminations": [
+        {
+          "seat": 6,
+          "hand_id": 19,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 2172,
+          "points": 0.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 26,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 1917,
+          "points": 0.0
+        },
+        {
+          "seat": 3,
+          "hand_id": 47,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 1899,
+          "points": 0.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 64,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 1629,
+          "points": 0.0
+        },
+        {
+          "seat": 5,
+          "hand_id": 73,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 1685,
+          "points": 0.0
+        },
+        {
+          "seat": 4,
+          "hand_id": 127,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 898,
+          "points": 20.0
+        },
+        {
+          "seat": 1,
+          "hand_id": 175,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 2972,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 60,
+      "seed": 230060,
+      "candidate_seat": 4,
+      "hands": 176,
+      "stacks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        16000,
+        0,
+        0
+      ],
+      "points": [
+        0.0,
+        20.0,
+        0.0,
+        0.0,
+        30.0,
+        50.0,
+        0.0,
+        0.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 30.0,
+      "winner": 5,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 320,
+        "mean_us": 138.1975,
+        "median_us": 149.372,
+        "p95_us": 238.821,
+        "p99_us": 323.851,
+        "max_us": 376.11,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {},
+      "eliminations": [
+        {
+          "seat": 3,
+          "hand_id": 27,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 2077,
+          "points": 0.0
+        },
+        {
+          "seat": 6,
+          "hand_id": 37,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 1758,
+          "points": 0.0
+        },
+        {
+          "seat": 7,
+          "hand_id": 106,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 1425,
+          "points": 0.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 115,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 1522,
+          "points": 0.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 150,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 308,
+          "points": 0.0
+        },
+        {
+          "seat": 1,
+          "hand_id": 162,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 3140,
+          "points": 20.0
+        },
+        {
+          "seat": 4,
+          "hand_id": 175,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 4992,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 61,
+      "seed": 230061,
+      "candidate_seat": 5,
+      "hands": 173,
+      "stacks": [
+        0,
+        0,
+        0,
+        0,
+        16000,
+        0,
+        0,
+        0
+      ],
+      "points": [
+        30.0,
+        0.0,
+        0.0,
+        0.0,
+        50.0,
+        0.0,
+        0.0,
+        20.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 0.0,
+      "winner": 4,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 13,
+        "mean_us": 144.83030769230768,
+        "median_us": 180.761,
+        "p95_us": 281.191,
+        "p99_us": 281.191,
+        "max_us": 281.191,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {},
+      "eliminations": [
+        {
+          "seat": 5,
+          "hand_id": 5,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 1879,
+          "points": 0.0
+        },
+        {
+          "seat": 3,
+          "hand_id": 11,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 1912,
+          "points": 0.0
+        },
+        {
+          "seat": 6,
+          "hand_id": 20,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 2015,
+          "points": 0.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 85,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 212,
+          "points": 0.0
+        },
+        {
+          "seat": 1,
+          "hand_id": 87,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 2029,
+          "points": 0.0
+        },
+        {
+          "seat": 7,
+          "hand_id": 135,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 66,
+          "points": 20.0
+        },
+        {
+          "seat": 0,
+          "hand_id": 172,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 3210,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 62,
+      "seed": 230062,
+      "candidate_seat": 6,
+      "hands": 176,
+      "stacks": [
+        16000,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "points": [
+        50.0,
+        0.0,
+        0.0,
+        30.0,
+        0.0,
+        0.0,
+        0.0,
+        20.0
+      ],
+      "candidate_chips": 0,
+      "candidate_chip_delta": -2000,
+      "candidate_chip_share": 0.0,
+      "candidate_points": 0.0,
+      "winner": 0,
+      "candidate_won_table": false,
+      "candidate_latency": {
+        "count": 40,
+        "mean_us": 138.90302499999999,
+        "median_us": 146.076,
+        "p95_us": 226.507,
+        "p99_us": 240.745,
+        "max_us": 240.745,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {
+        "deadline": 2
+      },
+      "eliminations": [
+        {
+          "seat": 6,
+          "hand_id": 22,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 2306,
+          "points": 0.0
+        },
+        {
+          "seat": 5,
+          "hand_id": 50,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 1596,
+          "points": 0.0
+        },
+        {
+          "seat": 1,
+          "hand_id": 108,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 172,
+          "points": 0.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 108,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 280,
+          "points": 0.0
+        },
+        {
+          "seat": 4,
+          "hand_id": 129,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 934,
+          "points": 0.0
+        },
+        {
+          "seat": 7,
+          "hand_id": 142,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 4434,
+          "points": 20.0
+        },
+        {
+          "seat": 3,
+          "hand_id": 175,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 5001,
+          "points": 30.0
+        }
+      ]
+    },
+    {
+      "table_id": 63,
+      "seed": 230063,
+      "candidate_seat": 7,
+      "hands": 179,
+      "stacks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        16000
+      ],
+      "points": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        30.0,
+        0.0,
+        20.0,
+        50.0
+      ],
+      "candidate_chips": 16000,
+      "candidate_chip_delta": 14000,
+      "candidate_chip_share": 1.0,
+      "candidate_points": 50.0,
+      "winner": 7,
+      "candidate_won_table": true,
+      "candidate_latency": {
+        "count": 310,
+        "mean_us": 136.82090645161293,
+        "median_us": 135.526,
+        "p95_us": 250.172,
+        "p99_us": 340.793,
+        "max_us": 406.828,
+        "over_1ms": 0,
+        "fallbacks": {},
+        "errors": {}
+      },
+      "all_fallbacks": {},
+      "eliminations": [
+        {
+          "seat": 0,
+          "hand_id": 7,
+          "ranks": [
+            8
+          ],
+          "starting_stack": 2044,
+          "points": 0.0
+        },
+        {
+          "seat": 5,
+          "hand_id": 8,
+          "ranks": [
+            7
+          ],
+          "starting_stack": 1846,
+          "points": 0.0
+        },
+        {
+          "seat": 2,
+          "hand_id": 93,
+          "ranks": [
+            6
+          ],
+          "starting_stack": 106,
+          "points": 0.0
+        },
+        {
+          "seat": 3,
+          "hand_id": 107,
+          "ranks": [
+            5
+          ],
+          "starting_stack": 444,
+          "points": 0.0
+        },
+        {
+          "seat": 1,
+          "hand_id": 136,
+          "ranks": [
+            4
+          ],
+          "starting_stack": 2899,
+          "points": 0.0
+        },
+        {
+          "seat": 6,
+          "hand_id": 177,
+          "ranks": [
+            3
+          ],
+          "starting_stack": 6203,
+          "points": 20.0
+        },
+        {
+          "seat": 4,
+          "hand_id": 178,
+          "ranks": [
+            2
+          ],
+          "starting_stack": 1858,
+          "points": 30.0
+        }
+      ]
+    }
+  ]
+}

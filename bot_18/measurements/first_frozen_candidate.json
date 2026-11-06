@@ -1,0 +1,98 @@
+{
+  "frozen_at_utc": "2026-11-06T09:04:12.071342+00:00",
+  "source_sha256": {
+    "agent.py": "66a969bb484f4c16adf8f7aeccca224bf516ba9f51ec022ad20a4077a533e224",
+    "policy/icm.py": "6b22ae47eeab8a436f1098806ebfc886af2f8ce52971e4c127f40e703c9951cd",
+    "policy/icm_fast.py": "ced0b224b90386c441434b16f8577f4325227265d869d4c5811515e3df162432",
+    "policy/texture.py": "13e7d1e526aa5477b9c691ee9a3855673467b7c1dc1cc2dd3e4fd07a5ebee417",
+    "equity/model.py": "d370beecace244c53346512f2027fb1d7adce70116a657bc260b1fdd48b2ec7a",
+    "equity/preflop.py": "64fd15a3e576dbd55992762fb1f6abe031ddc7c49da0d631d61443f302e7f339",
+    "equity/features.py": "00ecc905e710cf87c473dd2d6f0c171d903f1ef59a37518787ab81ac0284d137",
+    "equity/evaluator.py": "4761058ec70762e8c41ec13dde115f50c58e417b391687f25d2a76e35a33e3ab",
+    "equity/model.json": "b89c374bc3e77cdc43309cd1282d6b94e5dc4c0d6e99c6e5fe2360c5f6f7ed60",
+    "equity/preflop.json": "379f36d83bc2d794a70c62be59acddc84740056c135b4e782b4e9af1113545bb",
+    "equity/premium.json": "01c573b8f1df26f1e71614a933e08ec2dcb8c9d30c5e0781b7e03ad3b8e4ff2a",
+    "equity/special.py": "e795f50008e7397ca7dd44d42b26245b48eb2134dfea6fa95b04cad18d54b7c5",
+    "equity/compiled.py": "fae4101b00072962b8a4fd41edb1d0bfc311ccc73cbed3c8d1148ab86ff7417e",
+    "sim/engine.py": "a8f09df775bf6ac390d477d97afeb8e2cbf972fb9010063cee3b3ef0b5aadef3",
+    "sim/baselines.py": "436ab7578499d4dd1e1a75ff7de57e284a59ba8083cff828601511931a55bcd8",
+    "sim/benchmark.py": "4dc4099f8527a1aecca6dcbe07bfad3e53a9f0c5a01996489722ddf4442921b6"
+  },
+  "config": {
+    "open_scale": 1.2,
+    "call_margin": 0.025,
+    "aggression": 1.6,
+    "selection": 1.5,
+    "shove_margin": 0.03,
+    "adaptation": 1.0,
+    "icm_shove": 1.0
+  },
+  "selection_note": "Last comparison effectively tied:26.55549 vs26.54161. Used preregistered higher-mean rule, not statistically established superiority.",
+  "tuning_tables": 26112,
+  "final_plan": {
+    "purpose": "Preregister final local evaluation before inspecting its labels or outcomes",
+    "model": "v3 street models plus exact quads/straight-board shortcuts; frozen encoder v2-pair-suit-canonical",
+    "policy_family": {
+      "open_scale": 1.2,
+      "selection": 1.5,
+      "aggression": 1.6
+    },
+    "pending_choice": "Enable payout-aware short-stack shoves only if their pooled tuning mean exceeds the otherwise-identical policy; no heldout data is used for this choice.",
+    "model_test": {
+      "seed": 1890017,
+      "rows": 28000,
+      "trials": 8192,
+      "opponents": "uniform 1..7, including 4 and 6 absent from the training sample grid"
+    },
+    "tournament_tests": [
+      {
+        "seed": 910000,
+        "tables_per_cell": 512,
+        "suites": [
+          "mixed",
+          "calling",
+          "tight",
+          "aggressive",
+          "challenge",
+          "selfplay"
+        ],
+        "payouts": [
+          "top3",
+          "flat4",
+          "winner"
+        ]
+      },
+      {
+        "seed": 1510000,
+        "tables_per_cell": 512,
+        "suites": [
+          "mixed",
+          "challenge",
+          "selfplay"
+        ],
+        "payouts": [
+          "linear"
+        ],
+        "hide_payouts": true
+      },
+      {
+        "seed": 1710000,
+        "tables_per_cell": 512,
+        "suites": [
+          "mixed",
+          "challenge",
+          "selfplay"
+        ],
+        "payouts": [
+          "top3",
+          "linear"
+        ],
+        "fast_blinds": true
+      }
+    ],
+    "total_tables": 13824,
+    "timeout_enforced_ns": 1000000,
+    "reserved_opponents": "challenge was not used for tuning or prior candidate performance measurement",
+    "limitations": "All interfaces, opponent implementations, later blinds and payout vectors are local experimental assumptions. This is not a contest submission or prediction of contest rank."
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "algorithm": "joint_residual_boosting_with_multioutput_regression_trees",
+  "train_rows": 300000,
+  "heldout_rows": 15000,
+  "features": 41,
+  "trees": 140,
+  "outputs_per_tree": 2,
+  "leaves": 127,
+  "depth": 10,
+  "subsample_rows": 80000,
+  "learning_rate": 0.1,
+  "min_samples_leaf": 35,
+  "rng_seed": 1212088,
+  "seconds": 169.19724774360657,
+  "model_bytes": 1247669,
+  "prediction_source_bytes": 719709,
+  "targets": [
+    "equity_random",
+    "equity_top20pct"
+  ],
+  "export_max_error": 1.1623202816890554e-09,
+  "mae": [
+    0.014572104664560263,
+    0.014672883451284095
+  ],
+  "rmse": [
+    0.02158554096132762,
+    0.02327317408792016
+  ],
+  "p95_abs_error": [
+    0.039350325053063843,
+    0.04218078404932245
+  ],
+  "by_street": {
+    "3": {
+      "rows": 5019,
+      "mae": [
+        0.010902744916407865,
+        0.011441353345840727
+      ],
+      "rmse": [
+        0.01419572469314154,
+        0.014773003895815772
+      ]
+    },
+    "4": {
+      "rows": 5034,
+      "mae": [
+        0.013960158249510825,
+        0.013665591534374195
+      ],
+      "rmse": [
+        0.01838174994741481,
+        0.01873469971119929
+      ]
+    },
+    "5": {
+      "rows": 4947,
+      "mae": [
+        0.018917577644009368,
+        0.01897645270718568
+      ],
+      "rmse": [
+        0.029402375545635562,
+        0.032615195788164075
+      ]
+    }
+  },
+  "train_files": [
+    "train0.csv",
+    "train1.csv",
+    "train2.csv",
+    "train3.csv",
+    "train4.csv",
+    "train5.csv"
+  ],
+  "heldout_file": "heldout.csv",
+  "selection": "Training0..4fit/Training5validation only; final model fitall6 and heldout evaluated once for this model. Prior full forest evaluated same independently seeded heldout; no heldout feedback used for joint selection.",
+  "scope": "Learned HU forest only. Production uses exact river enumeration, so forest river errors do not describe production river accuracy."
+}

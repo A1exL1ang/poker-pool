@@ -1,0 +1,580 @@
+{
+  "benchmark": "independent-local-synthetic-NLHE-v1",
+  "official_compatibility": false,
+  "config": {
+    "tables": 16,
+    "split": "tuning",
+    "seed_start": 8000,
+    "lineup": [
+      "mc",
+      "value",
+      "nit",
+      "loose",
+      "station",
+      "mirror",
+      "value"
+    ],
+    "payouts": [
+      0.5,
+      0.3,
+      0.2,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "synthetic_payouts": true,
+    "blind_schedule": [
+      [
+        10,
+        20
+      ],
+      [
+        15,
+        30
+      ],
+      [
+        25,
+        50
+      ],
+      [
+        40,
+        80
+      ],
+      [
+        60,
+        120
+      ],
+      [
+        100,
+        200
+      ],
+      [
+        150,
+        300
+      ],
+      [
+        250,
+        500
+      ]
+    ],
+    "synthetic_blinds": true,
+    "max_hands": 200,
+    "initial_stack": 2000,
+    "enforce_time_limit": false,
+    "benchmark_only_slow_opponents": [
+      "mc"
+    ],
+    "params": null,
+    "effective_defaults": {
+      "open_scale": 1.0,
+      "call_margin": 0.025,
+      "value_threshold": 0.69,
+      "bluff_scale": 1.0,
+      "risk_scale": 1.0,
+      "cbet": 0.54,
+      "postflop_range_weight": 0.6,
+      "shove_max_bb": 11.0
+    },
+    "effective_params": {
+      "open_scale": 1.0,
+      "call_margin": 0.025,
+      "value_threshold": 0.69,
+      "bluff_scale": 1.0,
+      "risk_scale": 1.0,
+      "cbet": 0.54,
+      "postflop_range_weight": 0.6,
+      "shove_max_bb": 11.0
+    },
+    "model_path": null,
+    "stress": false
+  },
+  "runtime": {
+    "python": "3.11.9 (main, Apr 12 2024, 09:55:27)  [GCC UCRT 13.2.0 64 bit (AMD64)]",
+    "implementation": "CPython",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "machine": "AMD64"
+  },
+  "focal_points": {
+    "n": 16,
+    "mean": 0.20309375,
+    "stderr": 0.05172431364837849,
+    "ci95": [
+      0.10171409524917815,
+      0.30447340475082185
+    ]
+  },
+  "focal_final_chips": {
+    "n": 16,
+    "mean": 3747.5,
+    "stderr": 1691.0813847949482,
+    "ci95": [
+      432.9804858019015,
+      7062.0195141980985
+    ]
+  },
+  "equal_share_reference": 0.125,
+  "finish_distribution": [
+    0.23421875,
+    0.20328125,
+    0.125,
+    0.125,
+    0.25,
+    0.0625,
+    0.0,
+    0.0
+  ],
+  "finish_distribution_semantics": "observed elimination ranks; exact ICM probabilities for cap survivors",
+  "focal_diagnostics": {
+    "decisions": 2490,
+    "engine_errors": 0,
+    "internal_fallbacks": 0,
+    "enforced_timeouts": 0,
+    "actions": {
+      "fold": 1151,
+      "check": 556,
+      "call": 173,
+      "raise_": 610
+    }
+  },
+  "all_diagnostics": {
+    "decisions": 15960,
+    "engine_errors": 0,
+    "internal_fallbacks": 0,
+    "enforced_timeouts": 0
+  },
+  "focal_latency": {
+    "n": 2490,
+    "p50_ns": 53200.0,
+    "p95_ns": 268564.99999999994,
+    "p99_ns": 367466.00000000006,
+    "p999_ns": 1976417.0999999703,
+    "max_ns": 3331400,
+    "over_1ms": 6,
+    "over_1ms_rate": 0.0024096385542168677
+  },
+  "wall_seconds": 14.066810099990107,
+  "artifact_sha256": {
+    "bot.py": "3b2b871aff0d04d30ba64e4739d98b7c63f195ff4ce33516b8f1c0995e974095",
+    "model.py": "48b1676e40500fdf9ddbecb88694d3c3124b052b99a01e4980b477d69dca3f4b",
+    "features.py": "9cdffaf8dd454fa2bada3ed8c32957a3c35d480123504fa0b46e527213c455e1",
+    "equity.py": "955f5f40da9c57bc5d8effc08c8584ead3959a017adc50f6dafab5200ccb9cfd",
+    "evaluator.py": "d704f3c148dfcd644a2bdfb7ddf8e62a894126ee71518666bc32fb1e224607dc",
+    "engine.py": "3e7d9f3978f52ff184f16b72a7c2bc8121f1ce441afcfaa3c25fb00fafa1c8c5",
+    "baselines.py": "f6d6a310b75654232a528cadef791820cb4344803e75231831ef1bd4124c56a8",
+    "assets/equity_model.json.gz": "583773cff5b349953d87faf0a14980876c959b6a61d1790ef55451460c987df1",
+    "assets/equity_model.bin": "8ca5196d471eb3d66b7234f745acf4ee1dbb451b41c8a7444ea824e9c61598a7",
+    "assets/preflop.csv": "932e8151725b8fa991446eabff14df7f680ba1d5e52eb9dc53ce2c66e71d30f7",
+    "assets/preflop_meta.json": "8c27f59a6cedba08a3b93e27c1eae376e74fb4bb355d8b8a7c87ac5aba9bdc50"
+  },
+  "tables": [
+    {
+      "seed": 8000,
+      "focal_seat": 0,
+      "lineup": [
+        "focal",
+        "mc",
+        "value",
+        "nit",
+        "loose",
+        "station",
+        "mirror",
+        "value"
+      ],
+      "points": 0.3,
+      "chips": 0,
+      "hands": 168,
+      "alive_at_cap": false,
+      "errors": 0,
+      "timeouts": 0,
+      "internal_fallbacks": 0,
+      "focal_errors": 0,
+      "focal_internal_fallbacks": 0,
+      "focal_timeouts": 0,
+      "focal_decisions": 240
+    },
+    {
+      "seed": 8001,
+      "focal_seat": 1,
+      "lineup": [
+        "mc",
+        "focal",
+        "value",
+        "nit",
+        "loose",
+        "station",
+        "mirror",
+        "value"
+      ],
+      "points": 0.0,
+      "chips": 0,
+      "hands": 200,
+      "alive_at_cap": false,
+      "errors": 0,
+      "timeouts": 0,
+      "internal_fallbacks": 0,
+      "focal_errors": 0,
+      "focal_internal_fallbacks": 0,
+      "focal_timeouts": 0,
+      "focal_decisions": 44
+    },
+    {
+      "seed": 8002,
+      "focal_seat": 2,
+      "lineup": [
+        "mc",
+        "value",
+        "focal",
+        "nit",
+        "loose",
+        "station",
+        "mirror",
+        "value"
+      ],
+      "points": 0.0,
+      "chips": 0,
+      "hands": 115,
+      "alive_at_cap": false,
+      "errors": 0,
+      "timeouts": 0,
+      "internal_fallbacks": 0,
+      "focal_errors": 0,
+      "focal_internal_fallbacks": 0,
+      "focal_timeouts": 0,
+      "focal_decisions": 78
+    },
+    {
+      "seed": 8003,
+      "focal_seat": 3,
+      "lineup": [
+        "mc",
+        "value",
+        "nit",
+        "focal",
+        "loose",
+        "station",
+        "mirror",
+        "value"
+      ],
+      "points": 0.5,
+      "chips": 16000,
+      "hands": 189,
+      "alive_at_cap": false,
+      "errors": 0,
+      "timeouts": 0,
+      "internal_fallbacks": 0,
+      "focal_errors": 0,
+      "focal_internal_fallbacks": 0,
+      "focal_timeouts": 0,
+      "focal_decisions": 272
+    },
+    {
+      "seed": 8004,
+      "focal_seat": 4,
+      "lineup": [
+        "mc",
+        "value",
+        "nit",
+        "loose",
+        "focal",
+        "station",
+        "mirror",
+        "value"
+      ],
+      "points": 0.0,
+      "chips": 0,
+      "hands": 176,
+      "alive_at_cap": false,
+      "errors": 0,
+      "timeouts": 0,
+      "internal_fallbacks": 0,
+      "focal_errors": 0,
+      "focal_internal_fallbacks": 0,
+      "focal_timeouts": 0,
+      "focal_decisions": 155
+    },
+    {
+      "seed": 8005,
+      "focal_seat": 5,
+      "lineup": [
+        "mc",
+        "value",
+        "nit",
+        "loose",
+        "station",
+        "focal",
+        "mirror",
+        "value"
+      ],
+      "points": 0.3,
+      "chips": 0,
+      "hands": 133,
+      "alive_at_cap": false,
+      "errors": 0,
+      "timeouts": 0,
+      "internal_fallbacks": 0,
+      "focal_errors": 0,
+      "focal_internal_fallbacks": 0,
+      "focal_timeouts": 0,
+      "focal_decisions": 202
+    },
+    {
+      "seed": 8006,
+      "focal_seat": 6,
+      "lineup": [
+        "mc",
+        "value",
+        "nit",
+        "loose",
+        "station",
+        "mirror",
+        "focal",
+        "value"
+      ],
+      "points": 0.0,
+      "chips": 0,
+      "hands": 140,
+      "alive_at_cap": false,
+      "errors": 0,
+      "timeouts": 0,
+      "internal_fallbacks": 0,
+      "focal_errors": 0,
+      "focal_internal_fallbacks": 0,
+      "focal_timeouts": 0,
+      "focal_decisions": 81
+    },
+    {
+      "seed": 8007,
+      "focal_seat": 7,
+      "lineup": [
+        "mc",
+        "value",
+        "nit",
+        "loose",
+        "station",
+        "mirror",
+        "value",
+        "focal"
+      ],
+      "points": 0.5,
+      "chips": 16000,
+      "hands": 198,
+      "alive_at_cap": false,
+      "errors": 0,
+      "timeouts": 0,
+      "internal_fallbacks": 0,
+      "focal_errors": 0,
+      "focal_internal_fallbacks": 0,
+      "focal_timeouts": 0,
+      "focal_decisions": 260
+    },
+    {
+      "seed": 8008,
+      "focal_seat": 0,
+      "lineup": [
+        "focal",
+        "value",
+        "nit",
+        "loose",
+        "station",
+        "mirror",
+        "value",
+        "mc"
+      ],
+      "points": 0.0,
+      "chips": 0,
+      "hands": 200,
+      "alive_at_cap": false,
+      "errors": 0,
+      "timeouts": 0,
+      "internal_fallbacks": 0,
+      "focal_errors": 0,
+      "focal_internal_fallbacks": 0,
+      "focal_timeouts": 0,
+      "focal_decisions": 186
+    },
+    {
+      "seed": 8009,
+      "focal_seat": 1,
+      "lineup": [
+        "value",
+        "focal",
+        "nit",
+        "loose",
+        "station",
+        "mirror",
+        "value",
+        "mc"
+      ],
+      "points": 0.3,
+      "chips": 0,
+      "hands": 91,
+      "alive_at_cap": false,
+      "errors": 0,
+      "timeouts": 0,
+      "internal_fallbacks": 0,
+      "focal_errors": 0,
+      "focal_internal_fallbacks": 0,
+      "focal_timeouts": 0,
+      "focal_decisions": 156
+    },
+    {
+      "seed": 8010,
+      "focal_seat": 2,
+      "lineup": [
+        "value",
+        "nit",
+        "focal",
+        "loose",
+        "station",
+        "mirror",
+        "value",
+        "mc"
+      ],
+      "points": 0.5,
+      "chips": 16000,
+      "hands": 190,
+      "alive_at_cap": false,
+      "errors": 0,
+      "timeouts": 0,
+      "internal_fallbacks": 0,
+      "focal_errors": 0,
+      "focal_internal_fallbacks": 0,
+      "focal_timeouts": 0,
+      "focal_decisions": 245
+    },
+    {
+      "seed": 8011,
+      "focal_seat": 3,
+      "lineup": [
+        "value",
+        "nit",
+        "loose",
+        "focal",
+        "station",
+        "mirror",
+        "value",
+        "mc"
+      ],
+      "points": 0.0,
+      "chips": 0,
+      "hands": 182,
+      "alive_at_cap": false,
+      "errors": 0,
+      "timeouts": 0,
+      "internal_fallbacks": 0,
+      "focal_errors": 0,
+      "focal_internal_fallbacks": 0,
+      "focal_timeouts": 0,
+      "focal_decisions": 58
+    },
+    {
+      "seed": 8012,
+      "focal_seat": 4,
+      "lineup": [
+        "value",
+        "nit",
+        "loose",
+        "station",
+        "focal",
+        "mirror",
+        "value",
+        "mc"
+      ],
+      "points": 0.2,
+      "chips": 0,
+      "hands": 120,
+      "alive_at_cap": false,
+      "errors": 0,
+      "timeouts": 0,
+      "internal_fallbacks": 0,
+      "focal_errors": 0,
+      "focal_internal_fallbacks": 0,
+      "focal_timeouts": 0,
+      "focal_decisions": 56
+    },
+    {
+      "seed": 8013,
+      "focal_seat": 5,
+      "lineup": [
+        "value",
+        "nit",
+        "loose",
+        "station",
+        "mirror",
+        "focal",
+        "value",
+        "mc"
+      ],
+      "points": 0.2,
+      "chips": 0,
+      "hands": 200,
+      "alive_at_cap": false,
+      "errors": 0,
+      "timeouts": 0,
+      "internal_fallbacks": 0,
+      "focal_errors": 0,
+      "focal_internal_fallbacks": 0,
+      "focal_timeouts": 0,
+      "focal_decisions": 136
+    },
+    {
+      "seed": 8014,
+      "focal_seat": 6,
+      "lineup": [
+        "value",
+        "nit",
+        "loose",
+        "station",
+        "mirror",
+        "value",
+        "focal",
+        "mc"
+      ],
+      "points": 0.0,
+      "chips": 0,
+      "hands": 107,
+      "alive_at_cap": false,
+      "errors": 0,
+      "timeouts": 0,
+      "internal_fallbacks": 0,
+      "focal_errors": 0,
+      "focal_internal_fallbacks": 0,
+      "focal_timeouts": 0,
+      "focal_decisions": 64
+    },
+    {
+      "seed": 8015,
+      "focal_seat": 7,
+      "lineup": [
+        "value",
+        "nit",
+        "loose",
+        "station",
+        "mirror",
+        "value",
+        "mc",
+        "focal"
+      ],
+      "points": 0.4495,
+      "chips": 11960,
+      "hands": 200,
+      "alive_at_cap": true,
+      "errors": 0,
+      "timeouts": 0,
+      "internal_fallbacks": 0,
+      "focal_errors": 0,
+      "focal_internal_fallbacks": 0,
+      "focal_timeouts": 0,
+      "focal_decisions": 257
+    }
+  ],
+  "limitations": [
+    "Synthetic heuristic opponent pool; no equilibrium or contest performance claim.",
+    "MC opponents deliberately exceed 1ms and are benchmark-only when present.",
+    "Normal CI may be inaccurate for small samples or rare large payouts.",
+    "OS scheduling and machine load affect wall-clock decision times.",
+    "Do not use held-out results to tune the policy and still call them held-out."
+  ]
+}

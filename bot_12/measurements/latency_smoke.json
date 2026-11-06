@@ -1,0 +1,684 @@
+{
+  "environment": {
+    "python": "3.11.9 (main, Apr 12 2024, 09:55:27)  [GCC UCRT 13.2.0 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "machine": "AMD64",
+    "processor": "AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD",
+    "gc_enabled": true,
+    "load_note": "Other desktop/process load was not measured; no CPU/process/job inventory queried. Run serially after training/tuning for final evidence.",
+    "timer": "time.perf_counter_ns wall; time.process_time_ns CPU"
+  },
+  "current_source_hashes": {
+    "agent.py": "2a577bc8fd87b8e388d353f9c1bf70714868852500a0a8ae0a3866b2ecc90261",
+    "equity.py": "d5bee1a18f77ecd593b648186dfb8255c0f637c977d58b9ad53358e109d50bb5",
+    "icm.py": "352f063e89bcc3cde0a9b0ad35d2f9ad6d3287b1b5042178603ca31cd65ec902",
+    "assets/equity_predict.py": "0bce2a0f279b57d234a242348a3d1135ee3ee8bab503e7e55c04f893fdc548cc",
+    "assets/equity_model.json": "730eb4d850d0a2627c93460ca48e15bb75f467681e52656da858464949d6bf3a",
+    "assets/preflop.json": "7be0437bdc6873d331233e49909ed20d05e89048311b08701708bc8469aa31bd"
+  },
+  "params": {
+    "open_scale": 1.0,
+    "call_margin": 0.025,
+    "value_threshold": 0.7,
+    "bluff_scale": 1.0,
+    "range_selection": 1.0,
+    "shove_margin": 0.025,
+    "threebet_scale": 1.0,
+    "realization": 1.0
+  },
+  "corpus_path": "measurements\\latency_smoke_corpus.jsonl.gz",
+  "corpus": {
+    "kind": "actual_local_hero_observations",
+    "tables": 3,
+    "seed_start": 730000,
+    "max_hands": 4,
+    "synthetic_payouts": [
+      0.5,
+      0.3,
+      0.2
+    ],
+    "synthetic_blind_schedule": [
+      [
+        10,
+        20
+      ],
+      [
+        20,
+        40
+      ],
+      [
+        40,
+        80
+      ],
+      [
+        80,
+        160
+      ],
+      [
+        160,
+        320
+      ],
+      [
+        320,
+        640
+      ],
+      [
+        640,
+        1280
+      ],
+      [
+        1280,
+        2560
+      ]
+    ],
+    "scenarios": [
+      "mixed",
+      "selfplay",
+      "shove"
+    ],
+    "hero_seat_rotation": true,
+    "seconds": 0.02277039992623031,
+    "source_hashes": {
+      "agent.py": "2a577bc8fd87b8e388d353f9c1bf70714868852500a0a8ae0a3866b2ecc90261",
+      "equity.py": "d5bee1a18f77ecd593b648186dfb8255c0f637c977d58b9ad53358e109d50bb5",
+      "icm.py": "352f063e89bcc3cde0a9b0ad35d2f9ad6d3287b1b5042178603ca31cd65ec902",
+      "assets/equity_predict.py": "0bce2a0f279b57d234a242348a3d1135ee3ee8bab503e7e55c04f893fdc548cc",
+      "assets/equity_model.json": "730eb4d850d0a2627c93460ca48e15bb75f467681e52656da858464949d6bf3a",
+      "assets/preflop.json": "7be0437bdc6873d331233e49909ed20d05e89048311b08701708bc8469aa31bd"
+    },
+    "params": {
+      "open_scale": 1.0,
+      "call_margin": 0.025,
+      "value_threshold": 0.7,
+      "bluff_scale": 1.0,
+      "range_selection": 1.0,
+      "shove_margin": 0.025,
+      "threebet_scale": 1.0,
+      "realization": 1.0
+    },
+    "table_rows": [
+      {
+        "table": 0,
+        "seed": 730000,
+        "hero_seat": 0,
+        "scenario": "mixed",
+        "decisions": 4,
+        "hands": 4,
+        "invalid": 0,
+        "exceptions": 0,
+        "internal_fallbacks": 0
+      },
+      {
+        "table": 1,
+        "seed": 730001,
+        "hero_seat": 1,
+        "scenario": "selfplay",
+        "decisions": 4,
+        "hands": 4,
+        "invalid": 0,
+        "exceptions": 0,
+        "internal_fallbacks": 0
+      },
+      {
+        "table": 2,
+        "seed": 730002,
+        "hero_seat": 2,
+        "scenario": "shove",
+        "decisions": 4,
+        "hands": 4,
+        "invalid": 0,
+        "exceptions": 0,
+        "internal_fallbacks": 0
+      }
+    ],
+    "observations": 12,
+    "street_counts": {
+      "preflop": 12,
+      "flop": 0,
+      "turn": 0,
+      "river": 0
+    }
+  },
+  "corpus_source_matches_current": true,
+  "warm": {
+    "seconds": 0.002952300012111664,
+    "warmup_decisions": 20,
+    "initialization_timed": false,
+    "module_assets_already_imported": true,
+    "table_state_replayed_in_order_and_reset_at_boundaries": true,
+    "wall": {
+      "all": {
+        "decisions": 100,
+        "p50_us": 18.0,
+        "p95_us": 22.8,
+        "p99_us": 23.9,
+        "p999_us": 23.9,
+        "max_us": 27.0,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      },
+      "preflop": {
+        "decisions": 100,
+        "p50_us": 18.0,
+        "p95_us": 22.8,
+        "p99_us": 23.9,
+        "p999_us": 23.9,
+        "max_us": 27.0,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      },
+      "flop": {
+        "decisions": 0,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 0.0,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      },
+      "turn": {
+        "decisions": 0,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 0.0,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      },
+      "river": {
+        "decisions": 0,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 0.0,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      }
+    },
+    "cpu": {
+      "all": {
+        "decisions": 100,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 0.0,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      },
+      "preflop": {
+        "decisions": 100,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 0.0,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      },
+      "flop": {
+        "decisions": 0,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 0.0,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      },
+      "turn": {
+        "decisions": 0,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 0.0,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      },
+      "river": {
+        "decisions": 0,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 0.0,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      }
+    },
+    "internal_fallbacks": 0,
+    "invalid_actions": 0,
+    "icm_cache_misses": 0,
+    "cpu_timing_note": "Process CPU intervals include two wall-clock marker calls; wall intervals bracket act only."
+  },
+  "cold": {
+    "seconds": 0.0007468000985682011,
+    "initialization_timed": false,
+    "module_assets_already_imported": true,
+    "fresh_Agent_each_decision": true,
+    "icm_cache_cleared_before_each_decision": true,
+    "note": "First act on an in-hand observation with empty seat priors; process/asset startup is excluded.",
+    "wall": {
+      "all": {
+        "decisions": 30,
+        "p50_us": 18.7,
+        "p95_us": 25.3,
+        "p99_us": 27.1,
+        "p999_us": 27.1,
+        "max_us": 29.2,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      },
+      "preflop": {
+        "decisions": 30,
+        "p50_us": 18.7,
+        "p95_us": 25.3,
+        "p99_us": 27.1,
+        "p999_us": 27.1,
+        "max_us": 29.2,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      },
+      "flop": {
+        "decisions": 0,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 0.0,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      },
+      "turn": {
+        "decisions": 0,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 0.0,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      },
+      "river": {
+        "decisions": 0,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 0.0,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      }
+    },
+    "cpu": {
+      "all": {
+        "decisions": 30,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 0.0,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      },
+      "preflop": {
+        "decisions": 30,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 0.0,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      },
+      "flop": {
+        "decisions": 0,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 0.0,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      },
+      "turn": {
+        "decisions": 0,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 0.0,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      },
+      "river": {
+        "decisions": 0,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 0.0,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      }
+    },
+    "internal_fallbacks": 0,
+    "invalid_actions": 0,
+    "icm_cache_misses": 0,
+    "cpu_timing_note": "Process CPU intervals include two wall-clock marker calls; wall intervals bracket act only."
+  },
+  "artificial_uncached_icm": {
+    "seconds": 0.004113600007258356,
+    "artificial": true,
+    "note": "Eight live table stacks, six folded hands, heads-up all-in; unequal starting stacks total2000 chips. This measures an artificial worst-size ICM context, not game frequency.",
+    "unique_stack_states": 12,
+    "icm_cache_cleared_before_each_decision": true,
+    "decisions_without_icm_cache_miss": 0,
+    "initialization_timed": false,
+    "wall": {
+      "all": {
+        "decisions": 12,
+        "p50_us": 302.0,
+        "p95_us": 341.3,
+        "p99_us": 341.3,
+        "p999_us": 341.3,
+        "max_us": 392.5,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      },
+      "preflop": {
+        "decisions": 3,
+        "p50_us": 179.1,
+        "p95_us": 179.1,
+        "p99_us": 179.1,
+        "p999_us": 179.1,
+        "max_us": 187.1,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      },
+      "flop": {
+        "decisions": 3,
+        "p50_us": 307.9,
+        "p95_us": 307.9,
+        "p99_us": 307.9,
+        "p999_us": 307.9,
+        "max_us": 392.5,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      },
+      "turn": {
+        "decisions": 3,
+        "p50_us": 310.8,
+        "p95_us": 310.8,
+        "p99_us": 310.8,
+        "p999_us": 310.8,
+        "max_us": 341.3,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      },
+      "river": {
+        "decisions": 3,
+        "p50_us": 302.0,
+        "p95_us": 302.0,
+        "p99_us": 302.0,
+        "p999_us": 302.0,
+        "max_us": 334.4,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      }
+    },
+    "cpu": {
+      "all": {
+        "decisions": 12,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 0.0,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      },
+      "preflop": {
+        "decisions": 3,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 0.0,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      },
+      "flop": {
+        "decisions": 3,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 0.0,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      },
+      "turn": {
+        "decisions": 3,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 0.0,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      },
+      "river": {
+        "decisions": 3,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 0.0,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      }
+    },
+    "internal_fallbacks": 0,
+    "invalid_actions": 0,
+    "icm_cache_misses": 36,
+    "cpu_timing_note": "Process CPU intervals include two wall-clock marker calls; wall intervals bracket act only."
+  },
+  "limitations": [
+    "Local Python/hardware timing; official hardware and adapter are unavailable.",
+    "Module import/model load, Agent construction, observation construction and JSON transport excluded.",
+    "Wall-clock scheduling pauses count as overruns; no hard deadline is guaranteed.",
+    "Replay uses recorded game states; artificial ICM stress is separately identified.",
+    "Fresh-Agent cold replay measures an empty table profile, not a fresh OS process."
+  ],
+  "in_game_deadline": {
+    "tables": 2,
+    "seed_start": 740000,
+    "seconds": 0.021353400079533458,
+    "synthetic_payouts": [
+      0.5,
+      0.3,
+      0.2
+    ],
+    "synthetic_blind_schedule": [
+      [
+        10,
+        20
+      ],
+      [
+        20,
+        40
+      ],
+      [
+        40,
+        80
+      ],
+      [
+        80,
+        160
+      ],
+      [
+        160,
+        320
+      ],
+      [
+        320,
+        640
+      ],
+      [
+        640,
+        1280
+      ],
+      [
+        1280,
+        2560
+      ]
+    ],
+    "same_policy_control": true,
+    "deadline_ns": 1000000,
+    "deadline_applied_to_all_seats": true,
+    "metrics": {
+      "unbounded": {
+        "points": {
+          "n": 2,
+          "mean": 0.1264903271149151,
+          "se": 0.0029736915152080434,
+          "ci95": [
+            0.12066189174510733,
+            0.13231876248472285
+          ]
+        },
+        "field_points": {
+          "n": 2,
+          "mean": 0.1247870961264407,
+          "se": 0.000424813073601156,
+          "ci95": [
+            0.12395446250218244,
+            0.12561972975069896
+          ]
+        },
+        "latency": {
+          "decisions": 11,
+          "p50_us": 36.5,
+          "p95_us": 201.7,
+          "p99_us": 201.7,
+          "p999_us": 201.7,
+          "max_us": 204.7,
+          "overruns_1ms": 0,
+          "overrun_fraction": 0.0
+        },
+        "invalid_actions": 0,
+        "exceptions": 0,
+        "external_timeout_fallbacks": 0,
+        "all_table_timeout_fallbacks": 0,
+        "internal_fallbacks": 0
+      },
+      "enforced": {
+        "points": {
+          "n": 2,
+          "mean": 0.1264903271149151,
+          "se": 0.0029736915152080434,
+          "ci95": [
+            0.12066189174510733,
+            0.13231876248472285
+          ]
+        },
+        "field_points": {
+          "n": 2,
+          "mean": 0.1247870961264407,
+          "se": 0.000424813073601156,
+          "ci95": [
+            0.12395446250218244,
+            0.12561972975069896
+          ]
+        },
+        "latency": {
+          "decisions": 11,
+          "p50_us": 38.9,
+          "p95_us": 225.8,
+          "p99_us": 225.8,
+          "p999_us": 225.8,
+          "max_us": 232.8,
+          "overruns_1ms": 0,
+          "overrun_fraction": 0.0
+        },
+        "invalid_actions": 0,
+        "exceptions": 0,
+        "external_timeout_fallbacks": 0,
+        "all_table_timeout_fallbacks": 0,
+        "internal_fallbacks": 0
+      }
+    },
+    "paired_points_enforced_minus_unbounded": {
+      "n": 2,
+      "mean": 0.0,
+      "se": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    "table_rows": [
+      {
+        "seed": 740000,
+        "hero_seat": 0,
+        "scenario": "mixed",
+        "unbounded": {
+          "points": 0.12946401863012313,
+          "field_points": 0.12436228305283954,
+          "decisions": 4,
+          "invalid": 0,
+          "exceptions": 0,
+          "external_timeout_fallbacks": 0,
+          "internal_fallbacks": 0,
+          "table_timeout_fallbacks": 0,
+          "capped": true
+        },
+        "enforced": {
+          "points": 0.12946401863012313,
+          "field_points": 0.12436228305283954,
+          "decisions": 4,
+          "invalid": 0,
+          "exceptions": 0,
+          "external_timeout_fallbacks": 0,
+          "internal_fallbacks": 0,
+          "table_timeout_fallbacks": 0,
+          "capped": true
+        }
+      },
+      {
+        "seed": 740001,
+        "hero_seat": 1,
+        "scenario": "selfplay",
+        "unbounded": {
+          "points": 0.12351663559970705,
+          "field_points": 0.12521190920004185,
+          "decisions": 7,
+          "invalid": 0,
+          "exceptions": 0,
+          "external_timeout_fallbacks": 0,
+          "internal_fallbacks": 0,
+          "table_timeout_fallbacks": 0,
+          "capped": true
+        },
+        "enforced": {
+          "points": 0.12351663559970705,
+          "field_points": 0.12521190920004185,
+          "decisions": 7,
+          "invalid": 0,
+          "exceptions": 0,
+          "external_timeout_fallbacks": 0,
+          "internal_fallbacks": 0,
+          "table_timeout_fallbacks": 0,
+          "capped": true
+        }
+      }
+    ],
+    "note": "Same-policy paired seeds; scheduling-driven timeouts can change all seats' play and later card assignment. This is local timing behavior, not an official performance estimate."
+  },
+  "total_seconds": 0.2028392000356689
+}

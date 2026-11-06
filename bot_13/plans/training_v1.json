@@ -1,0 +1,5574 @@
+{
+  "phase": "training",
+  "description": "Explicitly LOCAL scenarios; never official payouts or blind levels.",
+  "selection_metric": "mean across scenarios of chip share, or supplied points/sum(payouts)",
+  "reserved_heldout_seeds": ">=900000; never used for tuning",
+  "tasks": [
+    {
+      "name": "base__mixed",
+      "args": {
+        "config": {},
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 200000,
+        "opponents": [
+          "tight",
+          "station",
+          "aggressive",
+          "equity",
+          "tight",
+          "station",
+          "aggressive"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": null,
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "base__equity",
+      "args": {
+        "config": {},
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 210000,
+        "opponents": [
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "base__aggressive",
+      "args": {
+        "config": {},
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 220000,
+        "opponents": [
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            20,
+            40
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            80,
+            160
+          ],
+          [
+            160,
+            320
+          ],
+          [
+            320,
+            640
+          ],
+          [
+            640,
+            1280
+          ],
+          [
+            1280,
+            2560
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "base__reference",
+      "args": {
+        "config": {},
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 230000,
+        "opponents": [
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "base__station",
+      "args": {
+        "config": {},
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 240000,
+        "opponents": [
+          "station",
+          "station",
+          "station",
+          "station",
+          "station",
+          "station",
+          "station"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": null,
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "open_wide__mixed",
+      "args": {
+        "config": {
+          "open_scale": 1.15
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 200000,
+        "opponents": [
+          "tight",
+          "station",
+          "aggressive",
+          "equity",
+          "tight",
+          "station",
+          "aggressive"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": null,
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "open_wide__equity",
+      "args": {
+        "config": {
+          "open_scale": 1.15
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 210000,
+        "opponents": [
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "open_wide__aggressive",
+      "args": {
+        "config": {
+          "open_scale": 1.15
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 220000,
+        "opponents": [
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            20,
+            40
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            80,
+            160
+          ],
+          [
+            160,
+            320
+          ],
+          [
+            320,
+            640
+          ],
+          [
+            640,
+            1280
+          ],
+          [
+            1280,
+            2560
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "open_wide__reference",
+      "args": {
+        "config": {
+          "open_scale": 1.15
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 230000,
+        "opponents": [
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "open_wide__station",
+      "args": {
+        "config": {
+          "open_scale": 1.15
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 240000,
+        "opponents": [
+          "station",
+          "station",
+          "station",
+          "station",
+          "station",
+          "station",
+          "station"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": null,
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "open_tight__mixed",
+      "args": {
+        "config": {
+          "open_scale": 0.85
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 200000,
+        "opponents": [
+          "tight",
+          "station",
+          "aggressive",
+          "equity",
+          "tight",
+          "station",
+          "aggressive"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": null,
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "open_tight__equity",
+      "args": {
+        "config": {
+          "open_scale": 0.85
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 210000,
+        "opponents": [
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "open_tight__aggressive",
+      "args": {
+        "config": {
+          "open_scale": 0.85
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 220000,
+        "opponents": [
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            20,
+            40
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            80,
+            160
+          ],
+          [
+            160,
+            320
+          ],
+          [
+            320,
+            640
+          ],
+          [
+            640,
+            1280
+          ],
+          [
+            1280,
+            2560
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "open_tight__reference",
+      "args": {
+        "config": {
+          "open_scale": 0.85
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 230000,
+        "opponents": [
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "open_tight__station",
+      "args": {
+        "config": {
+          "open_scale": 0.85
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 240000,
+        "opponents": [
+          "station",
+          "station",
+          "station",
+          "station",
+          "station",
+          "station",
+          "station"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": null,
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "call_loose__mixed",
+      "args": {
+        "config": {
+          "call_margin": -0.01
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 200000,
+        "opponents": [
+          "tight",
+          "station",
+          "aggressive",
+          "equity",
+          "tight",
+          "station",
+          "aggressive"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": null,
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "call_loose__equity",
+      "args": {
+        "config": {
+          "call_margin": -0.01
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 210000,
+        "opponents": [
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "call_loose__aggressive",
+      "args": {
+        "config": {
+          "call_margin": -0.01
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 220000,
+        "opponents": [
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            20,
+            40
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            80,
+            160
+          ],
+          [
+            160,
+            320
+          ],
+          [
+            320,
+            640
+          ],
+          [
+            640,
+            1280
+          ],
+          [
+            1280,
+            2560
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "call_loose__reference",
+      "args": {
+        "config": {
+          "call_margin": -0.01
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 230000,
+        "opponents": [
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "call_loose__station",
+      "args": {
+        "config": {
+          "call_margin": -0.01
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 240000,
+        "opponents": [
+          "station",
+          "station",
+          "station",
+          "station",
+          "station",
+          "station",
+          "station"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": null,
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "call_tight__mixed",
+      "args": {
+        "config": {
+          "call_margin": 0.05
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 200000,
+        "opponents": [
+          "tight",
+          "station",
+          "aggressive",
+          "equity",
+          "tight",
+          "station",
+          "aggressive"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": null,
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "call_tight__equity",
+      "args": {
+        "config": {
+          "call_margin": 0.05
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 210000,
+        "opponents": [
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "call_tight__aggressive",
+      "args": {
+        "config": {
+          "call_margin": 0.05
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 220000,
+        "opponents": [
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            20,
+            40
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            80,
+            160
+          ],
+          [
+            160,
+            320
+          ],
+          [
+            320,
+            640
+          ],
+          [
+            640,
+            1280
+          ],
+          [
+            1280,
+            2560
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "call_tight__reference",
+      "args": {
+        "config": {
+          "call_margin": 0.05
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 230000,
+        "opponents": [
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "call_tight__station",
+      "args": {
+        "config": {
+          "call_margin": 0.05
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 240000,
+        "opponents": [
+          "station",
+          "station",
+          "station",
+          "station",
+          "station",
+          "station",
+          "station"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": null,
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "value_lower__mixed",
+      "args": {
+        "config": {
+          "value_threshold": 0.56
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 200000,
+        "opponents": [
+          "tight",
+          "station",
+          "aggressive",
+          "equity",
+          "tight",
+          "station",
+          "aggressive"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": null,
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "value_lower__equity",
+      "args": {
+        "config": {
+          "value_threshold": 0.56
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 210000,
+        "opponents": [
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "value_lower__aggressive",
+      "args": {
+        "config": {
+          "value_threshold": 0.56
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 220000,
+        "opponents": [
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            20,
+            40
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            80,
+            160
+          ],
+          [
+            160,
+            320
+          ],
+          [
+            320,
+            640
+          ],
+          [
+            640,
+            1280
+          ],
+          [
+            1280,
+            2560
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "value_lower__reference",
+      "args": {
+        "config": {
+          "value_threshold": 0.56
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 230000,
+        "opponents": [
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "value_lower__station",
+      "args": {
+        "config": {
+          "value_threshold": 0.56
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 240000,
+        "opponents": [
+          "station",
+          "station",
+          "station",
+          "station",
+          "station",
+          "station",
+          "station"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": null,
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "value_higher__mixed",
+      "args": {
+        "config": {
+          "value_threshold": 0.67
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 200000,
+        "opponents": [
+          "tight",
+          "station",
+          "aggressive",
+          "equity",
+          "tight",
+          "station",
+          "aggressive"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": null,
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "value_higher__equity",
+      "args": {
+        "config": {
+          "value_threshold": 0.67
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 210000,
+        "opponents": [
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "value_higher__aggressive",
+      "args": {
+        "config": {
+          "value_threshold": 0.67
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 220000,
+        "opponents": [
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            20,
+            40
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            80,
+            160
+          ],
+          [
+            160,
+            320
+          ],
+          [
+            320,
+            640
+          ],
+          [
+            640,
+            1280
+          ],
+          [
+            1280,
+            2560
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "value_higher__reference",
+      "args": {
+        "config": {
+          "value_threshold": 0.67
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 230000,
+        "opponents": [
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "value_higher__station",
+      "args": {
+        "config": {
+          "value_threshold": 0.67
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 240000,
+        "opponents": [
+          "station",
+          "station",
+          "station",
+          "station",
+          "station",
+          "station",
+          "station"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": null,
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "bet_large__mixed",
+      "args": {
+        "config": {
+          "bet_scale": 0.9
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 200000,
+        "opponents": [
+          "tight",
+          "station",
+          "aggressive",
+          "equity",
+          "tight",
+          "station",
+          "aggressive"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": null,
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "bet_large__equity",
+      "args": {
+        "config": {
+          "bet_scale": 0.9
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 210000,
+        "opponents": [
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "bet_large__aggressive",
+      "args": {
+        "config": {
+          "bet_scale": 0.9
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 220000,
+        "opponents": [
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            20,
+            40
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            80,
+            160
+          ],
+          [
+            160,
+            320
+          ],
+          [
+            320,
+            640
+          ],
+          [
+            640,
+            1280
+          ],
+          [
+            1280,
+            2560
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "bet_large__reference",
+      "args": {
+        "config": {
+          "bet_scale": 0.9
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 230000,
+        "opponents": [
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "bet_large__station",
+      "args": {
+        "config": {
+          "bet_scale": 0.9
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 240000,
+        "opponents": [
+          "station",
+          "station",
+          "station",
+          "station",
+          "station",
+          "station",
+          "station"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": null,
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "bet_small__mixed",
+      "args": {
+        "config": {
+          "bet_scale": 0.48
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 200000,
+        "opponents": [
+          "tight",
+          "station",
+          "aggressive",
+          "equity",
+          "tight",
+          "station",
+          "aggressive"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": null,
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "bet_small__equity",
+      "args": {
+        "config": {
+          "bet_scale": 0.48
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 210000,
+        "opponents": [
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "bet_small__aggressive",
+      "args": {
+        "config": {
+          "bet_scale": 0.48
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 220000,
+        "opponents": [
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            20,
+            40
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            80,
+            160
+          ],
+          [
+            160,
+            320
+          ],
+          [
+            320,
+            640
+          ],
+          [
+            640,
+            1280
+          ],
+          [
+            1280,
+            2560
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "bet_small__reference",
+      "args": {
+        "config": {
+          "bet_scale": 0.48
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 230000,
+        "opponents": [
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "bet_small__station",
+      "args": {
+        "config": {
+          "bet_scale": 0.48
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 240000,
+        "opponents": [
+          "station",
+          "station",
+          "station",
+          "station",
+          "station",
+          "station",
+          "station"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": null,
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "bluff_more__mixed",
+      "args": {
+        "config": {
+          "bluff_frequency": 0.24
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 200000,
+        "opponents": [
+          "tight",
+          "station",
+          "aggressive",
+          "equity",
+          "tight",
+          "station",
+          "aggressive"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": null,
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "bluff_more__equity",
+      "args": {
+        "config": {
+          "bluff_frequency": 0.24
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 210000,
+        "opponents": [
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "bluff_more__aggressive",
+      "args": {
+        "config": {
+          "bluff_frequency": 0.24
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 220000,
+        "opponents": [
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            20,
+            40
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            80,
+            160
+          ],
+          [
+            160,
+            320
+          ],
+          [
+            320,
+            640
+          ],
+          [
+            640,
+            1280
+          ],
+          [
+            1280,
+            2560
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "bluff_more__reference",
+      "args": {
+        "config": {
+          "bluff_frequency": 0.24
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 230000,
+        "opponents": [
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "bluff_more__station",
+      "args": {
+        "config": {
+          "bluff_frequency": 0.24
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 240000,
+        "opponents": [
+          "station",
+          "station",
+          "station",
+          "station",
+          "station",
+          "station",
+          "station"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": null,
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "bluff_less__mixed",
+      "args": {
+        "config": {
+          "bluff_frequency": 0.02
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 200000,
+        "opponents": [
+          "tight",
+          "station",
+          "aggressive",
+          "equity",
+          "tight",
+          "station",
+          "aggressive"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": null,
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "bluff_less__equity",
+      "args": {
+        "config": {
+          "bluff_frequency": 0.02
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 210000,
+        "opponents": [
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "bluff_less__aggressive",
+      "args": {
+        "config": {
+          "bluff_frequency": 0.02
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 220000,
+        "opponents": [
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            20,
+            40
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            80,
+            160
+          ],
+          [
+            160,
+            320
+          ],
+          [
+            320,
+            640
+          ],
+          [
+            640,
+            1280
+          ],
+          [
+            1280,
+            2560
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "bluff_less__reference",
+      "args": {
+        "config": {
+          "bluff_frequency": 0.02
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 230000,
+        "opponents": [
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "bluff_less__station",
+      "args": {
+        "config": {
+          "bluff_frequency": 0.02
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 240000,
+        "opponents": [
+          "station",
+          "station",
+          "station",
+          "station",
+          "station",
+          "station",
+          "station"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": null,
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "ranges_broad__mixed",
+      "args": {
+        "config": {
+          "range_threshold_scale": 0.75,
+          "range_bluff": 0.16
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 200000,
+        "opponents": [
+          "tight",
+          "station",
+          "aggressive",
+          "equity",
+          "tight",
+          "station",
+          "aggressive"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": null,
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "ranges_broad__equity",
+      "args": {
+        "config": {
+          "range_threshold_scale": 0.75,
+          "range_bluff": 0.16
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 210000,
+        "opponents": [
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "ranges_broad__aggressive",
+      "args": {
+        "config": {
+          "range_threshold_scale": 0.75,
+          "range_bluff": 0.16
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 220000,
+        "opponents": [
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            20,
+            40
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            80,
+            160
+          ],
+          [
+            160,
+            320
+          ],
+          [
+            320,
+            640
+          ],
+          [
+            640,
+            1280
+          ],
+          [
+            1280,
+            2560
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "ranges_broad__reference",
+      "args": {
+        "config": {
+          "range_threshold_scale": 0.75,
+          "range_bluff": 0.16
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 230000,
+        "opponents": [
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "ranges_broad__station",
+      "args": {
+        "config": {
+          "range_threshold_scale": 0.75,
+          "range_bluff": 0.16
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 240000,
+        "opponents": [
+          "station",
+          "station",
+          "station",
+          "station",
+          "station",
+          "station",
+          "station"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": null,
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "ranges_tight__mixed",
+      "args": {
+        "config": {
+          "range_threshold_scale": 1.15,
+          "range_bluff": 0.04
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 200000,
+        "opponents": [
+          "tight",
+          "station",
+          "aggressive",
+          "equity",
+          "tight",
+          "station",
+          "aggressive"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": null,
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "ranges_tight__equity",
+      "args": {
+        "config": {
+          "range_threshold_scale": 1.15,
+          "range_bluff": 0.04
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 210000,
+        "opponents": [
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "ranges_tight__aggressive",
+      "args": {
+        "config": {
+          "range_threshold_scale": 1.15,
+          "range_bluff": 0.04
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 220000,
+        "opponents": [
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            20,
+            40
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            80,
+            160
+          ],
+          [
+            160,
+            320
+          ],
+          [
+            320,
+            640
+          ],
+          [
+            640,
+            1280
+          ],
+          [
+            1280,
+            2560
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "ranges_tight__reference",
+      "args": {
+        "config": {
+          "range_threshold_scale": 1.15,
+          "range_bluff": 0.04
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 230000,
+        "opponents": [
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "ranges_tight__station",
+      "args": {
+        "config": {
+          "range_threshold_scale": 1.15,
+          "range_bluff": 0.04
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 240000,
+        "opponents": [
+          "station",
+          "station",
+          "station",
+          "station",
+          "station",
+          "station",
+          "station"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": null,
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "no_adapt__mixed",
+      "args": {
+        "config": {
+          "adapt": false
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 200000,
+        "opponents": [
+          "tight",
+          "station",
+          "aggressive",
+          "equity",
+          "tight",
+          "station",
+          "aggressive"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": null,
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "no_adapt__equity",
+      "args": {
+        "config": {
+          "adapt": false
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 210000,
+        "opponents": [
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "no_adapt__aggressive",
+      "args": {
+        "config": {
+          "adapt": false
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 220000,
+        "opponents": [
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            20,
+            40
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            80,
+            160
+          ],
+          [
+            160,
+            320
+          ],
+          [
+            320,
+            640
+          ],
+          [
+            640,
+            1280
+          ],
+          [
+            1280,
+            2560
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "no_adapt__reference",
+      "args": {
+        "config": {
+          "adapt": false
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 230000,
+        "opponents": [
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "no_adapt__station",
+      "args": {
+        "config": {
+          "adapt": false
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 240000,
+        "opponents": [
+          "station",
+          "station",
+          "station",
+          "station",
+          "station",
+          "station",
+          "station"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": null,
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "no_icm__mixed",
+      "args": {
+        "config": {
+          "risk_scale": 0.0
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 200000,
+        "opponents": [
+          "tight",
+          "station",
+          "aggressive",
+          "equity",
+          "tight",
+          "station",
+          "aggressive"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": null,
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "no_icm__equity",
+      "args": {
+        "config": {
+          "risk_scale": 0.0
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 210000,
+        "opponents": [
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "no_icm__aggressive",
+      "args": {
+        "config": {
+          "risk_scale": 0.0
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 220000,
+        "opponents": [
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            20,
+            40
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            80,
+            160
+          ],
+          [
+            160,
+            320
+          ],
+          [
+            320,
+            640
+          ],
+          [
+            640,
+            1280
+          ],
+          [
+            1280,
+            2560
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "no_icm__reference",
+      "args": {
+        "config": {
+          "risk_scale": 0.0
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 230000,
+        "opponents": [
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "no_icm__station",
+      "args": {
+        "config": {
+          "risk_scale": 0.0
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 240000,
+        "opponents": [
+          "station",
+          "station",
+          "station",
+          "station",
+          "station",
+          "station",
+          "station"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": null,
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "extra_icm__mixed",
+      "args": {
+        "config": {
+          "risk_scale": 1.5
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 200000,
+        "opponents": [
+          "tight",
+          "station",
+          "aggressive",
+          "equity",
+          "tight",
+          "station",
+          "aggressive"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": null,
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "extra_icm__equity",
+      "args": {
+        "config": {
+          "risk_scale": 1.5
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 210000,
+        "opponents": [
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "extra_icm__aggressive",
+      "args": {
+        "config": {
+          "risk_scale": 1.5
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 220000,
+        "opponents": [
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            20,
+            40
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            80,
+            160
+          ],
+          [
+            160,
+            320
+          ],
+          [
+            320,
+            640
+          ],
+          [
+            640,
+            1280
+          ],
+          [
+            1280,
+            2560
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "extra_icm__reference",
+      "args": {
+        "config": {
+          "risk_scale": 1.5
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 230000,
+        "opponents": [
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "extra_icm__station",
+      "args": {
+        "config": {
+          "risk_scale": 1.5
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 240000,
+        "opponents": [
+          "station",
+          "station",
+          "station",
+          "station",
+          "station",
+          "station",
+          "station"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": null,
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "balanced__mixed",
+      "args": {
+        "config": {
+          "open_scale": 1.05,
+          "call_margin": 0.03,
+          "value_threshold": 0.59,
+          "bet_scale": 0.75,
+          "bluff_frequency": 0.09,
+          "range_bluff": 0.1
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 200000,
+        "opponents": [
+          "tight",
+          "station",
+          "aggressive",
+          "equity",
+          "tight",
+          "station",
+          "aggressive"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": null,
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "balanced__equity",
+      "args": {
+        "config": {
+          "open_scale": 1.05,
+          "call_margin": 0.03,
+          "value_threshold": 0.59,
+          "bet_scale": 0.75,
+          "bluff_frequency": 0.09,
+          "range_bluff": 0.1
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 210000,
+        "opponents": [
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "balanced__aggressive",
+      "args": {
+        "config": {
+          "open_scale": 1.05,
+          "call_margin": 0.03,
+          "value_threshold": 0.59,
+          "bet_scale": 0.75,
+          "bluff_frequency": 0.09,
+          "range_bluff": 0.1
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 220000,
+        "opponents": [
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            20,
+            40
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            80,
+            160
+          ],
+          [
+            160,
+            320
+          ],
+          [
+            320,
+            640
+          ],
+          [
+            640,
+            1280
+          ],
+          [
+            1280,
+            2560
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "balanced__reference",
+      "args": {
+        "config": {
+          "open_scale": 1.05,
+          "call_margin": 0.03,
+          "value_threshold": 0.59,
+          "bet_scale": 0.75,
+          "bluff_frequency": 0.09,
+          "range_bluff": 0.1
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 230000,
+        "opponents": [
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "balanced__station",
+      "args": {
+        "config": {
+          "open_scale": 1.05,
+          "call_margin": 0.03,
+          "value_threshold": 0.59,
+          "bet_scale": 0.75,
+          "bluff_frequency": 0.09,
+          "range_bluff": 0.1
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 240000,
+        "opponents": [
+          "station",
+          "station",
+          "station",
+          "station",
+          "station",
+          "station",
+          "station"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": null,
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "conservative__mixed",
+      "args": {
+        "config": {
+          "open_scale": 0.9,
+          "call_margin": 0.04,
+          "value_threshold": 0.65,
+          "bet_scale": 0.65
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 200000,
+        "opponents": [
+          "tight",
+          "station",
+          "aggressive",
+          "equity",
+          "tight",
+          "station",
+          "aggressive"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": null,
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "conservative__equity",
+      "args": {
+        "config": {
+          "open_scale": 0.9,
+          "call_margin": 0.04,
+          "value_threshold": 0.65,
+          "bet_scale": 0.65
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 210000,
+        "opponents": [
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity",
+          "equity"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "conservative__aggressive",
+      "args": {
+        "config": {
+          "open_scale": 0.9,
+          "call_margin": 0.04,
+          "value_threshold": 0.65,
+          "bet_scale": 0.65
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 220000,
+        "opponents": [
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive",
+          "aggressive"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            20,
+            40
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            80,
+            160
+          ],
+          [
+            160,
+            320
+          ],
+          [
+            320,
+            640
+          ],
+          [
+            640,
+            1280
+          ],
+          [
+            1280,
+            2560
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "conservative__reference",
+      "args": {
+        "config": {
+          "open_scale": 0.9,
+          "call_margin": 0.04,
+          "value_threshold": 0.65,
+          "bet_scale": 0.65
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 230000,
+        "opponents": [
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": [
+          50,
+          30,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "enforce_deadline": true
+      }
+    },
+    {
+      "name": "conservative__station",
+      "args": {
+        "config": {
+          "open_scale": 0.9,
+          "call_margin": 0.04,
+          "value_threshold": 0.65,
+          "bet_scale": 0.65
+        },
+        "reference_config": {},
+        "tables": 64,
+        "seed_start": 240000,
+        "opponents": [
+          "station",
+          "station",
+          "station",
+          "station",
+          "station",
+          "station",
+          "station"
+        ],
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "payouts": null,
+        "enforce_deadline": true
+      }
+    }
+  ]
+}

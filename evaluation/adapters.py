@@ -7,12 +7,14 @@ import importlib
 import importlib.util
 import json
 import sys
+from itertools import count
 from pathlib import Path
 from common.engine import Action
 
 ROOT = Path(__file__).resolve().parents[1]
 PACKAGES = {1:'pokerbot',2:'pokerbot',3:'bot3',4:'bot',5:'pokerbot',6:'bot6',7:'bot7',8:'kestrel'}
 STREETS = ('preflop','flop','turn','river')
+_TABLE_IDS = count(1)
 
 def load_package(alias, directory):
     if alias not in sys.modules:
@@ -33,13 +35,17 @@ def history(o):
     for i, blind in ((o.sb_seat,o.sb),(o.bb_seat,o.bb)):
         paid = min(remaining[i],blind); remaining[i] -= paid; bets[i] += paid; pot += paid
     street = 0; current = o.bb
+    folded = [not active for active in o.active]
     result=[]
     for j,e in enumerate(o.history):
         if e.street != street:
             street=e.street; bets=[0]*o.n_seats; current=0
-        facing=max(0,current-bets[e.seat])
+        opponents=[i for i in range(o.n_seats) if i!=e.seat and not folded[i]]
+        target=current if any(remaining[i]>0 for i in opponents) else max((bets[i] for i in opponents),default=0)
+        facing=max(0,target-bets[e.seat])
         result.append(dict(id=o.hand_number*100000+j,seat=e.seat,street=STREETS[e.street],action=e.kind,
                            amount=e.amount,to_call=facing,pot_before=pot,paid=e.paid,hand_id=o.hand_number,facing_bet=facing>0))
+        if e.kind=='fold': folded[e.seat]=True
         if e.kind in ('raise','call'):
             bets[e.seat]=e.amount; remaining[e.seat]-=e.paid; pot+=e.paid
             current=max(current,e.amount)
@@ -56,7 +62,7 @@ class Adapter:
 
     def reset(self, seed, seat, n_seats):
         self.bot=self.module.Agent() if self.number==8 else self.module.Agent(seed=seed)
-        self.table_id=str(seed//1000003)
+        self.table_id='evaluation-table-'+str(next(_TABLE_IDS))
         self.calls=0; self.internal_errors=0
 
     def act(self,o):
@@ -102,10 +108,18 @@ class Adapter:
             d['players']=[dict(seat=p['seat'],stack=p['stack'],committed=p['bet'],invested=p['committed'],folded=p['folded'],all_in=p['all_in']) for p in players]
             d['history']=[dict(id=e['id'],seat=e['seat'],street=e['street'],action=e['action'],amount=e['paid'] if e['action']=='call' else e['amount'],to_call=e['to_call'],pot_before=e['pot_before']) for e in h]
         self.calls+=1
+        previous_info=getattr(self.bot,'last_info',None)
         a=self.bot.act_dict(d) if n==7 else self.bot.act(d)
-        if getattr(self.bot,'last_error',None):
+        last_error=getattr(self.bot,'last_error',None)
+        info=getattr(self.bot,'last_info',None)
+        # Bot1 creates a fresh diagnostic dictionary for each caught input error.
+        # A later early return may retain it: count new reports, not stale state.
+        reported_fallback=(n==1 and isinstance(info,dict) and info is not previous_info
+                           and bool(info.get('fallback')))
+        if last_error or reported_fallback:
             self.internal_errors+=1
-            raise RuntimeError(self.bot.last_error)
+        if last_error:
+            raise RuntimeError(last_error)
         if not isinstance(a,dict): a=a.as_dict()
         return Action(a['action'],int(a.get('amount',0)))
 

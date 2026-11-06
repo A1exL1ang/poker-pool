@@ -1,0 +1,197 @@
+{
+  "benchmark": "independent-local-synthetic-NLHE-v1",
+  "official_compatibility": false,
+  "config": {
+    "tables": 2,
+    "split": "tuning",
+    "seed_start": 9500,
+    "lineup": [
+      "mc",
+      "mc",
+      "mc",
+      "mc",
+      "mc",
+      "mc",
+      "mc"
+    ],
+    "payouts": [
+      0.5,
+      0.3,
+      0.2,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "synthetic_payouts": true,
+    "blind_schedule": [
+      [
+        10,
+        20
+      ],
+      [
+        15,
+        30
+      ],
+      [
+        25,
+        50
+      ],
+      [
+        40,
+        80
+      ],
+      [
+        60,
+        120
+      ],
+      [
+        100,
+        200
+      ],
+      [
+        150,
+        300
+      ],
+      [
+        250,
+        500
+      ]
+    ],
+    "synthetic_blinds": true,
+    "max_hands": 50,
+    "initial_stack": 2000,
+    "enforce_time_limit": false,
+    "params": null,
+    "model_path": null,
+    "stress": false
+  },
+  "focal_points": {
+    "n": 2,
+    "mean": 0.1793195592723591,
+    "stderr": 0.016124787757220316,
+    "ci95": [
+      0.1477149752682073,
+      0.2109241432765109
+    ]
+  },
+  "focal_final_chips": {
+    "n": 2,
+    "mean": 2478.0,
+    "stderr": 432.0,
+    "ci95": [
+      1631.28,
+      3324.7200000000003
+    ]
+  },
+  "equal_share_reference": 0.125,
+  "finish_distribution": [
+    0.15487499999999998,
+    0.189345136669476,
+    0.22539259135758152,
+    0.23141591244576443,
+    0.18544614028776607,
+    0.01352521923941195,
+    0.0,
+    0.0
+  ],
+  "finish_distribution_semantics": "observed elimination ranks; exact ICM probabilities for cap survivors",
+  "focal_diagnostics": {
+    "decisions": 124,
+    "engine_errors": 0,
+    "internal_fallbacks": 0,
+    "enforced_timeouts": 0,
+    "actions": {
+      "fold": 92,
+      "check": 8,
+      "call": 7,
+      "raise_": 17
+    }
+  },
+  "all_diagnostics": {
+    "decisions": 1088,
+    "engine_errors": 0,
+    "internal_fallbacks": 0,
+    "enforced_timeouts": 0
+  },
+  "focal_latency": {
+    "n": 124,
+    "p50_ns": 86250.0,
+    "p95_ns": 491274.9999999999,
+    "p99_ns": 666686.0,
+    "p999_ns": 797334.4999999993,
+    "max_ns": 815600,
+    "over_1ms": 0,
+    "over_1ms_rate": 0.0
+  },
+  "wall_seconds": 9.664977199980058,
+  "artifact_sha256": {
+    "bot.py": "165a775636c6e8aac7547504481b4cd677264e45854e8d5e886cfc91544524ed",
+    "model.py": "99f82b1051accc00ed64825c6ddc73428c01ede6220f67116cf9e852781f0d8c",
+    "features.py": "9cdffaf8dd454fa2bada3ed8c32957a3c35d480123504fa0b46e527213c455e1",
+    "equity.py": "955f5f40da9c57bc5d8effc08c8584ead3959a017adc50f6dafab5200ccb9cfd",
+    "evaluator.py": "d704f3c148dfcd644a2bdfb7ddf8e62a894126ee71518666bc32fb1e224607dc",
+    "engine.py": "3e7d9f3978f52ff184f16b72a7c2bc8121f1ce441afcfaa3c25fb00fafa1c8c5",
+    "baselines.py": "f6d6a310b75654232a528cadef791820cb4344803e75231831ef1bd4124c56a8",
+    "assets/equity_model.json.gz": "583773cff5b349953d87faf0a14980876c959b6a61d1790ef55451460c987df1"
+  },
+  "tables": [
+    {
+      "seed": 9500,
+      "focal_seat": 0,
+      "lineup": [
+        "focal",
+        "mc",
+        "mc",
+        "mc",
+        "mc",
+        "mc",
+        "mc",
+        "mc"
+      ],
+      "points": 0.16319477151513878,
+      "chips": 2046,
+      "hands": 50,
+      "alive_at_cap": true,
+      "errors": 0,
+      "timeouts": 0,
+      "internal_fallbacks": 0,
+      "focal_errors": 0,
+      "focal_internal_fallbacks": 0,
+      "focal_timeouts": 0,
+      "focal_decisions": 56
+    },
+    {
+      "seed": 9501,
+      "focal_seat": 1,
+      "lineup": [
+        "mc",
+        "focal",
+        "mc",
+        "mc",
+        "mc",
+        "mc",
+        "mc",
+        "mc"
+      ],
+      "points": 0.1954443470295794,
+      "chips": 2910,
+      "hands": 50,
+      "alive_at_cap": true,
+      "errors": 0,
+      "timeouts": 0,
+      "internal_fallbacks": 0,
+      "focal_errors": 0,
+      "focal_internal_fallbacks": 0,
+      "focal_timeouts": 0,
+      "focal_decisions": 68
+    }
+  ],
+  "limitations": [
+    "Synthetic heuristic opponent pool; no equilibrium or contest performance claim.",
+    "Normal CI may be inaccurate for small samples or rare large payouts.",
+    "OS scheduling and machine load affect wall-clock decision times.",
+    "Do not use held-out results to tune the policy and still call them held-out."
+  ]
+}

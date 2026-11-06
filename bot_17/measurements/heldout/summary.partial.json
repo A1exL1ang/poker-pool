@@ -1,0 +1,715 @@
+{
+  "phase": "heldout",
+  "tables_per_environment": 1000,
+  "environments": [
+    [
+      "mixed_top3",
+      "mixed",
+      "top3",
+      "default"
+    ],
+    [
+      "mixed_winner",
+      "mixed",
+      "winner",
+      "fast"
+    ],
+    [
+      "tight_top3",
+      "tight",
+      "top3",
+      "default"
+    ],
+    [
+      "pressure_top3",
+      "pressure",
+      "top3",
+      "default"
+    ],
+    [
+      "calling_top3",
+      "calling",
+      "top3",
+      "slow"
+    ],
+    [
+      "selfplay_top3",
+      "selfplay",
+      "top3",
+      "fast"
+    ]
+  ],
+  "profiles": {
+    "base": {}
+  },
+  "seed_start": 910000,
+  "workers": 6,
+  "enforce_time": true,
+  "source_sha256": {
+    "agent.py": "0c0dd6af1a3975223c15eb96d315c061a4cd429a016319ff1999f20fc28aab2c",
+    "equity.py": "c60762dccb5b68cc3ff9368f693e77579b369a2eafe3376f94e790854f1f36dc",
+    "risk.py": "8ef9db7054ff1acf91315900fef77bdb15b6af5012ecd72d2f3ef1f8225a53ad",
+    "simulator.py": "7596347bc962d7fd3f8519ba8fb0b000dfe764dbfea287b68d5d9f6e4aa3fa0e",
+    "baselines.py": "39a92123c6f82f79a4349d1412f6abc781e683c506bb63b0d46d02b68463ff49",
+    "tournament.py": "24ca88114c5e57da35a602b230eb97f3b043b15efcfbf4c9afedfed8a3f99ad1"
+  },
+  "results": {
+    "base": {
+      "mixed_winner": {
+        "label": "base_mixed_winner",
+        "seed_start": 930000,
+        "tables": 1000,
+        "lineup": "mixed",
+        "payouts": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "payout_warning": "Experimental vector, not official contest payouts. Null means terminal chip share.",
+        "blind_levels": [
+          [
+            10,
+            20
+          ],
+          [
+            20,
+            40
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            80,
+            160
+          ],
+          [
+            160,
+            320
+          ],
+          [
+            320,
+            640
+          ],
+          [
+            640,
+            1280
+          ],
+          [
+            1280,
+            2560
+          ]
+        ],
+        "hands_per_level": 25,
+        "max_hands": 200,
+        "timing_enforced": true,
+        "elapsed_seconds": 41.910011678002775,
+        "python": "3.12.7",
+        "platform": "Linux-4.18.0-553.147.1.el8_10.x86_64-x86_64-with-glibc2.28",
+        "source_sha256_at_start": {
+          "agent.py": "0c0dd6af1a3975223c15eb96d315c061a4cd429a016319ff1999f20fc28aab2c",
+          "equity.py": "c60762dccb5b68cc3ff9368f693e77579b369a2eafe3376f94e790854f1f36dc",
+          "risk.py": "8ef9db7054ff1acf91315900fef77bdb15b6af5012ecd72d2f3ef1f8225a53ad",
+          "simulator.py": "7596347bc962d7fd3f8519ba8fb0b000dfe764dbfea287b68d5d9f6e4aa3fa0e",
+          "baselines.py": "39a92123c6f82f79a4349d1412f6abc781e683c506bb63b0d46d02b68463ff49",
+          "tournament.py": "24ca88114c5e57da35a602b230eb97f3b043b15efcfbf4c9afedfed8a3f99ad1"
+        },
+        "process_id": 4167082,
+        "hero_score": {
+          "n": 1000,
+          "mean": 0.46,
+          "standard_error": 0.015768596914394403,
+          "normal_95_interval": [
+            0.429093550047787,
+            0.49090644995221305
+          ]
+        },
+        "hero_chip_share": {
+          "n": 1000,
+          "mean": 0.46,
+          "standard_error": 0.015768596914394403,
+          "normal_95_interval": [
+            0.429093550047787,
+            0.49090644995221305
+          ]
+        },
+        "hero_latency": {
+          "n": 120031,
+          "median_us": 34.235,
+          "p95_us": 93.627,
+          "p99_us": 114.947,
+          "p999_us": 138.431,
+          "max_us": 200.539,
+          "over_1ms": 0
+        },
+        "hero_errors": 0,
+        "hero_invalid_actions": 0,
+        "hero_internal_fallbacks": 0,
+        "hero_observed_over_1ms": 0,
+        "hero_fallback_overruns": 0,
+        "config": {},
+        "backend": "native",
+        "sampler": {
+          "calls": 25984,
+          "trials": 2492512,
+          "opponent_draws": 3037888,
+          "proposal_cap_fallbacks": 0,
+          "uniform_emergency_fallbacks": 0,
+          "proposals": 4251064,
+          "exact_river_calls": 7265
+        }
+      },
+      "pressure_top3": {
+        "label": "base_pressure_top3",
+        "seed_start": 970000,
+        "tables": 1000,
+        "lineup": "pressure",
+        "payouts": [
+          0.5,
+          0.3,
+          0.2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "payout_warning": "Experimental vector, not official contest payouts. Null means terminal chip share.",
+        "blind_levels": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "hands_per_level": 25,
+        "max_hands": 200,
+        "timing_enforced": true,
+        "elapsed_seconds": 45.06085046892986,
+        "python": "3.12.7",
+        "platform": "Linux-4.18.0-553.147.1.el8_10.x86_64-x86_64-with-glibc2.28",
+        "source_sha256_at_start": {
+          "agent.py": "0c0dd6af1a3975223c15eb96d315c061a4cd429a016319ff1999f20fc28aab2c",
+          "equity.py": "c60762dccb5b68cc3ff9368f693e77579b369a2eafe3376f94e790854f1f36dc",
+          "risk.py": "8ef9db7054ff1acf91315900fef77bdb15b6af5012ecd72d2f3ef1f8225a53ad",
+          "simulator.py": "7596347bc962d7fd3f8519ba8fb0b000dfe764dbfea287b68d5d9f6e4aa3fa0e",
+          "baselines.py": "39a92123c6f82f79a4349d1412f6abc781e683c506bb63b0d46d02b68463ff49",
+          "tournament.py": "24ca88114c5e57da35a602b230eb97f3b043b15efcfbf4c9afedfed8a3f99ad1"
+        },
+        "process_id": 4167085,
+        "hero_score": {
+          "n": 1000,
+          "mean": 0.26095167500000005,
+          "standard_error": 0.006091483153563015,
+          "normal_95_interval": [
+            0.24901236801901655,
+            0.27289098198098355
+          ]
+        },
+        "hero_chip_share": {
+          "n": 1000,
+          "mean": 0.308758375,
+          "standard_error": 0.014481843904737342,
+          "normal_95_interval": [
+            0.2803739609467148,
+            0.33714278905328515
+          ]
+        },
+        "hero_latency": {
+          "n": 129812,
+          "median_us": 37.401,
+          "p95_us": 101.963,
+          "p99_us": 134.123,
+          "p999_us": 229.384,
+          "max_us": 17417.23,
+          "over_1ms": 1
+        },
+        "hero_errors": 0,
+        "hero_invalid_actions": 0,
+        "hero_internal_fallbacks": 0,
+        "hero_observed_over_1ms": 1,
+        "hero_fallback_overruns": 1,
+        "config": {},
+        "backend": "native",
+        "sampler": {
+          "calls": 30074,
+          "trials": 2886496,
+          "opponent_draws": 3200512,
+          "proposal_cap_fallbacks": 0,
+          "uniform_emergency_fallbacks": 0,
+          "proposals": 4622907,
+          "exact_river_calls": 8010
+        }
+      },
+      "mixed_top3": {
+        "label": "base_mixed_top3",
+        "seed_start": 910000,
+        "tables": 1000,
+        "lineup": "mixed",
+        "payouts": [
+          0.5,
+          0.3,
+          0.2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "payout_warning": "Experimental vector, not official contest payouts. Null means terminal chip share.",
+        "blind_levels": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "hands_per_level": 25,
+        "max_hands": 200,
+        "timing_enforced": true,
+        "elapsed_seconds": 50.7212834560778,
+        "python": "3.12.7",
+        "platform": "Linux-4.18.0-553.147.1.el8_10.x86_64-x86_64-with-glibc2.28",
+        "source_sha256_at_start": {
+          "agent.py": "0c0dd6af1a3975223c15eb96d315c061a4cd429a016319ff1999f20fc28aab2c",
+          "equity.py": "c60762dccb5b68cc3ff9368f693e77579b369a2eafe3376f94e790854f1f36dc",
+          "risk.py": "8ef9db7054ff1acf91315900fef77bdb15b6af5012ecd72d2f3ef1f8225a53ad",
+          "simulator.py": "7596347bc962d7fd3f8519ba8fb0b000dfe764dbfea287b68d5d9f6e4aa3fa0e",
+          "baselines.py": "39a92123c6f82f79a4349d1412f6abc781e683c506bb63b0d46d02b68463ff49",
+          "tournament.py": "24ca88114c5e57da35a602b230eb97f3b043b15efcfbf4c9afedfed8a3f99ad1"
+        },
+        "process_id": 4167080,
+        "hero_score": {
+          "n": 1000,
+          "mean": 0.29044630794144016,
+          "standard_error": 0.006744334470802102,
+          "normal_95_interval": [
+            0.27722741237866805,
+            0.3036652035042123
+          ]
+        },
+        "hero_chip_share": {
+          "n": 1000,
+          "mean": 0.4598553125,
+          "standard_error": 0.0150186211356394,
+          "normal_95_interval": [
+            0.43041881507414675,
+            0.48929180992585325
+          ]
+        },
+        "hero_latency": {
+          "n": 151660,
+          "median_us": 31.971,
+          "p95_us": 94.479,
+          "p99_us": 121.71,
+          "p999_us": 150.204,
+          "max_us": 6861.298,
+          "over_1ms": 1
+        },
+        "hero_errors": 0,
+        "hero_invalid_actions": 0,
+        "hero_internal_fallbacks": 0,
+        "hero_observed_over_1ms": 1,
+        "hero_fallback_overruns": 1,
+        "config": {},
+        "backend": "native",
+        "sampler": {
+          "calls": 33147,
+          "trials": 3180480,
+          "opponent_draws": 3798912,
+          "proposal_cap_fallbacks": 0,
+          "uniform_emergency_fallbacks": 0,
+          "proposals": 5283679,
+          "exact_river_calls": 9710
+        }
+      },
+      "tight_top3": {
+        "label": "base_tight_top3",
+        "seed_start": 950000,
+        "tables": 1000,
+        "lineup": "tight",
+        "payouts": [
+          0.5,
+          0.3,
+          0.2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "payout_warning": "Experimental vector, not official contest payouts. Null means terminal chip share.",
+        "blind_levels": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "hands_per_level": 25,
+        "max_hands": 200,
+        "timing_enforced": true,
+        "elapsed_seconds": 75.07490994106047,
+        "python": "3.12.7",
+        "platform": "Linux-4.18.0-553.147.1.el8_10.x86_64-x86_64-with-glibc2.28",
+        "source_sha256_at_start": {
+          "agent.py": "0c0dd6af1a3975223c15eb96d315c061a4cd429a016319ff1999f20fc28aab2c",
+          "equity.py": "c60762dccb5b68cc3ff9368f693e77579b369a2eafe3376f94e790854f1f36dc",
+          "risk.py": "8ef9db7054ff1acf91315900fef77bdb15b6af5012ecd72d2f3ef1f8225a53ad",
+          "simulator.py": "7596347bc962d7fd3f8519ba8fb0b000dfe764dbfea287b68d5d9f6e4aa3fa0e",
+          "baselines.py": "39a92123c6f82f79a4349d1412f6abc781e683c506bb63b0d46d02b68463ff49",
+          "tournament.py": "24ca88114c5e57da35a602b230eb97f3b043b15efcfbf4c9afedfed8a3f99ad1"
+        },
+        "process_id": 4167083,
+        "hero_score": {
+          "n": 1000,
+          "mean": 0.2974521951150107,
+          "standard_error": 0.0070812934316807396,
+          "normal_95_interval": [
+            0.28357285998891646,
+            0.31133153024110494
+          ]
+        },
+        "hero_chip_share": {
+          "n": 1000,
+          "mean": 0.5258560625,
+          "standard_error": 0.014220147623122209,
+          "normal_95_interval": [
+            0.4979845731586805,
+            0.5537275518413196
+          ]
+        },
+        "hero_latency": {
+          "n": 172359,
+          "median_us": 24.265,
+          "p95_us": 91.152,
+          "p99_us": 123.964,
+          "p999_us": 192.354,
+          "max_us": 367.635,
+          "over_1ms": 0
+        },
+        "hero_errors": 0,
+        "hero_invalid_actions": 0,
+        "hero_internal_fallbacks": 0,
+        "hero_observed_over_1ms": 0,
+        "hero_fallback_overruns": 0,
+        "config": {},
+        "backend": "native",
+        "sampler": {
+          "calls": 33908,
+          "trials": 3251872,
+          "opponent_draws": 4063488,
+          "proposal_cap_fallbacks": 0,
+          "uniform_emergency_fallbacks": 0,
+          "proposals": 5496503,
+          "exact_river_calls": 10101
+        }
+      },
+      "selfplay_top3": {
+        "label": "base_selfplay_top3",
+        "seed_start": 1010000,
+        "tables": 1000,
+        "lineup": "selfplay",
+        "payouts": [
+          0.5,
+          0.3,
+          0.2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "payout_warning": "Experimental vector, not official contest payouts. Null means terminal chip share.",
+        "blind_levels": [
+          [
+            10,
+            20
+          ],
+          [
+            20,
+            40
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            80,
+            160
+          ],
+          [
+            160,
+            320
+          ],
+          [
+            320,
+            640
+          ],
+          [
+            640,
+            1280
+          ],
+          [
+            1280,
+            2560
+          ]
+        ],
+        "hands_per_level": 25,
+        "max_hands": 200,
+        "timing_enforced": true,
+        "elapsed_seconds": 82.87419121805578,
+        "python": "3.12.7",
+        "platform": "Linux-4.18.0-553.147.1.el8_10.x86_64-x86_64-with-glibc2.28",
+        "source_sha256_at_start": {
+          "agent.py": "0c0dd6af1a3975223c15eb96d315c061a4cd429a016319ff1999f20fc28aab2c",
+          "equity.py": "c60762dccb5b68cc3ff9368f693e77579b369a2eafe3376f94e790854f1f36dc",
+          "risk.py": "8ef9db7054ff1acf91315900fef77bdb15b6af5012ecd72d2f3ef1f8225a53ad",
+          "simulator.py": "7596347bc962d7fd3f8519ba8fb0b000dfe764dbfea287b68d5d9f6e4aa3fa0e",
+          "baselines.py": "39a92123c6f82f79a4349d1412f6abc781e683c506bb63b0d46d02b68463ff49",
+          "tournament.py": "24ca88114c5e57da35a602b230eb97f3b043b15efcfbf4c9afedfed8a3f99ad1"
+        },
+        "process_id": 4167081,
+        "hero_score": {
+          "n": 1000,
+          "mean": 0.1286,
+          "standard_error": 0.005716180080675794,
+          "normal_95_interval": [
+            0.11739628704187544,
+            0.13980371295812455
+          ]
+        },
+        "hero_chip_share": {
+          "n": 1000,
+          "mean": 0.129,
+          "standard_error": 0.010605256784796466,
+          "normal_95_interval": [
+            0.10821369670179892,
+            0.14978630329820108
+          ]
+        },
+        "hero_latency": {
+          "n": 115443,
+          "median_us": 35.317,
+          "p95_us": 85.091,
+          "p99_us": 111.411,
+          "p999_us": 192.484,
+          "max_us": 386.45,
+          "over_1ms": 0
+        },
+        "hero_errors": 0,
+        "hero_invalid_actions": 0,
+        "hero_internal_fallbacks": 0,
+        "hero_observed_over_1ms": 0,
+        "hero_fallback_overruns": 0,
+        "config": {},
+        "backend": "native",
+        "sampler": {
+          "calls": 189203,
+          "trials": 18163040,
+          "opponent_draws": 20084672,
+          "proposal_cap_fallbacks": 0,
+          "uniform_emergency_fallbacks": 0,
+          "proposals": 28393937,
+          "exact_river_calls": 52940
+        }
+      },
+      "calling_top3": {
+        "label": "base_calling_top3",
+        "seed_start": 990000,
+        "tables": 1000,
+        "lineup": "calling",
+        "payouts": [
+          0.5,
+          0.3,
+          0.2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "payout_warning": "Experimental vector, not official contest payouts. Null means terminal chip share.",
+        "blind_levels": [
+          [
+            10,
+            20
+          ],
+          [
+            12,
+            25
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            20,
+            40
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            35,
+            70
+          ],
+          [
+            50,
+            100
+          ],
+          [
+            75,
+            150
+          ]
+        ],
+        "hands_per_level": 25,
+        "max_hands": 200,
+        "timing_enforced": true,
+        "elapsed_seconds": 92.36050962982699,
+        "python": "3.12.7",
+        "platform": "Linux-4.18.0-553.147.1.el8_10.x86_64-x86_64-with-glibc2.28",
+        "source_sha256_at_start": {
+          "agent.py": "0c0dd6af1a3975223c15eb96d315c061a4cd429a016319ff1999f20fc28aab2c",
+          "equity.py": "c60762dccb5b68cc3ff9368f693e77579b369a2eafe3376f94e790854f1f36dc",
+          "risk.py": "8ef9db7054ff1acf91315900fef77bdb15b6af5012ecd72d2f3ef1f8225a53ad",
+          "simulator.py": "7596347bc962d7fd3f8519ba8fb0b000dfe764dbfea287b68d5d9f6e4aa3fa0e",
+          "baselines.py": "39a92123c6f82f79a4349d1412f6abc781e683c506bb63b0d46d02b68463ff49",
+          "tournament.py": "24ca88114c5e57da35a602b230eb97f3b043b15efcfbf4c9afedfed8a3f99ad1"
+        },
+        "process_id": 4167084,
+        "hero_score": {
+          "n": 1000,
+          "mean": 0.43964285714285717,
+          "standard_error": 0.0050833259237771985,
+          "normal_95_interval": [
+            0.42967953833225386,
+            0.4496061759534605
+          ]
+        },
+        "hero_chip_share": {
+          "n": 1000,
+          "mean": 0.874,
+          "standard_error": 0.010499249222407964,
+          "normal_95_interval": [
+            0.8534214715240804,
+            0.8945785284759196
+          ]
+        },
+        "hero_latency": {
+          "n": 143298,
+          "median_us": 66.857,
+          "p95_us": 125.968,
+          "p99_us": 140.195,
+          "p999_us": 170.292,
+          "max_us": 12352.808,
+          "over_1ms": 1
+        },
+        "hero_errors": 0,
+        "hero_invalid_actions": 0,
+        "hero_internal_fallbacks": 0,
+        "hero_observed_over_1ms": 1,
+        "hero_fallback_overruns": 1,
+        "config": {},
+        "backend": "native",
+        "sampler": {
+          "calls": 71769,
+          "trials": 5456544,
+          "opponent_draws": 22553984,
+          "proposal_cap_fallbacks": 0,
+          "uniform_emergency_fallbacks": 0,
+          "proposals": 38936691,
+          "exact_river_calls": 8323
+        }
+      }
+    }
+  },
+  "warning": "Synthetic opponents and assumed schedules/payouts; not official contest performance."
+}

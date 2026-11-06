@@ -1,0 +1,17 @@
+{
+  "source": "Independent local Monte Carlo; no third-party hand tables",
+  "generator": "tools/generate_equity.cpp",
+  "command": "tools/generate_equity preflop assets/preflop.csv 50000 901",
+  "seed": 901,
+  "rollouts_per_cell": 50000,
+  "hand_types": 169,
+  "range_combo_counts": [1326, 536, 208, 68],
+  "range_definition": "Complete hand types ranked by generated heads-up random equity, including the type that crosses each 40%,15%,5% combination-mass boundary",
+  "range_sampling": "Uniform legal combinations after removal of known hero and board cards",
+  "worst_case_monte_carlo_standard_error": 0.002236068,
+  "limitations": [
+    "Ranges are models rather than human ranges or equilibrium ranges",
+    "Range ordering itself contains finite Monte Carlo noise",
+    "No official interface, blind schedule or payout information was provided"
+  ]
+}

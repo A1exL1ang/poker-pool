@@ -1,0 +1,30 @@
+{
+  "kind": "frozen held-out seven-sidepot audit; no policy tuning",
+  "seed": 17555191,
+  "spots": 600,
+  "teacher_samples": 4096,
+  "runtime_native_samples": 64,
+  "python_prefix_trees": 80,
+  "model": {
+    "rmse": 0.04471003999680677,
+    "mae": 0.026533964139287082,
+    "p95_absolute_error": 0.08871569750426428,
+    "max_absolute_error": 0.5695773952844869
+  },
+  "runtime_native": {
+    "rmse": 0.029971101153322067,
+    "mae": 0.02087572575081019,
+    "p95_absolute_error": 0.06393685397620863,
+    "max_absolute_error": 0.13543425611714666
+  },
+  "sampler_stats": {
+    "calls": 1200,
+    "trials": 2496000,
+    "opponent_draws": 17472000,
+    "proposal_cap_fallbacks": 4,
+    "uniform_emergency_fallbacks": 1,
+    "proposals": 52829407,
+    "exact_river_calls": 0
+  },
+  "limitations": "Python uses mean range parameters separately within each mask and omits blocker correlations induced by players outside that mask; native samples all ranges jointly. Both share heuristic opponent model."
+}

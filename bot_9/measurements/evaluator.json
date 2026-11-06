@@ -1,0 +1,20 @@
+{
+  "python_version": "3.11.9",
+  "platform": "Windows local workspace",
+  "exhaustive_five_card_reference_comparisons": 2598960,
+  "exhaustive_five_card_category_counts": [1302540,1098240,123552,54912,10200,5108,3744,624,40],
+  "random_python_reference_comparisons": {"5_cards":5000,"6_cards":5000,"7_cards":5000},
+  "random_cpp_reference_comparisons": 50000,
+  "mean_evaluate_7_microseconds": 4.12691,
+  "mean_hand_features_river_microseconds": 44.60574,
+  "timing_samples": 10000,
+  "timing_seed": 8,
+  "timing_limitations": "Means from one local Python loop; OS scheduling, hardware and full-agent timing require separate measurement. These are not 1ms full-agent guarantees.",
+  "reproduce_tests": [
+    "python -m unittest discover -s tests -p test_evaluator.py -v",
+    "python tools/validate_evaluator.py",
+    "g++ -O3 -std=c++17 tools/generate_equity.cpp -o tools/generate_equity",
+    "tools/generate_equity validate 50000 917",
+    "python -m unittest discover -s tests -p test_generator.py -v"
+  ]
+}

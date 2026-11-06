@@ -1,0 +1,533 @@
+{
+  "environment": {
+    "python": "3.11.9 (main, Apr 12 2024, 09:55:27)  [GCC UCRT 13.2.0 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "machine": "AMD64",
+    "processor": "AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD",
+    "gc_enabled": true,
+    "load_note": "Other desktop/process load was not measured; no CPU/process/job inventory queried. Run serially after training/tuning for final evidence.",
+    "timer": "time.perf_counter_ns wall; time.process_time_ns CPU"
+  },
+  "clock_info": {
+    "perf_counter": {
+      "implementation": "QueryPerformanceCounter()",
+      "monotonic": true,
+      "adjustable": false,
+      "resolution": 1e-07
+    },
+    "process_time": {
+      "implementation": "GetProcessTimes()",
+      "monotonic": true,
+      "adjustable": false,
+      "resolution": 1e-07
+    }
+  },
+  "current_source_hashes": {
+    "agent.py": "2a577bc8fd87b8e388d353f9c1bf70714868852500a0a8ae0a3866b2ecc90261",
+    "equity.py": "d5bee1a18f77ecd593b648186dfb8255c0f637c977d58b9ad53358e109d50bb5",
+    "icm.py": "352f063e89bcc3cde0a9b0ad35d2f9ad6d3287b1b5042178603ca31cd65ec902",
+    "assets/equity_predict.py": "0bce2a0f279b57d234a242348a3d1135ee3ee8bab503e7e55c04f893fdc548cc",
+    "assets/equity_model.json": "730eb4d850d0a2627c93460ca48e15bb75f467681e52656da858464949d6bf3a",
+    "assets/preflop.json": "7be0437bdc6873d331233e49909ed20d05e89048311b08701708bc8469aa31bd",
+    "assets/rank_scores.zlib": "61b17c193aec514b853973713b8964b6a7e66417b4387a29858f5e4100a5e413"
+  },
+  "params": {
+    "open_scale": 1.0,
+    "call_margin": 0.025,
+    "value_threshold": 0.7,
+    "bluff_scale": 1.0,
+    "range_selection": 1.0,
+    "shove_margin": 0.025,
+    "threebet_scale": 1.0,
+    "realization": 1.0
+  },
+  "corpus_path": "measurements\\latency_smoke_corpus.jsonl.gz",
+  "corpus": {
+    "kind": "actual_local_hero_observations",
+    "tables": 3,
+    "seed_start": 730000,
+    "max_hands": 4,
+    "synthetic_payouts": [
+      0.5,
+      0.3,
+      0.2
+    ],
+    "synthetic_blind_schedule": [
+      [
+        10,
+        20
+      ],
+      [
+        20,
+        40
+      ],
+      [
+        40,
+        80
+      ],
+      [
+        80,
+        160
+      ],
+      [
+        160,
+        320
+      ],
+      [
+        320,
+        640
+      ],
+      [
+        640,
+        1280
+      ],
+      [
+        1280,
+        2560
+      ]
+    ],
+    "scenarios": [
+      "mixed",
+      "selfplay",
+      "shove"
+    ],
+    "hero_seat_rotation": true,
+    "seconds": 0.02277039992623031,
+    "source_hashes": {
+      "agent.py": "2a577bc8fd87b8e388d353f9c1bf70714868852500a0a8ae0a3866b2ecc90261",
+      "equity.py": "d5bee1a18f77ecd593b648186dfb8255c0f637c977d58b9ad53358e109d50bb5",
+      "icm.py": "352f063e89bcc3cde0a9b0ad35d2f9ad6d3287b1b5042178603ca31cd65ec902",
+      "assets/equity_predict.py": "0bce2a0f279b57d234a242348a3d1135ee3ee8bab503e7e55c04f893fdc548cc",
+      "assets/equity_model.json": "730eb4d850d0a2627c93460ca48e15bb75f467681e52656da858464949d6bf3a",
+      "assets/preflop.json": "7be0437bdc6873d331233e49909ed20d05e89048311b08701708bc8469aa31bd"
+    },
+    "params": {
+      "open_scale": 1.0,
+      "call_margin": 0.025,
+      "value_threshold": 0.7,
+      "bluff_scale": 1.0,
+      "range_selection": 1.0,
+      "shove_margin": 0.025,
+      "threebet_scale": 1.0,
+      "realization": 1.0
+    },
+    "table_rows": [
+      {
+        "table": 0,
+        "seed": 730000,
+        "hero_seat": 0,
+        "scenario": "mixed",
+        "decisions": 4,
+        "hands": 4,
+        "invalid": 0,
+        "exceptions": 0,
+        "internal_fallbacks": 0
+      },
+      {
+        "table": 1,
+        "seed": 730001,
+        "hero_seat": 1,
+        "scenario": "selfplay",
+        "decisions": 4,
+        "hands": 4,
+        "invalid": 0,
+        "exceptions": 0,
+        "internal_fallbacks": 0
+      },
+      {
+        "table": 2,
+        "seed": 730002,
+        "hero_seat": 2,
+        "scenario": "shove",
+        "decisions": 4,
+        "hands": 4,
+        "invalid": 0,
+        "exceptions": 0,
+        "internal_fallbacks": 0
+      }
+    ],
+    "observations": 12,
+    "street_counts": {
+      "preflop": 12,
+      "flop": 0,
+      "turn": 0,
+      "river": 0
+    }
+  },
+  "corpus_source_matches_current": false,
+  "warm": {
+    "seconds": 0.0008688999805599451,
+    "batch_process_cpu_ms": 15.625,
+    "batch_cpu_note": "Includes warmup, Agent construction and validation outside act timers.",
+    "warmup_decisions": 2,
+    "initialization_timed": false,
+    "module_assets_already_imported": true,
+    "table_state_replayed_in_order_and_reset_at_boundaries": true,
+    "wall": {
+      "all": {
+        "decisions": 10,
+        "p50_us": 46.2,
+        "p95_us": 57.1,
+        "p99_us": 57.1,
+        "p999_us": 57.1,
+        "max_us": 58.3,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      },
+      "preflop": {
+        "decisions": 10,
+        "p50_us": 46.2,
+        "p95_us": 57.1,
+        "p99_us": 57.1,
+        "p999_us": 57.1,
+        "max_us": 58.3,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      },
+      "flop": {
+        "decisions": 0,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 0.0,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      },
+      "turn": {
+        "decisions": 0,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 0.0,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      },
+      "river": {
+        "decisions": 0,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 0.0,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      }
+    },
+    "cpu": {
+      "all": {
+        "decisions": 10,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 0.0,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      },
+      "preflop": {
+        "decisions": 10,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 0.0,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      },
+      "flop": {
+        "decisions": 0,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 0.0,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      },
+      "turn": {
+        "decisions": 0,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 0.0,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      },
+      "river": {
+        "decisions": 0,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 0.0,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      }
+    },
+    "process_cpu_samples_nonzero": 0,
+    "total_measured_act_wall_ms": 0.4637,
+    "total_measured_act_process_cpu_ms": 0.0,
+    "internal_fallbacks": 0,
+    "invalid_actions": 0,
+    "icm_cache_misses": 0,
+    "cpu_timing_note": "Process CPU intervals include two wall-clock marker calls. OS CPU accounting can be coarse (many zero samples on Windows); CPU per-act percentiles do not establish sub-ms precision. Wall intervals bracket act only."
+  },
+  "cold": {
+    "seconds": 0.00022090005222707987,
+    "batch_process_cpu_ms": 0.0,
+    "batch_cpu_note": "Includes per-case Agent construction/cache clearing and validation outside act timers.",
+    "initialization_timed": false,
+    "module_assets_already_imported": true,
+    "fresh_Agent_each_decision": true,
+    "icm_cache_cleared_before_each_decision": true,
+    "note": "First act on an in-hand observation with empty seat priors; process/asset startup is excluded.",
+    "wall": {
+      "all": {
+        "decisions": 4,
+        "p50_us": 39.4,
+        "p95_us": 47.7,
+        "p99_us": 47.7,
+        "p999_us": 47.7,
+        "max_us": 49.5,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      },
+      "preflop": {
+        "decisions": 4,
+        "p50_us": 39.4,
+        "p95_us": 47.7,
+        "p99_us": 47.7,
+        "p999_us": 47.7,
+        "max_us": 49.5,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      },
+      "flop": {
+        "decisions": 0,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 0.0,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      },
+      "turn": {
+        "decisions": 0,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 0.0,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      },
+      "river": {
+        "decisions": 0,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 0.0,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      }
+    },
+    "cpu": {
+      "all": {
+        "decisions": 4,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 0.0,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      },
+      "preflop": {
+        "decisions": 4,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 0.0,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      },
+      "flop": {
+        "decisions": 0,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 0.0,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      },
+      "turn": {
+        "decisions": 0,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 0.0,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      },
+      "river": {
+        "decisions": 0,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 0.0,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      }
+    },
+    "process_cpu_samples_nonzero": 0,
+    "total_measured_act_wall_ms": 0.1701,
+    "total_measured_act_process_cpu_ms": 0.0,
+    "internal_fallbacks": 0,
+    "invalid_actions": 0,
+    "icm_cache_misses": 0,
+    "cpu_timing_note": "Process CPU intervals include two wall-clock marker calls. OS CPU accounting can be coarse (many zero samples on Windows); CPU per-act percentiles do not establish sub-ms precision. Wall intervals bracket act only."
+  },
+  "artificial_uncached_icm": {
+    "seconds": 0.0021564000053331256,
+    "batch_process_cpu_ms": 0.0,
+    "batch_cpu_note": "Includes artificial state construction/cache clearing and validation outside act timers.",
+    "artificial": true,
+    "note": "Eight live table stacks, six folded hands, heads-up all-in; unequal starting stacks total2000 chips. This measures an artificial worst-size ICM context, not game frequency.",
+    "unique_stack_states": 4,
+    "icm_cache_cleared_before_each_decision": true,
+    "decisions_without_icm_cache_miss": 0,
+    "initialization_timed": false,
+    "wall": {
+      "all": {
+        "decisions": 4,
+        "p50_us": 497.1,
+        "p95_us": 506.0,
+        "p99_us": 506.0,
+        "p999_us": 506.0,
+        "max_us": 587.3,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      },
+      "preflop": {
+        "decisions": 1,
+        "p50_us": 250.3,
+        "p95_us": 250.3,
+        "p99_us": 250.3,
+        "p999_us": 250.3,
+        "max_us": 250.3,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      },
+      "flop": {
+        "decisions": 1,
+        "p50_us": 587.3,
+        "p95_us": 587.3,
+        "p99_us": 587.3,
+        "p999_us": 587.3,
+        "max_us": 587.3,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      },
+      "turn": {
+        "decisions": 1,
+        "p50_us": 506.0,
+        "p95_us": 506.0,
+        "p99_us": 506.0,
+        "p999_us": 506.0,
+        "max_us": 506.0,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      },
+      "river": {
+        "decisions": 1,
+        "p50_us": 497.1,
+        "p95_us": 497.1,
+        "p99_us": 497.1,
+        "p999_us": 497.1,
+        "max_us": 497.1,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      }
+    },
+    "cpu": {
+      "all": {
+        "decisions": 4,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 0.0,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      },
+      "preflop": {
+        "decisions": 1,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 0.0,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      },
+      "flop": {
+        "decisions": 1,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 0.0,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      },
+      "turn": {
+        "decisions": 1,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 0.0,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      },
+      "river": {
+        "decisions": 1,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 0.0,
+        "overruns_1ms": 0,
+        "overrun_fraction": 0.0
+      }
+    },
+    "process_cpu_samples_nonzero": 0,
+    "total_measured_act_wall_ms": 1.8407,
+    "total_measured_act_process_cpu_ms": 0.0,
+    "internal_fallbacks": 0,
+    "invalid_actions": 0,
+    "icm_cache_misses": 12,
+    "cpu_timing_note": "Process CPU intervals include two wall-clock marker calls. OS CPU accounting can be coarse (many zero samples on Windows); CPU per-act percentiles do not establish sub-ms precision. Wall intervals bracket act only."
+  },
+  "limitations": [
+    "Local Python/hardware timing; official hardware and adapter are unavailable.",
+    "Module import/model load, Agent construction, observation construction and JSON transport excluded.",
+    "Wall-clock scheduling pauses count as overruns; no hard deadline is guaranteed.",
+    "Replay uses recorded game states; artificial ICM stress is separately identified.",
+    "Fresh-Agent cold replay measures an empty table profile, not a fresh OS process."
+  ],
+  "in_game_deadline": {
+    "skipped": true,
+    "note": "Pass --enforce-deadline to run a separately paired all-seat 1ms fallback trial."
+  },
+  "total_seconds": 0.12095350003801286
+}

@@ -1,0 +1,60 @@
+{
+  "archive": "dist/bot_9.zip",
+  "archive_bytes": 5302616,
+  "archive_sha256": "2b800e5c57fc7e963a66e7cf2f05efe2e587e5e071e56ea90e4f19d850faf3f1",
+  "uncompressed_bytes": 15008822,
+  "files": [
+    "MANIFEST.json",
+    "assets/equity_model.bin",
+    "assets/preflop.csv",
+    "bot.py",
+    "equity.py",
+    "evaluator.py",
+    "features.py",
+    "model.py",
+    "play.py"
+  ],
+  "model_asset": "assets/equity_model.bin",
+  "stdlib_only_static_import_graph": {
+    "bot.py": [
+      "equity",
+      "evaluator",
+      "math",
+      "model"
+    ],
+    "model.py": [
+      "array",
+      "features",
+      "gzip",
+      "json",
+      "pathlib",
+      "struct",
+      "sys"
+    ],
+    "features.py": [
+      "evaluator"
+    ],
+    "evaluator.py": [
+      "itertools"
+    ],
+    "equity.py": [
+      "csv",
+      "math",
+      "pathlib"
+    ],
+    "play.py": [
+      "bot",
+      "json",
+      "sys"
+    ]
+  },
+  "isolated_smoke": {
+    "smoke_decisions": 16,
+    "agent_errors": 0,
+    "network_attempts": 0,
+    "python_flags": "-I -S",
+    "model_loaded": true,
+    "third_party_modules": 0,
+    "jsonl_lines": 2
+  }
+}

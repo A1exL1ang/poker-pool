@@ -1,0 +1,695 @@
+{
+  "benchmark": "independent-local-latency-replay-v1",
+  "runtime": {
+    "python": "3.11.9 (main, Apr 12 2024, 09:55:27)  [GCC UCRT 13.2.0 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26200-SP0"
+  },
+  "clocks": {
+    "perf_counter": {
+      "implementation": "QueryPerformanceCounter()",
+      "resolution_seconds": 1e-07,
+      "monotonic": true,
+      "adjustable": false
+    },
+    "process_time": {
+      "implementation": "GetProcessTimes()",
+      "resolution_seconds": 1e-07,
+      "monotonic": true,
+      "adjustable": false
+    }
+  },
+  "config": {
+    "calls": 20000,
+    "model_path": "C:\\Users\\alexl\\Code\\poker-pool\\.workers\\bot_9\\assets\\equity_model.bin",
+    "seed_start": 7000,
+    "max_tables": 400,
+    "max_hands": 200
+  },
+  "startup": {
+    "import_wall_ns": 53192300,
+    "import_process_ns": 31250000,
+    "agent_init_wall_ns": 16941800,
+    "agent_init_process_ns": 15625000,
+    "first_preflop_call_wall_ns": 68800,
+    "first_preflop_call_process_ns": 0,
+    "first_action": {
+      "action": "raise",
+      "amount": 50
+    },
+    "internal_fallbacks": 0,
+    "model_trees": 12,
+    "subprocess_wall_including_launch_ns": 207650200
+  },
+  "artifact_sha256": {
+    "bot.py": "58e29a64d2178faaa373c387ecc859155b4f5c48f97ab368814169391c8531c8",
+    "model.py": "0b902f8dc664bf85b1addc09a362a4c31f9051aabd853638ff496cbb4e120a91",
+    "features.py": "9cdffaf8dd454fa2bada3ed8c32957a3c35d480123504fa0b46e527213c455e1",
+    "evaluator.py": "d704f3c148dfcd644a2bdfb7ddf8e62a894126ee71518666bc32fb1e224607dc",
+    "equity.py": "955f5f40da9c57bc5d8effc08c8584ead3959a017adc50f6dafab5200ccb9cfd",
+    "assets/preflop.csv": "932e8151725b8fa991446eabff14df7f680ba1d5e52eb9dc53ce2c66e71d30f7",
+    "selected_model": "292a35acd0ef90a57267a3236572686c32a069d57c578a599620dac5b09d2253"
+  },
+  "lineups": {
+    "mixed": {
+      "collection": {
+        "lineup": "mixed",
+        "requested_decisions": 10000,
+        "recorded_decisions": 10000,
+        "tables": 59,
+        "seed_start": 7000,
+        "engine_errors": 0,
+        "internal_fallbacks": 0,
+        "wall_seconds": 2.6729449999984354,
+        "limit_enforcement": false,
+        "synthetic_payouts": [
+          0.5,
+          0.3,
+          0.2,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "synthetic_blinds": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "max_hands": 200
+      },
+      "replay": {
+        "all": {
+          "wall": {
+            "n": 10000,
+            "mean_ns": 83750.54,
+            "p50_ns": 40500.0,
+            "p95_ns": 177500.0,
+            "p99_ns": 230601.00000000003,
+            "p999_ns": 472611.40000000235,
+            "max_ns": 70405400,
+            "over_1ms": 1,
+            "over_1ms_rate": 0.0001
+          },
+          "process": {
+            "n": 10000,
+            "mean_ns": 79687.5,
+            "p50_ns": 0.0,
+            "p95_ns": 0.0,
+            "p99_ns": 0.0,
+            "p999_ns": 15625000.0,
+            "max_ns": 78125000,
+            "over_1ms": 47,
+            "over_1ms_rate": 0.0047
+          }
+        },
+        "preflop": {
+          "wall": {
+            "n": 6247,
+            "mean_ns": 31568.929085961263,
+            "p50_ns": 26600.0,
+            "p95_ns": 58400.0,
+            "p99_ns": 86908.0,
+            "p999_ns": 198991.39999999962,
+            "max_ns": 510000,
+            "over_1ms": 0,
+            "over_1ms_rate": 0.0
+          },
+          "process": {
+            "n": 6247,
+            "mean_ns": 30014.406915319352,
+            "p50_ns": 0.0,
+            "p95_ns": 0.0,
+            "p99_ns": 0.0,
+            "p999_ns": 15625000.0,
+            "max_ns": 15625000,
+            "over_1ms": 12,
+            "over_1ms_rate": 0.0019209220425804386
+          }
+        },
+        "postflop": {
+          "wall": {
+            "n": 3753,
+            "mean_ns": 170608.65973887558,
+            "p50_ns": 147800.0,
+            "p95_ns": 207239.99999999997,
+            "p99_ns": 287488.00000000006,
+            "p999_ns": 532766.4000000043,
+            "max_ns": 70405400,
+            "over_1ms": 1,
+            "over_1ms_rate": 0.0002664535038635758
+          },
+          "process": {
+            "n": 3753,
+            "mean_ns": 162370.1039168665,
+            "p50_ns": 0.0,
+            "p95_ns": 0.0,
+            "p99_ns": 0.0,
+            "p999_ns": 15625000.0,
+            "max_ns": 78125000,
+            "over_1ms": 35,
+            "over_1ms_rate": 0.009325872635225153
+          }
+        },
+        "warm_calls": {
+          "wall": {
+            "n": 9941,
+            "mean_ns": 83855.87969017202,
+            "p50_ns": 40000.0,
+            "p95_ns": 177500.0,
+            "p99_ns": 230660.00000000003,
+            "p999_ns": 473283.9999999942,
+            "max_ns": 70405400,
+            "over_1ms": 1,
+            "over_1ms_rate": 0.00010059350165979277
+          },
+          "process": {
+            "n": 9941,
+            "mean_ns": 80160.44663514737,
+            "p50_ns": 0.0,
+            "p95_ns": 0.0,
+            "p99_ns": 0.0,
+            "p999_ns": 15625000.0,
+            "max_ns": 78125000,
+            "over_1ms": 47,
+            "over_1ms_rate": 0.00472789457801026
+          }
+        },
+        "table_first_calls": {
+          "wall": {
+            "n": 59,
+            "mean_ns": 66001.69491525424,
+            "p50_ns": 58300.0,
+            "p95_ns": 93299.99999999997,
+            "p99_ns": 109376.00000000003,
+            "p999_ns": 116057.6,
+            "max_ns": 116800,
+            "over_1ms": 0,
+            "over_1ms_rate": 0.0
+          },
+          "process": {
+            "n": 59,
+            "mean_ns": 0.0,
+            "p50_ns": 0.0,
+            "p95_ns": 0.0,
+            "p99_ns": 0.0,
+            "p999_ns": 0.0,
+            "max_ns": 0,
+            "over_1ms": 0,
+            "over_1ms_rate": 0.0
+          }
+        },
+        "by_street": {
+          "0": {
+            "wall": {
+              "n": 6247,
+              "mean_ns": 31568.929085961263,
+              "p50_ns": 26600.0,
+              "p95_ns": 58400.0,
+              "p99_ns": 86908.0,
+              "p999_ns": 198991.39999999962,
+              "max_ns": 510000,
+              "over_1ms": 0,
+              "over_1ms_rate": 0.0
+            },
+            "process": {
+              "n": 6247,
+              "mean_ns": 30014.406915319352,
+              "p50_ns": 0.0,
+              "p95_ns": 0.0,
+              "p99_ns": 0.0,
+              "p999_ns": 15625000.0,
+              "max_ns": 15625000,
+              "over_1ms": 12,
+              "over_1ms_rate": 0.0019209220425804386
+            }
+          },
+          "1": {
+            "wall": {
+              "n": 1611,
+              "mean_ns": 195627.74674115455,
+              "p50_ns": 148400.0,
+              "p95_ns": 198350.0,
+              "p99_ns": 278010.0000000005,
+              "p999_ns": 702452.0000000186,
+              "max_ns": 70405400,
+              "over_1ms": 1,
+              "over_1ms_rate": 0.0006207324643078833
+            },
+            "process": {
+              "n": 1611,
+              "mean_ns": 145484.17132216014,
+              "p50_ns": 0.0,
+              "p95_ns": 0.0,
+              "p99_ns": 0.0,
+              "p999_ns": 15625000.0,
+              "max_ns": 78125000,
+              "over_1ms": 11,
+              "over_1ms_rate": 0.006828057107386716
+            }
+          },
+          "2": {
+            "wall": {
+              "n": 1186,
+              "mean_ns": 146209.35919055648,
+              "p50_ns": 143250.0,
+              "p95_ns": 203800.0,
+              "p99_ns": 269645.00000000023,
+              "p999_ns": 482879.00000000803,
+              "max_ns": 601800,
+              "over_1ms": 0,
+              "over_1ms_rate": 0.0
+            },
+            "process": {
+              "n": 1186,
+              "mean_ns": 144919.89881956155,
+              "p50_ns": 0.0,
+              "p95_ns": 0.0,
+              "p99_ns": 0.0,
+              "p999_ns": 15625000.0,
+              "max_ns": 15625000,
+              "over_1ms": 11,
+              "over_1ms_rate": 0.00927487352445194
+            }
+          },
+          "3": {
+            "wall": {
+              "n": 956,
+              "mean_ns": 158717.25941422593,
+              "p50_ns": 154200.0,
+              "p95_ns": 220850.0,
+              "p99_ns": 330710.0000000002,
+              "p999_ns": 486757.4999999999,
+              "max_ns": 490100,
+              "over_1ms": 0,
+              "over_1ms_rate": 0.0
+            },
+            "process": {
+              "n": 956,
+              "mean_ns": 212473.84937238492,
+              "p50_ns": 0.0,
+              "p95_ns": 0.0,
+              "p99_ns": 15625000.0,
+              "p999_ns": 15625000.0,
+              "max_ns": 15625000,
+              "over_1ms": 13,
+              "over_1ms_rate": 0.013598326359832637
+            }
+          }
+        },
+        "agent_init_warm_process": {
+          "wall": {
+            "n": 59,
+            "mean_ns": 1391184.7457627119,
+            "p50_ns": 1392000.0,
+            "p95_ns": 1636930.0,
+            "p99_ns": 1867322.0000000002,
+            "p999_ns": 1950372.2,
+            "max_ns": 1959600,
+            "over_1ms": 59,
+            "over_1ms_rate": 1.0
+          },
+          "process": {
+            "n": 59,
+            "mean_ns": 2118644.0677966103,
+            "p50_ns": 0.0,
+            "p95_ns": 15625000.0,
+            "p99_ns": 15625000.0,
+            "p999_ns": 15625000.0,
+            "max_ns": 15625000,
+            "over_1ms": 8,
+            "over_1ms_rate": 0.13559322033898305
+          }
+        },
+        "action_mismatches": 0,
+        "invalid_actions": 0,
+        "uncaught_exceptions": 0,
+        "internal_safety_fallbacks": 0,
+        "process_clock_observed_nonzero_ns": [
+          [
+            15625000,
+            46
+          ],
+          [
+            78125000,
+            1
+          ]
+        ],
+        "would_trigger_wall_limit_or_error_fallback": 1,
+        "would_trigger_process_limit_or_error_fallback": 47
+      }
+    },
+    "mirror": {
+      "collection": {
+        "lineup": "mirror",
+        "requested_decisions": 10000,
+        "recorded_decisions": 10000,
+        "tables": 9,
+        "seed_start": 8000,
+        "engine_errors": 0,
+        "internal_fallbacks": 0,
+        "wall_seconds": 1.4980961999390274,
+        "limit_enforcement": false,
+        "synthetic_payouts": [
+          0.5,
+          0.3,
+          0.2,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "synthetic_blinds": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "max_hands": 200
+      },
+      "replay": {
+        "all": {
+          "wall": {
+            "n": 10000,
+            "mean_ns": 68229.83,
+            "p50_ns": 41900.0,
+            "p95_ns": 170904.99999999994,
+            "p99_ns": 230501.00000000003,
+            "p999_ns": 393423.2000000047,
+            "max_ns": 830100,
+            "over_1ms": 0,
+            "over_1ms_rate": 0.0
+          },
+          "process": {
+            "n": 10000,
+            "mean_ns": 62500.0,
+            "p50_ns": 0.0,
+            "p95_ns": 0.0,
+            "p99_ns": 0.0,
+            "p999_ns": 15625000.0,
+            "max_ns": 15625000,
+            "over_1ms": 40,
+            "over_1ms_rate": 0.004
+          }
+        },
+        "preflop": {
+          "wall": {
+            "n": 7162,
+            "mean_ns": 35603.00195476124,
+            "p50_ns": 31450.0,
+            "p95_ns": 57500.0,
+            "p99_ns": 91917.0000000001,
+            "p999_ns": 191361.89999999988,
+            "max_ns": 584700,
+            "over_1ms": 0,
+            "over_1ms_rate": 0.0
+          },
+          "process": {
+            "n": 7162,
+            "mean_ns": 37088.10388159732,
+            "p50_ns": 0.0,
+            "p95_ns": 0.0,
+            "p99_ns": 0.0,
+            "p999_ns": 15625000.0,
+            "max_ns": 15625000,
+            "over_1ms": 17,
+            "over_1ms_rate": 0.0023736386484222286
+          }
+        },
+        "postflop": {
+          "wall": {
+            "n": 2838,
+            "mean_ns": 150567.15997181114,
+            "p50_ns": 146400.0,
+            "p95_ns": 209120.00000000006,
+            "p99_ns": 291304.0000000001,
+            "p999_ns": 543673.4000000007,
+            "max_ns": 830100,
+            "over_1ms": 0,
+            "over_1ms_rate": 0.0
+          },
+          "process": {
+            "n": 2838,
+            "mean_ns": 126629.66878083158,
+            "p50_ns": 0.0,
+            "p95_ns": 0.0,
+            "p99_ns": 0.0,
+            "p999_ns": 15625000.0,
+            "max_ns": 15625000,
+            "over_1ms": 23,
+            "over_1ms_rate": 0.00810429880197322
+          }
+        },
+        "warm_calls": {
+          "wall": {
+            "n": 9928,
+            "mean_ns": 68300.3726833199,
+            "p50_ns": 41800.0,
+            "p95_ns": 171064.99999999997,
+            "p99_ns": 230256.9999999996,
+            "p999_ns": 395093.6000000074,
+            "max_ns": 830100,
+            "over_1ms": 0,
+            "over_1ms_rate": 0.0
+          },
+          "process": {
+            "n": 9928,
+            "mean_ns": 62953.263497179694,
+            "p50_ns": 0.0,
+            "p95_ns": 0.0,
+            "p99_ns": 0.0,
+            "p999_ns": 15625000.0,
+            "max_ns": 15625000,
+            "over_1ms": 40,
+            "over_1ms_rate": 0.0040290088638195
+          }
+        },
+        "table_first_calls": {
+          "wall": {
+            "n": 72,
+            "mean_ns": 58502.77777777778,
+            "p50_ns": 51200.0,
+            "p95_ns": 98395.00000000007,
+            "p99_ns": 208199.00000000052,
+            "p999_ns": 261299.90000000017,
+            "max_ns": 267200,
+            "over_1ms": 0,
+            "over_1ms_rate": 0.0
+          },
+          "process": {
+            "n": 72,
+            "mean_ns": 0.0,
+            "p50_ns": 0.0,
+            "p95_ns": 0.0,
+            "p99_ns": 0.0,
+            "p999_ns": 0.0,
+            "max_ns": 0,
+            "over_1ms": 0,
+            "over_1ms_rate": 0.0
+          }
+        },
+        "by_street": {
+          "0": {
+            "wall": {
+              "n": 7162,
+              "mean_ns": 35603.00195476124,
+              "p50_ns": 31450.0,
+              "p95_ns": 57500.0,
+              "p99_ns": 91917.0000000001,
+              "p999_ns": 191361.89999999988,
+              "max_ns": 584700,
+              "over_1ms": 0,
+              "over_1ms_rate": 0.0
+            },
+            "process": {
+              "n": 7162,
+              "mean_ns": 37088.10388159732,
+              "p50_ns": 0.0,
+              "p95_ns": 0.0,
+              "p99_ns": 0.0,
+              "p999_ns": 15625000.0,
+              "max_ns": 15625000,
+              "over_1ms": 17,
+              "over_1ms_rate": 0.0023736386484222286
+            }
+          },
+          "1": {
+            "wall": {
+              "n": 1307,
+              "mean_ns": 153805.4322876817,
+              "p50_ns": 149500.0,
+              "p95_ns": 213670.00000000006,
+              "p99_ns": 305560.00000000023,
+              "p999_ns": 453923.7999999989,
+              "max_ns": 614800,
+              "over_1ms": 0,
+              "over_1ms_rate": 0.0
+            },
+            "process": {
+              "n": 1307,
+              "mean_ns": 143458.3014537108,
+              "p50_ns": 0.0,
+              "p95_ns": 0.0,
+              "p99_ns": 0.0,
+              "p999_ns": 15625000.0,
+              "max_ns": 15625000,
+              "over_1ms": 12,
+              "over_1ms_rate": 0.009181331293037491
+            }
+          },
+          "2": {
+            "wall": {
+              "n": 917,
+              "mean_ns": 145776.00872410033,
+              "p50_ns": 140300.0,
+              "p95_ns": 211159.99999999994,
+              "p99_ns": 284964.00000000006,
+              "p999_ns": 615114.7999999874,
+              "max_ns": 830100,
+              "over_1ms": 0,
+              "over_1ms_rate": 0.0
+            },
+            "process": {
+              "n": 917,
+              "mean_ns": 102235.55070883315,
+              "p50_ns": 0.0,
+              "p95_ns": 0.0,
+              "p99_ns": 0.0,
+              "p999_ns": 15625000.0,
+              "max_ns": 15625000,
+              "over_1ms": 6,
+              "over_1ms_rate": 0.006543075245365322
+            }
+          },
+          "3": {
+            "wall": {
+              "n": 614,
+              "mean_ns": 150829.47882736157,
+              "p50_ns": 148300.0,
+              "p95_ns": 202340.0,
+              "p99_ns": 268333.0,
+              "p999_ns": 326927.3999999972,
+              "max_ns": 357700,
+              "over_1ms": 0,
+              "over_1ms_rate": 0.0
+            },
+            "process": {
+              "n": 614,
+              "mean_ns": 127239.41368078176,
+              "p50_ns": 0.0,
+              "p95_ns": 0.0,
+              "p99_ns": 0.0,
+              "p999_ns": 15625000.0,
+              "max_ns": 15625000,
+              "over_1ms": 5,
+              "over_1ms_rate": 0.008143322475570033
+            }
+          }
+        },
+        "agent_init_warm_process": {
+          "wall": {
+            "n": 72,
+            "mean_ns": 1155023.611111111,
+            "p50_ns": 1110700.0,
+            "p95_ns": 1495335.0000000002,
+            "p99_ns": 2005674.0000000075,
+            "p999_ns": 2766467.4000000022,
+            "max_ns": 2851000,
+            "over_1ms": 51,
+            "over_1ms_rate": 0.7083333333333334
+          },
+          "process": {
+            "n": 72,
+            "mean_ns": 1302083.3333333333,
+            "p50_ns": 0.0,
+            "p95_ns": 15625000.0,
+            "p99_ns": 15625000.0,
+            "p999_ns": 15625000.0,
+            "max_ns": 15625000,
+            "over_1ms": 6,
+            "over_1ms_rate": 0.08333333333333333
+          }
+        },
+        "action_mismatches": 0,
+        "invalid_actions": 0,
+        "uncaught_exceptions": 0,
+        "internal_safety_fallbacks": 0,
+        "process_clock_observed_nonzero_ns": [
+          [
+            15625000,
+            40
+          ]
+        ],
+        "would_trigger_wall_limit_or_error_fallback": 0,
+        "would_trigger_process_limit_or_error_fallback": 40
+      }
+    }
+  },
+  "semantics": [
+    "Timers surround the full Agent.act call; no timer overhead or outliers removed.",
+    "Wall timer also includes the nested process clock calls and process scheduling.",
+    "Windows process_time can update in coarse ~15.625ms ticks; raw process overrun counts may not indicate individual slow calls. Observed nonzero tick sizes are retained.",
+    "Collection uses no timing enforcement; replay fallback counts describe what a 1ms wrapper would do on this fixed trajectory.",
+    "New table-local agents and original observation order preserve state; mismatches are reported.",
+    "Synthetic lineups, payouts and blinds; hardware-specific local evidence, not official compatibility or performance."
+  ],
+  "total_wall_seconds": 6.007580199977383
+}

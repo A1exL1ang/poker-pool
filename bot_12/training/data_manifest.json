@@ -1,0 +1,85 @@
+{
+  "generator_sha256": "e187024187b81f8c077dbd30e9cee0ca39cc95b758b846abf21b9cfb0d3caca6",
+  "order": {
+    "samples_per_class": 200000,
+    "seed": 1200201
+  },
+  "preflop": {
+    "samples_per_class_range": 150000,
+    "seed": 1200202
+  },
+  "training": {
+    "files": [
+      "train0.csv",
+      "train1.csv",
+      "train2.csv",
+      "train3.csv",
+      "train4.csv",
+      "train5.csv"
+    ],
+    "rows_per_file": 50000,
+    "samples_per_target": 1024,
+    "seeds": [
+      1200300,
+      1200301,
+      1200302,
+      1200303,
+      1200304,
+      1200305
+    ]
+  },
+  "validation": "train0..4 fit; train5 for complexity choice; all6 final fit",
+  "heldout": {
+    "file": "heldout.csv",
+    "rows": 15000,
+    "samples_per_target": 4096,
+    "seed": 1200400
+  },
+  "files": {
+    "heldout.csv": {
+      "bytes": 1645915,
+      "sha256": "b92c7bc707690261be64259e71f2338424322037d9f6796cd8c64029fbe83d56"
+    },
+    "order.txt": {
+      "bytes": 2825,
+      "sha256": "895f8453b16863820ddfb65eb9095090e4f2ba62dabb9a030987d154b1076a02"
+    },
+    "preflop.csv": {
+      "bytes": 10602,
+      "sha256": "8e59b94e071252a0700b1effdaa6928cdb5289f55f1f8e68ced0938d672228b1"
+    },
+    "train0.csv": {
+      "bytes": 5485711,
+      "sha256": "5ef98ce20749368b3a17470aff7628af9890ebf444fd3a93b63fc2c91b1b9e51"
+    },
+    "train1.csv": {
+      "bytes": 5486416,
+      "sha256": "b3d6ae3dcf53b00eef1bfa36081fa30d4d1256ed0c730a8c8763cc005973ad18"
+    },
+    "train2.csv": {
+      "bytes": 5484577,
+      "sha256": "0ad16d4c7f7e8ccdfec47bfd30e5b50c279cffaab0e87f1e65dc9b568dcec6a2"
+    },
+    "train3.csv": {
+      "bytes": 5484960,
+      "sha256": "d33da11e659ce099ab44371fbf36210292e8435f144fdd4e9480cc60e3db61e9"
+    },
+    "train4.csv": {
+      "bytes": 5484957,
+      "sha256": "fa2726c1ba611939162f9237bff2d000a0ca1cd19e9b2d5aa7ea7c23ead5b6f0"
+    },
+    "train5.csv": {
+      "bytes": 5484181,
+      "sha256": "f73859b1b9a31a4f833ad1e322f646a27fd24fadc446c54a62d45cbe02fd8035"
+    }
+  },
+  "narrow_preflop": {
+    "file": "preflop_narrow.json",
+    "samples_per_class_range": 200000,
+    "seed": 1200501,
+    "rank_thresholds": [
+      14,
+      34
+    ]
+  }
+}

@@ -1,0 +1,460 @@
+{
+  "phase": "tuning",
+  "results": [
+    {
+      "split": "training",
+      "environment": {
+        "python": "3.11.9 (main, Apr 12 2024, 09:55:27)  [GCC UCRT 13.2.0 64 bit (AMD64)]",
+        "platform": "Windows-10-10.0.26200-SP0",
+        "processor": "AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD"
+      },
+      "seconds": 0.7811572999926284,
+      "config": {
+        "tables": 2,
+        "seed_start": 13000,
+        "seed_stop_exclusive": 13002,
+        "hero_seat_rotation": true,
+        "lineup": "mixed",
+        "synthetic_payout": "top3",
+        "payouts": [
+          0.5,
+          0.3,
+          0.2
+        ],
+        "synthetic_schedule": "doubling",
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            20,
+            40
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            80,
+            160
+          ],
+          [
+            160,
+            320
+          ],
+          [
+            320,
+            640
+          ],
+          [
+            640,
+            1280
+          ],
+          [
+            1280,
+            2560
+          ]
+        ],
+        "max_hands": 20,
+        "starting_stack": 2000,
+        "hands_per_level": 25,
+        "workers": 2,
+        "enforce_1ms_fallback": false,
+        "candidate_params": {
+          "open_scale": 1.0,
+          "call_margin": 0.025,
+          "value_threshold": 0.7,
+          "bluff_scale": 1.0,
+          "range_selection": 1.0,
+          "shove_margin": 0.025,
+          "threebet_scale": 1.0,
+          "realization": 1.0
+        },
+        "reference": {
+          "kind": "EquityBot",
+          "style": "tag"
+        }
+      },
+      "metrics": {
+        "candidate": {
+          "points": {
+            "n": 2,
+            "mean": 0.0613831736380051,
+            "se": 0.0613831736380051,
+            "ci95": [
+              -0.05892784669248489,
+              0.1816941939684951
+            ]
+          },
+          "field_points": {
+            "n": 2,
+            "mean": 0.13408811805171356,
+            "se": 0.008769024805429291,
+            "ci95": [
+              0.11690082943307215,
+              0.15127540667035497
+            ]
+          },
+          "placement": {
+            "n": 2,
+            "mean": 4.841375865459849,
+            "se": 1.1586241345401505,
+            "ci95": [
+              2.570472561761154,
+              7.112279169158544
+            ]
+          },
+          "chips": {
+            "n": 2,
+            "mean": 873.0,
+            "se": 872.9999999999999,
+            "ci95": [
+              -838.0799999999997,
+              2584.08
+            ]
+          },
+          "outright_win_rate": 0.0,
+          "cap_rate": 1.0,
+          "mean_hands": 20.0,
+          "invalid_actions": 0,
+          "exceptions": 0,
+          "timeouts": 0,
+          "internal_fallbacks": 0,
+          "latency": {
+            "decisions": 44,
+            "p50_us": 71.0,
+            "p95_us": 364.7,
+            "p99_us": 417.0,
+            "p999_us": 417.0,
+            "max_us": 429.4,
+            "overruns_1ms": 0,
+            "overrun_fraction": 0.0
+          },
+          "all_table_invalid_actions": 0,
+          "all_table_exceptions": 0
+        },
+        "reference": {
+          "points": {
+            "n": 2,
+            "mean": 0.22596826056748512,
+            "se": 0.03732022073861287,
+            "ci95": [
+              0.1528206279198039,
+              0.29911589321516635
+            ]
+          },
+          "field_points": {
+            "n": 2,
+            "mean": 0.11057596277607357,
+            "se": 0.005331460105516141,
+            "ci95": [
+              0.10012630096926194,
+              0.1210256245828852
+            ]
+          },
+          "placement": {
+            "n": 2,
+            "mean": 2.9185680077751535,
+            "se": 0.42981340887581604,
+            "ci95": [
+              2.076133726378554,
+              3.7610022891717527
+            ]
+          },
+          "chips": {
+            "n": 2,
+            "mean": 3808.5,
+            "se": 691.5,
+            "ci95": [
+              2453.16,
+              5163.84
+            ]
+          },
+          "outright_win_rate": 0.0,
+          "cap_rate": 1.0,
+          "mean_hands": 20.0,
+          "invalid_actions": 0,
+          "exceptions": 0,
+          "timeouts": 0,
+          "internal_fallbacks": 0,
+          "latency": {
+            "decisions": 77,
+            "p50_us": 9.8,
+            "p95_us": 161.9,
+            "p99_us": 223.7,
+            "p999_us": 223.7,
+            "max_us": 1619.0,
+            "overruns_1ms": 1,
+            "overrun_fraction": 0.012987012987012988
+          },
+          "all_table_invalid_actions": 0,
+          "all_table_exceptions": 0
+        }
+      },
+      "paired_points_delta": {
+        "n": 2,
+        "mean": -0.16458508692948,
+        "se": 0.09870339437661796,
+        "ci95": [
+          -0.3580437399076512,
+          0.02887356604869118
+        ]
+      },
+      "tables": [
+        {
+          "seed": 13000,
+          "hero_seat": 0,
+          "candidate_points": 0.1227663472760102,
+          "reference_points": 0.18864803982887224,
+          "candidate_chips": 1746,
+          "reference_chips": 3117
+        },
+        {
+          "seed": 13001,
+          "hero_seat": 1,
+          "candidate_points": 0.0,
+          "reference_points": 0.263288481306098,
+          "candidate_chips": 0,
+          "reference_chips": 4500
+        }
+      ],
+      "limitations": [
+        "Synthetic local payout and blind scenarios, not official contest values.",
+        "Transparent scripted opponents do not represent the unknown contest field.",
+        "Shared deck seeds; action-dependent elimination changes later card assignment.",
+        "Wall-clock timings include scheduler interference; hardware differs from contest.",
+        "Confidence intervals are asymptotic 1.96*sample-SE; no multiple-testing correction."
+      ],
+      "phase": "tuning",
+      "scenario": "mixed"
+    },
+    {
+      "split": "training",
+      "environment": {
+        "python": "3.11.9 (main, Apr 12 2024, 09:55:27)  [GCC UCRT 13.2.0 64 bit (AMD64)]",
+        "platform": "Windows-10-10.0.26200-SP0",
+        "processor": "AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD"
+      },
+      "seconds": 0.5693928999826312,
+      "config": {
+        "tables": 2,
+        "seed_start": 1013000,
+        "seed_stop_exclusive": 1013002,
+        "hero_seat_rotation": true,
+        "lineup": "mixed",
+        "synthetic_payout": "winner",
+        "payouts": [
+          1.0
+        ],
+        "synthetic_schedule": "doubling",
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            20,
+            40
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            80,
+            160
+          ],
+          [
+            160,
+            320
+          ],
+          [
+            320,
+            640
+          ],
+          [
+            640,
+            1280
+          ],
+          [
+            1280,
+            2560
+          ]
+        ],
+        "max_hands": 20,
+        "starting_stack": 2000,
+        "hands_per_level": 25,
+        "workers": 2,
+        "enforce_1ms_fallback": false,
+        "candidate_params": {
+          "open_scale": 1.0,
+          "call_margin": 0.025,
+          "value_threshold": 0.7,
+          "bluff_scale": 1.0,
+          "range_selection": 1.0,
+          "shove_margin": 0.025,
+          "threebet_scale": 1.0,
+          "realization": 1.0
+        },
+        "reference": {
+          "kind": "EquityBot",
+          "style": "tag"
+        }
+      },
+      "metrics": {
+        "candidate": {
+          "points": {
+            "n": 2,
+            "mean": 0.11925,
+            "se": 0.002624999999999995,
+            "ci95": [
+              0.11410500000000001,
+              0.12439499999999998
+            ]
+          },
+          "field_points": {
+            "n": 2,
+            "mean": 0.12582142857142858,
+            "se": 0.00037500000000000033,
+            "ci95": [
+              0.12508642857142857,
+              0.1265564285714286
+            ]
+          },
+          "placement": {
+            "n": 2,
+            "mean": 3.5448751727169316,
+            "se": 0.661583729028579,
+            "ci95": [
+              2.2481710638209167,
+              4.841579281612947
+            ]
+          },
+          "chips": {
+            "n": 2,
+            "mean": 1908.0,
+            "se": 41.99999999999999,
+            "ci95": [
+              1825.68,
+              1990.32
+            ]
+          },
+          "outright_win_rate": 0.0,
+          "cap_rate": 1.0,
+          "mean_hands": 20.0,
+          "invalid_actions": 0,
+          "exceptions": 0,
+          "timeouts": 0,
+          "internal_fallbacks": 0,
+          "latency": {
+            "decisions": 55,
+            "p50_us": 63.4,
+            "p95_us": 295.6,
+            "p99_us": 470.2,
+            "p999_us": 470.2,
+            "max_us": 645.3,
+            "overruns_1ms": 0,
+            "overrun_fraction": 0.0
+          },
+          "all_table_invalid_actions": 0,
+          "all_table_exceptions": 0
+        },
+        "reference": {
+          "points": {
+            "n": 2,
+            "mean": 0.135,
+            "se": 0.135,
+            "ci95": [
+              -0.1296,
+              0.3996
+            ]
+          },
+          "field_points": {
+            "n": 2,
+            "mean": 0.12357142857142857,
+            "se": 0.01928571428571428,
+            "ci95": [
+              0.08577142857142858,
+              0.16137142857142855
+            ]
+          },
+          "placement": {
+            "n": 2,
+            "mean": 3.918003256189344,
+            "se": 1.081996743810656,
+            "ci95": [
+              1.7972896383204584,
+              6.038716874058229
+            ]
+          },
+          "chips": {
+            "n": 2,
+            "mean": 2160.0,
+            "se": 2160.0,
+            "ci95": [
+              -2073.6000000000004,
+              6393.6
+            ]
+          },
+          "outright_win_rate": 0.0,
+          "cap_rate": 1.0,
+          "mean_hands": 20.0,
+          "invalid_actions": 0,
+          "exceptions": 0,
+          "timeouts": 0,
+          "internal_fallbacks": 0,
+          "latency": {
+            "decisions": 35,
+            "p50_us": 8.9,
+            "p95_us": 177.2,
+            "p99_us": 196.6,
+            "p999_us": 196.6,
+            "max_us": 237.6,
+            "overruns_1ms": 0,
+            "overrun_fraction": 0.0
+          },
+          "all_table_invalid_actions": 0,
+          "all_table_exceptions": 0
+        }
+      },
+      "paired_points_delta": {
+        "n": 2,
+        "mean": -0.01575,
+        "se": 0.132375,
+        "ci95": [
+          -0.275205,
+          0.243705
+        ]
+      },
+      "tables": [
+        {
+          "seed": 1013000,
+          "hero_seat": 0,
+          "candidate_points": 0.116625,
+          "reference_points": 0.0,
+          "candidate_chips": 1866,
+          "reference_chips": 0
+        },
+        {
+          "seed": 1013001,
+          "hero_seat": 1,
+          "candidate_points": 0.121875,
+          "reference_points": 0.27,
+          "candidate_chips": 1950,
+          "reference_chips": 4320
+        }
+      ],
+      "limitations": [
+        "Synthetic local payout and blind scenarios, not official contest values.",
+        "Transparent scripted opponents do not represent the unknown contest field.",
+        "Shared deck seeds; action-dependent elimination changes later card assignment.",
+        "Wall-clock timings include scheduler interference; hardware differs from contest.",
+        "Confidence intervals are asymptotic 1.96*sample-SE; no multiple-testing correction."
+      ],
+      "phase": "tuning",
+      "scenario": "winner"
+    }
+  ],
+  "raw_trials_path": "C:\\Users\\alexl\\Code\\poker-pool\\.workers\\bot_12\\measurements\\harness_multi_smoke.trials.jsonl"
+}

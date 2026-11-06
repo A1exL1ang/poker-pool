@@ -1,73 +1,74 @@
 # Poker pool
 
-Eight independent no-limit Texas Hold'em bots, built concurrently on November 6,
-2026. Each builder had the contest rules and the objective of maximizing its
-chance of winning. Builders used separate repositories and contexts, with
-instructions prohibiting access to other bots. This was instructional isolation,
-not an OS-level read barrier. Fast mode was disabled for all eight builds.
+Twenty independent no-limit Texas Holdâ€™em bots, built November 6, 2026. Each builder received the contest rules, the objective of maximizing its chance of winning, and standard no-limit Holdâ€™em. Builders used separate repositories and contexts with strict no-cross-read instructions. This was instructional isolation, not an OS access barrier. Fast mode was off.
 
-| Directory | Builder | Local tests passed |
-|---|---|---:|
-| bot_1 | Sol high | 39 |
-| bot_2 | Sol xhigh | 24 |
-| bot_3 | Sol max | 36 |
-| bot_4 | Astra high | 36 |
-| bot_5 | Astra high | 23 |
-| bot_6 | Astra xhigh | 39 |
-| bot_7 | Astra xhigh | 23 |
-| bot_8 | Astra max | 24 |
+The first eight builds had a one-hour limit. Twelve additional builds had no fixed deadline and could use up to two private helpers each. All 20 policies were frozen before common evaluation. No builder received another botâ€™s strategy or the Claude baseline.
 
-Each directory contains its own implementation, tests, and documentation. All
-eight builds finished within one hour; exported tests were independently rerun.
-Their separate local benchmarks are **not a ranking**.
+## Latest results: all 20 bots
 
-The official starter kit was unavailable. These bots implement documented local
-interfaces; official contest compatibility and a strict 1 ms timing guarantee
-have not been established.
+**82,080 balanced eight-seat tournaments completed on Engaging.** Bot 18 leads the top3/top4 point estimates; bot 6 leads winner-take-all. Bot 18 and bot 6 are effectively tied under50/30/20 payouts (13.742% versus13.725% prize share), with overlapping uncertainty intervals.
 
-## Evaluation results
+The packaged **Claude PPO baseline outscored every bot** in matched same-table comparisons under all three payout shapes. PPO also beat the non-PPO CFR-distilled net directly by4.04 percentage points under50/30/20 payouts (95% CI3.62â€“4.47). These are multiplayer field-specific results, not universal or heads-up strength guarantees.
 
-**13,824 Engaging tournaments completed.** With experimental 50/30/20 payouts,
-the eight-only point-estimate order was **6, 8, 7, 4, 2, 5, 3, 1**. Several
-confidence intervals overlap. The leader changed to bot 2 with winner-take-all
-payouts and bot 4 with 40/30/20/10 payouts. The pinned Claude baseline outscored
-every bot in matched mixed-table comparisons under all three payout schedules.
+- [Complete rankings, baseline comparisons, timing and limitations](evaluation/POOL20_RESULTS.md)
+- [Machine-readable audited summary](evaluation/pool20_summary.json)
+- [Raw match shards and metadata](evaluation/pool20_raw_results.tar.gz)
+- [Frozen bot hashes](evaluation/frozen_bots20.json) and [harness hashes](evaluation/pool20_harness_manifest.json)
 
-See [full results and uncertainty](evaluation/RESULTS.md),
-[machine-readable summary](evaluation/summary.json), and
-[raw matches](evaluation/production_results.jsonl.gz).
+All 83,016,412 decisions were audited: zero exceptions, illegal actions or safety fallbacks;6,784 strict1 ms timeout fallbacks and55 separate internal budget fallbacks. All 12 new exports passed independent regression runs:784 tests discovered,10 optional skips,zero failures. The original eight previously passed244 tests. Neither official-interface compatibility nor a universal1 ms guarantee is claimed.
 
-**Non-PPO comparison:** another 13,824 tournaments tested Claude's CFR-distilled
-`policy_v9` with the same postflop nets. Its average mixed-field prize share was
-14.22% versus PPO's 18.77% with 50/30/20 payouts. Its matched advantages over
-bot 4 (+0.51 percentage points) and bot 6 (+0.71 points) were not statistically
-clear at the marginal 95% level. See [pure-net results](evaluation/NET_RESULTS.md),
-[summary](evaluation/net_summary.json), and [raw matches](evaluation/net_results.jsonl.gz).
+## Builders
 
-`evaluation/` contains the frozen source hashes, baseline provenance, common
-engine, per-bot adapters, and seeded tournament runner. The baseline is the packaged submission from
-`A1exL1ang/poker-prep/vibe_coding_exp/claude_exp_1`, pinned to
-`a3d75f7c736da8c69e474ceed7e189682f9e6c7e`. Its code is obtained separately, not
-vendored as a second repository here. The common engine and its initial tests
-are derived from that revision, with evaluation changes tracked here.
+| Bot | Model and effort |
+|---:|---|
+| [1](bot_1) | Sol high |
+| [2](bot_2) | Sol xhigh |
+| [3](bot_3) | Sol max |
+| [4](bot_4) | Astra high |
+| [5](bot_5) | Astra high |
+| [6](bot_6) | Astra xhigh |
+| [7](bot_7) | Astra xhigh |
+| [8](bot_8) | Astra max |
+| [9](bot_9) | Sol high |
+| [10](bot_10) | Sol high |
+| [11](bot_11) | Sol xhigh |
+| [12](bot_12) | Sol xhigh |
+| [13](bot_13) | Sol max |
+| [14](bot_14) | Sol max |
+| [15](bot_15) | Astra high |
+| [16](bot_16) | Astra high |
+| [17](bot_17) | Astra xhigh |
+| [18](bot_18) | Astra xhigh |
+| [19](bot_19) | Astra max |
+| [20](bot_20) | Astra max |
 
-Experimental games use eight players, 2,000 chips each, 10/20 initial blinds,
-blind doubling every 25 hands, and a 200-hand cap with ICM settlement. The blind
-increments and payouts are experimental assumptions. Evaluated payout sensitivity:
-50/30/20, winner-take-all, and 40/30/20/10. Every seed rotates all eight seats;
-nine leave-one-out fields cover the eight local bots plus the Claude baseline.
-Decision timing includes adapter conversion and uses check/fold fallback above
-1 ms. Timing-dependent policies and operating-system scheduling mean seeded
-decks do not guarantee bit-identical actions.
+Sol denotes gpt-6.1-sol; Astra denotes gpt-6-astra. Each bot directory preserves its own implementation, documentation, tests and experimental evidence. Separate builder opponent suites are not comparable rankings.
 
-Run local evaluation checks after obtaining the pinned baseline and installing
-NumPy and pytest:
+## Evaluation and reproduction
 
-```powershell
-$env:PYTHONPATH='evaluation'
-python -m pytest evaluation/tests -q
+The20-only design uses285 field instances per repetition; mixed comparisons use570 fields of6 bots plus both Claude variants. Four independent repetitions,8 seat rotations and3 payouts produce82,080tables. Each bot and pair has exactly balanced exposure within each cohort; deliberate composition multiplicities are documented in [schedule20.py](evaluation/schedule20.py). Confidence intervals resample field-seed clusters with rotations retained.
+
+Local experimental assumptions:8 seats,2,000 chips,10/20initial blinds, doubling every25 hands,200-hand cap with ICM settlement; payouts50/30/20,100,and40/30/20/10. The official starter kit and complete payout/blind schedule were unavailable. Conversion is inside the1 ms decision clock. OS scheduling and internal time budgets can change actions despite fixed seeds.
+
+Both Claude variants are pinned to poker-prep commit `a3d75f7c736da8c69e474ceed7e189682f9e6c7e`. The PPO policy is the packaged `vibe_coding_exp/claude_exp_1/submission`; the non-PPO version uses CFR-distilled `policy_v9` with the same postflop nets and default heuristic fallback. External baseline code is obtained separately, not vendored here. The common engine derives from that revision with tracked evaluation fixes.
+
+After obtaining the pinned baselines and installing NumPy, run on an appropriate compute allocation:
+
+```sh
+export PYTHONPATH=evaluation
+python evaluation/verify_pool20.py
+python evaluation/verify_bundle.py --net
+python -m unittest discover -s evaluation/tests -v
+python -m unittest discover -s evaluation -p 'test_*.py' -v
+python evaluation/run_pool20.py --pilot --output evaluation/pilot.jsonl
+python evaluation/run_pool20.py --shard 0 --shards 24 --output evaluation/pool20_results/production_0.jsonl
+python evaluation/analyze_pool20.py --results evaluation/pool20_results --output evaluation/pool20_summary.json
 ```
 
-Engaging runs must use new bounded preemptible allocations. Existing user jobs
-are never used or modified. Private worker logs and SSH session details are
-excluded from this repository.
+Run all 24 shards before analysis. [pool20.slurm](evaluation/pool20.slurm) records bounded resource settings. Use only new task-owned preemptible jobs; existing user allocations remain untouched. Private worker logs, SSH details and development virtual environments are excluded.
+
+## Earlier eight-bot experiments
+
+Preserved: [PPO comparison](evaluation/RESULTS.md), [pure-net comparison](evaluation/NET_RESULTS.md), [PPO raw matches](evaluation/production_results.jsonl.gz), [pure-net raw matches](evaluation/net_results.jsonl.gz). These used different fields and an earlier adapter harness; do not interpret cross-run differences as isolated policy improvements.
+
+See [bot similarity findings](evaluation/SIMILARITY.md) for source structure, action agreement and bet-sizing comparisons.

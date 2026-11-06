@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "created_before_final_evaluation": true,
+  "equity_training_seed": 371029,
+  "equity_validation_seed": 781237,
+  "equity_final_test_seed": 991237,
+  "tournament_tuning_seed_start": 10000,
+  "tournament_validation_seed_start": 5000000,
+  "latency_corpus_seed_start": 8200000,
+  "tournament_final_seed_start": 190000000,
+  "scoring": "All payout vectors and later blind levels are hypothetical sensitivity scenarios, not official information.",
+  "selection": "Use tuning/validation only to choose a stable policy. Freeze source+asset hashes before final seeds. Final results are descriptive; local baselines do not establish contest-optimal play.",
+  "uncertainty": "Report independent-seed-block mean and normal 95% confidence interval. Paired same-seed control comparisons reduce some deal variance but trajectories can diverge. Never treat actions as independent tournament samples.",
+  "latency": "Measure both unfiltered act() wall time and CPU time; count >1ms, errors, illegal actions, internal budget fallbacks. Separate constructor/import cost. Include actual timeout enforcement in final tournament scenarios.",
+  "initial_final_seed_start": 90000000,
+  "final_integration_note": "After first evaluation, simulator table IDs were made independent of deck seeds. Agent policy and model unchanged. Fresh tournament seeds are used for the final rerun."
+}

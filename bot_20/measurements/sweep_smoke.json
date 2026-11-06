@@ -1,0 +1,2340 @@
+{
+  "purpose": "Development-only selection; no final seeds used",
+  "configs": {
+    "base": {},
+    "tight_open": {
+      "open_scale": 0.85
+    }
+  },
+  "scenarios": [
+    [
+      "robust",
+      "medium",
+      "top3"
+    ],
+    [
+      "tight",
+      "fast",
+      "flat3"
+    ],
+    [
+      "mixed",
+      "fast",
+      "winner"
+    ],
+    [
+      "loose",
+      "slow",
+      "top3"
+    ]
+  ],
+  "tables_per_scenario": 8,
+  "seed_start": 10000,
+  "provenance": {
+    "captured_at_utc": "2026-11-06T08:36:24.676269+00:00",
+    "algorithm": "SHA256",
+    "fingerprint_sha256": "02da7367e1eaf2a982e2b22ad5f6da01eb288fb8b7ff55d809faa31517c333ed",
+    "files": {
+      "agent.py": {
+        "kind": "source",
+        "bytes": 369,
+        "sha256": "ae607aed78c3c6e03ca7cc7103e54868daae6030e4c704ef3c41ff96dbdd1153"
+      },
+      "pokerbot/__init__.py": {
+        "kind": "source",
+        "bytes": 173,
+        "sha256": "218a4bc43ead49d52cc422dff9624b7ad652efcc78dd09f9661db08abf4de300"
+      },
+      "pokerbot/equity.py": {
+        "kind": "source",
+        "bytes": 10132,
+        "sha256": "7b1edd0b2895beb476c8ebfd8f00ea1c8d3449c0c715d7890b1a62044444ca72"
+      },
+      "pokerbot/evaluator.py": {
+        "kind": "source",
+        "bytes": 3420,
+        "sha256": "a8aefeace9ab149b5ea219bc41e161f6c240bedd07478747d182d9b5ff46c3c8"
+      },
+      "pokerbot/features.py": {
+        "kind": "source",
+        "bytes": 9498,
+        "sha256": "8f4788444c8b385e25bb0b4e2945c70fb65ea2e128493c0e78a63cb01050822c"
+      },
+      "pokerbot/icm.py": {
+        "kind": "source",
+        "bytes": 4642,
+        "sha256": "3382936c2a4afa5198182b6db1e83aad4b81f473bf35b295bbf5d6bfb512fe4c"
+      },
+      "pokerbot/interface.py": {
+        "kind": "source",
+        "bytes": 5434,
+        "sha256": "76769263202be3b611a9b11a2df418b9d1e9fe2a9615c5534dc9821bf11ae147"
+      },
+      "pokerbot/policy.py": {
+        "kind": "source",
+        "bytes": 24261,
+        "sha256": "fe40cac2749e3bd38605b84f3770f98e152c84254454e17428dd5459a0dee878"
+      },
+      "simulator/__init__.py": {
+        "kind": "source",
+        "bytes": 223,
+        "sha256": "78410736a343a050577b40875fb3b307569eead3ee2d083279c7db1e6ce2aa14"
+      },
+      "simulator/baselines.py": {
+        "kind": "source",
+        "bytes": 9288,
+        "sha256": "8de5633517a55937742d4e270a7dcf79d29c765163837b028b082a32f6d039a3"
+      },
+      "simulator/benchmark.py": {
+        "kind": "source",
+        "bytes": 13745,
+        "sha256": "f4988a5967763e333dd4c2b5d2709ee4595de6b5cf2474d6ebb1ee46fc5fa088"
+      },
+      "simulator/engine.py": {
+        "kind": "source",
+        "bytes": 19985,
+        "sha256": "c4cf31ab20f2fc53fb521b59f5e977485f297497018353a2db102943ddfa2d59"
+      },
+      "simulator/scenarios.py": {
+        "kind": "source",
+        "bytes": 1282,
+        "sha256": "6cc7d4086ba62c3c3bbd9ab07a730949accaa26d0fd2243632948949e6f9afba"
+      },
+      "pokerbot/assets/equity_model.json.gz": {
+        "kind": "asset",
+        "bytes": 88910,
+        "sha256": "4ceb7c4d89e407943910fd2f6afcdba17906251cb70dd8b36f0e7dfeb567c402"
+      },
+      "pokerbot/assets/preflop.json": {
+        "kind": "asset",
+        "bytes": 226090,
+        "sha256": "db51ea57a0c94b5da9d977f7420e25d0cd8ee7d12db97d359beb26e90d657dbc"
+      },
+      "benchmarks/protocol.json": {
+        "kind": "protocol",
+        "bytes": 1141,
+        "sha256": "e47c834ea62e5f650d85b6201db17528d4e0760f0bdbd9aeeec8d0a306606a40"
+      }
+    },
+    "capture_policy": "Captured once before experiment; freeze source/assets for the full run."
+  },
+  "elapsed_seconds": 4.204836599994451,
+  "candidates": {
+    "base": {
+      "scenarios": [
+        {
+          "score": {
+            "mean": 0.1375,
+            "standard_error": 0.0625,
+            "approx_95pct_ci": [
+              0.015000000000000013,
+              0.26
+            ],
+            "independent_seed_blocks": 8,
+            "equal_seat_share_reference": 0.125
+          },
+          "tables": 8,
+          "outright_win_rate": 0.125,
+          "cutoff_rate": 0.0,
+          "average_hands": 154.75,
+          "candidate_metrics": {
+            "decisions": 1105,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 1,
+            "fallbacks": 0,
+            "elapsed_ns": 163650500,
+            "max_ns": 1045200,
+            "mean_us": 148.1
+          },
+          "candidate_internal": {
+            "budget_fallbacks": 2,
+            "errors": 0,
+            "decisions": 1105
+          }
+        },
+        {
+          "score": {
+            "mean": 0.29166666666666663,
+            "standard_error": 0.041666666666666664,
+            "approx_95pct_ci": [
+              0.20999999999999996,
+              0.3733333333333333
+            ],
+            "independent_seed_blocks": 8,
+            "equal_seat_share_reference": 0.125
+          },
+          "tables": 8,
+          "outright_win_rate": 0.5,
+          "cutoff_rate": 0.0,
+          "average_hands": 155.75,
+          "candidate_metrics": {
+            "decisions": 1383,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 176736700,
+            "max_ns": 731400,
+            "mean_us": 127.79226319595082
+          },
+          "candidate_internal": {
+            "budget_fallbacks": 0,
+            "errors": 0,
+            "decisions": 1383
+          }
+        },
+        {
+          "score": {
+            "mean": 0.75,
+            "standard_error": 0.16366341767699427,
+            "approx_95pct_ci": [
+              0.42921970135309123,
+              1.0707802986469088
+            ],
+            "independent_seed_blocks": 8,
+            "equal_seat_share_reference": 0.125
+          },
+          "tables": 8,
+          "outright_win_rate": 0.75,
+          "cutoff_rate": 0.0,
+          "average_hands": 115.25,
+          "candidate_metrics": {
+            "decisions": 1326,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 182526400,
+            "max_ns": 686800,
+            "mean_us": 137.6518853695324
+          },
+          "candidate_internal": {
+            "budget_fallbacks": 0,
+            "errors": 0,
+            "decisions": 1326
+          }
+        },
+        {
+          "score": {
+            "mean": 0.45,
+            "standard_error": 0.032732683535398856,
+            "approx_95pct_ci": [
+              0.38584394027061825,
+              0.5141560597293817
+            ],
+            "independent_seed_blocks": 8,
+            "equal_seat_share_reference": 0.125
+          },
+          "tables": 8,
+          "outright_win_rate": 0.75,
+          "cutoff_rate": 0.0,
+          "average_hands": 85.875,
+          "candidate_metrics": {
+            "decisions": 1927,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 3,
+            "fallbacks": 0,
+            "elapsed_ns": 424114900,
+            "max_ns": 1638300,
+            "mean_us": 220.09076284379864
+          },
+          "candidate_internal": {
+            "budget_fallbacks": 6,
+            "errors": 0,
+            "decisions": 1927
+          }
+        }
+      ],
+      "pooled_mean": 0.40729166666666666,
+      "paired_mean_delta_vs_base": 0.0,
+      "paired_standard_error": 0.0,
+      "scenario_deltas_vs_base": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "tight_open": {
+      "scenarios": [
+        {
+          "score": {
+            "mean": 0.07963437500000001,
+            "standard_error": 0.05674213069603872,
+            "approx_95pct_ci": [
+              -0.03158020116423589,
+              0.1908489511642359
+            ],
+            "independent_seed_blocks": 8,
+            "equal_seat_share_reference": 0.125
+          },
+          "tables": 8,
+          "outright_win_rate": 0.0,
+          "cutoff_rate": 0.25,
+          "average_hands": 160.75,
+          "candidate_metrics": {
+            "decisions": 944,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 113871500,
+            "max_ns": 760000,
+            "mean_us": 120.62658898305085
+          },
+          "candidate_internal": {
+            "budget_fallbacks": 0,
+            "errors": 0,
+            "decisions": 944
+          }
+        },
+        {
+          "score": {
+            "mean": 0.20833333333333331,
+            "standard_error": 0.06099375455928331,
+            "approx_95pct_ci": [
+              0.08878557439713802,
+              0.3278810922695286
+            ],
+            "independent_seed_blocks": 8,
+            "equal_seat_share_reference": 0.125
+          },
+          "tables": 8,
+          "outright_win_rate": 0.375,
+          "cutoff_rate": 0.0,
+          "average_hands": 144.25,
+          "candidate_metrics": {
+            "decisions": 1226,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 153199300,
+            "max_ns": 822300,
+            "mean_us": 124.95864600326264
+          },
+          "candidate_internal": {
+            "budget_fallbacks": 0,
+            "errors": 0,
+            "decisions": 1226
+          }
+        },
+        {
+          "score": {
+            "mean": 0.625,
+            "standard_error": 0.18298126367784995,
+            "approx_95pct_ci": [
+              0.2663567231914141,
+              0.9836432768085859
+            ],
+            "independent_seed_blocks": 8,
+            "equal_seat_share_reference": 0.125
+          },
+          "tables": 8,
+          "outright_win_rate": 0.625,
+          "cutoff_rate": 0.0,
+          "average_hands": 113.625,
+          "candidate_metrics": {
+            "decisions": 1208,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 1,
+            "fallbacks": 0,
+            "elapsed_ns": 206332400,
+            "max_ns": 1182200,
+            "mean_us": 170.8049668874172
+          },
+          "candidate_internal": {
+            "budget_fallbacks": 1,
+            "errors": 0,
+            "decisions": 1208
+          }
+        },
+        {
+          "score": {
+            "mean": 0.475,
+            "standard_error": 0.024999999999999998,
+            "approx_95pct_ci": [
+              0.426,
+              0.524
+            ],
+            "independent_seed_blocks": 8,
+            "equal_seat_share_reference": 0.125
+          },
+          "tables": 8,
+          "outright_win_rate": 0.875,
+          "cutoff_rate": 0.0,
+          "average_hands": 91.125,
+          "candidate_metrics": {
+            "decisions": 2028,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 1,
+            "fallbacks": 0,
+            "elapsed_ns": 430311800,
+            "max_ns": 1342900,
+            "mean_us": 212.1853057199211
+          },
+          "candidate_internal": {
+            "budget_fallbacks": 0,
+            "errors": 0,
+            "decisions": 2028
+          }
+        }
+      ],
+      "pooled_mean": 0.3469919270833333,
+      "paired_mean_delta_vs_base": -0.06029973958333333,
+      "paired_standard_error": 0.0352100251321052,
+      "scenario_deltas_vs_base": [
+        -0.057865625,
+        -0.08333333333333333,
+        -0.125,
+        0.025
+      ]
+    }
+  },
+  "rows": {
+    "base": {
+      "0": [
+        {
+          "index": 0,
+          "seed": 10000,
+          "hero": 0,
+          "score": 0.2,
+          "chips": 0,
+          "won": false,
+          "cutoff": false,
+          "hands": 81,
+          "metrics": {
+            "decisions": 110,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 13849900,
+            "max_ns": 467500,
+            "mean_us": 125.90818181818182
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 110
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 1,
+          "seed": 10001,
+          "hero": 1,
+          "score": 0.2,
+          "chips": 0,
+          "won": false,
+          "cutoff": false,
+          "hands": 179,
+          "metrics": {
+            "decisions": 177,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 25515900,
+            "max_ns": 632000,
+            "mean_us": 144.15762711864406
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 177
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 2,
+          "seed": 10002,
+          "hero": 2,
+          "score": 0.0,
+          "chips": 0,
+          "won": false,
+          "cutoff": false,
+          "hands": 160,
+          "metrics": {
+            "decisions": 73,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 13512200,
+            "max_ns": 585600,
+            "mean_us": 185.0986301369863
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 73
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 3,
+          "seed": 10003,
+          "hero": 3,
+          "score": 0.0,
+          "chips": 0,
+          "won": false,
+          "cutoff": false,
+          "hands": 123,
+          "metrics": {
+            "decisions": 86,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 9250300,
+            "max_ns": 383100,
+            "mean_us": 107.56162790697675
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 86
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 4,
+          "seed": 10004,
+          "hero": 4,
+          "score": 0.0,
+          "chips": 0,
+          "won": false,
+          "cutoff": false,
+          "hands": 168,
+          "metrics": {
+            "decisions": 13,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 2905200,
+            "max_ns": 768300,
+            "mean_us": 223.47692307692307
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 13
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 5,
+          "seed": 10005,
+          "hero": 5,
+          "score": 0.5,
+          "chips": 16000,
+          "won": true,
+          "cutoff": false,
+          "hands": 190,
+          "metrics": {
+            "decisions": 278,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 1,
+            "fallbacks": 0,
+            "elapsed_ns": 45921800,
+            "max_ns": 1045200,
+            "mean_us": 165.18633093525182
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 2,
+            "decisions": 278
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 6,
+          "seed": 10006,
+          "hero": 6,
+          "score": 0.2,
+          "chips": 0,
+          "won": false,
+          "cutoff": false,
+          "hands": 172,
+          "metrics": {
+            "decisions": 253,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 39504000,
+            "max_ns": 496900,
+            "mean_us": 156.1422924901186
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 253
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 7,
+          "seed": 10007,
+          "hero": 7,
+          "score": 0.0,
+          "chips": 0,
+          "won": false,
+          "cutoff": false,
+          "hands": 165,
+          "metrics": {
+            "decisions": 115,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 13191200,
+            "max_ns": 483700,
+            "mean_us": 114.70608695652174
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 115
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        }
+      ],
+      "1": [
+        {
+          "index": 0,
+          "seed": 110000,
+          "hero": 0,
+          "score": 0.3333333333333333,
+          "chips": 16000,
+          "won": true,
+          "cutoff": false,
+          "hands": 147,
+          "metrics": {
+            "decisions": 183,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 25405700,
+            "max_ns": 650000,
+            "mean_us": 138.82896174863387
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 183
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 1,
+          "seed": 110001,
+          "hero": 1,
+          "score": 0.3333333333333333,
+          "chips": 0,
+          "won": false,
+          "cutoff": false,
+          "hands": 153,
+          "metrics": {
+            "decisions": 192,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 27506300,
+            "max_ns": 587000,
+            "mean_us": 143.26197916666666
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 192
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 2,
+          "seed": 110002,
+          "hero": 2,
+          "score": 0.3333333333333333,
+          "chips": 0,
+          "won": false,
+          "cutoff": false,
+          "hands": 128,
+          "metrics": {
+            "decisions": 134,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 16509300,
+            "max_ns": 731400,
+            "mean_us": 123.20373134328358
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 134
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 3,
+          "seed": 110003,
+          "hero": 3,
+          "score": 0.3333333333333333,
+          "chips": 16000,
+          "won": true,
+          "cutoff": false,
+          "hands": 148,
+          "metrics": {
+            "decisions": 197,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 27555700,
+            "max_ns": 702900,
+            "mean_us": 139.87664974619287
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 197
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 4,
+          "seed": 110004,
+          "hero": 4,
+          "score": 0.3333333333333333,
+          "chips": 16000,
+          "won": true,
+          "cutoff": false,
+          "hands": 164,
+          "metrics": {
+            "decisions": 186,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 21301200,
+            "max_ns": 572800,
+            "mean_us": 114.52258064516128
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 186
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 5,
+          "seed": 110005,
+          "hero": 5,
+          "score": 0.3333333333333333,
+          "chips": 0,
+          "won": false,
+          "cutoff": false,
+          "hands": 148,
+          "metrics": {
+            "decisions": 176,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 21680900,
+            "max_ns": 539800,
+            "mean_us": 123.18693181818182
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 176
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 6,
+          "seed": 110006,
+          "hero": 6,
+          "score": 0.3333333333333333,
+          "chips": 16000,
+          "won": true,
+          "cutoff": false,
+          "hands": 184,
+          "metrics": {
+            "decisions": 213,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 25760900,
+            "max_ns": 573300,
+            "mean_us": 120.94319248826291
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 213
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 7,
+          "seed": 110007,
+          "hero": 7,
+          "score": 0.0,
+          "chips": 0,
+          "won": false,
+          "cutoff": false,
+          "hands": 174,
+          "metrics": {
+            "decisions": 102,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 11016700,
+            "max_ns": 541100,
+            "mean_us": 108.00686274509805
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 102
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        }
+      ],
+      "2": [
+        {
+          "index": 0,
+          "seed": 210000,
+          "hero": 0,
+          "score": 0.0,
+          "chips": 0,
+          "won": false,
+          "cutoff": false,
+          "hands": 96,
+          "metrics": {
+            "decisions": 126,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 17697100,
+            "max_ns": 436500,
+            "mean_us": 140.4531746031746
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 126
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 1,
+          "seed": 210001,
+          "hero": 1,
+          "score": 1.0,
+          "chips": 16000,
+          "won": true,
+          "cutoff": false,
+          "hands": 133,
+          "metrics": {
+            "decisions": 167,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 23110100,
+            "max_ns": 590500,
+            "mean_us": 138.38383233532934
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 167
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 2,
+          "seed": 210002,
+          "hero": 2,
+          "score": 1.0,
+          "chips": 16000,
+          "won": true,
+          "cutoff": false,
+          "hands": 107,
+          "metrics": {
+            "decisions": 145,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 17194400,
+            "max_ns": 348000,
+            "mean_us": 118.58206896551725
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 145
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 3,
+          "seed": 210003,
+          "hero": 3,
+          "score": 1.0,
+          "chips": 16000,
+          "won": true,
+          "cutoff": false,
+          "hands": 45,
+          "metrics": {
+            "decisions": 125,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 20972600,
+            "max_ns": 434500,
+            "mean_us": 167.7808
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 125
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 4,
+          "seed": 210004,
+          "hero": 4,
+          "score": 1.0,
+          "chips": 16000,
+          "won": true,
+          "cutoff": false,
+          "hands": 120,
+          "metrics": {
+            "decisions": 152,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 20069200,
+            "max_ns": 455200,
+            "mean_us": 132.03421052631577
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 152
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 5,
+          "seed": 210005,
+          "hero": 5,
+          "score": 0.0,
+          "chips": 0,
+          "won": false,
+          "cutoff": false,
+          "hands": 106,
+          "metrics": {
+            "decisions": 161,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 19616600,
+            "max_ns": 387700,
+            "mean_us": 121.84223602484472
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 161
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 6,
+          "seed": 210006,
+          "hero": 6,
+          "score": 1.0,
+          "chips": 16000,
+          "won": true,
+          "cutoff": false,
+          "hands": 152,
+          "metrics": {
+            "decisions": 225,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 30941700,
+            "max_ns": 381700,
+            "mean_us": 137.51866666666666
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 225
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 7,
+          "seed": 210007,
+          "hero": 7,
+          "score": 1.0,
+          "chips": 16000,
+          "won": true,
+          "cutoff": false,
+          "hands": 163,
+          "metrics": {
+            "decisions": 225,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 32924700,
+            "max_ns": 686800,
+            "mean_us": 146.332
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 225
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        }
+      ],
+      "3": [
+        {
+          "index": 0,
+          "seed": 310000,
+          "hero": 0,
+          "score": 0.5,
+          "chips": 16000,
+          "won": true,
+          "cutoff": false,
+          "hands": 108,
+          "metrics": {
+            "decisions": 292,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 50272100,
+            "max_ns": 637500,
+            "mean_us": 172.16472602739725
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 292
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 1,
+          "seed": 310001,
+          "hero": 1,
+          "score": 0.5,
+          "chips": 16000,
+          "won": true,
+          "cutoff": false,
+          "hands": 101,
+          "metrics": {
+            "decisions": 349,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 85105500,
+            "max_ns": 852800,
+            "mean_us": 243.85530085959886
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 1,
+            "decisions": 349
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 2,
+          "seed": 310002,
+          "hero": 2,
+          "score": 0.5,
+          "chips": 16000,
+          "won": true,
+          "cutoff": false,
+          "hands": 119,
+          "metrics": {
+            "decisions": 338,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 2,
+            "fallbacks": 0,
+            "elapsed_ns": 75453900,
+            "max_ns": 1638300,
+            "mean_us": 223.2363905325444
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 1,
+            "decisions": 338
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 3,
+          "seed": 310003,
+          "hero": 3,
+          "score": 0.3,
+          "chips": 0,
+          "won": false,
+          "cutoff": false,
+          "hands": 62,
+          "metrics": {
+            "decisions": 150,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 32533600,
+            "max_ns": 621000,
+            "mean_us": 216.89066666666665
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 150
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 4,
+          "seed": 310004,
+          "hero": 4,
+          "score": 0.3,
+          "chips": 0,
+          "won": false,
+          "cutoff": false,
+          "hands": 22,
+          "metrics": {
+            "decisions": 57,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 11846800,
+            "max_ns": 448600,
+            "mean_us": 207.83859649122806
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 57
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 5,
+          "seed": 310005,
+          "hero": 5,
+          "score": 0.5,
+          "chips": 16000,
+          "won": true,
+          "cutoff": false,
+          "hands": 103,
+          "metrics": {
+            "decisions": 325,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 80162000,
+            "max_ns": 724200,
+            "mean_us": 246.6523076923077
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 2,
+            "decisions": 325
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 6,
+          "seed": 310006,
+          "hero": 6,
+          "score": 0.5,
+          "chips": 16000,
+          "won": true,
+          "cutoff": false,
+          "hands": 75,
+          "metrics": {
+            "decisions": 152,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 28976200,
+            "max_ns": 840100,
+            "mean_us": 190.6328947368421
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 2,
+            "decisions": 152
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 7,
+          "seed": 310007,
+          "hero": 7,
+          "score": 0.5,
+          "chips": 16000,
+          "won": true,
+          "cutoff": false,
+          "hands": 97,
+          "metrics": {
+            "decisions": 264,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 1,
+            "fallbacks": 0,
+            "elapsed_ns": 59764800,
+            "max_ns": 1052000,
+            "mean_us": 226.38181818181818
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 264
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        }
+      ]
+    },
+    "tight_open": {
+      "0": [
+        {
+          "index": 0,
+          "seed": 10000,
+          "hero": 0,
+          "score": 0.2,
+          "chips": 0,
+          "won": false,
+          "cutoff": false,
+          "hands": 82,
+          "metrics": {
+            "decisions": 103,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 11423500,
+            "max_ns": 428600,
+            "mean_us": 110.90776699029126
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 103
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 1,
+          "seed": 10001,
+          "hero": 1,
+          "score": 0.0,
+          "chips": 0,
+          "won": false,
+          "cutoff": true,
+          "hands": 200,
+          "metrics": {
+            "decisions": 165,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 21580600,
+            "max_ns": 760000,
+            "mean_us": 130.79151515151514
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 165
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 2,
+          "seed": 10002,
+          "hero": 2,
+          "score": 0.0,
+          "chips": 0,
+          "won": false,
+          "cutoff": false,
+          "hands": 160,
+          "metrics": {
+            "decisions": 73,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 11840700,
+            "max_ns": 578500,
+            "mean_us": 162.2013698630137
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 73
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 3,
+          "seed": 10003,
+          "hero": 3,
+          "score": 0.0,
+          "chips": 0,
+          "won": false,
+          "cutoff": false,
+          "hands": 123,
+          "metrics": {
+            "decisions": 86,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 10394100,
+            "max_ns": 453100,
+            "mean_us": 120.86162790697675
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 86
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 4,
+          "seed": 10004,
+          "hero": 4,
+          "score": 0.0,
+          "chips": 0,
+          "won": false,
+          "cutoff": false,
+          "hands": 168,
+          "metrics": {
+            "decisions": 13,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 1366100,
+            "max_ns": 289100,
+            "mean_us": 105.08461538461539
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 13
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 5,
+          "seed": 10005,
+          "hero": 5,
+          "score": 0.43707500000000005,
+          "chips": 10966,
+          "won": false,
+          "cutoff": true,
+          "hands": 200,
+          "metrics": {
+            "decisions": 256,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 30447000,
+            "max_ns": 496400,
+            "mean_us": 118.93359375
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 256
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 6,
+          "seed": 10006,
+          "hero": 6,
+          "score": 0.0,
+          "chips": 0,
+          "won": false,
+          "cutoff": false,
+          "hands": 188,
+          "metrics": {
+            "decisions": 135,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 14577600,
+            "max_ns": 558200,
+            "mean_us": 107.98222222222222
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 135
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 7,
+          "seed": 10007,
+          "hero": 7,
+          "score": 0.0,
+          "chips": 0,
+          "won": false,
+          "cutoff": false,
+          "hands": 165,
+          "metrics": {
+            "decisions": 113,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 12241900,
+            "max_ns": 447100,
+            "mean_us": 108.3353982300885
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 113
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        }
+      ],
+      "1": [
+        {
+          "index": 0,
+          "seed": 110000,
+          "hero": 0,
+          "score": 0.3333333333333333,
+          "chips": 16000,
+          "won": true,
+          "cutoff": false,
+          "hands": 149,
+          "metrics": {
+            "decisions": 184,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 23944800,
+            "max_ns": 481300,
+            "mean_us": 130.13478260869564
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 184
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 1,
+          "seed": 110001,
+          "hero": 1,
+          "score": 0.3333333333333333,
+          "chips": 16000,
+          "won": true,
+          "cutoff": false,
+          "hands": 134,
+          "metrics": {
+            "decisions": 166,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 22230800,
+            "max_ns": 626700,
+            "mean_us": 133.92048192771085
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 166
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 2,
+          "seed": 110002,
+          "hero": 2,
+          "score": 0.0,
+          "chips": 0,
+          "won": false,
+          "cutoff": false,
+          "hands": 128,
+          "metrics": {
+            "decisions": 114,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 14219100,
+            "max_ns": 681400,
+            "mean_us": 124.72894736842105
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 114
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 3,
+          "seed": 110003,
+          "hero": 3,
+          "score": 0.0,
+          "chips": 0,
+          "won": false,
+          "cutoff": false,
+          "hands": 151,
+          "metrics": {
+            "decisions": 129,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 18324300,
+            "max_ns": 822300,
+            "mean_us": 142.04883720930232
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 129
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 4,
+          "seed": 110004,
+          "hero": 4,
+          "score": 0.3333333333333333,
+          "chips": 16000,
+          "won": true,
+          "cutoff": false,
+          "hands": 166,
+          "metrics": {
+            "decisions": 185,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 21933400,
+            "max_ns": 652400,
+            "mean_us": 118.55891891891892
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 185
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 5,
+          "seed": 110005,
+          "hero": 5,
+          "score": 0.3333333333333333,
+          "chips": 0,
+          "won": false,
+          "cutoff": false,
+          "hands": 163,
+          "metrics": {
+            "decisions": 186,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 21763200,
+            "max_ns": 606700,
+            "mean_us": 117.00645161290323
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 186
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 6,
+          "seed": 110006,
+          "hero": 6,
+          "score": 0.3333333333333333,
+          "chips": 0,
+          "won": false,
+          "cutoff": false,
+          "hands": 139,
+          "metrics": {
+            "decisions": 162,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 21383900,
+            "max_ns": 610200,
+            "mean_us": 131.99938271604938
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 162
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 7,
+          "seed": 110007,
+          "hero": 7,
+          "score": 0.0,
+          "chips": 0,
+          "won": false,
+          "cutoff": false,
+          "hands": 124,
+          "metrics": {
+            "decisions": 100,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 9399800,
+            "max_ns": 512900,
+            "mean_us": 93.998
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 100
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        }
+      ],
+      "2": [
+        {
+          "index": 0,
+          "seed": 210000,
+          "hero": 0,
+          "score": 0.0,
+          "chips": 0,
+          "won": false,
+          "cutoff": false,
+          "hands": 87,
+          "metrics": {
+            "decisions": 114,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 16117400,
+            "max_ns": 465700,
+            "mean_us": 141.38070175438597
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 114
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 1,
+          "seed": 210001,
+          "hero": 1,
+          "score": 1.0,
+          "chips": 16000,
+          "won": true,
+          "cutoff": false,
+          "hands": 99,
+          "metrics": {
+            "decisions": 121,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 15587400,
+            "max_ns": 454700,
+            "mean_us": 128.82148760330577
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 121
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 2,
+          "seed": 210002,
+          "hero": 2,
+          "score": 1.0,
+          "chips": 16000,
+          "won": true,
+          "cutoff": false,
+          "hands": 93,
+          "metrics": {
+            "decisions": 128,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 19684400,
+            "max_ns": 558600,
+            "mean_us": 153.784375
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 128
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 3,
+          "seed": 210003,
+          "hero": 3,
+          "score": 1.0,
+          "chips": 16000,
+          "won": true,
+          "cutoff": false,
+          "hands": 59,
+          "metrics": {
+            "decisions": 166,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 1,
+            "fallbacks": 0,
+            "elapsed_ns": 45348000,
+            "max_ns": 1182200,
+            "mean_us": 273.1807228915663
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 1,
+            "decisions": 166
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 4,
+          "seed": 210004,
+          "hero": 4,
+          "score": 1.0,
+          "chips": 16000,
+          "won": true,
+          "cutoff": false,
+          "hands": 120,
+          "metrics": {
+            "decisions": 151,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 20735100,
+            "max_ns": 490500,
+            "mean_us": 137.3185430463576
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 151
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 5,
+          "seed": 210005,
+          "hero": 5,
+          "score": 0.0,
+          "chips": 0,
+          "won": false,
+          "cutoff": false,
+          "hands": 142,
+          "metrics": {
+            "decisions": 174,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 23655700,
+            "max_ns": 417600,
+            "mean_us": 135.9522988505747
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 174
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 6,
+          "seed": 210006,
+          "hero": 6,
+          "score": 0.0,
+          "chips": 0,
+          "won": false,
+          "cutoff": false,
+          "hands": 131,
+          "metrics": {
+            "decisions": 132,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 24363300,
+            "max_ns": 645900,
+            "mean_us": 184.57045454545457
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 132
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 7,
+          "seed": 210007,
+          "hero": 7,
+          "score": 1.0,
+          "chips": 16000,
+          "won": true,
+          "cutoff": false,
+          "hands": 178,
+          "metrics": {
+            "decisions": 222,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 40841100,
+            "max_ns": 880600,
+            "mean_us": 183.96891891891892
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 222
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        }
+      ],
+      "3": [
+        {
+          "index": 0,
+          "seed": 310000,
+          "hero": 0,
+          "score": 0.5,
+          "chips": 16000,
+          "won": true,
+          "cutoff": false,
+          "hands": 108,
+          "metrics": {
+            "decisions": 286,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 1,
+            "fallbacks": 0,
+            "elapsed_ns": 69744100,
+            "max_ns": 1342900,
+            "mean_us": 243.86048951048951
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 286
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 1,
+          "seed": 310001,
+          "hero": 1,
+          "score": 0.5,
+          "chips": 16000,
+          "won": true,
+          "cutoff": false,
+          "hands": 103,
+          "metrics": {
+            "decisions": 343,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 73914700,
+            "max_ns": 608500,
+            "mean_us": 215.49475218658893
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 343
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 2,
+          "seed": 310002,
+          "hero": 2,
+          "score": 0.5,
+          "chips": 16000,
+          "won": true,
+          "cutoff": false,
+          "hands": 111,
+          "metrics": {
+            "decisions": 296,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 59746500,
+            "max_ns": 627900,
+            "mean_us": 201.84628378378378
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 296
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 3,
+          "seed": 310003,
+          "hero": 3,
+          "score": 0.5,
+          "chips": 16000,
+          "won": true,
+          "cutoff": false,
+          "hands": 99,
+          "metrics": {
+            "decisions": 282,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 59046400,
+            "max_ns": 624900,
+            "mean_us": 209.38439716312055
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 282
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 4,
+          "seed": 310004,
+          "hero": 4,
+          "score": 0.3,
+          "chips": 0,
+          "won": false,
+          "cutoff": false,
+          "hands": 37,
+          "metrics": {
+            "decisions": 101,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 23518400,
+            "max_ns": 657000,
+            "mean_us": 232.85544554455444
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 101
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 5,
+          "seed": 310005,
+          "hero": 5,
+          "score": 0.5,
+          "chips": 16000,
+          "won": true,
+          "cutoff": false,
+          "hands": 103,
+          "metrics": {
+            "decisions": 313,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 70326500,
+            "max_ns": 649000,
+            "mean_us": 224.685303514377
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 313
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 6,
+          "seed": 310006,
+          "hero": 6,
+          "score": 0.5,
+          "chips": 16000,
+          "won": true,
+          "cutoff": false,
+          "hands": 71,
+          "metrics": {
+            "decisions": 149,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 23255100,
+            "max_ns": 589400,
+            "mean_us": 156.07449664429532
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 149
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        },
+        {
+          "index": 7,
+          "seed": 310007,
+          "hero": 7,
+          "score": 0.5,
+          "chips": 16000,
+          "won": true,
+          "cutoff": false,
+          "hands": 97,
+          "metrics": {
+            "decisions": 258,
+            "errors": 0,
+            "illegal": 0,
+            "over_1ms": 0,
+            "fallbacks": 0,
+            "elapsed_ns": 50760100,
+            "max_ns": 429100,
+            "mean_us": 196.74457364341083
+          },
+          "internal": {
+            "errors": 0,
+            "budget_fallbacks": 0,
+            "decisions": 258
+          },
+          "model_flags": {
+            "exposes_estimator": true,
+            "model_loaded": true,
+            "preflop_loaded": true
+          }
+        }
+      ]
+    }
+  }
+}

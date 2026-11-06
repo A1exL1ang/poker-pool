@@ -1,0 +1,515 @@
+{
+  "arguments": {
+    "tables": 30,
+    "repeat": 2,
+    "params": null,
+    "output": "measurements/model_v1_latency.json"
+  },
+  "hashes": {
+    "agent.py": "d265239701c2d241c013cd32328b3a3563b0a3ab7afad94377ff757798d33069",
+    "icm.py": "2f6dcf27749ad4054e9ab458c314af2e45da3b3a2fd174dfb03d7ce40750a816",
+    "sim.py": "b31cf5cfc3848a35025a4d262d63ca1d2d295c88b7adb95c5b82d0267609eda8",
+    "poker_eval.py": "63c92793285bc16061d80928c148af33f623178068642db360d835caf4b64ac2",
+    "equity_model.py": "55971a4caa81cdabfe78b1ef578a56a437661c4a56daa039e671a648d36ec391",
+    "baselines.py": "d6eadc133bd4f1f08a9029cd4f91bd8a96fe7d20a7ceba13954f9d6eac578290",
+    "assets/preflop.json": "10d52ed255c0ab01f2f5ed1f2ff8712bb98dcb47f8760c18062a1f5fec62f5f1",
+    "assets/equity_model.json": "ab54346844b7155b8488926132b256cdec238de39229b15fd3201d82e998299d"
+  },
+  "asset_status": {
+    "postflop_model": true,
+    "preflop_table": true,
+    "load_errors": []
+  },
+  "python": "3.11.9",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "clock_boundary": "in-process act; excludes imports, model loading, observation construction and JSON IO",
+  "gc_enabled": true,
+  "trace_decisions": {
+    "count": 4893,
+    "mean_us": 171.8996525648886,
+    "p50_us": 64.4,
+    "p90_us": 483.3,
+    "p99_us": 964.6,
+    "p99.9_us": 3494.9,
+    "max_us": 27383.4,
+    "over_1ms": 42
+  },
+  "replay_wall": {
+    "count": 9786,
+    "mean_us": 155.79249948906602,
+    "p50_us": 57.7,
+    "p90_us": 474.1,
+    "p99_us": 862.1,
+    "p99.9_us": 2002.5,
+    "max_us": 3180.1,
+    "over_1ms": 59
+  },
+  "replay_thread_cpu": {
+    "count": 9786,
+    "mean_us": 135.71684038422237,
+    "p50_us": 0.0,
+    "p90_us": 0.0,
+    "p99_us": 0.0,
+    "p99.9_us": 15625.0,
+    "max_us": 15625.0,
+    "over_1ms": 85
+  },
+  "by_street": {
+    "preflop": {
+      "count": 7756,
+      "mean_us": 64.73250386797318,
+      "p50_us": 53.0,
+      "p90_us": 82.5,
+      "p99_us": 287.1,
+      "p99.9_us": 1197.1,
+      "max_us": 3107.8,
+      "over_1ms": 10
+    },
+    "flop": {
+      "count": 882,
+      "mean_us": 491.96247165532884,
+      "p50_us": 437.1,
+      "p90_us": 617.4,
+      "p99_us": 1655.8,
+      "p99.9_us": 3180.1,
+      "max_us": 3180.1,
+      "over_1ms": 26
+    },
+    "turn": {
+      "count": 672,
+      "mean_us": 511.68660714285716,
+      "p50_us": 475.2,
+      "p90_us": 682.9,
+      "p99_us": 1297.4,
+      "p99.9_us": 2599.7,
+      "max_us": 2599.7,
+      "over_1ms": 13
+    },
+    "river": {
+      "count": 476,
+      "mean_us": 514.1928571428572,
+      "p50_us": 483.9,
+      "p90_us": 647.6,
+      "p99_us": 1462.4,
+      "p99.9_us": 2002.5,
+      "max_us": 2002.5,
+      "over_1ms": 10
+    }
+  },
+  "internal_fallbacks": 0,
+  "overrun_details": [
+    {
+      "index": 425,
+      "street": "turn",
+      "history_length": 10,
+      "wall_us": 1297.4,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 1137,
+      "street": "flop",
+      "history_length": 6,
+      "wall_us": 1102.4,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 1154,
+      "street": "turn",
+      "history_length": 10,
+      "wall_us": 1988.4,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 1226,
+      "street": "river",
+      "history_length": 14,
+      "wall_us": 1021.6,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 1333,
+      "street": "flop",
+      "history_length": 11,
+      "wall_us": 1019.3,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 1431,
+      "street": "flop",
+      "history_length": 8,
+      "wall_us": 1256.1,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 1639,
+      "street": "turn",
+      "history_length": 8,
+      "wall_us": 1563.6,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 1775,
+      "street": "preflop",
+      "history_length": 6,
+      "wall_us": 2421.1,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 1787,
+      "street": "flop",
+      "history_length": 8,
+      "wall_us": 1140.6,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 1801,
+      "street": "preflop",
+      "history_length": 3,
+      "wall_us": 3107.8,
+      "thread_cpu_us": 15625.0
+    },
+    {
+      "index": 1894,
+      "street": "flop",
+      "history_length": 8,
+      "wall_us": 1361.2,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 2204,
+      "street": "flop",
+      "history_length": 7,
+      "wall_us": 1050.6,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 3120,
+      "street": "flop",
+      "history_length": 8,
+      "wall_us": 1013.6,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 3406,
+      "street": "turn",
+      "history_length": 11,
+      "wall_us": 1230.9,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 3430,
+      "street": "preflop",
+      "history_length": 10,
+      "wall_us": 1094.1,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 3792,
+      "street": "river",
+      "history_length": 12,
+      "wall_us": 1246.2,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 3864,
+      "street": "flop",
+      "history_length": 12,
+      "wall_us": 1001.6,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 4188,
+      "street": "preflop",
+      "history_length": 6,
+      "wall_us": 1129.9,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 4249,
+      "street": "river",
+      "history_length": 12,
+      "wall_us": 1462.4,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 4777,
+      "street": "flop",
+      "history_length": 6,
+      "wall_us": 2406.1,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 4791,
+      "street": "flop",
+      "history_length": 4,
+      "wall_us": 2720.4,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 161,
+      "street": "turn",
+      "history_length": 9,
+      "wall_us": 1343.2,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 186,
+      "street": "flop",
+      "history_length": 9,
+      "wall_us": 3180.1,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 205,
+      "street": "river",
+      "history_length": 13,
+      "wall_us": 1715.0,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 1454,
+      "street": "turn",
+      "history_length": 12,
+      "wall_us": 1201.1,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 2022,
+      "street": "flop",
+      "history_length": 5,
+      "wall_us": 1764.5,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 2116,
+      "street": "flop",
+      "history_length": 5,
+      "wall_us": 2107.4,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 2117,
+      "street": "preflop",
+      "history_length": 6,
+      "wall_us": 1392.2,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 2363,
+      "street": "flop",
+      "history_length": 9,
+      "wall_us": 1480.6,
+      "thread_cpu_us": 15625.0
+    },
+    {
+      "index": 2365,
+      "street": "turn",
+      "history_length": 9,
+      "wall_us": 1108.6,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 2376,
+      "street": "flop",
+      "history_length": 12,
+      "wall_us": 1167.5,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 2380,
+      "street": "river",
+      "history_length": 15,
+      "wall_us": 1558.0,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 2387,
+      "street": "turn",
+      "history_length": 13,
+      "wall_us": 1145.0,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 2392,
+      "street": "flop",
+      "history_length": 11,
+      "wall_us": 2291.1,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 2543,
+      "street": "preflop",
+      "history_length": 3,
+      "wall_us": 1436.5,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 2582,
+      "street": "flop",
+      "history_length": 6,
+      "wall_us": 1258.8,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 2603,
+      "street": "turn",
+      "history_length": 8,
+      "wall_us": 1086.7,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 2613,
+      "street": "preflop",
+      "history_length": 6,
+      "wall_us": 1910.3,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 2628,
+      "street": "turn",
+      "history_length": 14,
+      "wall_us": 1708.7,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 2634,
+      "street": "preflop",
+      "history_length": 4,
+      "wall_us": 1469.0,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 2675,
+      "street": "flop",
+      "history_length": 5,
+      "wall_us": 1303.3,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 2768,
+      "street": "turn",
+      "history_length": 10,
+      "wall_us": 1304.8,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 2773,
+      "street": "flop",
+      "history_length": 12,
+      "wall_us": 1142.6,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 2782,
+      "street": "flop",
+      "history_length": 9,
+      "wall_us": 1597.3,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 2808,
+      "street": "river",
+      "history_length": 14,
+      "wall_us": 1226.3,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 2810,
+      "street": "flop",
+      "history_length": 6,
+      "wall_us": 1004.2,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 2825,
+      "street": "flop",
+      "history_length": 7,
+      "wall_us": 2424.8,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 2849,
+      "street": "river",
+      "history_length": 14,
+      "wall_us": 1071.5,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 2978,
+      "street": "flop",
+      "history_length": 6,
+      "wall_us": 1655.8,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 3002,
+      "street": "turn",
+      "history_length": 9,
+      "wall_us": 2599.7,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 3311,
+      "street": "turn",
+      "history_length": 8,
+      "wall_us": 1008.5,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 3367,
+      "street": "flop",
+      "history_length": 11,
+      "wall_us": 1212.7,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 3393,
+      "street": "flop",
+      "history_length": 9,
+      "wall_us": 1439.9,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 3430,
+      "street": "preflop",
+      "history_length": 10,
+      "wall_us": 1197.1,
+      "thread_cpu_us": 15625.0
+    },
+    {
+      "index": 3444,
+      "street": "flop",
+      "history_length": 5,
+      "wall_us": 1672.7,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 3458,
+      "street": "preflop",
+      "history_length": 5,
+      "wall_us": 1485.4,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 3509,
+      "street": "river",
+      "history_length": 15,
+      "wall_us": 1807.0,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 3511,
+      "street": "river",
+      "history_length": 14,
+      "wall_us": 1447.0,
+      "thread_cpu_us": 0.0
+    },
+    {
+      "index": 3846,
+      "street": "river",
+      "history_length": 12,
+      "wall_us": 2002.5,
+      "thread_cpu_us": 0.0
+    }
+  ]
+}

@@ -1,0 +1,1425 @@
+{
+  "kind": "synthetic valid-state stress; local assumptions, no official interface claim",
+  "arguments": {
+    "iterations": 3000,
+    "params": "assets/selected_params.json",
+    "output": "measurements/final_stress.json"
+  },
+  "hashes": {
+    "agent.py": "4ed889524f4dfaa29b7f1a01501750fe85b482af85141c7c8b10f9e403da0e00",
+    "icm.py": "775242b151b3f1c17190985fc37c89865638410779d1c423770d2c924a7651ad",
+    "sim.py": "b31cf5cfc3848a35025a4d262d63ca1d2d295c88b7adb95c5b82d0267609eda8",
+    "poker_eval.py": "db2651281b6aada200627263fc5069df8d05858722bd44f12337b8b876ff2a6d",
+    "equity_model.py": "468912bd932ef5160bfe847c784b3f22ad08dec3322b34634c082a7c0487a00c",
+    "equity_features.py": "12935f5f465489e45192f878b5a691c1008ab49f9a300030bcc68829e992f687",
+    "baselines.py": "e009298b0a45ed6522c0d90a3cd3b4e3beca8a7368f22cfa953029fdfa3177cf",
+    "assets/preflop.json": "10d52ed255c0ab01f2f5ed1f2ff8712bb98dcb47f8760c18062a1f5fec62f5f1",
+    "assets/equity_model.json": "e19b864bc347f3a091feb1dbc91f3b7496585f9e935f6b674d79938f9c123944",
+    "assets/equity_fast.py": "6911c6c54094aa0d1240014722f885b7dfb659992ea4f4fbb093b7eb7f262154",
+    "benchmarks/run.py": "5a96ef700ee5c94bb57705b92f1e283fb9455df594377fe2f7fc1322a133b54e",
+    "benchmarks/tune.py": "70dbe6c886858ab4277b0db483d3cc8811f54f91084fc2eaf426c06ed044fea2",
+    "benchmarks/latency.py": "ebc9a3c3b9d1d1c8cc3b5f77ce294d7c80122e9afc35ca776fea9ac094eaf759"
+  },
+  "assets": {
+    "postflop_model": true,
+    "preflop_table": true,
+    "load_errors": [],
+    "inference_backend": "generated",
+    "fast_error": null
+  },
+  "python": "3.12.7",
+  "platform": "Linux-4.18.0-553.147.1.el8_10.x86_64-x86_64-with-glibc2.28",
+  "clock_boundary": "in-process act only; imports, reset and observation construction excluded",
+  "thread_clock": {
+    "implementation": "clock_gettime(CLOCK_THREAD_CPUTIME_ID)",
+    "monotonic": true,
+    "adjustable": false,
+    "resolution": 1e-09
+  },
+  "gc_enabled": true,
+  "cases": {
+    "eight_unequal_unopened": {
+      "hero": 0,
+      "hole": [
+        48,
+        49
+      ],
+      "history_events": 2,
+      "observation": {
+        "hand_id": 0,
+        "street": "preflop",
+        "hero": 0,
+        "button": 5,
+        "hole": [
+          48,
+          49
+        ],
+        "board": [],
+        "stacks": [
+          200,
+          9,
+          37,
+          61,
+          83,
+          117,
+          147,
+          223
+        ],
+        "bets": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          10,
+          20
+        ],
+        "contributions": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          10,
+          20
+        ],
+        "folded": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "active": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "hand_start_stacks": [
+          200,
+          9,
+          37,
+          61,
+          83,
+          117,
+          157,
+          243
+        ],
+        "pot": 30,
+        "to_call": 20,
+        "min_raise_to": 40,
+        "max_raise_to": 200,
+        "can_raise": true,
+        "legal_actions": [
+          "fold",
+          "call",
+          "raise"
+        ],
+        "small_blind": 10,
+        "big_blind": 20,
+        "small_blind_seat": 6,
+        "big_blind_seat": 7,
+        "history": [
+          {
+            "seat": 6,
+            "street": "preflop",
+            "action": "blind",
+            "blind": "small",
+            "amount": 10,
+            "total": 10,
+            "pot_before": 0,
+            "to_call_before": 0,
+            "stack_before": 157
+          },
+          {
+            "seat": 7,
+            "street": "preflop",
+            "action": "blind",
+            "blind": "big",
+            "amount": 20,
+            "total": 20,
+            "pot_before": 10,
+            "to_call_before": 0,
+            "stack_before": 243
+          }
+        ],
+        "street_raise_count": 0,
+        "last_aggressor": null,
+        "actor_order": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "wall": {
+        "count": 3000,
+        "mean_us": 469.585262,
+        "p50_us": 466.889,
+        "p90_us": 476.417,
+        "p99_us": 514.068,
+        "p99.9_us": 640.015,
+        "max_us": 669.28,
+        "over_1ms": 0
+      },
+      "thread_cpu_raw": {
+        "count": 3000,
+        "mean_us": 468.169917,
+        "p50_us": 465.285,
+        "p90_us": 473.699,
+        "p99_us": 511.732,
+        "p99.9_us": 618.342,
+        "max_us": 663.086,
+        "over_1ms": 0
+      },
+      "first_wall_us": 519.718,
+      "first_thread_cpu_raw_us": 521.23,
+      "zero_thread_cpu_samples": 0,
+      "thread_cpu_interpretation": "individual samples available; OS and clock semantics still apply",
+      "batch_wall_us_per_iteration_including_reset_and_logging": 483.3428646666667,
+      "batch_thread_cpu_us_per_iteration_including_reset_and_logging": 481.0279156666666,
+      "invalid_actions": 0,
+      "internal_fallbacks": 0,
+      "overruns": []
+    },
+    "eight_unequal_limped_bb": {
+      "hero": 7,
+      "hole": [
+        48,
+        49
+      ],
+      "history_events": 9,
+      "observation": {
+        "hand_id": 0,
+        "street": "preflop",
+        "hero": 7,
+        "button": 5,
+        "hole": [
+          48,
+          49
+        ],
+        "board": [],
+        "stacks": [
+          21,
+          41,
+          63,
+          87,
+          131,
+          177,
+          219,
+          231
+        ],
+        "bets": [
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "contributions": [
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "folded": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "active": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "hand_start_stacks": [
+          41,
+          61,
+          83,
+          107,
+          151,
+          197,
+          239,
+          251
+        ],
+        "pot": 160,
+        "to_call": 0,
+        "min_raise_to": 40,
+        "max_raise_to": 251,
+        "can_raise": true,
+        "legal_actions": [
+          "check",
+          "raise"
+        ],
+        "small_blind": 10,
+        "big_blind": 20,
+        "small_blind_seat": 6,
+        "big_blind_seat": 7,
+        "history": [
+          {
+            "seat": 6,
+            "street": "preflop",
+            "action": "blind",
+            "blind": "small",
+            "amount": 10,
+            "total": 10,
+            "pot_before": 0,
+            "to_call_before": 0,
+            "stack_before": 239
+          },
+          {
+            "seat": 7,
+            "street": "preflop",
+            "action": "blind",
+            "blind": "big",
+            "amount": 20,
+            "total": 20,
+            "pot_before": 10,
+            "to_call_before": 0,
+            "stack_before": 251
+          },
+          {
+            "seat": 0,
+            "street": "preflop",
+            "action": "call",
+            "amount": 20,
+            "total": 20,
+            "pot_before": 30,
+            "to_call_before": 20,
+            "stack_before": 41
+          },
+          {
+            "seat": 1,
+            "street": "preflop",
+            "action": "call",
+            "amount": 20,
+            "total": 20,
+            "pot_before": 50,
+            "to_call_before": 20,
+            "stack_before": 61
+          },
+          {
+            "seat": 2,
+            "street": "preflop",
+            "action": "call",
+            "amount": 20,
+            "total": 20,
+            "pot_before": 70,
+            "to_call_before": 20,
+            "stack_before": 83
+          },
+          {
+            "seat": 3,
+            "street": "preflop",
+            "action": "call",
+            "amount": 20,
+            "total": 20,
+            "pot_before": 90,
+            "to_call_before": 20,
+            "stack_before": 107
+          },
+          {
+            "seat": 4,
+            "street": "preflop",
+            "action": "call",
+            "amount": 20,
+            "total": 20,
+            "pot_before": 110,
+            "to_call_before": 20,
+            "stack_before": 151
+          },
+          {
+            "seat": 5,
+            "street": "preflop",
+            "action": "call",
+            "amount": 20,
+            "total": 20,
+            "pot_before": 130,
+            "to_call_before": 20,
+            "stack_before": 197
+          },
+          {
+            "seat": 6,
+            "street": "preflop",
+            "action": "call",
+            "amount": 10,
+            "total": 20,
+            "pot_before": 150,
+            "to_call_before": 10,
+            "stack_before": 229
+          }
+        ],
+        "street_raise_count": 0,
+        "last_aggressor": null,
+        "actor_order": [
+          7
+        ]
+      },
+      "wall": {
+        "count": 3000,
+        "mean_us": 481.7710646666667,
+        "p50_us": 479.442,
+        "p90_us": 489.271,
+        "p99_us": 524.608,
+        "p99.9_us": 533.634,
+        "max_us": 979.333,
+        "over_1ms": 0
+      },
+      "thread_cpu_raw": {
+        "count": 3000,
+        "mean_us": 480.317432,
+        "p50_us": 477.718,
+        "p90_us": 486.524,
+        "p99_us": 522.722,
+        "p99.9_us": 530.436,
+        "max_us": 975.915,
+        "over_1ms": 0
+      },
+      "first_wall_us": 493.498,
+      "first_thread_cpu_raw_us": 487.696,
+      "zero_thread_cpu_samples": 0,
+      "thread_cpu_interpretation": "individual samples available; OS and clock semantics still apply",
+      "batch_wall_us_per_iteration_including_reset_and_logging": 495.924673,
+      "batch_thread_cpu_us_per_iteration_including_reset_and_logging": 493.580695,
+      "invalid_actions": 0,
+      "internal_fallbacks": 0,
+      "overruns": []
+    },
+    "eight_equal_unopened": {
+      "hero": 0,
+      "hole": [
+        48,
+        49
+      ],
+      "history_events": 2,
+      "observation": {
+        "hand_id": 0,
+        "street": "preflop",
+        "hero": 0,
+        "button": 5,
+        "hole": [
+          48,
+          49
+        ],
+        "board": [],
+        "stacks": [
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          190,
+          180
+        ],
+        "bets": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          10,
+          20
+        ],
+        "contributions": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          10,
+          20
+        ],
+        "folded": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "active": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "hand_start_stacks": [
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200
+        ],
+        "pot": 30,
+        "to_call": 20,
+        "min_raise_to": 40,
+        "max_raise_to": 200,
+        "can_raise": true,
+        "legal_actions": [
+          "fold",
+          "call",
+          "raise"
+        ],
+        "small_blind": 10,
+        "big_blind": 20,
+        "small_blind_seat": 6,
+        "big_blind_seat": 7,
+        "history": [
+          {
+            "seat": 6,
+            "street": "preflop",
+            "action": "blind",
+            "blind": "small",
+            "amount": 10,
+            "total": 10,
+            "pot_before": 0,
+            "to_call_before": 0,
+            "stack_before": 200
+          },
+          {
+            "seat": 7,
+            "street": "preflop",
+            "action": "blind",
+            "blind": "big",
+            "amount": 20,
+            "total": 20,
+            "pot_before": 10,
+            "to_call_before": 0,
+            "stack_before": 200
+          }
+        ],
+        "street_raise_count": 0,
+        "last_aggressor": null,
+        "actor_order": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "wall": {
+        "count": 3000,
+        "mean_us": 367.973008,
+        "p50_us": 365.668,
+        "p90_us": 374.585,
+        "p99_us": 410.903,
+        "p99.9_us": 419.871,
+        "max_us": 558.13,
+        "over_1ms": 0
+      },
+      "thread_cpu_raw": {
+        "count": 3000,
+        "mean_us": 367.0039336666667,
+        "p50_us": 363.934,
+        "p90_us": 372.54,
+        "p99_us": 410.03,
+        "p99.9_us": 415.11,
+        "max_us": 554.251,
+        "over_1ms": 0
+      },
+      "first_wall_us": 377.069,
+      "first_thread_cpu_raw_us": 372.069,
+      "zero_thread_cpu_samples": 0,
+      "thread_cpu_interpretation": "individual samples available; OS and clock semantics still apply",
+      "batch_wall_us_per_iteration_including_reset_and_logging": 381.7753073333334,
+      "batch_thread_cpu_us_per_iteration_including_reset_and_logging": 379.9783956666667,
+      "invalid_actions": 0,
+      "internal_fallbacks": 0,
+      "overruns": []
+    },
+    "eight_with_forced_allin_small_blind": {
+      "hero": 3,
+      "hole": [
+        48,
+        49
+      ],
+      "history_events": 2,
+      "observation": {
+        "hand_id": 0,
+        "street": "preflop",
+        "hero": 3,
+        "button": 0,
+        "hole": [
+          48,
+          49
+        ],
+        "board": [],
+        "stacks": [
+          200,
+          0,
+          11,
+          61,
+          83,
+          117,
+          157,
+          243
+        ],
+        "bets": [
+          0,
+          5,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "contributions": [
+          0,
+          5,
+          20,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "folded": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "active": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "hand_start_stacks": [
+          200,
+          5,
+          31,
+          61,
+          83,
+          117,
+          157,
+          243
+        ],
+        "pot": 25,
+        "to_call": 20,
+        "min_raise_to": 40,
+        "max_raise_to": 61,
+        "can_raise": true,
+        "legal_actions": [
+          "fold",
+          "call",
+          "raise"
+        ],
+        "small_blind": 10,
+        "big_blind": 20,
+        "small_blind_seat": 1,
+        "big_blind_seat": 2,
+        "history": [
+          {
+            "seat": 1,
+            "street": "preflop",
+            "action": "blind",
+            "blind": "small",
+            "amount": 5,
+            "total": 5,
+            "pot_before": 0,
+            "to_call_before": 0,
+            "stack_before": 5
+          },
+          {
+            "seat": 2,
+            "street": "preflop",
+            "action": "blind",
+            "blind": "big",
+            "amount": 20,
+            "total": 20,
+            "pot_before": 5,
+            "to_call_before": 0,
+            "stack_before": 31
+          }
+        ],
+        "street_raise_count": 0,
+        "last_aggressor": null,
+        "actor_order": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          0,
+          2
+        ]
+      },
+      "wall": {
+        "count": 3000,
+        "mean_us": 363.209044,
+        "p50_us": 361.761,
+        "p90_us": 368.283,
+        "p99_us": 403.028,
+        "p99.9_us": 511.102,
+        "max_us": 548.042,
+        "over_1ms": 0
+      },
+      "thread_cpu_raw": {
+        "count": 3000,
+        "mean_us": 362.4519886666667,
+        "p50_us": 360.257,
+        "p90_us": 365.817,
+        "p99_us": 402.255,
+        "p99.9_us": 520.007,
+        "max_us": 555.564,
+        "over_1ms": 0
+      },
+      "first_wall_us": 366.83,
+      "first_thread_cpu_raw_us": 367.661,
+      "zero_thread_cpu_samples": 0,
+      "thread_cpu_interpretation": "individual samples available; OS and clock semantics still apply",
+      "batch_wall_us_per_iteration_including_reset_and_logging": 377.2558676666667,
+      "batch_thread_cpu_us_per_iteration_including_reset_and_logging": 375.5036753333333,
+      "invalid_actions": 0,
+      "internal_fallbacks": 0,
+      "overruns": []
+    },
+    "eight_live_seats_isolated_icm_top3": {
+      "hero": 2,
+      "hole": [
+        48,
+        49
+      ],
+      "history_events": 9,
+      "observation": {
+        "hand_id": 0,
+        "street": "preflop",
+        "hero": 2,
+        "button": 0,
+        "hole": [
+          48,
+          49
+        ],
+        "board": [],
+        "stacks": [
+          500,
+          490,
+          480,
+          0,
+          500,
+          500,
+          500,
+          500
+        ],
+        "bets": [
+          0,
+          10,
+          20,
+          500,
+          0,
+          0,
+          0,
+          0
+        ],
+        "contributions": [
+          0,
+          10,
+          20,
+          500,
+          0,
+          0,
+          0,
+          0
+        ],
+        "folded": [
+          true,
+          true,
+          false,
+          false,
+          true,
+          true,
+          true,
+          true
+        ],
+        "active": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "hand_start_stacks": [
+          500,
+          500,
+          500,
+          500,
+          500,
+          500,
+          500,
+          500
+        ],
+        "pot": 530,
+        "to_call": 480,
+        "min_raise_to": 980,
+        "max_raise_to": 500,
+        "can_raise": false,
+        "legal_actions": [
+          "fold",
+          "call"
+        ],
+        "small_blind": 10,
+        "big_blind": 20,
+        "small_blind_seat": 1,
+        "big_blind_seat": 2,
+        "history": [
+          {
+            "seat": 1,
+            "street": "preflop",
+            "action": "blind",
+            "blind": "small",
+            "amount": 10,
+            "total": 10,
+            "pot_before": 0,
+            "to_call_before": 0,
+            "stack_before": 500
+          },
+          {
+            "seat": 2,
+            "street": "preflop",
+            "action": "blind",
+            "blind": "big",
+            "amount": 20,
+            "total": 20,
+            "pot_before": 10,
+            "to_call_before": 0,
+            "stack_before": 500
+          },
+          {
+            "seat": 3,
+            "street": "preflop",
+            "action": "raise",
+            "amount": 500,
+            "total": 500,
+            "pot_before": 30,
+            "to_call_before": 20,
+            "stack_before": 500
+          },
+          {
+            "seat": 4,
+            "street": "preflop",
+            "action": "fold",
+            "amount": 0,
+            "total": 0,
+            "pot_before": 530,
+            "to_call_before": 500,
+            "stack_before": 500
+          },
+          {
+            "seat": 5,
+            "street": "preflop",
+            "action": "fold",
+            "amount": 0,
+            "total": 0,
+            "pot_before": 530,
+            "to_call_before": 500,
+            "stack_before": 500
+          },
+          {
+            "seat": 6,
+            "street": "preflop",
+            "action": "fold",
+            "amount": 0,
+            "total": 0,
+            "pot_before": 530,
+            "to_call_before": 500,
+            "stack_before": 500
+          },
+          {
+            "seat": 7,
+            "street": "preflop",
+            "action": "fold",
+            "amount": 0,
+            "total": 0,
+            "pot_before": 530,
+            "to_call_before": 500,
+            "stack_before": 500
+          },
+          {
+            "seat": 0,
+            "street": "preflop",
+            "action": "fold",
+            "amount": 0,
+            "total": 0,
+            "pot_before": 530,
+            "to_call_before": 500,
+            "stack_before": 500
+          },
+          {
+            "seat": 1,
+            "street": "preflop",
+            "action": "fold",
+            "amount": 0,
+            "total": 10,
+            "pot_before": 530,
+            "to_call_before": 490,
+            "stack_before": 490
+          }
+        ],
+        "street_raise_count": 1,
+        "last_aggressor": 3,
+        "actor_order": [
+          2
+        ],
+        "payouts": [
+          0.5,
+          0.3,
+          0.2,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "wall": {
+        "count": 3000,
+        "mean_us": 253.89422033333332,
+        "p50_us": 250.682,
+        "p90_us": 260.25,
+        "p99_us": 295.336,
+        "p99.9_us": 309.583,
+        "max_us": 430.801,
+        "over_1ms": 0
+      },
+      "thread_cpu_raw": {
+        "count": 3000,
+        "mean_us": 253.50359433333335,
+        "p50_us": 250.781,
+        "p90_us": 259.267,
+        "p99_us": 293.451,
+        "p99.9_us": 307.498,
+        "max_us": 425.749,
+        "over_1ms": 0
+      },
+      "first_wall_us": 277.883,
+      "first_thread_cpu_raw_us": 278.854,
+      "zero_thread_cpu_samples": 0,
+      "thread_cpu_interpretation": "individual samples available; OS and clock semantics still apply",
+      "batch_wall_us_per_iteration_including_reset_and_logging": 267.66697266666665,
+      "batch_thread_cpu_us_per_iteration_including_reset_and_logging": 266.38409133333334,
+      "invalid_actions": 0,
+      "internal_fallbacks": 0,
+      "overruns": []
+    },
+    "eight_live_seats_isolated_icm_linear": {
+      "hero": 2,
+      "hole": [
+        48,
+        49
+      ],
+      "history_events": 9,
+      "observation": {
+        "hand_id": 0,
+        "street": "preflop",
+        "hero": 2,
+        "button": 0,
+        "hole": [
+          48,
+          49
+        ],
+        "board": [],
+        "stacks": [
+          500,
+          490,
+          480,
+          0,
+          500,
+          500,
+          500,
+          500
+        ],
+        "bets": [
+          0,
+          10,
+          20,
+          500,
+          0,
+          0,
+          0,
+          0
+        ],
+        "contributions": [
+          0,
+          10,
+          20,
+          500,
+          0,
+          0,
+          0,
+          0
+        ],
+        "folded": [
+          true,
+          true,
+          false,
+          false,
+          true,
+          true,
+          true,
+          true
+        ],
+        "active": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "hand_start_stacks": [
+          500,
+          500,
+          500,
+          500,
+          500,
+          500,
+          500,
+          500
+        ],
+        "pot": 530,
+        "to_call": 480,
+        "min_raise_to": 980,
+        "max_raise_to": 500,
+        "can_raise": false,
+        "legal_actions": [
+          "fold",
+          "call"
+        ],
+        "small_blind": 10,
+        "big_blind": 20,
+        "small_blind_seat": 1,
+        "big_blind_seat": 2,
+        "history": [
+          {
+            "seat": 1,
+            "street": "preflop",
+            "action": "blind",
+            "blind": "small",
+            "amount": 10,
+            "total": 10,
+            "pot_before": 0,
+            "to_call_before": 0,
+            "stack_before": 500
+          },
+          {
+            "seat": 2,
+            "street": "preflop",
+            "action": "blind",
+            "blind": "big",
+            "amount": 20,
+            "total": 20,
+            "pot_before": 10,
+            "to_call_before": 0,
+            "stack_before": 500
+          },
+          {
+            "seat": 3,
+            "street": "preflop",
+            "action": "raise",
+            "amount": 500,
+            "total": 500,
+            "pot_before": 30,
+            "to_call_before": 20,
+            "stack_before": 500
+          },
+          {
+            "seat": 4,
+            "street": "preflop",
+            "action": "fold",
+            "amount": 0,
+            "total": 0,
+            "pot_before": 530,
+            "to_call_before": 500,
+            "stack_before": 500
+          },
+          {
+            "seat": 5,
+            "street": "preflop",
+            "action": "fold",
+            "amount": 0,
+            "total": 0,
+            "pot_before": 530,
+            "to_call_before": 500,
+            "stack_before": 500
+          },
+          {
+            "seat": 6,
+            "street": "preflop",
+            "action": "fold",
+            "amount": 0,
+            "total": 0,
+            "pot_before": 530,
+            "to_call_before": 500,
+            "stack_before": 500
+          },
+          {
+            "seat": 7,
+            "street": "preflop",
+            "action": "fold",
+            "amount": 0,
+            "total": 0,
+            "pot_before": 530,
+            "to_call_before": 500,
+            "stack_before": 500
+          },
+          {
+            "seat": 0,
+            "street": "preflop",
+            "action": "fold",
+            "amount": 0,
+            "total": 0,
+            "pot_before": 530,
+            "to_call_before": 500,
+            "stack_before": 500
+          },
+          {
+            "seat": 1,
+            "street": "preflop",
+            "action": "fold",
+            "amount": 0,
+            "total": 10,
+            "pot_before": 530,
+            "to_call_before": 490,
+            "stack_before": 490
+          }
+        ],
+        "street_raise_count": 1,
+        "last_aggressor": 3,
+        "actor_order": [
+          2
+        ],
+        "payouts": [
+          0.2222222222222222,
+          0.19444444444444445,
+          0.16666666666666666,
+          0.1388888888888889,
+          0.1111111111111111,
+          0.08333333333333333,
+          0.05555555555555555,
+          0.027777777777777776
+        ]
+      },
+      "wall": {
+        "count": 3000,
+        "mean_us": 343.3911776666667,
+        "p50_us": 341.603,
+        "p90_us": 348.857,
+        "p99_us": 385.606,
+        "p99.9_us": 485.674,
+        "max_us": 516.442,
+        "over_1ms": 0
+      },
+      "thread_cpu_raw": {
+        "count": 3000,
+        "mean_us": 342.5380303333334,
+        "p50_us": 340.85,
+        "p90_us": 347.022,
+        "p99_us": 384.353,
+        "p99.9_us": 391.926,
+        "max_us": 498.497,
+        "over_1ms": 0
+      },
+      "first_wall_us": 350.63,
+      "first_thread_cpu_raw_us": 351.551,
+      "zero_thread_cpu_samples": 0,
+      "thread_cpu_interpretation": "individual samples available; OS and clock semantics still apply",
+      "batch_wall_us_per_iteration_including_reset_and_logging": 356.92447633333336,
+      "batch_thread_cpu_us_per_iteration_including_reset_and_logging": 355.2111366666667,
+      "invalid_actions": 0,
+      "internal_fallbacks": 0,
+      "overruns": []
+    },
+    "eight_live_seats_isolated_icm_satellite": {
+      "hero": 2,
+      "hole": [
+        48,
+        49
+      ],
+      "history_events": 9,
+      "observation": {
+        "hand_id": 0,
+        "street": "preflop",
+        "hero": 2,
+        "button": 0,
+        "hole": [
+          48,
+          49
+        ],
+        "board": [],
+        "stacks": [
+          500,
+          490,
+          480,
+          0,
+          500,
+          500,
+          500,
+          500
+        ],
+        "bets": [
+          0,
+          10,
+          20,
+          500,
+          0,
+          0,
+          0,
+          0
+        ],
+        "contributions": [
+          0,
+          10,
+          20,
+          500,
+          0,
+          0,
+          0,
+          0
+        ],
+        "folded": [
+          true,
+          true,
+          false,
+          false,
+          true,
+          true,
+          true,
+          true
+        ],
+        "active": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "hand_start_stacks": [
+          500,
+          500,
+          500,
+          500,
+          500,
+          500,
+          500,
+          500
+        ],
+        "pot": 530,
+        "to_call": 480,
+        "min_raise_to": 980,
+        "max_raise_to": 500,
+        "can_raise": false,
+        "legal_actions": [
+          "fold",
+          "call"
+        ],
+        "small_blind": 10,
+        "big_blind": 20,
+        "small_blind_seat": 1,
+        "big_blind_seat": 2,
+        "history": [
+          {
+            "seat": 1,
+            "street": "preflop",
+            "action": "blind",
+            "blind": "small",
+            "amount": 10,
+            "total": 10,
+            "pot_before": 0,
+            "to_call_before": 0,
+            "stack_before": 500
+          },
+          {
+            "seat": 2,
+            "street": "preflop",
+            "action": "blind",
+            "blind": "big",
+            "amount": 20,
+            "total": 20,
+            "pot_before": 10,
+            "to_call_before": 0,
+            "stack_before": 500
+          },
+          {
+            "seat": 3,
+            "street": "preflop",
+            "action": "raise",
+            "amount": 500,
+            "total": 500,
+            "pot_before": 30,
+            "to_call_before": 20,
+            "stack_before": 500
+          },
+          {
+            "seat": 4,
+            "street": "preflop",
+            "action": "fold",
+            "amount": 0,
+            "total": 0,
+            "pot_before": 530,
+            "to_call_before": 500,
+            "stack_before": 500
+          },
+          {
+            "seat": 5,
+            "street": "preflop",
+            "action": "fold",
+            "amount": 0,
+            "total": 0,
+            "pot_before": 530,
+            "to_call_before": 500,
+            "stack_before": 500
+          },
+          {
+            "seat": 6,
+            "street": "preflop",
+            "action": "fold",
+            "amount": 0,
+            "total": 0,
+            "pot_before": 530,
+            "to_call_before": 500,
+            "stack_before": 500
+          },
+          {
+            "seat": 7,
+            "street": "preflop",
+            "action": "fold",
+            "amount": 0,
+            "total": 0,
+            "pot_before": 530,
+            "to_call_before": 500,
+            "stack_before": 500
+          },
+          {
+            "seat": 0,
+            "street": "preflop",
+            "action": "fold",
+            "amount": 0,
+            "total": 0,
+            "pot_before": 530,
+            "to_call_before": 500,
+            "stack_before": 500
+          },
+          {
+            "seat": 1,
+            "street": "preflop",
+            "action": "fold",
+            "amount": 0,
+            "total": 10,
+            "pot_before": 530,
+            "to_call_before": 490,
+            "stack_before": 490
+          }
+        ],
+        "street_raise_count": 1,
+        "last_aggressor": 3,
+        "actor_order": [
+          2
+        ],
+        "payouts": [
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "wall": {
+        "count": 3000,
+        "mean_us": 217.493078,
+        "p50_us": 215.516,
+        "p90_us": 221.487,
+        "p99_us": 230.804,
+        "p99.9_us": 317.618,
+        "max_us": 392.859,
+        "over_1ms": 0
+      },
+      "thread_cpu_raw": {
+        "count": 3000,
+        "mean_us": 217.17599033333332,
+        "p50_us": 216.177,
+        "p90_us": 220.485,
+        "p99_us": 226.225,
+        "p99.9_us": 264.207,
+        "max_us": 362.491,
+        "over_1ms": 0
+      },
+      "first_wall_us": 223.4,
+      "first_thread_cpu_raw_us": 224.282,
+      "zero_thread_cpu_samples": 0,
+      "thread_cpu_interpretation": "individual samples available; OS and clock semantics still apply",
+      "batch_wall_us_per_iteration_including_reset_and_logging": 230.75668666666667,
+      "batch_thread_cpu_us_per_iteration_including_reset_and_logging": 229.646245,
+      "invalid_actions": 0,
+      "internal_fallbacks": 0,
+      "overruns": []
+    }
+  }
+}

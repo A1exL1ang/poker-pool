@@ -1,0 +1,390 @@
+{
+  "purpose": "full Agent.act latency including features, inference, ICM and action normalization",
+  "python": "3.11.9 (main, Apr 12 2024, 09:55:27)  [GCC UCRT 13.2.0 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "seed": 160900,
+  "timing_scope": "warm imports; clocks surround full act only; CPU counter also includes wall-clock read overhead",
+  "official_hardware_unknown": true,
+  "gc_policy": "Python default; not disabled",
+  "assets_available": {
+    "model": true,
+    "preflop": true,
+    "narrow": true
+  },
+  "file_sha256": {
+    "agent.py": "4423da92afa0dd5354fb4caf4dc1e873e5eca76dde080bf7c44e08f8513c3088",
+    "bot/policy.py": "8751f43ec199fb5ee5b0dcc96e9084edc144cc10fb61752f78f9dd36280bee58",
+    "bot/equity.py": "6a60cbf90a076a39bd49533dec0d638de97945a237b6d6cdb2a489dfefc0ca70",
+    "bot/features.py": "c864fda9568beec5a740038581e293e8b2c8f32bbba3dc160224ba5ce9fe1164",
+    "bot/evaluator.py": "8bd87b424e2a5ccbae3e984956fe5b8615c32d807398fb22d8e6df0a6effb9d5",
+    "bot/icm.py": "38650da114a19c9cf05b822dd6423e2543ac9d2f6a6f0b7fb738323a95a34204",
+    "simulator.py": "c03f6302325315ddc580fad1d1caea51bbbbac50dadcda1a8e3074c452bde7db",
+    "baselines.py": "6bfc6cfd62f59447593bc2f31887f6430788763bd0121a04b0b52cc7ea2a28dc",
+    "assets/equity_model.json": "5485974324fc6cb4990538d5e45358ca037cbc26acc018d5e3e88daa88186fac",
+    "assets/preflop.json": "cb9793e833b983b62055b5b68ad9903b70a3c779313cb1a844f06a26dcc9ff6f"
+  },
+  "files_changed_during_run": false,
+  "import_ms": 48.8081,
+  "constructor_us": 38.2,
+  "cold_first_action": {
+    "wall": {
+      "count": 1,
+      "p50_us": 280.7,
+      "p95_us": 280.7,
+      "p99_us": 280.7,
+      "p999_us": 280.7,
+      "max_us": 280.7,
+      "mean_us": 280.7,
+      "overruns_1ms": 0
+    },
+    "process_cpu": {
+      "count": 1,
+      "p50_us": 0.0,
+      "p95_us": 0.0,
+      "p99_us": 0.0,
+      "p999_us": 0.0,
+      "max_us": 0.0,
+      "mean_us": 0.0,
+      "overruns_1ms": 0
+    },
+    "illegal_or_raised_error_count": 0,
+    "first_errors": [],
+    "internal_errors": 0,
+    "internal_fallbacks": 0,
+    "action_counts": {
+      "0:call": 1
+    },
+    "observations": 1,
+    "repeats": 1,
+    "force_full_history_parse": false,
+    "max_history_entries": 14,
+    "max_live_hand_opponents": 1
+  },
+  "cold_fixture": "allin_icm8_street0",
+  "saved_observation_file": null,
+  "workloads": {
+    "random_legal_street_balanced": {
+      "wall": {
+        "count": 180,
+        "p50_us": 146.6,
+        "p95_us": 358.8,
+        "p99_us": 499.9,
+        "p999_us": 524.9,
+        "max_us": 642.5,
+        "mean_us": 155.39833333333334,
+        "overruns_1ms": 0
+      },
+      "process_cpu": {
+        "count": 180,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 15625.0,
+        "max_us": 15625.0,
+        "mean_us": 173.61111111111111,
+        "overruns_1ms": 2
+      },
+      "illegal_or_raised_error_count": 0,
+      "first_errors": [],
+      "internal_errors": 0,
+      "internal_fallbacks": 0,
+      "action_counts": {
+        "0:raise": 14,
+        "3:check": 12,
+        "3:raise": 2,
+        "1:check": 26,
+        "0:fold": 47,
+        "2:fold": 11,
+        "2:check": 19,
+        "1:fold": 15,
+        "3:fold": 4,
+        "0:call": 17,
+        "1:raise": 1,
+        "1:call": 5,
+        "2:raise": 2,
+        "3:call": 2,
+        "2:call": 2,
+        "0:check": 1
+      },
+      "observations": 180,
+      "repeats": 1,
+      "force_full_history_parse": false,
+      "max_history_entries": 24,
+      "max_live_hand_opponents": 7
+    },
+    "allin_icm8_street0": {
+      "wall": {
+        "count": 20,
+        "p50_us": 134.1,
+        "p95_us": 204.0,
+        "p99_us": 204.0,
+        "p999_us": 204.0,
+        "max_us": 209.4,
+        "mean_us": 146.13,
+        "overruns_1ms": 0
+      },
+      "process_cpu": {
+        "count": 20,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 0.0,
+        "mean_us": 0.0,
+        "overruns_1ms": 0
+      },
+      "illegal_or_raised_error_count": 0,
+      "first_errors": [],
+      "internal_errors": 0,
+      "internal_fallbacks": 0,
+      "action_counts": {
+        "0:call": 20
+      },
+      "observations": 1,
+      "repeats": 20,
+      "force_full_history_parse": true,
+      "max_history_entries": 14,
+      "max_live_hand_opponents": 1
+    },
+    "allin_icm8_street1": {
+      "wall": {
+        "count": 20,
+        "p50_us": 241.8,
+        "p95_us": 283.1,
+        "p99_us": 283.1,
+        "p999_us": 283.1,
+        "max_us": 296.4,
+        "mean_us": 250.135,
+        "overruns_1ms": 0
+      },
+      "process_cpu": {
+        "count": 20,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 15625.0,
+        "mean_us": 781.25,
+        "overruns_1ms": 1
+      },
+      "illegal_or_raised_error_count": 0,
+      "first_errors": [],
+      "internal_errors": 0,
+      "internal_fallbacks": 0,
+      "action_counts": {
+        "1:call": 20
+      },
+      "observations": 1,
+      "repeats": 20,
+      "force_full_history_parse": true,
+      "max_history_entries": 16,
+      "max_live_hand_opponents": 1
+    },
+    "allin_icm8_street2": {
+      "wall": {
+        "count": 20,
+        "p50_us": 264.0,
+        "p95_us": 346.4,
+        "p99_us": 346.4,
+        "p999_us": 346.4,
+        "max_us": 456.2,
+        "mean_us": 275.83,
+        "overruns_1ms": 0
+      },
+      "process_cpu": {
+        "count": 20,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 0.0,
+        "mean_us": 0.0,
+        "overruns_1ms": 0
+      },
+      "illegal_or_raised_error_count": 0,
+      "first_errors": [],
+      "internal_errors": 0,
+      "internal_fallbacks": 0,
+      "action_counts": {
+        "2:call": 20
+      },
+      "observations": 1,
+      "repeats": 20,
+      "force_full_history_parse": true,
+      "max_history_entries": 24,
+      "max_live_hand_opponents": 1
+    },
+    "allin_icm8_street3": {
+      "wall": {
+        "count": 20,
+        "p50_us": 270.6,
+        "p95_us": 333.7,
+        "p99_us": 333.7,
+        "p999_us": 333.7,
+        "max_us": 629.0,
+        "mean_us": 295.4,
+        "overruns_1ms": 0
+      },
+      "process_cpu": {
+        "count": 20,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 0.0,
+        "mean_us": 0.0,
+        "overruns_1ms": 0
+      },
+      "illegal_or_raised_error_count": 0,
+      "first_errors": [],
+      "internal_errors": 0,
+      "internal_fallbacks": 0,
+      "action_counts": {
+        "3:fold": 7,
+        "3:call": 13
+      },
+      "observations": 1,
+      "repeats": 20,
+      "force_full_history_parse": true,
+      "max_history_entries": 32,
+      "max_live_hand_opponents": 1
+    },
+    "legal_long_history_street0": {
+      "wall": {
+        "count": 20,
+        "p50_us": 130.5,
+        "p95_us": 198.1,
+        "p99_us": 198.1,
+        "p999_us": 198.1,
+        "max_us": 211.0,
+        "mean_us": 134.605,
+        "overruns_1ms": 0
+      },
+      "process_cpu": {
+        "count": 20,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 15625.0,
+        "mean_us": 781.25,
+        "overruns_1ms": 1
+      },
+      "illegal_or_raised_error_count": 0,
+      "first_errors": [],
+      "internal_errors": 0,
+      "internal_fallbacks": 0,
+      "action_counts": {
+        "0:call": 20
+      },
+      "observations": 1,
+      "repeats": 20,
+      "force_full_history_parse": true,
+      "max_history_entries": 261,
+      "max_live_hand_opponents": 7
+    },
+    "legal_long_history_street1": {
+      "wall": {
+        "count": 20,
+        "p50_us": 319.4,
+        "p95_us": 436.6,
+        "p99_us": 436.6,
+        "p999_us": 436.6,
+        "max_us": 619.8,
+        "mean_us": 332.3,
+        "overruns_1ms": 0
+      },
+      "process_cpu": {
+        "count": 20,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 0.0,
+        "mean_us": 0.0,
+        "overruns_1ms": 0
+      },
+      "illegal_or_raised_error_count": 0,
+      "first_errors": [],
+      "internal_errors": 0,
+      "internal_fallbacks": 0,
+      "action_counts": {
+        "1:check": 20
+      },
+      "observations": 1,
+      "repeats": 20,
+      "force_full_history_parse": true,
+      "max_history_entries": 269,
+      "max_live_hand_opponents": 7
+    },
+    "legal_long_history_street2": {
+      "wall": {
+        "count": 20,
+        "p50_us": 317.2,
+        "p95_us": 391.9,
+        "p99_us": 391.9,
+        "p999_us": 391.9,
+        "max_us": 463.3,
+        "mean_us": 331.535,
+        "overruns_1ms": 0
+      },
+      "process_cpu": {
+        "count": 20,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 0.0,
+        "mean_us": 0.0,
+        "overruns_1ms": 0
+      },
+      "illegal_or_raised_error_count": 0,
+      "first_errors": [],
+      "internal_errors": 0,
+      "internal_fallbacks": 0,
+      "action_counts": {
+        "2:check": 20
+      },
+      "observations": 1,
+      "repeats": 20,
+      "force_full_history_parse": true,
+      "max_history_entries": 277,
+      "max_live_hand_opponents": 7
+    },
+    "legal_long_history_street3": {
+      "wall": {
+        "count": 20,
+        "p50_us": 336.8,
+        "p95_us": 383.7,
+        "p99_us": 383.7,
+        "p999_us": 383.7,
+        "max_us": 519.6,
+        "mean_us": 353.07,
+        "overruns_1ms": 0
+      },
+      "process_cpu": {
+        "count": 20,
+        "p50_us": 0.0,
+        "p95_us": 0.0,
+        "p99_us": 0.0,
+        "p999_us": 0.0,
+        "max_us": 15625.0,
+        "mean_us": 781.25,
+        "overruns_1ms": 1
+      },
+      "illegal_or_raised_error_count": 0,
+      "first_errors": [],
+      "internal_errors": 0,
+      "internal_fallbacks": 0,
+      "action_counts": {
+        "3:check": 20
+      },
+      "observations": 1,
+      "repeats": 20,
+      "force_full_history_parse": true,
+      "max_history_entries": 285,
+      "max_live_hand_opponents": 7
+    }
+  },
+  "note": "Wall scheduling pauses are retained. No observed overrun is discarded. Synthetic stress frequencies are not tournament frequencies."
+}

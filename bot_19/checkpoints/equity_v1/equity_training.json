@@ -1,0 +1,245 @@
+{
+  "training": {
+    "path": "train.bin",
+    "bytes": 105600000,
+    "sha256": "24c9c304fbaaee8b5d850c4b0cec4fe1dbfbe54f73fefb0137bbc2fd73ebe7ed"
+  },
+  "validation": {
+    "path": "validation.bin",
+    "bytes": 7920000,
+    "sha256": "91d58e0120fc641fb73254c517e031580dc359db724711d20ac16aa3987b0ee9"
+  },
+  "selection": "per-street validation RMSE; test labels never read",
+  "parameters": {
+    "train": "training/data/train.bin",
+    "valid": "training/data/validation.bin",
+    "output": "assets/equity_model.json",
+    "report": "measurements/equity_training.json",
+    "trees": 192,
+    "depth": 6,
+    "learning_rate": 0.085,
+    "threads": 8,
+    "seed": 191911
+  },
+  "python": "3.12.7",
+  "xgboost": "3.4.1",
+  "numpy": "2.5.4",
+  "streets": {
+    "3": {
+      "train_rows": 200082,
+      "trees": 192,
+      "metrics": {
+        "rows": 14889,
+        "mae": 0.017841175198554993,
+        "rmse": 0.024490810930728912,
+        "bias": -3.70672823919449e-05,
+        "p95_absolute_error": 0.05002598837018013,
+        "p99_absolute_error": 0.07821960747241974,
+        "max_absolute_error": 0.21028167009353638
+      },
+      "export_max_difference": 4.7205086484147785e-07,
+      "strata": {
+        "range_width_le_020": {
+          "rows": 7134,
+          "mae": 0.016696037724614143,
+          "rmse": 0.023448774591088295,
+          "bias": -0.00012562639312818646,
+          "p95_absolute_error": 0.046979621052742004,
+          "p99_absolute_error": 0.07656942307949066,
+          "max_absolute_error": 0.21028167009353638
+        },
+        "range_width_ge_060": {
+          "rows": 3721,
+          "mae": 0.02018842101097107,
+          "rmse": 0.027212534099817276,
+          "bias": -0.00019991429871879518,
+          "p95_absolute_error": 0.05586269497871399,
+          "p99_absolute_error": 0.08670041710138321,
+          "max_absolute_error": 0.14387273788452148
+        },
+        "aggression_ge_070": {
+          "rows": 5904,
+          "mae": 0.016686538234353065,
+          "rmse": 0.023833751678466797,
+          "bias": -2.0085855794604868e-05,
+          "p95_absolute_error": 0.04854404181241989,
+          "p99_absolute_error": 0.0838804841041565,
+          "max_absolute_error": 0.21028167009353638
+        },
+        "no_aggression": {
+          "rows": 1915,
+          "mae": 0.020540764555335045,
+          "rmse": 0.026826297864317894,
+          "bias": -0.0010209904285147786,
+          "p95_absolute_error": 0.05317375808954239,
+          "p99_absolute_error": 0.07560381293296814,
+          "max_absolute_error": 0.15979456901550293
+        },
+        "pair_or_highcard": {
+          "rows": 13790,
+          "mae": 0.017020005732774734,
+          "rmse": 0.02313007041811943,
+          "bias": -9.995891741709784e-05,
+          "p95_absolute_error": 0.04740201681852341,
+          "p99_absolute_error": 0.0722309872508049,
+          "max_absolute_error": 0.15979456901550293
+        },
+        "strong_made": {
+          "rows": 103,
+          "mae": 0.03157195448875427,
+          "rmse": 0.04713474586606026,
+          "bias": 0.0007436420419253409,
+          "p95_absolute_error": 0.1135082095861435,
+          "p99_absolute_error": 0.15592235326766968,
+          "max_absolute_error": 0.1664639115333557
+        }
+      }
+    },
+    "4": {
+      "train_rows": 199853,
+      "trees": 192,
+      "metrics": {
+        "rows": 14939,
+        "mae": 0.021699663251638412,
+        "rmse": 0.03176402300596237,
+        "bias": 0.0004090394068043679,
+        "p95_absolute_error": 0.06659886240959167,
+        "p99_absolute_error": 0.10649923980236053,
+        "max_absolute_error": 0.30304962396621704
+      },
+      "export_max_difference": 5.311304397404015e-07,
+      "strata": {
+        "range_width_le_020": {
+          "rows": 7277,
+          "mae": 0.0206037275493145,
+          "rmse": 0.030661391094326973,
+          "bias": 0.0004053560842294246,
+          "p95_absolute_error": 0.0636787861585617,
+          "p99_absolute_error": 0.10346575081348419,
+          "max_absolute_error": 0.24571558833122253
+        },
+        "range_width_ge_060": {
+          "rows": 3745,
+          "mae": 0.023691272363066673,
+          "rmse": 0.033821191638708115,
+          "bias": 0.0005557197146117687,
+          "p95_absolute_error": 0.07007098197937012,
+          "p99_absolute_error": 0.10900291055440903,
+          "max_absolute_error": 0.30304962396621704
+        },
+        "aggression_ge_070": {
+          "rows": 5961,
+          "mae": 0.020835207775235176,
+          "rmse": 0.03204420581459999,
+          "bias": 0.0005671695107594132,
+          "p95_absolute_error": 0.0663459300994873,
+          "p99_absolute_error": 0.117099829018116,
+          "max_absolute_error": 0.30304962396621704
+        },
+        "no_aggression": {
+          "rows": 1802,
+          "mae": 0.024258065968751907,
+          "rmse": 0.0325838141143322,
+          "bias": -0.00047276131226681173,
+          "p95_absolute_error": 0.06605340540409088,
+          "p99_absolute_error": 0.10389766097068787,
+          "max_absolute_error": 0.1881541609764099
+        },
+        "pair_or_highcard": {
+          "rows": 12073,
+          "mae": 0.018583273515105247,
+          "rmse": 0.026498757302761078,
+          "bias": 9.169381519313902e-05,
+          "p95_absolute_error": 0.056079503148794174,
+          "p99_absolute_error": 0.08650179952383041,
+          "max_absolute_error": 0.20331278443336487
+        },
+        "strong_made": {
+          "rows": 532,
+          "mae": 0.03802483156323433,
+          "rmse": 0.05750554800033569,
+          "bias": 0.005895594134926796,
+          "p95_absolute_error": 0.1296466588973999,
+          "p99_absolute_error": 0.2057102769613266,
+          "max_absolute_error": 0.30304962396621704
+        }
+      }
+    },
+    "5": {
+      "train_rows": 200065,
+      "trees": 192,
+      "metrics": {
+        "rows": 15172,
+        "mae": 0.027191756293177605,
+        "rmse": 0.047161899507045746,
+        "bias": 0.0018939245492219925,
+        "p95_absolute_error": 0.10154848545789719,
+        "p99_absolute_error": 0.1810750514268875,
+        "max_absolute_error": 0.38600826263427734
+      },
+      "export_max_difference": 4.915848568209924e-07,
+      "strata": {
+        "range_width_le_020": {
+          "rows": 7295,
+          "mae": 0.025633307173848152,
+          "rmse": 0.046293240040540695,
+          "bias": 0.002925391308963299,
+          "p95_absolute_error": 0.10138262808322906,
+          "p99_absolute_error": 0.1772526055574417,
+          "max_absolute_error": 0.38600826263427734
+        },
+        "range_width_ge_060": {
+          "rows": 3851,
+          "mae": 0.030477626249194145,
+          "rmse": 0.049654271453619,
+          "bias": 0.001185110304504633,
+          "p95_absolute_error": 0.10519766807556152,
+          "p99_absolute_error": 0.19269141554832458,
+          "max_absolute_error": 0.3279041051864624
+        },
+        "aggression_ge_070": {
+          "rows": 6097,
+          "mae": 0.024166608229279518,
+          "rmse": 0.04737062007188797,
+          "bias": 0.003288820618763566,
+          "p95_absolute_error": 0.10251505672931671,
+          "p99_absolute_error": 0.1964624971151352,
+          "max_absolute_error": 0.37590426206588745
+        },
+        "no_aggression": {
+          "rows": 1863,
+          "mae": 0.03424355015158653,
+          "rmse": 0.05148060992360115,
+          "bias": 0.0006112260743975639,
+          "p95_absolute_error": 0.10686339437961578,
+          "p99_absolute_error": 0.16702871024608612,
+          "max_absolute_error": 0.38383424282073975
+        },
+        "pair_or_highcard": {
+          "rows": 9345,
+          "mae": 0.01515005063265562,
+          "rmse": 0.029010772705078125,
+          "bias": 0.002233595587313175,
+          "p95_absolute_error": 0.0645783394575119,
+          "p99_absolute_error": 0.11564864218235016,
+          "max_absolute_error": 0.3666839003562927
+        },
+        "strong_made": {
+          "rows": 1587,
+          "mae": 0.05558621883392334,
+          "rmse": 0.08249043673276901,
+          "bias": -0.0037115958984941244,
+          "p95_absolute_error": 0.18902376294136047,
+          "p99_absolute_error": 0.28820112347602844,
+          "max_absolute_error": 0.36501866579055786
+        }
+      }
+    }
+  },
+  "elapsed_seconds": 3.6312313191592693,
+  "model": {
+    "path": "equity_model.json",
+    "bytes": 1075917,
+    "sha256": "ab54346844b7155b8488926132b256cdec238de39229b15fd3201d82e998299d"
+  }
+}

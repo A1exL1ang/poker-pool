@@ -1,0 +1,141 @@
+{
+  "train_rows": 240000,
+  "validation_rows": 12000,
+  "test_rows": 12000,
+  "candidates": [
+    {
+      "min_samples_leaf": 5,
+      "max_depth": 20,
+      "validation": {
+        "mae": 0.016440008220497612,
+        "rmse": 0.02481258470470654,
+        "mae_by_range": [
+          0.01524884704509324,
+          0.015910193755658934,
+          0.016867721798030037,
+          0.017733270283208244
+        ],
+        "p95_absolute_error": 0.04815453269240953,
+        "by_street": {
+          "3": {
+            "n": 3946,
+            "mae": 0.015714656944833285
+          },
+          "4": {
+            "n": 4013,
+            "mae": 0.016982821543575454
+          },
+          "5": {
+            "n": 4041,
+            "mae": 0.016609255007990927
+          }
+        }
+      }
+    },
+    {
+      "min_samples_leaf": 12,
+      "max_depth": 18,
+      "validation": {
+        "mae": 0.019156368170395913,
+        "rmse": 0.0294055117905572,
+        "mae_by_range": [
+          0.017994675485805516,
+          0.01857245338919083,
+          0.01957561012207728,
+          0.020482733684510025
+        ],
+        "p95_absolute_error": 0.05739184408112701,
+        "by_street": {
+          "3": {
+            "n": 3946,
+            "mae": 0.017589133946024717
+          },
+          "4": {
+            "n": 4013,
+            "mae": 0.019461433230011493
+          },
+          "5": {
+            "n": 4041,
+            "mae": 0.02038380696404397
+          }
+        }
+      }
+    },
+    {
+      "min_samples_leaf": 24,
+      "max_depth": 16,
+      "validation": {
+        "mae": 0.022920397418722697,
+        "rmse": 0.03486928432026871,
+        "mae_by_range": [
+          0.021550969757884685,
+          0.022304153235646183,
+          0.023473779536967304,
+          0.024352687144392617
+        ],
+        "p95_absolute_error": 0.06876230122022609,
+        "by_street": {
+          "3": {
+            "n": 3946,
+            "mae": 0.02066183929677162
+          },
+          "4": {
+            "n": 4013,
+            "mae": 0.02284247561853313
+          },
+          "5": {
+            "n": 4041,
+            "mae": 0.025203240906319858
+          }
+        }
+      }
+    }
+  ],
+  "selected": {
+    "bootstrap": false,
+    "ccp_alpha": 0.0,
+    "criterion": "squared_error",
+    "max_depth": 20,
+    "max_features": 0.9,
+    "max_leaf_nodes": null,
+    "max_samples": null,
+    "min_impurity_decrease": 0.0,
+    "min_samples_leaf": 5,
+    "min_samples_split": 2,
+    "min_weight_fraction_leaf": 0.0,
+    "monotonic_cst": null,
+    "n_estimators": 24,
+    "n_jobs": 8,
+    "oob_score": false,
+    "random_state": 151,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "held_out_test": {
+    "mae": 0.016424436552542564,
+    "rmse": 0.024646409481210368,
+    "mae_by_range": [
+      0.015252695393534616,
+      0.015903690757091683,
+      0.016653861475262943,
+      0.017887498584281014
+    ],
+    "p95_absolute_error": 0.048267044795351974,
+    "by_street": {
+      "3": {
+        "n": 4012,
+        "mae": 0.015513555311574192
+      },
+      "4": {
+        "n": 4103,
+        "mae": 0.016874435082125726
+      },
+      "5": {
+        "n": 3885,
+        "mae": 0.016889844936554287
+      }
+    }
+  },
+  "artifact_bytes": 15789776,
+  "label_note": "Monte Carlo sampled labels; measured error includes label noise. Top preflop ranges do not condition on postflop actions."
+}

@@ -1,0 +1,1288 @@
+{
+  "scope": "LOCAL SYNTHETIC EVALUATION; no official interface/payout compatibility",
+  "frozen_candidate": {
+    "frozen_at_utc": "2026-11-06T09:04:12.071342+00:00",
+    "source_sha256": {
+      "agent.py": "66a969bb484f4c16adf8f7aeccca224bf516ba9f51ec022ad20a4077a533e224",
+      "policy/icm.py": "6b22ae47eeab8a436f1098806ebfc886af2f8ce52971e4c127f40e703c9951cd",
+      "policy/icm_fast.py": "ced0b224b90386c441434b16f8577f4325227265d869d4c5811515e3df162432",
+      "policy/texture.py": "13e7d1e526aa5477b9c691ee9a3855673467b7c1dc1cc2dd3e4fd07a5ebee417",
+      "equity/model.py": "d370beecace244c53346512f2027fb1d7adce70116a657bc260b1fdd48b2ec7a",
+      "equity/preflop.py": "64fd15a3e576dbd55992762fb1f6abe031ddc7c49da0d631d61443f302e7f339",
+      "equity/features.py": "00ecc905e710cf87c473dd2d6f0c171d903f1ef59a37518787ab81ac0284d137",
+      "equity/evaluator.py": "4761058ec70762e8c41ec13dde115f50c58e417b391687f25d2a76e35a33e3ab",
+      "equity/model.json": "b89c374bc3e77cdc43309cd1282d6b94e5dc4c0d6e99c6e5fe2360c5f6f7ed60",
+      "equity/preflop.json": "379f36d83bc2d794a70c62be59acddc84740056c135b4e782b4e9af1113545bb",
+      "equity/premium.json": "01c573b8f1df26f1e71614a933e08ec2dcb8c9d30c5e0781b7e03ad3b8e4ff2a",
+      "equity/special.py": "e795f50008e7397ca7dd44d42b26245b48eb2134dfea6fa95b04cad18d54b7c5",
+      "equity/compiled.py": "fae4101b00072962b8a4fd41edb1d0bfc311ccc73cbed3c8d1148ab86ff7417e",
+      "sim/engine.py": "a8f09df775bf6ac390d477d97afeb8e2cbf972fb9010063cee3b3ef0b5aadef3",
+      "sim/baselines.py": "436ab7578499d4dd1e1a75ff7de57e284a59ba8083cff828601511931a55bcd8",
+      "sim/benchmark.py": "4dc4099f8527a1aecca6dcbe07bfad3e53a9f0c5a01996489722ddf4442921b6"
+    },
+    "config": {
+      "open_scale": 1.2,
+      "call_margin": 0.025,
+      "aggression": 1.6,
+      "selection": 1.5,
+      "shove_margin": 0.03,
+      "adaptation": 1.0,
+      "icm_shove": 1.0
+    },
+    "selection_note": "Last comparison effectively tied:26.55549 vs26.54161. Used preregistered higher-mean rule, not statistically established superiority.",
+    "tuning_tables": 26112,
+    "final_plan": {
+      "purpose": "Preregister final local evaluation before inspecting its labels or outcomes",
+      "model": "v3 street models plus exact quads/straight-board shortcuts; frozen encoder v2-pair-suit-canonical",
+      "policy_family": {
+        "open_scale": 1.2,
+        "selection": 1.5,
+        "aggression": 1.6
+      },
+      "pending_choice": "Enable payout-aware short-stack shoves only if their pooled tuning mean exceeds the otherwise-identical policy; no heldout data is used for this choice.",
+      "model_test": {
+        "seed": 1890017,
+        "rows": 28000,
+        "trials": 8192,
+        "opponents": "uniform 1..7, including 4 and 6 absent from the training sample grid"
+      },
+      "tournament_tests": [
+        {
+          "seed": 910000,
+          "tables_per_cell": 512,
+          "suites": [
+            "mixed",
+            "calling",
+            "tight",
+            "aggressive",
+            "challenge",
+            "selfplay"
+          ],
+          "payouts": [
+            "top3",
+            "flat4",
+            "winner"
+          ]
+        },
+        {
+          "seed": 1510000,
+          "tables_per_cell": 512,
+          "suites": [
+            "mixed",
+            "challenge",
+            "selfplay"
+          ],
+          "payouts": [
+            "linear"
+          ],
+          "hide_payouts": true
+        },
+        {
+          "seed": 1710000,
+          "tables_per_cell": 512,
+          "suites": [
+            "mixed",
+            "challenge",
+            "selfplay"
+          ],
+          "payouts": [
+            "top3",
+            "linear"
+          ],
+          "fast_blinds": true
+        }
+      ],
+      "total_tables": 13824,
+      "timeout_enforced_ns": 1000000,
+      "reserved_opponents": "challenge was not used for tuning or prior candidate performance measurement",
+      "limitations": "All interfaces, opponent implementations, later blinds and payout vectors are local experimental assumptions. This is not a contest submission or prediction of contest rank."
+    }
+  },
+  "totals": {
+    "tables": 13824,
+    "decisions": 2557341,
+    "errors": 0,
+    "illegal": 0,
+    "candidate_fallbacks": 0,
+    "overruns": 8,
+    "timeout_fraction": 3.1282492244874656e-06
+  },
+  "cells": [
+    {
+      "experiment": "final_standard",
+      "suite": "mixed",
+      "payouts": [
+        50,
+        30,
+        20,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tables": 512,
+      "points": {
+        "n": 512,
+        "mean": 31.131464157753673,
+        "standard_error": 0.8080112383236355,
+        "normal_95_ci": [
+          29.54776213063935,
+          32.715166184867996
+        ]
+      },
+      "decisions": 101938,
+      "overruns": 0,
+      "latency_us": {
+        "p50": 34.368,
+        "p95": 193.016,
+        "p99": 212.374,
+        "p999": 235.698,
+        "max": 576.987
+      },
+      "internal_fallbacks": 0
+    },
+    {
+      "experiment": "final_standard",
+      "suite": "mixed",
+      "payouts": [
+        25,
+        25,
+        25,
+        25,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tables": 512,
+      "points": {
+        "n": 512,
+        "mean": 23.583984375,
+        "standard_error": 0.2556419737392342,
+        "normal_95_ci": [
+          23.082926106471103,
+          24.085042643528897
+        ]
+      },
+      "decisions": 101891,
+      "overruns": 0,
+      "latency_us": {
+        "p50": 34.757,
+        "p95": 193.851,
+        "p99": 211.968,
+        "p999": 233.315,
+        "max": 600.39
+      },
+      "internal_fallbacks": 0
+    },
+    {
+      "experiment": "final_standard",
+      "suite": "mixed",
+      "payouts": [
+        100,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tables": 512,
+      "points": {
+        "n": 512,
+        "mean": 47.0119873046875,
+        "standard_error": 2.0491007411824618,
+        "normal_95_ci": [
+          42.995749851969876,
+          51.02822475740513
+        ]
+      },
+      "decisions": 99935,
+      "overruns": 0,
+      "latency_us": {
+        "p50": 34.341,
+        "p95": 193.702,
+        "p99": 211.536,
+        "p999": 232.354,
+        "max": 594.541
+      },
+      "internal_fallbacks": 0
+    },
+    {
+      "experiment": "final_standard",
+      "suite": "calling",
+      "payouts": [
+        50,
+        30,
+        20,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tables": 512,
+      "points": {
+        "n": 512,
+        "mean": 45.68359375,
+        "standard_error": 0.5096636099172631,
+        "normal_95_ci": [
+          44.68465307456216,
+          46.68253442543784
+        ]
+      },
+      "decisions": 134637,
+      "overruns": 0,
+      "latency_us": {
+        "p50": 162.416,
+        "p95": 191.682,
+        "p99": 207.652,
+        "p999": 231.312,
+        "max": 587.469
+      },
+      "internal_fallbacks": 0
+    },
+    {
+      "experiment": "final_standard",
+      "suite": "calling",
+      "payouts": [
+        25,
+        25,
+        25,
+        25,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tables": 512,
+      "points": {
+        "n": 512,
+        "mean": 24.755859375,
+        "standard_error": 0.10875483641066086,
+        "normal_95_ci": [
+          24.542699895635106,
+          24.969018854364894
+        ]
+      },
+      "decisions": 135673,
+      "overruns": 0,
+      "latency_us": {
+        "p50": 163.616,
+        "p95": 194.286,
+        "p99": 210.641,
+        "p999": 232.657,
+        "max": 644.646
+      },
+      "internal_fallbacks": 0
+    },
+    {
+      "experiment": "final_standard",
+      "suite": "calling",
+      "payouts": [
+        100,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tables": 512,
+      "points": {
+        "n": 512,
+        "mean": 89.453125,
+        "standard_error": 1.358780194114759,
+        "normal_95_ci": [
+          86.78991581953507,
+          92.11633418046493
+        ]
+      },
+      "decisions": 132264,
+      "overruns": 0,
+      "latency_us": {
+        "p50": 164.015,
+        "p95": 194.165,
+        "p99": 210.358,
+        "p999": 233.655,
+        "max": 610.357
+      },
+      "internal_fallbacks": 0
+    },
+    {
+      "experiment": "final_standard",
+      "suite": "tight",
+      "payouts": [
+        50,
+        30,
+        20,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tables": 512,
+      "points": {
+        "n": 512,
+        "mean": 26.021838645409087,
+        "standard_error": 0.8969603896721767,
+        "normal_95_ci": [
+          24.263796281651622,
+          27.77988100916655
+        ]
+      },
+      "decisions": 98421,
+      "overruns": 1,
+      "latency_us": {
+        "p50": 34.272,
+        "p95": 203.13,
+        "p99": 223.088,
+        "p999": 244.355,
+        "max": 11397.12
+      },
+      "internal_fallbacks": 0
+    },
+    {
+      "experiment": "final_standard",
+      "suite": "tight",
+      "payouts": [
+        25,
+        25,
+        25,
+        25,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tables": 512,
+      "points": {
+        "n": 512,
+        "mean": 20.166015625,
+        "standard_error": 0.43676941669555913,
+        "normal_95_ci": [
+          19.309947568276705,
+          21.022083681723295
+        ]
+      },
+      "decisions": 98911,
+      "overruns": 0,
+      "latency_us": {
+        "p50": 35.175,
+        "p95": 200.752,
+        "p99": 221.136,
+        "p999": 244.149,
+        "max": 731.926
+      },
+      "internal_fallbacks": 0
+    },
+    {
+      "experiment": "final_standard",
+      "suite": "tight",
+      "payouts": [
+        100,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tables": 512,
+      "points": {
+        "n": 512,
+        "mean": 36.52293701171875,
+        "standard_error": 1.8482372159645502,
+        "normal_95_ci": [
+          32.90039206842823,
+          40.145481955009274
+        ]
+      },
+      "decisions": 97809,
+      "overruns": 0,
+      "latency_us": {
+        "p50": 33.766,
+        "p95": 198.893,
+        "p99": 218.536,
+        "p999": 237.835,
+        "max": 704.683
+      },
+      "internal_fallbacks": 0
+    },
+    {
+      "experiment": "final_standard",
+      "suite": "aggressive",
+      "payouts": [
+        50,
+        30,
+        20,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tables": 512,
+      "points": {
+        "n": 512,
+        "mean": 31.83950813511004,
+        "standard_error": 0.7057479528808106,
+        "normal_95_ci": [
+          30.45624214746365,
+          33.22277412275643
+        ]
+      },
+      "decisions": 94822,
+      "overruns": 0,
+      "latency_us": {
+        "p50": 34.937,
+        "p95": 190.763,
+        "p99": 209.894,
+        "p999": 230.737,
+        "max": 319.948
+      },
+      "internal_fallbacks": 0
+    },
+    {
+      "experiment": "final_standard",
+      "suite": "aggressive",
+      "payouts": [
+        25,
+        25,
+        25,
+        25,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tables": 512,
+      "points": {
+        "n": 512,
+        "mean": 24.169921875,
+        "standard_error": 0.19814661510874662,
+        "normal_95_ci": [
+          23.781554509386858,
+          24.558289240613142
+        ]
+      },
+      "decisions": 94709,
+      "overruns": 4,
+      "latency_us": {
+        "p50": 35.782,
+        "p95": 189.882,
+        "p99": 207.957,
+        "p999": 230.656,
+        "max": 14237.057
+      },
+      "internal_fallbacks": 0
+    },
+    {
+      "experiment": "final_standard",
+      "suite": "aggressive",
+      "payouts": [
+        100,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tables": 512,
+      "points": {
+        "n": 512,
+        "mean": 34.60162353515625,
+        "standard_error": 1.9758169643185128,
+        "normal_95_ci": [
+          30.729022285091965,
+          38.474224785220535
+        ]
+      },
+      "decisions": 95160,
+      "overruns": 0,
+      "latency_us": {
+        "p50": 35.144,
+        "p95": 191.864,
+        "p99": 209.76,
+        "p999": 230.737,
+        "max": 278.056
+      },
+      "internal_fallbacks": 0
+    },
+    {
+      "experiment": "final_standard",
+      "suite": "challenge",
+      "payouts": [
+        50,
+        30,
+        20,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tables": 512,
+      "points": {
+        "n": 512,
+        "mean": 14.924535243160628,
+        "standard_error": 0.818558823002297,
+        "normal_95_ci": [
+          13.320159950076127,
+          16.52891053624513
+        ]
+      },
+      "decisions": 91817,
+      "overruns": 0,
+      "latency_us": {
+        "p50": 40.591,
+        "p95": 209.917,
+        "p99": 232.109,
+        "p999": 254.884,
+        "max": 286.927
+      },
+      "internal_fallbacks": 0
+    },
+    {
+      "experiment": "final_standard",
+      "suite": "challenge",
+      "payouts": [
+        25,
+        25,
+        25,
+        25,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tables": 512,
+      "points": {
+        "n": 512,
+        "mean": 14.642260394437468,
+        "standard_error": 0.5445438834627393,
+        "normal_95_ci": [
+          13.5749543828505,
+          15.709566406024436
+        ]
+      },
+      "decisions": 93856,
+      "overruns": 0,
+      "latency_us": {
+        "p50": 40.784,
+        "p95": 210.712,
+        "p99": 233.612,
+        "p999": 259.951,
+        "max": 300.56
+      },
+      "internal_fallbacks": 0
+    },
+    {
+      "experiment": "final_standard",
+      "suite": "challenge",
+      "payouts": [
+        100,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tables": 512,
+      "points": {
+        "n": 512,
+        "mean": 19.83719482421875,
+        "standard_error": 1.4926910056519624,
+        "normal_95_ci": [
+          16.911520453140902,
+          22.762869195296595
+        ]
+      },
+      "decisions": 95629,
+      "overruns": 3,
+      "latency_us": {
+        "p50": 41.16,
+        "p95": 210.206,
+        "p99": 230.801,
+        "p999": 252.281,
+        "max": 33219.193
+      },
+      "internal_fallbacks": 0
+    },
+    {
+      "experiment": "final_standard",
+      "suite": "selfplay",
+      "payouts": [
+        50,
+        30,
+        20,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tables": 512,
+      "points": {
+        "n": 512,
+        "mean": 11.74958642457536,
+        "standard_error": 0.7440795483297451,
+        "normal_95_ci": [
+          10.29119050984906,
+          13.207982339301662
+        ]
+      },
+      "decisions": 90914,
+      "overruns": 0,
+      "latency_us": {
+        "p50": 35.592,
+        "p95": 211.071,
+        "p99": 239.796,
+        "p999": 259.955,
+        "max": 536.082
+      },
+      "internal_fallbacks": 0
+    },
+    {
+      "experiment": "final_standard",
+      "suite": "selfplay",
+      "payouts": [
+        25,
+        25,
+        25,
+        25,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tables": 512,
+      "points": {
+        "n": 512,
+        "mean": 12.246271655831118,
+        "standard_error": 0.5511894595922516,
+        "normal_95_ci": [
+          11.165940315030305,
+          13.32660299663193
+        ]
+      },
+      "decisions": 90623,
+      "overruns": 0,
+      "latency_us": {
+        "p50": 34.809,
+        "p95": 202.097,
+        "p99": 229.261,
+        "p999": 254.122,
+        "max": 677.043
+      },
+      "internal_fallbacks": 0
+    },
+    {
+      "experiment": "final_standard",
+      "suite": "selfplay",
+      "payouts": [
+        100,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tables": 512,
+      "points": {
+        "n": 512,
+        "mean": 13.8539794921875,
+        "standard_error": 1.253622579193851,
+        "normal_95_ci": [
+          11.396879236967553,
+          16.311079747407447
+        ]
+      },
+      "decisions": 89971,
+      "overruns": 0,
+      "latency_us": {
+        "p50": 34.899,
+        "p95": 200.794,
+        "p99": 224.114,
+        "p999": 246.823,
+        "max": 278.615
+      },
+      "internal_fallbacks": 0
+    },
+    {
+      "experiment": "final_hidden_payouts",
+      "suite": "mixed",
+      "payouts": [
+        35,
+        25,
+        18,
+        12,
+        6,
+        3,
+        1,
+        0
+      ],
+      "tables": 512,
+      "points": {
+        "n": 512,
+        "mean": 25.727786471415968,
+        "standard_error": 0.41270873872361535,
+        "normal_95_ci": [
+          24.918877343517682,
+          26.536695599314253
+        ]
+      },
+      "decisions": 99515,
+      "overruns": 0,
+      "latency_us": {
+        "p50": 37.794,
+        "p95": 230.074,
+        "p99": 249.575,
+        "p999": 269.809,
+        "max": 692.115
+      },
+      "internal_fallbacks": 0
+    },
+    {
+      "experiment": "final_hidden_payouts",
+      "suite": "challenge",
+      "payouts": [
+        35,
+        25,
+        18,
+        12,
+        6,
+        3,
+        1,
+        0
+      ],
+      "tables": 512,
+      "points": {
+        "n": 512,
+        "mean": 15.332774014668958,
+        "standard_error": 0.5492523130928393,
+        "normal_95_ci": [
+          14.256239481006993,
+          16.409308548330923
+        ]
+      },
+      "decisions": 94236,
+      "overruns": 0,
+      "latency_us": {
+        "p50": 39.946,
+        "p95": 205.027,
+        "p99": 224.89,
+        "p999": 247.746,
+        "max": 680.206
+      },
+      "internal_fallbacks": 0
+    },
+    {
+      "experiment": "final_hidden_payouts",
+      "suite": "selfplay",
+      "payouts": [
+        35,
+        25,
+        18,
+        12,
+        6,
+        3,
+        1,
+        0
+      ],
+      "tables": 512,
+      "points": {
+        "n": 512,
+        "mean": 12.361685416474002,
+        "standard_error": 0.5192627360336745,
+        "normal_95_ci": [
+          11.343930453848,
+          13.379440379100004
+        ]
+      },
+      "decisions": 89596,
+      "overruns": 0,
+      "latency_us": {
+        "p50": 34.311,
+        "p95": 203.044,
+        "p99": 228.275,
+        "p999": 251.236,
+        "max": 667.888
+      },
+      "internal_fallbacks": 0
+    },
+    {
+      "experiment": "final_fast_blinds",
+      "suite": "mixed",
+      "payouts": [
+        50,
+        30,
+        20,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tables": 512,
+      "points": {
+        "n": 512,
+        "mean": 31.03515625,
+        "standard_error": 0.8366805089442055,
+        "normal_95_ci": [
+          29.395262452469357,
+          32.67505004753064
+        ]
+      },
+      "decisions": 77609,
+      "overruns": 0,
+      "latency_us": {
+        "p50": 41.488,
+        "p95": 240.126,
+        "p99": 259.245,
+        "p999": 278.261,
+        "max": 476.765
+      },
+      "internal_fallbacks": 0
+    },
+    {
+      "experiment": "final_fast_blinds",
+      "suite": "mixed",
+      "payouts": [
+        35,
+        25,
+        18,
+        12,
+        6,
+        3,
+        1,
+        0
+      ],
+      "tables": 512,
+      "points": {
+        "n": 512,
+        "mean": 24.609049479166668,
+        "standard_error": 0.42419354932673015,
+        "normal_95_ci": [
+          23.777630122486276,
+          25.44046883584706
+        ]
+      },
+      "decisions": 77373,
+      "overruns": 0,
+      "latency_us": {
+        "p50": 41.581,
+        "p95": 237.662,
+        "p99": 256.853,
+        "p999": 276.636,
+        "max": 314.166
+      },
+      "internal_fallbacks": 0
+    },
+    {
+      "experiment": "final_fast_blinds",
+      "suite": "challenge",
+      "payouts": [
+        50,
+        30,
+        20,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tables": 512,
+      "points": {
+        "n": 512,
+        "mean": 15.29296875,
+        "standard_error": 0.8511838990276086,
+        "normal_95_ci": [
+          13.624648307905886,
+          16.961289192094114
+        ]
+      },
+      "decisions": 70559,
+      "overruns": 0,
+      "latency_us": {
+        "p50": 42.64,
+        "p95": 210.628,
+        "p99": 233.319,
+        "p999": 256.232,
+        "max": 468.513
+      },
+      "internal_fallbacks": 0
+    },
+    {
+      "experiment": "final_fast_blinds",
+      "suite": "challenge",
+      "payouts": [
+        35,
+        25,
+        18,
+        12,
+        6,
+        3,
+        1,
+        0
+      ],
+      "tables": 512,
+      "points": {
+        "n": 512,
+        "mean": 15.21875,
+        "standard_error": 0.5654666685176951,
+        "normal_95_ci": [
+          14.110435329705318,
+          16.327064670294682
+        ]
+      },
+      "decisions": 71292,
+      "overruns": 0,
+      "latency_us": {
+        "p50": 42.346,
+        "p95": 210.385,
+        "p99": 233.205,
+        "p999": 274.974,
+        "max": 324.838
+      },
+      "internal_fallbacks": 0
+    },
+    {
+      "experiment": "final_fast_blinds",
+      "suite": "selfplay",
+      "payouts": [
+        50,
+        30,
+        20,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tables": 512,
+      "points": {
+        "n": 512,
+        "mean": 10.78125,
+        "standard_error": 0.7083799471922879,
+        "normal_95_ci": [
+          9.392825303503116,
+          12.169674696496884
+        ]
+      },
+      "decisions": 68216,
+      "overruns": 0,
+      "latency_us": {
+        "p50": 35.342,
+        "p95": 201.947,
+        "p99": 230.654,
+        "p999": 255.122,
+        "max": 284.166
+      },
+      "internal_fallbacks": 0
+    },
+    {
+      "experiment": "final_fast_blinds",
+      "suite": "selfplay",
+      "payouts": [
+        35,
+        25,
+        18,
+        12,
+        6,
+        3,
+        1,
+        0
+      ],
+      "tables": 512,
+      "points": {
+        "n": 512,
+        "mean": 13.03125,
+        "standard_error": 0.5076225323961514,
+        "normal_95_ci": [
+          12.036309836503543,
+          14.026190163496457
+        ]
+      },
+      "decisions": 69965,
+      "overruns": 0,
+      "latency_us": {
+        "p50": 35.508,
+        "p95": 203.88,
+        "p99": 233.213,
+        "p999": 267.221,
+        "max": 315.942
+      },
+      "internal_fallbacks": 0
+    }
+  ],
+  "model_test": {
+    "overall": {
+      "n": 28000,
+      "mae": 0.028401578626588698,
+      "rmse": 0.048403334501336055,
+      "bias": 0.007893741313165855,
+      "p95_absolute": 0.10158916501172993,
+      "p99_absolute": 0.19118240766099498,
+      "max_absolute": 0.5645794525480606
+    },
+    "by_street": {
+      "3": {
+        "n": 9252,
+        "mae": 0.02094146696577213,
+        "rmse": 0.031231440377645976,
+        "bias": 0.005163612536202576,
+        "p95_absolute": 0.0682746338,
+        "p99_absolute": 0.11076348513208395,
+        "max_absolute": 0.24287960728221936
+      },
+      "4": {
+        "n": 9404,
+        "mae": 0.026462053679580506,
+        "rmse": 0.04052750285201849,
+        "bias": 0.006412427283816729,
+        "p95_absolute": 0.0863226294880276,
+        "p99_absolute": 0.13824153346766785,
+        "max_absolute": 0.42590424037039887
+      },
+      "5": {
+        "n": 9344,
+        "mae": 0.03774021793390247,
+        "rmse": 0.06634606558600964,
+        "bias": 0.012087815433078469,
+        "p95_absolute": 0.14745912280709286,
+        "p99_absolute": 0.2577277188112186,
+        "max_absolute": 0.5645794525480606
+      }
+    },
+    "by_opponents": {
+      "1": {
+        "n": 4058,
+        "mae": 0.021101664023130816,
+        "rmse": 0.03097727333110978,
+        "bias": 0.0006272512086121371,
+        "p95_absolute": 0.06613513380842406,
+        "p99_absolute": 0.10708855263793726,
+        "max_absolute": 0.22673723159300607
+      },
+      "2": {
+        "n": 3931,
+        "mae": 0.020003326134832484,
+        "rmse": 0.030960283181681012,
+        "bias": -0.0002838921097388065,
+        "p95_absolute": 0.0677682988979813,
+        "p99_absolute": 0.11047405508590152,
+        "max_absolute": 0.21171086551308332
+      },
+      "3": {
+        "n": 4038,
+        "mae": 0.023814019673821327,
+        "rmse": 0.039637230991673406,
+        "bias": -0.0009786930452244554,
+        "p95_absolute": 0.08282748837960249,
+        "p99_absolute": 0.16515056058750022,
+        "max_absolute": 0.3014232255136601
+      },
+      "4": {
+        "n": 4006,
+        "mae": 0.04385677318505037,
+        "rmse": 0.06395370951967827,
+        "bias": 0.03634337348003874,
+        "p95_absolute": 0.12718207258722222,
+        "p99_absolute": 0.2111859719410719,
+        "max_absolute": 0.37781997021323693
+      },
+      "5": {
+        "n": 4005,
+        "mae": 0.02839450145506929,
+        "rmse": 0.051660813366794935,
+        "bias": -0.000632895833636347,
+        "p95_absolute": 0.11258315060999396,
+        "p99_absolute": 0.20907913785196308,
+        "max_absolute": 0.48921810461992965
+      },
+      "6": {
+        "n": 3975,
+        "mae": 0.03310743469287435,
+        "rmse": 0.05664557810937642,
+        "bias": 0.0168753699093407,
+        "p95_absolute": 0.11874806276654176,
+        "p99_absolute": 0.22388569340566877,
+        "max_absolute": 0.5645794525480606
+      },
+      "7": {
+        "n": 3987,
+        "mae": 0.02854459439394577,
+        "rmse": 0.05432467732143423,
+        "bias": 0.003363659901465911,
+        "p95_absolute": 0.11392613022993414,
+        "p99_absolute": 0.23817810975082754,
+        "max_absolute": 0.48648480321117316
+      }
+    },
+    "seed": 1890017,
+    "label_trials": 8192,
+    "data_sha256": "67cfd21dd38cf8cd93cd724500a20b7357c5edc775cceb7951380cba204cf48d"
+  },
+  "latency_replay": {
+    "platform": "Linux-4.18.0-553.147.1.el8_10.x86_64-x86_64-with-glibc2.28",
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:27:36) [GCC 11.2.0]",
+    "config": {},
+    "model_and_source_sha256": {
+      "agent.py": "66a969bb484f4c16adf8f7aeccca224bf516ba9f51ec022ad20a4077a533e224",
+      "policy/icm.py": "6b22ae47eeab8a436f1098806ebfc886af2f8ce52971e4c127f40e703c9951cd",
+      "policy/icm_fast.py": "ced0b224b90386c441434b16f8577f4325227265d869d4c5811515e3df162432",
+      "policy/texture.py": "13e7d1e526aa5477b9c691ee9a3855673467b7c1dc1cc2dd3e4fd07a5ebee417",
+      "equity/model.py": "d370beecace244c53346512f2027fb1d7adce70116a657bc260b1fdd48b2ec7a",
+      "equity/preflop.py": "64fd15a3e576dbd55992762fb1f6abe031ddc7c49da0d631d61443f302e7f339",
+      "equity/features.py": "00ecc905e710cf87c473dd2d6f0c171d903f1ef59a37518787ab81ac0284d137",
+      "equity/evaluator.py": "4761058ec70762e8c41ec13dde115f50c58e417b391687f25d2a76e35a33e3ab",
+      "equity/model.json": "b89c374bc3e77cdc43309cd1282d6b94e5dc4c0d6e99c6e5fe2360c5f6f7ed60",
+      "equity/preflop.json": "379f36d83bc2d794a70c62be59acddc84740056c135b4e782b4e9af1113545bb",
+      "equity/premium.json": "01c573b8f1df26f1e71614a933e08ec2dcb8c9d30c5e0781b7e03ad3b8e4ff2a",
+      "equity/special.py": "e795f50008e7397ca7dd44d42b26245b48eb2134dfea6fa95b04cad18d54b7c5",
+      "equity/compiled.py": "fae4101b00072962b8a4fd41edb1d0bfc311ccc73cbed3c8d1148ab86ff7417e",
+      "sim/engine.py": "a8f09df775bf6ac390d477d97afeb8e2cbf972fb9010063cee3b3ef0b5aadef3",
+      "sim/baselines.py": "436ab7578499d4dd1e1a75ff7de57e284a59ba8083cff828601511931a55bcd8",
+      "sim/benchmark.py": "4dc4099f8527a1aecca6dcbe07bfad3e53a9f0c5a01996489722ddf4442921b6"
+    },
+    "wall_us": {
+      "n": 33286,
+      "p50": 32.008,
+      "p95": 192.96,
+      "p99": 205.837,
+      "p999": 220.044,
+      "max": 287.487,
+      "over_1ms": 0
+    },
+    "process_cpu_us": {
+      "n": 33286,
+      "p50": 32.38,
+      "p95": 193.043,
+      "p99": 205.8,
+      "p999": 219.204,
+      "max": 288.163,
+      "over_1ms": 0
+    },
+    "wall_by_street_us": {
+      "preflop": {
+        "n": 18662,
+        "p50": 18.369,
+        "p95": 37.559,
+        "p99": 54.512,
+        "p999": 75.165,
+        "max": 276.942,
+        "over_1ms": 0
+      },
+      "flop": {
+        "n": 4508,
+        "p50": 147.935,
+        "p95": 163.866,
+        "p99": 173.619,
+        "p999": 191.804,
+        "max": 260.894,
+        "over_1ms": 0
+      },
+      "turn": {
+        "n": 3416,
+        "p50": 149.557,
+        "p95": 165.599,
+        "p99": 175.68,
+        "p999": 193.778,
+        "max": 239.62,
+        "over_1ms": 0
+      },
+      "river": {
+        "n": 2700,
+        "p50": 146.424,
+        "p95": 167.611,
+        "p99": 183.299,
+        "p999": 199.597,
+        "max": 223.354,
+        "over_1ms": 0
+      },
+      "icm_stress": {
+        "n": 4000,
+        "p50": 190.878,
+        "p95": 209.069,
+        "p99": 218.022,
+        "p999": 265.01,
+        "max": 287.487,
+        "over_1ms": 0
+      }
+    },
+    "cpu_by_street_us": {
+      "preflop": {
+        "n": 18662,
+        "p50": 18.72,
+        "p95": 37.673,
+        "p99": 54.566,
+        "p999": 75.31,
+        "max": 277.605,
+        "over_1ms": 0
+      },
+      "flop": {
+        "n": 4508,
+        "p50": 147.869,
+        "p95": 162.68,
+        "p99": 171.413,
+        "p999": 192.336,
+        "max": 261.426,
+        "over_1ms": 0
+      },
+      "turn": {
+        "n": 3416,
+        "p50": 149.634,
+        "p95": 164.675,
+        "p99": 173.147,
+        "p999": 194.361,
+        "max": 235.939,
+        "over_1ms": 0
+      },
+      "river": {
+        "n": 2700,
+        "p50": 146.502,
+        "p95": 166.477,
+        "p99": 182.043,
+        "p999": 196.715,
+        "max": 223.894,
+        "over_1ms": 0
+      },
+      "icm_stress": {
+        "n": 4000,
+        "p50": 190.951,
+        "p95": 208.679,
+        "p99": 217.036,
+        "p999": 264.462,
+        "max": 288.163,
+        "over_1ms": 0
+      }
+    },
+    "internal_fallbacks": 0,
+    "illegal_actions": 0,
+    "observation_corpus_tables": 150,
+    "observations": 29286,
+    "limitations": [
+      "Initialization and JSON decoding excluded; actual act call measured.",
+      "CPU timing includes timer instrumentation; Windows CPU clock resolution can be coarse.",
+      "Wall-time overruns retained; no hard realtime guarantee."
+    ]
+  },
+  "limitations": [
+    "Synthetic opponents/payouts/blind schedule; no contest ranking prediction.",
+    "Model ranges are preflop abstractions; postflop selection is heuristic.",
+    "1ms wall overruns trigger actual simulated check/fold; none are discarded.",
+    "Startup, serialization and unavailable official adapter are outside act timing."
+  ]
+}

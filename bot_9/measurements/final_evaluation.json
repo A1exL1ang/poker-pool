@@ -1,0 +1,1433 @@
+{
+  "purpose": "Held-out evidence after frozen policy; no subsequent tuning",
+  "suite_definitions": [
+    [
+      "mixed_sng",
+      "mixed",
+      "sng",
+      100000,
+      1000,
+      true,
+      null
+    ],
+    [
+      "mixed_wta",
+      "mixed",
+      "wta",
+      110000,
+      1000,
+      true,
+      null
+    ],
+    [
+      "reference_sng",
+      "reference",
+      "sng",
+      120000,
+      1000,
+      true,
+      null
+    ],
+    [
+      "mirror_sng",
+      "mirror",
+      "sng",
+      130000,
+      1000,
+      true,
+      null
+    ],
+    [
+      "mixed_flat3",
+      "mixed",
+      "flat3",
+      140000,
+      1000,
+      true,
+      null
+    ],
+    [
+      "mixed_fast_blinds",
+      "mixed",
+      "sng",
+      150000,
+      1000,
+      true,
+      [
+        [
+          10,
+          20
+        ],
+        [
+          20,
+          40
+        ],
+        [
+          40,
+          80
+        ],
+        [
+          80,
+          160
+        ],
+        [
+          160,
+          320
+        ],
+        [
+          320,
+          640
+        ],
+        [
+          640,
+          1280
+        ],
+        [
+          1280,
+          2560
+        ]
+      ]
+    ],
+    [
+      "mc_mixed_sng",
+      "mc,value,nit,loose,station,mirror,value",
+      "sng",
+      160000,
+      256,
+      false,
+      null
+    ],
+    [
+      "mc_sng",
+      "mc",
+      "sng",
+      170000,
+      64,
+      false,
+      null
+    ]
+  ],
+  "elapsed_seconds": 206.77927899360657,
+  "results": {
+    "mixed_sng": {
+      "config": {
+        "tables": 1000,
+        "split": "heldout",
+        "seed_start": 100000,
+        "lineup": [
+          "station",
+          "nit",
+          "loose",
+          "maniac",
+          "random",
+          "value",
+          "value"
+        ],
+        "payouts": [
+          0.5,
+          0.3,
+          0.2,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "synthetic_payouts": true,
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "synthetic_blinds": true,
+        "max_hands": 200,
+        "initial_stack": 2000,
+        "enforce_time_limit": true,
+        "benchmark_only_slow_opponents": [],
+        "baseline_reference_params": null,
+        "params": null,
+        "effective_defaults": {
+          "open_scale": 1.1,
+          "call_margin": 0.05,
+          "value_threshold": 0.69,
+          "bluff_scale": 0.5,
+          "risk_scale": 1.0,
+          "cbet": 0.5,
+          "postflop_range_weight": 0.6,
+          "shove_max_bb": 11.0,
+          "conditional_weight": 0.95,
+          "bluff_prior": 0.1,
+          "bet_penalty_scale": 1.25
+        },
+        "effective_params": {
+          "open_scale": 1.1,
+          "call_margin": 0.05,
+          "value_threshold": 0.69,
+          "bluff_scale": 0.5,
+          "risk_scale": 1.0,
+          "cbet": 0.5,
+          "postflop_range_weight": 0.6,
+          "shove_max_bb": 11.0,
+          "conditional_weight": 0.95,
+          "bluff_prior": 0.1,
+          "bet_penalty_scale": 1.25
+        },
+        "model_path": null,
+        "stress": false
+      },
+      "focal_points": {
+        "n": 1000,
+        "mean": 0.3206435931288594,
+        "stderr": 0.0053042996801134345,
+        "ci95": [
+          0.3102471657558371,
+          0.33104002050188175
+        ]
+      },
+      "equal_share_reference": 0.125,
+      "finish_distribution": [
+        0.3951649375000001,
+        0.29294111878859447,
+        0.17589394371140563,
+        0.081,
+        0.0215,
+        0.018833333333333334,
+        0.008333333333333331,
+        0.006333333333333333
+      ],
+      "focal_diagnostics": {
+        "decisions": 177343,
+        "engine_errors": 0,
+        "internal_fallbacks": 0,
+        "enforced_timeouts": 0,
+        "actions": {
+          "fold": 64233,
+          "check": 48121,
+          "call": 8118,
+          "raise_": 56871
+        }
+      },
+      "all_diagnostics": {
+        "decisions": 711676,
+        "engine_errors": 0,
+        "internal_fallbacks": 0,
+        "enforced_timeouts": 1
+      },
+      "focal_latency": {
+        "n": 177343,
+        "p50_ns": 25559.0,
+        "p95_ns": 94448.0,
+        "p99_ns": 109446.0,
+        "p999_ns": 191054.97799999773,
+        "max_ns": 972032,
+        "over_1ms": 0,
+        "over_1ms_rate": 0.0
+      },
+      "wall_seconds": 29.79285322711803,
+      "artifact_sha256": {
+        "bot.py": "eb401fd4b4708aba2770d0915b22f2e1f8237240949112239956714a98b15132",
+        "model.py": "0b902f8dc664bf85b1addc09a362a4c31f9051aabd853638ff496cbb4e120a91",
+        "features.py": "9cdffaf8dd454fa2bada3ed8c32957a3c35d480123504fa0b46e527213c455e1",
+        "equity.py": "955f5f40da9c57bc5d8effc08c8584ead3959a017adc50f6dafab5200ccb9cfd",
+        "evaluator.py": "d704f3c148dfcd644a2bdfb7ddf8e62a894126ee71518666bc32fb1e224607dc",
+        "engine.py": "3e7d9f3978f52ff184f16b72a7c2bc8121f1ce441afcfaa3c25fb00fafa1c8c5",
+        "baselines.py": "018f24a7b3b0a742eb5f6e2a0f85202ff9d01f53f34dde35b4a382ac8e526266",
+        "assets/equity_model.json.gz": "583773cff5b349953d87faf0a14980876c959b6a61d1790ef55451460c987df1",
+        "assets/equity_model.bin": "292a35acd0ef90a57267a3236572686c32a069d57c578a599620dac5b09d2253",
+        "assets/preflop.csv": "932e8151725b8fa991446eabff14df7f680ba1d5e52eb9dc53ce2c66e71d30f7"
+      },
+      "runtime": {
+        "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:27:36) [GCC 11.2.0]",
+        "implementation": "CPython",
+        "platform": "Linux-4.18.0-553.147.1.el8_10.x86_64-x86_64-with-glibc2.28",
+        "machine": "x86_64"
+      }
+    },
+    "mixed_wta": {
+      "config": {
+        "tables": 1000,
+        "split": "heldout",
+        "seed_start": 110000,
+        "lineup": [
+          "station",
+          "nit",
+          "loose",
+          "maniac",
+          "random",
+          "value",
+          "value"
+        ],
+        "payouts": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "synthetic_payouts": true,
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "synthetic_blinds": true,
+        "max_hands": 200,
+        "initial_stack": 2000,
+        "enforce_time_limit": true,
+        "benchmark_only_slow_opponents": [],
+        "baseline_reference_params": null,
+        "params": null,
+        "effective_defaults": {
+          "open_scale": 1.1,
+          "call_margin": 0.05,
+          "value_threshold": 0.69,
+          "bluff_scale": 0.5,
+          "risk_scale": 1.0,
+          "cbet": 0.5,
+          "postflop_range_weight": 0.6,
+          "shove_max_bb": 11.0,
+          "conditional_weight": 0.95,
+          "bluff_prior": 0.1,
+          "bet_penalty_scale": 1.25
+        },
+        "effective_params": {
+          "open_scale": 1.1,
+          "call_margin": 0.05,
+          "value_threshold": 0.69,
+          "bluff_scale": 0.5,
+          "risk_scale": 1.0,
+          "cbet": 0.5,
+          "postflop_range_weight": 0.6,
+          "shove_max_bb": 11.0,
+          "conditional_weight": 0.95,
+          "bluff_prior": 0.1,
+          "bet_penalty_scale": 1.25
+        },
+        "model_path": null,
+        "stress": false
+      },
+      "focal_points": {
+        "n": 1000,
+        "mean": 0.4035983125,
+        "stderr": 0.014614828744987192,
+        "ci95": [
+          0.3749532481598251,
+          0.4322433768401749
+        ]
+      },
+      "equal_share_reference": 0.125,
+      "finish_distribution": [
+        0.4035983125,
+        0.25375695101584395,
+        0.1886447364841561,
+        0.082,
+        0.03725,
+        0.015083333333333334,
+        0.013583333333333334,
+        0.006083333333333333
+      ],
+      "focal_diagnostics": {
+        "decisions": 177218,
+        "engine_errors": 0,
+        "internal_fallbacks": 0,
+        "enforced_timeouts": 0,
+        "actions": {
+          "fold": 62380,
+          "check": 49719,
+          "call": 7943,
+          "raise_": 57176
+        }
+      },
+      "all_diagnostics": {
+        "decisions": 728811,
+        "engine_errors": 0,
+        "internal_fallbacks": 0,
+        "enforced_timeouts": 1
+      },
+      "focal_latency": {
+        "n": 177218,
+        "p50_ns": 22462.0,
+        "p95_ns": 93677.0,
+        "p99_ns": 101912.0,
+        "p999_ns": 206233.77299999777,
+        "max_ns": 468232,
+        "over_1ms": 0,
+        "over_1ms_rate": 0.0
+      },
+      "wall_seconds": 29.888903276994824,
+      "artifact_sha256": {
+        "bot.py": "eb401fd4b4708aba2770d0915b22f2e1f8237240949112239956714a98b15132",
+        "model.py": "0b902f8dc664bf85b1addc09a362a4c31f9051aabd853638ff496cbb4e120a91",
+        "features.py": "9cdffaf8dd454fa2bada3ed8c32957a3c35d480123504fa0b46e527213c455e1",
+        "equity.py": "955f5f40da9c57bc5d8effc08c8584ead3959a017adc50f6dafab5200ccb9cfd",
+        "evaluator.py": "d704f3c148dfcd644a2bdfb7ddf8e62a894126ee71518666bc32fb1e224607dc",
+        "engine.py": "3e7d9f3978f52ff184f16b72a7c2bc8121f1ce441afcfaa3c25fb00fafa1c8c5",
+        "baselines.py": "018f24a7b3b0a742eb5f6e2a0f85202ff9d01f53f34dde35b4a382ac8e526266",
+        "assets/equity_model.json.gz": "583773cff5b349953d87faf0a14980876c959b6a61d1790ef55451460c987df1",
+        "assets/equity_model.bin": "292a35acd0ef90a57267a3236572686c32a069d57c578a599620dac5b09d2253",
+        "assets/preflop.csv": "932e8151725b8fa991446eabff14df7f680ba1d5e52eb9dc53ce2c66e71d30f7"
+      },
+      "runtime": {
+        "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:27:36) [GCC 11.2.0]",
+        "implementation": "CPython",
+        "platform": "Linux-4.18.0-553.147.1.el8_10.x86_64-x86_64-with-glibc2.28",
+        "machine": "x86_64"
+      }
+    },
+    "reference_sng": {
+      "config": {
+        "tables": 1000,
+        "split": "heldout",
+        "seed_start": 120000,
+        "lineup": [
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference",
+          "reference"
+        ],
+        "payouts": [
+          0.5,
+          0.3,
+          0.2,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "synthetic_payouts": true,
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "synthetic_blinds": true,
+        "max_hands": 200,
+        "initial_stack": 2000,
+        "enforce_time_limit": true,
+        "benchmark_only_slow_opponents": [],
+        "baseline_reference_params": {
+          "open_scale": 1.0,
+          "call_margin": 0.025,
+          "value_threshold": 0.69,
+          "bluff_scale": 1.0,
+          "risk_scale": 1.0,
+          "cbet": 0.54,
+          "postflop_range_weight": 0.6,
+          "shove_max_bb": 11.0,
+          "conditional_weight": 0.75,
+          "bluff_prior": 0.18,
+          "bet_penalty_scale": 1.0
+        },
+        "params": null,
+        "effective_defaults": {
+          "open_scale": 1.1,
+          "call_margin": 0.05,
+          "value_threshold": 0.69,
+          "bluff_scale": 0.5,
+          "risk_scale": 1.0,
+          "cbet": 0.5,
+          "postflop_range_weight": 0.6,
+          "shove_max_bb": 11.0,
+          "conditional_weight": 0.95,
+          "bluff_prior": 0.1,
+          "bet_penalty_scale": 1.25
+        },
+        "effective_params": {
+          "open_scale": 1.1,
+          "call_margin": 0.05,
+          "value_threshold": 0.69,
+          "bluff_scale": 0.5,
+          "risk_scale": 1.0,
+          "cbet": 0.5,
+          "postflop_range_weight": 0.6,
+          "shove_max_bb": 11.0,
+          "conditional_weight": 0.95,
+          "bluff_prior": 0.1,
+          "bet_penalty_scale": 1.25
+        },
+        "model_path": null,
+        "stress": false
+      },
+      "focal_points": {
+        "n": 1000,
+        "mean": 0.1553599875,
+        "stderr": 0.0059210387105911085,
+        "ci95": [
+          0.1437547516272414,
+          0.16696522337275857
+        ]
+      },
+      "equal_share_reference": 0.125,
+      "finish_distribution": [
+        0.16129993750000002,
+        0.1417000625,
+        0.161,
+        0.13,
+        0.112,
+        0.108,
+        0.093,
+        0.093
+      ],
+      "focal_diagnostics": {
+        "decisions": 164610,
+        "engine_errors": 0,
+        "internal_fallbacks": 0,
+        "enforced_timeouts": 0,
+        "actions": {
+          "fold": 93044,
+          "check": 21500,
+          "call": 13416,
+          "raise_": 36650
+        }
+      },
+      "all_diagnostics": {
+        "decisions": 1222884,
+        "engine_errors": 0,
+        "internal_fallbacks": 0,
+        "enforced_timeouts": 0
+      },
+      "focal_latency": {
+        "n": 164610,
+        "p50_ns": 27502.0,
+        "p95_ns": 93165.54999999999,
+        "p99_ns": 111410.0,
+        "p999_ns": 150857.3310000011,
+        "max_ns": 788946,
+        "over_1ms": 0,
+        "over_1ms_rate": 0.0
+      },
+      "wall_seconds": 75.63141393614933,
+      "artifact_sha256": {
+        "bot.py": "eb401fd4b4708aba2770d0915b22f2e1f8237240949112239956714a98b15132",
+        "model.py": "0b902f8dc664bf85b1addc09a362a4c31f9051aabd853638ff496cbb4e120a91",
+        "features.py": "9cdffaf8dd454fa2bada3ed8c32957a3c35d480123504fa0b46e527213c455e1",
+        "equity.py": "955f5f40da9c57bc5d8effc08c8584ead3959a017adc50f6dafab5200ccb9cfd",
+        "evaluator.py": "d704f3c148dfcd644a2bdfb7ddf8e62a894126ee71518666bc32fb1e224607dc",
+        "engine.py": "3e7d9f3978f52ff184f16b72a7c2bc8121f1ce441afcfaa3c25fb00fafa1c8c5",
+        "baselines.py": "018f24a7b3b0a742eb5f6e2a0f85202ff9d01f53f34dde35b4a382ac8e526266",
+        "assets/equity_model.json.gz": "583773cff5b349953d87faf0a14980876c959b6a61d1790ef55451460c987df1",
+        "assets/equity_model.bin": "292a35acd0ef90a57267a3236572686c32a069d57c578a599620dac5b09d2253",
+        "assets/preflop.csv": "932e8151725b8fa991446eabff14df7f680ba1d5e52eb9dc53ce2c66e71d30f7"
+      },
+      "runtime": {
+        "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:27:36) [GCC 11.2.0]",
+        "implementation": "CPython",
+        "platform": "Linux-4.18.0-553.147.1.el8_10.x86_64-x86_64-with-glibc2.28",
+        "machine": "x86_64"
+      }
+    },
+    "mirror_sng": {
+      "config": {
+        "tables": 1000,
+        "split": "heldout",
+        "seed_start": 130000,
+        "lineup": [
+          "mirror",
+          "mirror",
+          "mirror",
+          "mirror",
+          "mirror",
+          "mirror",
+          "mirror"
+        ],
+        "payouts": [
+          0.5,
+          0.3,
+          0.2,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "synthetic_payouts": true,
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "synthetic_blinds": true,
+        "max_hands": 200,
+        "initial_stack": 2000,
+        "enforce_time_limit": true,
+        "benchmark_only_slow_opponents": [],
+        "baseline_reference_params": null,
+        "params": null,
+        "effective_defaults": {
+          "open_scale": 1.1,
+          "call_margin": 0.05,
+          "value_threshold": 0.69,
+          "bluff_scale": 0.5,
+          "risk_scale": 1.0,
+          "cbet": 0.5,
+          "postflop_range_weight": 0.6,
+          "shove_max_bb": 11.0,
+          "conditional_weight": 0.95,
+          "bluff_prior": 0.1,
+          "bet_penalty_scale": 1.25
+        },
+        "effective_params": {
+          "open_scale": 1.1,
+          "call_margin": 0.05,
+          "value_threshold": 0.69,
+          "bluff_scale": 0.5,
+          "risk_scale": 1.0,
+          "cbet": 0.5,
+          "postflop_range_weight": 0.6,
+          "shove_max_bb": 11.0,
+          "conditional_weight": 0.95,
+          "bluff_prior": 0.1,
+          "bet_penalty_scale": 1.25
+        },
+        "model_path": null,
+        "stress": false
+      },
+      "focal_points": {
+        "n": 1000,
+        "mean": 0.10942846249999999,
+        "stderr": 0.005447841997781106,
+        "ci95": [
+          0.09875069218434902,
+          0.12010623281565096
+        ]
+      },
+      "equal_share_reference": 0.125,
+      "finish_distribution": [
+        0.11414231249999998,
+        0.1018576875,
+        0.109,
+        0.108,
+        0.143,
+        0.14,
+        0.135,
+        0.149
+      ],
+      "focal_diagnostics": {
+        "decisions": 156465,
+        "engine_errors": 0,
+        "internal_fallbacks": 0,
+        "enforced_timeouts": 0,
+        "actions": {
+          "fold": 95816,
+          "check": 17491,
+          "call": 12856,
+          "raise_": 30302
+        }
+      },
+      "all_diagnostics": {
+        "decisions": 1304170,
+        "engine_errors": 0,
+        "internal_fallbacks": 0,
+        "enforced_timeouts": 2
+      },
+      "focal_latency": {
+        "n": 156465,
+        "p50_ns": 27442.0,
+        "p95_ns": 89005.1999999999,
+        "p99_ns": 100870.0,
+        "p999_ns": 143415.82399999994,
+        "max_ns": 984475,
+        "over_1ms": 0,
+        "over_1ms_rate": 0.0
+      },
+      "wall_seconds": 75.05522720399313,
+      "artifact_sha256": {
+        "bot.py": "eb401fd4b4708aba2770d0915b22f2e1f8237240949112239956714a98b15132",
+        "model.py": "0b902f8dc664bf85b1addc09a362a4c31f9051aabd853638ff496cbb4e120a91",
+        "features.py": "9cdffaf8dd454fa2bada3ed8c32957a3c35d480123504fa0b46e527213c455e1",
+        "equity.py": "955f5f40da9c57bc5d8effc08c8584ead3959a017adc50f6dafab5200ccb9cfd",
+        "evaluator.py": "d704f3c148dfcd644a2bdfb7ddf8e62a894126ee71518666bc32fb1e224607dc",
+        "engine.py": "3e7d9f3978f52ff184f16b72a7c2bc8121f1ce441afcfaa3c25fb00fafa1c8c5",
+        "baselines.py": "018f24a7b3b0a742eb5f6e2a0f85202ff9d01f53f34dde35b4a382ac8e526266",
+        "assets/equity_model.json.gz": "583773cff5b349953d87faf0a14980876c959b6a61d1790ef55451460c987df1",
+        "assets/equity_model.bin": "292a35acd0ef90a57267a3236572686c32a069d57c578a599620dac5b09d2253",
+        "assets/preflop.csv": "932e8151725b8fa991446eabff14df7f680ba1d5e52eb9dc53ce2c66e71d30f7"
+      },
+      "runtime": {
+        "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:27:36) [GCC 11.2.0]",
+        "implementation": "CPython",
+        "platform": "Linux-4.18.0-553.147.1.el8_10.x86_64-x86_64-with-glibc2.28",
+        "machine": "x86_64"
+      }
+    },
+    "mixed_flat3": {
+      "config": {
+        "tables": 1000,
+        "split": "heldout",
+        "seed_start": 140000,
+        "lineup": [
+          "station",
+          "nit",
+          "loose",
+          "maniac",
+          "random",
+          "value",
+          "value"
+        ],
+        "payouts": [
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "synthetic_payouts": true,
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "synthetic_blinds": true,
+        "max_hands": 200,
+        "initial_stack": 2000,
+        "enforce_time_limit": true,
+        "benchmark_only_slow_opponents": [],
+        "baseline_reference_params": null,
+        "params": null,
+        "effective_defaults": {
+          "open_scale": 1.1,
+          "call_margin": 0.05,
+          "value_threshold": 0.69,
+          "bluff_scale": 0.5,
+          "risk_scale": 1.0,
+          "cbet": 0.5,
+          "postflop_range_weight": 0.6,
+          "shove_max_bb": 11.0,
+          "conditional_weight": 0.95,
+          "bluff_prior": 0.1,
+          "bet_penalty_scale": 1.25
+        },
+        "effective_params": {
+          "open_scale": 1.1,
+          "call_margin": 0.05,
+          "value_threshold": 0.69,
+          "bluff_scale": 0.5,
+          "risk_scale": 1.0,
+          "cbet": 0.5,
+          "postflop_range_weight": 0.6,
+          "shove_max_bb": 11.0,
+          "conditional_weight": 0.95,
+          "bluff_prior": 0.1,
+          "bet_penalty_scale": 1.25
+        },
+        "model_path": null,
+        "stress": false
+      },
+      "focal_points": {
+        "n": 1000,
+        "mean": 0.867,
+        "stderr": 0.010743669132397295,
+        "ci95": [
+          0.8459424085005013,
+          0.8880575914994987
+        ]
+      },
+      "equal_share_reference": 0.375,
+      "finish_distribution": [
+        0.39154993749999994,
+        0.2716384921116808,
+        0.20381157038831932,
+        0.076,
+        0.0355,
+        0.0155,
+        0.004,
+        0.0019999999999999996
+      ],
+      "focal_diagnostics": {
+        "decisions": 183507,
+        "engine_errors": 0,
+        "internal_fallbacks": 0,
+        "enforced_timeouts": 0,
+        "actions": {
+          "fold": 65709,
+          "check": 51327,
+          "call": 8181,
+          "raise_": 58290
+        }
+      },
+      "all_diagnostics": {
+        "decisions": 739143,
+        "engine_errors": 0,
+        "internal_fallbacks": 0,
+        "enforced_timeouts": 1
+      },
+      "focal_latency": {
+        "n": 183507,
+        "p50_ns": 22482.0,
+        "p95_ns": 103785.0,
+        "p99_ns": 119485.0,
+        "p999_ns": 233617.9680000071,
+        "max_ns": 550287,
+        "over_1ms": 0,
+        "over_1ms_rate": 0.0
+      },
+      "wall_seconds": 31.661001715110615,
+      "artifact_sha256": {
+        "bot.py": "eb401fd4b4708aba2770d0915b22f2e1f8237240949112239956714a98b15132",
+        "model.py": "0b902f8dc664bf85b1addc09a362a4c31f9051aabd853638ff496cbb4e120a91",
+        "features.py": "9cdffaf8dd454fa2bada3ed8c32957a3c35d480123504fa0b46e527213c455e1",
+        "equity.py": "955f5f40da9c57bc5d8effc08c8584ead3959a017adc50f6dafab5200ccb9cfd",
+        "evaluator.py": "d704f3c148dfcd644a2bdfb7ddf8e62a894126ee71518666bc32fb1e224607dc",
+        "engine.py": "3e7d9f3978f52ff184f16b72a7c2bc8121f1ce441afcfaa3c25fb00fafa1c8c5",
+        "baselines.py": "018f24a7b3b0a742eb5f6e2a0f85202ff9d01f53f34dde35b4a382ac8e526266",
+        "assets/equity_model.json.gz": "583773cff5b349953d87faf0a14980876c959b6a61d1790ef55451460c987df1",
+        "assets/equity_model.bin": "292a35acd0ef90a57267a3236572686c32a069d57c578a599620dac5b09d2253",
+        "assets/preflop.csv": "932e8151725b8fa991446eabff14df7f680ba1d5e52eb9dc53ce2c66e71d30f7"
+      },
+      "runtime": {
+        "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:27:36) [GCC 11.2.0]",
+        "implementation": "CPython",
+        "platform": "Linux-4.18.0-553.147.1.el8_10.x86_64-x86_64-with-glibc2.28",
+        "machine": "x86_64"
+      }
+    },
+    "mixed_fast_blinds": {
+      "config": {
+        "tables": 1000,
+        "split": "heldout",
+        "seed_start": 150000,
+        "lineup": [
+          "station",
+          "nit",
+          "loose",
+          "maniac",
+          "random",
+          "value",
+          "value"
+        ],
+        "payouts": [
+          0.5,
+          0.3,
+          0.2,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "synthetic_payouts": true,
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            20,
+            40
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            80,
+            160
+          ],
+          [
+            160,
+            320
+          ],
+          [
+            320,
+            640
+          ],
+          [
+            640,
+            1280
+          ],
+          [
+            1280,
+            2560
+          ]
+        ],
+        "synthetic_blinds": false,
+        "max_hands": 200,
+        "initial_stack": 2000,
+        "enforce_time_limit": true,
+        "benchmark_only_slow_opponents": [],
+        "baseline_reference_params": null,
+        "params": null,
+        "effective_defaults": {
+          "open_scale": 1.1,
+          "call_margin": 0.05,
+          "value_threshold": 0.69,
+          "bluff_scale": 0.5,
+          "risk_scale": 1.0,
+          "cbet": 0.5,
+          "postflop_range_weight": 0.6,
+          "shove_max_bb": 11.0,
+          "conditional_weight": 0.95,
+          "bluff_prior": 0.1,
+          "bet_penalty_scale": 1.25
+        },
+        "effective_params": {
+          "open_scale": 1.1,
+          "call_margin": 0.05,
+          "value_threshold": 0.69,
+          "bluff_scale": 0.5,
+          "risk_scale": 1.0,
+          "cbet": 0.5,
+          "postflop_range_weight": 0.6,
+          "shove_max_bb": 11.0,
+          "conditional_weight": 0.95,
+          "bluff_prior": 0.1,
+          "bet_penalty_scale": 1.25
+        },
+        "model_path": null,
+        "stress": false
+      },
+      "focal_points": {
+        "n": 1000,
+        "mean": 0.3147,
+        "stderr": 0.005667983418821551,
+        "ci95": [
+          0.3035907524991097,
+          0.32580924750089024
+        ]
+      },
+      "equal_share_reference": 0.125,
+      "finish_distribution": [
+        0.409,
+        0.228,
+        0.209,
+        0.099,
+        0.03025,
+        0.01725,
+        0.00275,
+        0.004749999999999999
+      ],
+      "focal_diagnostics": {
+        "decisions": 141235,
+        "engine_errors": 0,
+        "internal_fallbacks": 0,
+        "enforced_timeouts": 0,
+        "actions": {
+          "fold": 52848,
+          "check": 37590,
+          "call": 6428,
+          "raise_": 44369
+        }
+      },
+      "all_diagnostics": {
+        "decisions": 622831,
+        "engine_errors": 0,
+        "internal_fallbacks": 0,
+        "enforced_timeouts": 0
+      },
+      "focal_latency": {
+        "n": 141235,
+        "p50_ns": 27832.0,
+        "p95_ns": 104346.29999999999,
+        "p99_ns": 120523.60000000003,
+        "p999_ns": 233442.54600000108,
+        "max_ns": 846464,
+        "over_1ms": 0,
+        "over_1ms_rate": 0.0
+      },
+      "wall_seconds": 26.19236469292082,
+      "artifact_sha256": {
+        "bot.py": "eb401fd4b4708aba2770d0915b22f2e1f8237240949112239956714a98b15132",
+        "model.py": "0b902f8dc664bf85b1addc09a362a4c31f9051aabd853638ff496cbb4e120a91",
+        "features.py": "9cdffaf8dd454fa2bada3ed8c32957a3c35d480123504fa0b46e527213c455e1",
+        "equity.py": "955f5f40da9c57bc5d8effc08c8584ead3959a017adc50f6dafab5200ccb9cfd",
+        "evaluator.py": "d704f3c148dfcd644a2bdfb7ddf8e62a894126ee71518666bc32fb1e224607dc",
+        "engine.py": "3e7d9f3978f52ff184f16b72a7c2bc8121f1ce441afcfaa3c25fb00fafa1c8c5",
+        "baselines.py": "018f24a7b3b0a742eb5f6e2a0f85202ff9d01f53f34dde35b4a382ac8e526266",
+        "assets/equity_model.json.gz": "583773cff5b349953d87faf0a14980876c959b6a61d1790ef55451460c987df1",
+        "assets/equity_model.bin": "292a35acd0ef90a57267a3236572686c32a069d57c578a599620dac5b09d2253",
+        "assets/preflop.csv": "932e8151725b8fa991446eabff14df7f680ba1d5e52eb9dc53ce2c66e71d30f7"
+      },
+      "runtime": {
+        "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:27:36) [GCC 11.2.0]",
+        "implementation": "CPython",
+        "platform": "Linux-4.18.0-553.147.1.el8_10.x86_64-x86_64-with-glibc2.28",
+        "machine": "x86_64"
+      }
+    },
+    "mc_mixed_sng": {
+      "config": {
+        "tables": 256,
+        "split": "heldout",
+        "seed_start": 160000,
+        "lineup": [
+          "mc",
+          "value",
+          "nit",
+          "loose",
+          "station",
+          "mirror",
+          "value"
+        ],
+        "payouts": [
+          0.5,
+          0.3,
+          0.2,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "synthetic_payouts": true,
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "synthetic_blinds": true,
+        "max_hands": 200,
+        "initial_stack": 2000,
+        "enforce_time_limit": false,
+        "benchmark_only_slow_opponents": [
+          "mc"
+        ],
+        "baseline_reference_params": null,
+        "params": null,
+        "effective_defaults": {
+          "open_scale": 1.1,
+          "call_margin": 0.05,
+          "value_threshold": 0.69,
+          "bluff_scale": 0.5,
+          "risk_scale": 1.0,
+          "cbet": 0.5,
+          "postflop_range_weight": 0.6,
+          "shove_max_bb": 11.0,
+          "conditional_weight": 0.95,
+          "bluff_prior": 0.1,
+          "bet_penalty_scale": 1.25
+        },
+        "effective_params": {
+          "open_scale": 1.1,
+          "call_margin": 0.05,
+          "value_threshold": 0.69,
+          "bluff_scale": 0.5,
+          "risk_scale": 1.0,
+          "cbet": 0.5,
+          "postflop_range_weight": 0.6,
+          "shove_max_bb": 11.0,
+          "conditional_weight": 0.95,
+          "bluff_prior": 0.1,
+          "bet_penalty_scale": 1.25
+        },
+        "model_path": null,
+        "stress": false
+      },
+      "focal_points": {
+        "n": 256,
+        "mean": 0.22407539042471233,
+        "stderr": 0.012323497411450198,
+        "ci95": [
+          0.19992133549826996,
+          0.2482294453511547
+        ]
+      },
+      "equal_share_reference": 0.125,
+      "finish_distribution": [
+        0.26581811523437504,
+        0.17022393675372174,
+        0.2004957589070416,
+        0.1915871891048617,
+        0.09375,
+        0.046875,
+        0.0234375,
+        0.0078125
+      ],
+      "focal_diagnostics": {
+        "decisions": 44437,
+        "engine_errors": 0,
+        "internal_fallbacks": 0,
+        "enforced_timeouts": 0,
+        "actions": {
+          "fold": 20464,
+          "check": 8823,
+          "call": 2952,
+          "raise_": 12198
+        }
+      },
+      "all_diagnostics": {
+        "decisions": 248828,
+        "engine_errors": 0,
+        "internal_fallbacks": 0,
+        "enforced_timeouts": 0
+      },
+      "focal_latency": {
+        "n": 44437,
+        "p50_ns": 28844.0,
+        "p95_ns": 94939.0,
+        "p99_ns": 113173.0,
+        "p999_ns": 157482.88399999868,
+        "max_ns": 338477,
+        "over_1ms": 0,
+        "over_1ms_rate": 0.0
+      },
+      "wall_seconds": 128.4373457019683,
+      "artifact_sha256": {
+        "bot.py": "eb401fd4b4708aba2770d0915b22f2e1f8237240949112239956714a98b15132",
+        "model.py": "0b902f8dc664bf85b1addc09a362a4c31f9051aabd853638ff496cbb4e120a91",
+        "features.py": "9cdffaf8dd454fa2bada3ed8c32957a3c35d480123504fa0b46e527213c455e1",
+        "equity.py": "955f5f40da9c57bc5d8effc08c8584ead3959a017adc50f6dafab5200ccb9cfd",
+        "evaluator.py": "d704f3c148dfcd644a2bdfb7ddf8e62a894126ee71518666bc32fb1e224607dc",
+        "engine.py": "3e7d9f3978f52ff184f16b72a7c2bc8121f1ce441afcfaa3c25fb00fafa1c8c5",
+        "baselines.py": "018f24a7b3b0a742eb5f6e2a0f85202ff9d01f53f34dde35b4a382ac8e526266",
+        "assets/equity_model.json.gz": "583773cff5b349953d87faf0a14980876c959b6a61d1790ef55451460c987df1",
+        "assets/equity_model.bin": "292a35acd0ef90a57267a3236572686c32a069d57c578a599620dac5b09d2253",
+        "assets/preflop.csv": "932e8151725b8fa991446eabff14df7f680ba1d5e52eb9dc53ce2c66e71d30f7"
+      },
+      "runtime": {
+        "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:27:36) [GCC 11.2.0]",
+        "implementation": "CPython",
+        "platform": "Linux-4.18.0-553.147.1.el8_10.x86_64-x86_64-with-glibc2.28",
+        "machine": "x86_64"
+      }
+    },
+    "mc_sng": {
+      "config": {
+        "tables": 64,
+        "split": "heldout",
+        "seed_start": 170000,
+        "lineup": [
+          "mc",
+          "mc",
+          "mc",
+          "mc",
+          "mc",
+          "mc",
+          "mc"
+        ],
+        "payouts": [
+          0.5,
+          0.3,
+          0.2,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "synthetic_payouts": true,
+        "blind_schedule": [
+          [
+            10,
+            20
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            25,
+            50
+          ],
+          [
+            40,
+            80
+          ],
+          [
+            60,
+            120
+          ],
+          [
+            100,
+            200
+          ],
+          [
+            150,
+            300
+          ],
+          [
+            250,
+            500
+          ]
+        ],
+        "synthetic_blinds": true,
+        "max_hands": 200,
+        "initial_stack": 2000,
+        "enforce_time_limit": false,
+        "benchmark_only_slow_opponents": [
+          "mc"
+        ],
+        "baseline_reference_params": null,
+        "params": null,
+        "effective_defaults": {
+          "open_scale": 1.1,
+          "call_margin": 0.05,
+          "value_threshold": 0.69,
+          "bluff_scale": 0.5,
+          "risk_scale": 1.0,
+          "cbet": 0.5,
+          "postflop_range_weight": 0.6,
+          "shove_max_bb": 11.0,
+          "conditional_weight": 0.95,
+          "bluff_prior": 0.1,
+          "bet_penalty_scale": 1.25
+        },
+        "effective_params": {
+          "open_scale": 1.1,
+          "call_margin": 0.05,
+          "value_threshold": 0.69,
+          "bluff_scale": 0.5,
+          "risk_scale": 1.0,
+          "cbet": 0.5,
+          "postflop_range_weight": 0.6,
+          "shove_max_bb": 11.0,
+          "conditional_weight": 0.95,
+          "bluff_prior": 0.1,
+          "bet_penalty_scale": 1.25
+        },
+        "model_path": null,
+        "stress": false
+      },
+      "focal_points": {
+        "n": 64,
+        "mean": 0.1754001953125,
+        "stderr": 0.021548276451820905,
+        "ci95": [
+          0.13316557346693103,
+          0.21763481715806898
+        ]
+      },
+      "equal_share_reference": 0.125,
+      "finish_distribution": [
+        0.1191884765625,
+        0.2401865234375,
+        0.21875,
+        0.15625,
+        0.046875,
+        0.09375,
+        0.015625,
+        0.109375
+      ],
+      "focal_diagnostics": {
+        "decisions": 9558,
+        "engine_errors": 0,
+        "internal_fallbacks": 0,
+        "enforced_timeouts": 0,
+        "actions": {
+          "fold": 4986,
+          "check": 1662,
+          "call": 685,
+          "raise_": 2225
+        }
+      },
+      "all_diagnostics": {
+        "decisions": 68029,
+        "engine_errors": 0,
+        "internal_fallbacks": 0,
+        "enforced_timeouts": 0
+      },
+      "focal_latency": {
+        "n": 9558,
+        "p50_ns": 34104.0,
+        "p95_ns": 102272.15,
+        "p99_ns": 122903.90000000001,
+        "p999_ns": 181556.75699999693,
+        "max_ns": 290908,
+        "over_1ms": 0,
+        "over_1ms_rate": 0.0
+      },
+      "wall_seconds": 206.7543250231538,
+      "artifact_sha256": {
+        "bot.py": "eb401fd4b4708aba2770d0915b22f2e1f8237240949112239956714a98b15132",
+        "model.py": "0b902f8dc664bf85b1addc09a362a4c31f9051aabd853638ff496cbb4e120a91",
+        "features.py": "9cdffaf8dd454fa2bada3ed8c32957a3c35d480123504fa0b46e527213c455e1",
+        "equity.py": "955f5f40da9c57bc5d8effc08c8584ead3959a017adc50f6dafab5200ccb9cfd",
+        "evaluator.py": "d704f3c148dfcd644a2bdfb7ddf8e62a894126ee71518666bc32fb1e224607dc",
+        "engine.py": "3e7d9f3978f52ff184f16b72a7c2bc8121f1ce441afcfaa3c25fb00fafa1c8c5",
+        "baselines.py": "018f24a7b3b0a742eb5f6e2a0f85202ff9d01f53f34dde35b4a382ac8e526266",
+        "assets/equity_model.json.gz": "583773cff5b349953d87faf0a14980876c959b6a61d1790ef55451460c987df1",
+        "assets/equity_model.bin": "292a35acd0ef90a57267a3236572686c32a069d57c578a599620dac5b09d2253",
+        "assets/preflop.csv": "932e8151725b8fa991446eabff14df7f680ba1d5e52eb9dc53ce2c66e71d30f7"
+      },
+      "runtime": {
+        "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:27:36) [GCC 11.2.0]",
+        "implementation": "CPython",
+        "platform": "Linux-4.18.0-553.147.1.el8_10.x86_64-x86_64-with-glibc2.28",
+        "machine": "x86_64"
+      }
+    }
+  }
+}

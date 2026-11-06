@@ -1,0 +1,158 @@
+{
+  "kind": "LOCAL_EXACT_ICM_MICROBENCHMARK",
+  "python": "3.11.9",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "seed": 180075,
+  "repeats": 3000,
+  "source_sha256": {
+    "policy/icm.py": "8bee6662a3a6c7a6772996aee5c3c840dc73e1b653aebf64574dfe95f42c10ef",
+    "policy/icm_fast.py": "ced0b224b90386c441434b16f8577f4325227265d869d4c5811515e3df162432",
+    "training/compile_icm.py": "ff440a128762ca03f760d0f99af9e194dbed087ae5b3fb2f657c2ae7e71636b2"
+  },
+  "value_latency": {
+    "graded8": {
+      "current_loop": {
+        "n": 3000,
+        "p50_us": 140.4,
+        "p95_us": 176.2,
+        "p99_us": 300.5,
+        "max_us": 1649.2,
+        "over_1ms": 2
+      },
+      "unrolled_dp": {
+        "n": 3000,
+        "p50_us": 49.1,
+        "p95_us": 61.4,
+        "p99_us": 91.7,
+        "max_us": 1877.0,
+        "over_1ms": 1
+      },
+      "subset_moments": {
+        "n": 3000,
+        "p50_us": 32.4,
+        "p95_us": 42.5,
+        "p99_us": 71.7,
+        "max_us": 527.0,
+        "over_1ms": 0
+      }
+    },
+    "top3": {
+      "current_loop": {
+        "n": 3000,
+        "p50_us": 34.2,
+        "p95_us": 45.2,
+        "p99_us": 85.6,
+        "max_us": 984.8,
+        "over_1ms": 0
+      },
+      "unrolled_dp": {
+        "n": 3000,
+        "p50_us": 14.5,
+        "p95_us": 18.2,
+        "p99_us": 33.3,
+        "max_us": 369.2,
+        "over_1ms": 0
+      },
+      "subset_moments": {
+        "n": 3000,
+        "p50_us": 13.3,
+        "p95_us": 16.5,
+        "p99_us": 30.1,
+        "max_us": 239.9,
+        "over_1ms": 0
+      }
+    },
+    "flat4": {
+      "current_loop": {
+        "n": 3000,
+        "p50_us": 66.4,
+        "p95_us": 79.7,
+        "p99_us": 120.5,
+        "max_us": 764.4,
+        "over_1ms": 0
+      },
+      "unrolled_dp": {
+        "n": 3000,
+        "p50_us": 25.3,
+        "p95_us": 30.7,
+        "p99_us": 45.6,
+        "max_us": 283.3,
+        "over_1ms": 0
+      },
+      "subset_moments": {
+        "n": 3000,
+        "p50_us": 20.5,
+        "p95_us": 25.2,
+        "p99_us": 40.8,
+        "max_us": 977.1,
+        "over_1ms": 0
+      }
+    },
+    "winner": {
+      "current_loop": {
+        "n": 3000,
+        "p50_us": 3.1,
+        "p95_us": 3.9,
+        "p99_us": 5.0,
+        "max_us": 93.6,
+        "over_1ms": 0
+      },
+      "unrolled_dp": {
+        "n": 3000,
+        "p50_us": 5.2,
+        "p95_us": 6.4,
+        "p99_us": 8.0,
+        "max_us": 78.2,
+        "over_1ms": 0
+      },
+      "subset_moments": {
+        "n": 3000,
+        "p50_us": 5.5,
+        "p95_us": 6.6,
+        "p99_us": 9.4,
+        "max_us": 52.2,
+        "over_1ms": 0
+      }
+    }
+  },
+  "three_valuation_call_risk": {
+    "current_loop": {
+      "n": 3000,
+      "p50_us": 434.75,
+      "p95_us": 645.6,
+      "p99_us": 1180.8,
+      "max_us": 6250.1,
+      "over_1ms": 47
+    },
+    "unrolled_dp": {
+      "n": 3000,
+      "p50_us": 151.1,
+      "p95_us": 241.5,
+      "p99_us": 660.8,
+      "max_us": 6088.7,
+      "over_1ms": 11
+    },
+    "subset_moments": {
+      "n": 3000,
+      "p50_us": 92.1,
+      "p95_us": 146.1,
+      "p99_us": 289.4,
+      "max_us": 1929.2,
+      "over_1ms": 5
+    }
+  },
+  "call_threshold_values": {
+    "current_loop": 0.47800746440484404,
+    "unrolled_dp": 0.4780074644048443,
+    "subset_moments": 0.47800746440484443
+  },
+  "max_abs_error_vs_loop": {
+    "unrolled_dp": 5.684341886080802e-14,
+    "subset_moments": 1.3145040611561853e-13
+  },
+  "notes": [
+    "Wall-clock samples include scheduler noise; no timing guarantee.",
+    "Adapters include tuple construction and payout differences; no caller source changed.",
+    "Subset moments are algebraically exact; floating-point roundoff remains."
+  ]
+}

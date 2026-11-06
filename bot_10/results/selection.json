@@ -1,0 +1,18 @@
+{
+  "chosen_config": {
+    "open_scale": 1.15,
+    "pushfold": true,
+    "aggression": 1.0,
+    "call_margin": 0.025,
+    "bluff_scale": 1.0,
+    "range_penalty": 1.0
+  },
+  "model": "8 trees, max depth16, minleaf12",
+  "evidence": [
+    "results/tuning.json",
+    "results/refinement.json"
+  ],
+  "rationale": "Modest wider opens had consistent directional gains across development passes, uncertain at95%; shortstack approximation selected for analytic justification and no clear empirical loss. Other call/range/bluff changes did not justify complexity. 8tree model selected on latency vs small accuracy tradeoff before fresh calibration test. No contest optimality claim.",
+  "pre_evaluation_correction": "Observed-opportunity denominator fixes censored opponent actions after hero folds; regression added before any held-out tournament results were read. Pending job28073360 cancelled.",
+  "post_evaluation_change": "Only ICM utility import hoisted to startup to avoid lazy first-decision loading. Import-stripped AST identical and14702 replay actions identical; see final_equivalence.json."
+}
