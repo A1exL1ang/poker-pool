@@ -110,9 +110,10 @@ class Adapter:
         return Action(a['action'],int(a.get('amount',0)))
 
 class Baseline:
-    def __init__(self):
-        self.path=ROOT/'evaluation/baseline_repo/vibe_coding_exp/claude_exp_1/submission'
-        self.alias=load_package('frozen_claude',self.path/'nlbot')
+    def __init__(self,variant='ppo'):
+        if variant not in ('ppo','net'):raise ValueError(variant)
+        self.path=(ROOT/'evaluation/baseline_net' if variant=='net' else ROOT/'evaluation/baseline_repo/vibe_coding_exp/claude_exp_1/submission')
+        self.alias=load_package('frozen_claude_'+variant,self.path/'nlbot')
         self.engine=importlib.import_module(self.alias+'.engine')
         self.build=importlib.import_module(self.alias+'.bot.registry').build
     def reset(self,seed,seat,n_seats):

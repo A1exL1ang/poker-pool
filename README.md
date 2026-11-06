@@ -37,6 +37,13 @@ See [full results and uncertainty](evaluation/RESULTS.md),
 [machine-readable summary](evaluation/summary.json), and
 [raw matches](evaluation/production_results.jsonl.gz).
 
+**Non-PPO comparison:** another 13,824 tournaments tested Claude's CFR-distilled
+`policy_v9` with the same postflop nets. Its average mixed-field prize share was
+14.22% versus PPO's 18.77% with 50/30/20 payouts. Its matched advantages over
+bot 4 (+0.51 percentage points) and bot 6 (+0.71 points) were not statistically
+clear at the marginal 95% level. See [pure-net results](evaluation/NET_RESULTS.md),
+[summary](evaluation/net_summary.json), and [raw matches](evaluation/net_results.jsonl.gz).
+
 `evaluation/` contains the frozen source hashes, baseline provenance, common
 engine, per-bot adapters, and seeded tournament runner. The baseline is the packaged submission from
 `A1exL1ang/poker-prep/vibe_coding_exp/claude_exp_1`, pinned to

@@ -3,6 +3,7 @@ import hashlib
 import importlib
 import json
 import platform
+import sys
 from pathlib import Path
 from adapters import Adapter, Baseline, ROOT
 
@@ -20,9 +21,16 @@ def main():
         p=base/name.replace('\\','/')
         if not p.exists():missing.append('baseline/'+name)
         elif hashlib.sha256(p.read_bytes()).hexdigest()!=expected:changed.append('baseline/'+name)
+    if '--net' in sys.argv:
+        net=json.loads((ROOT/'evaluation/net_baseline_manifest.json').read_text())
+        for name,expected in net['files'].items():
+            p=ROOT/'evaluation/baseline_net'/name
+            if not p.exists():missing.append('net/'+name)
+            elif hashlib.sha256(p.read_bytes()).hexdigest()!=expected:changed.append('net/'+name)
     one=Adapter(1)
     native=importlib.import_module(one.alias+'.native')
     report=dict(platform=platform.platform(),python=platform.python_version(),missing=missing,changed=changed,bot1_native_loaded=native.LIB is not None,baseline_commit=baseline['commit'])
+    report['net_verified']='--net' in sys.argv
     print(json.dumps(report))
     if missing or changed:raise SystemExit(1)
 
