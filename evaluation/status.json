@@ -1,10 +1,10 @@
 {
-  "phase": "harness_preparation",
+  "phase": "complete",
   "all_builders_finished": true,
   "all_export_tests_passed": true,
   "baseline_repo": "https://github.com/A1exL1ang/poker-prep",
   "baseline_subdir": "vibe_coding_exp/claude_exp_1",
-  "next": "Implement independent package loading and all eight adapters, add common-engine regression tests then smoke test and launch bounded preemptible Engaging evaluation. No tournaments launched yet.",
+  "next": "Publish final evaluation artifacts to GitHub and delete completed heartbeat.",
   "baseline_commit": "a3d75f7c736da8c69e474ceed7e189682f9e6c7e",
   "baseline_artifact": "submission/submission_config.json",
   "engine_tests": {
@@ -18,5 +18,31 @@
     "excluded": "test_hu_payout_invariance imports training Solver requiring numba; not yet run"
   },
   "engaging": "verified; only three existing hold-cpu user jobs remain, untouched",
-  "venv": "evaluation/.venv (numpy and pytest installed)"
+  "venv": "evaluation/.venv (numpy and pytest installed)",
+  "common_tests_passed": 15,
+  "github_commit": "f0e11c7",
+  "pilot_job": "28066401",
+  "pilot_shards": 4,
+  "pilot_tables": 72,
+  "remote_root": "~/poker-pool-20261106-054844/evaluation/run_v1",
+  "production_job": "28067659",
+  "production_shards": 24,
+  "production_tables": 13824,
+  "pilot_summary": {
+    "tables": 72,
+    "decisions": 71353,
+    "timeouts": 13,
+    "errors": 0,
+    "illegal": 0,
+    "internal_errors": 0
+  },
+  "previous_production_job": "28067291",
+  "previous_failure": "Manifest verifier did not normalize Windows backslashes on Linux; stopped before matches. Fixed verifier only; frozen artifacts unchanged. Previous own array stopped before replacement.",
+  "last_poll_at": "2026-11-06T07:18:43.334614+00:00",
+  "observed_tables_completed": 13824,
+  "verification": "All24 shards completed; all source hashes verified and native helper loaded. Complete balanced schedule, zero exceptions/illegal/internal failures, chip/prize conservation passed.",
+  "completed_at": "2026-11-06T07:26:15.858728+00:00",
+  "results": "evaluation/RESULTS.md",
+  "summary": "evaluation/summary.json",
+  "cleanup": "No task-owned Slurm jobs remain; existing three user hold-cpu allocations untouched."
 }
